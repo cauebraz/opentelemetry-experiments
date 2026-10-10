@@ -251,6 +251,11 @@ curl -s https://pypi.org/pypi/<package>/json | jq -r .info.version
 | `opentelemetry-sdk`, `opentelemetry-exporter-otlp-proto-http` | `1.45.0`, exact in the `dependencies` of `pyproject.toml` and resolved in `uv.lock`; imported only by questions that measure the SDK |
 | `grpcio` | `1.84.0`, exact in the `dependencies` of `pyproject.toml` and resolved in `uv.lock`; L1-04 uses it with the `opentelemetry-proto` stubs to send OTLP/gRPC without an SDK exporter |
 
+`uv lock` does not select a distribution uploaded in the last 15 days
+(`exclude-newer = "15 days"` in `pyproject.toml`). Dependabot waits the same
+15 days (`cooldown.default-days`) before opening a version update for pip or
+GitHub Actions.
+
 The runtime image is `FROM scratch` with the verified binary and nothing else,
 so the Alpine digest is a build input and not an attack surface at run time.
 
