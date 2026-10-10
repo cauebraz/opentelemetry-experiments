@@ -23,7 +23,7 @@ REQUIRED_FIELDS = ("id", "title", "level", "theme", "status")
 STATUSES = ("stub", "ready", "measured")
 
 QUIET_SETTLE = 10.0
-RESULTS_VERSION = 2
+RESULTS_VERSION = 3
 
 STUB_SECTIONS = ("## Question", "## What the documentation says")
 FULL_SECTIONS = (
@@ -437,6 +437,7 @@ def provenance() -> dict[str, Any]:
         "docker_compose": compose_version(),
         "compose_sha256": file_sha256("compose.yaml"),
         "dockerfile_sha256": file_sha256("Dockerfile.collector"),
+        "uv_lock_sha256": file_sha256("uv.lock"),
     }
 
 

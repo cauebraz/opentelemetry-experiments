@@ -203,14 +203,15 @@ with a missing repetition is not a result.
 
 ## Provenance
 
-`results.json` carries `results_version` (2 since provenance was added; files
-without it are version 1 and still render) and a `provenance` block: the
-Python version, operating system and architecture, the Docker Compose version,
-and the SHA-256 of `compose.yaml` and `Dockerfile.collector`. Each entry under
-`variants` records its `options` and the SHA-256 of its collector, sink and
-Prometheus configs, plus the gateway config when the variant sets one. No
-clock reading is recorded, so two runs of the same
-setup can be compared field by field.
+`results.json` carries `results_version` (3 since the lockfile hash was added;
+2 had provenance without it; files without a version are version 1 and still
+render) and a `provenance` block: the Python version, operating system and
+architecture, the Docker Compose version, and the SHA-256 of `compose.yaml`,
+`Dockerfile.collector` and `uv.lock`. Each entry under `variants` records its
+`options` and the SHA-256 of its collector, sink and Prometheus configs, plus
+the gateway config when the variant sets one. No clock reading is recorded, so
+two runs of the same setup can be compared field by field. Older recorded
+results that omit `uv_lock_sha256` remain valid and still render.
 
 Two flags on a variant are validity rules, not predictions, and neither is
 allowed to carry an expected result:
