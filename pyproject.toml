@@ -52,3 +52,4 @@ select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
 
 [tool.uv]
 package = false
+exclude-newer = "15 days"

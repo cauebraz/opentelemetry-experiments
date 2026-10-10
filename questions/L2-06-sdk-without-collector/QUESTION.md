@@ -39,8 +39,8 @@ Source: [`specification/trace/sdk.md`, lines 1121-1124, 1171-1174 and 1193](http
 The specification does not say which spans are dropped when the queue is full,
 nor how long the exporter retries. Both are in the Python implementation at
 `opentelemetry-python v1.45.0`, commit
-`4f0fcfa53e53a8c654a34df0d0a1fd74483ebca2`, the version pinned in
-`pyproject.toml`:
+`4f0fcfa53e53a8c654a34df0d0a1fd74483ebca2`, pinned in `pyproject.toml` as
+`opentelemetry-sdk==1.45.0` and `opentelemetry-exporter-otlp-proto-http==1.45.0`:
 
 > ```python
 > _MAX_RETRIES: Final[int] = 6
