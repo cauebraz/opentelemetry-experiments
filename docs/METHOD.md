@@ -201,6 +201,13 @@ once; each sentence it returns is a validity note.
 can be diagnosed, and exits non-zero when any repetition is invalid. A table
 with a missing repetition is not a result.
 
+`just reports-check` renders every local measured question in memory and
+compares it byte for byte with the canonical
+`questions/<question>/results/REPORT.md`. It writes nothing and fails when an
+artifact is missing, malformed, names a different question or no longer
+matches the current `question.py`. External evidence and nested historical
+sessions are not canonical reports and are not included.
+
 ## Provenance
 
 `results.json` carries `results_version` (3 since the lockfile hash was added;
@@ -284,8 +291,9 @@ the runner owns the stack, the repetitions, the settling and the JSON. A
 `send` or `measure` call that raises is recorded as an invalid run with the
 exception in its notes, and the remaining runs continue.
 
-`just check` fails when a `QUESTION.md` is missing a required field, so a
-question cannot be half declared.
+`just check` fails when a `QUESTION.md` is missing a required field or its
+canonical report differs from the rendering of `results.json`, so a question
+cannot be half declared and a derived report cannot silently drift.
 
 ## External evidence
 

@@ -40,11 +40,14 @@ validate: build
 questions-lint:
     uv run --frozen python -m opentelemetry_experiments.lint_questions
 
+reports-check:
+    uv run --frozen python -m opentelemetry_experiments.render --check
+
 # Start the real stack once and prove one item of each signal reaches the sink.
 smoke: build
     uv run --frozen pytest smoke
 
-check: format-check lint questions-lint test validate smoke
+check: format-check lint questions-lint reports-check test validate smoke
 
 # Every question on the ladder, with its state.
 ladder:

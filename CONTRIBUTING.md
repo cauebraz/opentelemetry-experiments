@@ -21,8 +21,10 @@ just setup
 just check
 ```
 
-`just check` runs format, lint, question lint, unit tests, Collector and
-Prometheus config validation, and one smoke run through the real stack.
+`just check` runs format, lint, question lint, canonical report integrity,
+unit tests, Collector and Prometheus config validation, and one smoke run
+through the real stack. `just reports-check` runs only the read-only report
+comparison.
 
 ## Adding a question
 

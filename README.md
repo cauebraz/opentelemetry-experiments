@@ -22,8 +22,9 @@ just setup                 # uv sync, pinned
 just ladder                # every question, run here, external or not yet
 just ask L0-01             # run one question, three repetitions
 just render L0-01          # re-render its REPORT.md from the recorded JSON
+just reports-check         # verify every canonical REPORT.md without writing
 just smoke                 # one span, metric and log through the real stack
-just check                 # ruff, pytest, otelcol validate, promtool, smoke
+just check                 # ruff, reports, pytest, configs and smoke
 ```
 
 `just ask` needs Docker, `uv` and `just` on PATH. Nothing listens outside
