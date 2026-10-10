@@ -459,18 +459,38 @@ def test_run_question_records_version_provenance_and_config_hashes(
     assert payload["results_version"] == runner.RESULTS_VERSION
     assert payload["provenance"]["docker_compose"] == "2.99.0"
     assert len(payload["provenance"]["compose_sha256"]) == 64
+    assert len(payload["provenance"]["uv_lock_sha256"]) == 64
     hashes = payload["variants"][0]["config_sha256"]
     assert len(hashes["collector"]) == 64
     assert len(hashes["sink"]) == 64
     assert payload["variants"][0]["options"] == {}
     assert json.loads((tmp_path / "results.json").read_text()) == payload
-    assert "Results version 2" in render_question(payload, question)
+    assert f"Results version {runner.RESULTS_VERSION}" in render_question(
+        payload, question
+    )
 
 
 def test_an_unversioned_result_file_still_renders(payload, question):
     rendered = render_question(payload, question)
 
     assert "Results version" not in rendered
+    assert "## Measured" in rendered
+
+
+def test_a_version_2_result_without_lock_hash_still_renders(payload, question):
+    payload["results_version"] = 2
+    payload["provenance"] = {
+        "python": "3.14.8",
+        "system": "Darwin",
+        "machine": "arm64",
+        "docker_compose": "5.5.1",
+        "compose_sha256": "a" * 64,
+        "dockerfile_sha256": "b" * 64,
+    }
+
+    rendered = render_question(payload, question)
+
+    assert "Results version 2" in rendered
     assert "## Measured" in rendered
 
 

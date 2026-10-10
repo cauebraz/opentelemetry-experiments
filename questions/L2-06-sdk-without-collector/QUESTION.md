@@ -105,8 +105,9 @@ just ask L2-06
 
 Five variants, three repetitions each. Each run starts the stack, then runs
 `emitter.py` from this directory as a subprocess with the variant's name. The
-emitter builds its own `TracerProvider` with the `opentelemetry-sdk` and
-OTLP/HTTP exporter pinned in `pyproject.toml`, stops and starts the Collector
+emitter builds its own `TracerProvider` with `opentelemetry-sdk==1.45.0`
+and `opentelemetry-exporter-otlp-proto-http==1.45.0` from `pyproject.toml`,
+stops and starts the Collector
 container itself at the points the variant names, and prints one JSON line with
 what it observed. Every span is the root of its own trace, so a trace id
 at the sink names exactly one span.
