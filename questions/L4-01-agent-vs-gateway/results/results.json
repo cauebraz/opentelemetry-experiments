@@ -1,0 +1,860 @@
+{
+  "columns": [
+    {
+      "kind": "number",
+      "label": "HTTP",
+      "path": "sending.http_status"
+    },
+    {
+      "kind": "number",
+      "label": "Agent accepted",
+      "path": "sending.agent_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Agent sent",
+      "path": "sending.agent_sent"
+    },
+    {
+      "kind": "number",
+      "label": "Agent send_failed",
+      "path": "sending.agent_send_failed"
+    },
+    {
+      "kind": "number",
+      "label": "Gateway accepted",
+      "path": "sending.gateway_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Gateway sent",
+      "path": "sending.gateway_sent"
+    },
+    {
+      "kind": "number",
+      "label": "Sink accepted",
+      "path": "sending.sink_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Double-count sum",
+      "path": "sending.double_count_sum"
+    },
+    {
+      "kind": "number",
+      "label": "During agent queue",
+      "path": "sending.during_agent_queue"
+    },
+    {
+      "kind": "number",
+      "label": "During gateway queue",
+      "path": "sending.during_gateway_queue"
+    },
+    {
+      "kind": "number",
+      "label": "Drain s",
+      "path": "sending.drain_s"
+    },
+    {
+      "kind": "text",
+      "label": "Restored",
+      "path": "sending.restored"
+    },
+    {
+      "kind": "number",
+      "label": "Sink log spans",
+      "path": "measured.sink_log_spans"
+    }
+  ],
+  "execution_order": [
+    [
+      "healthy",
+      "gateway-paused",
+      "sink-paused"
+    ],
+    [
+      "gateway-paused",
+      "sink-paused",
+      "healthy"
+    ],
+    [
+      "sink-paused",
+      "healthy",
+      "gateway-paused"
+    ]
+  ],
+  "provenance": {
+    "compose_sha256": "8b794e6e14ffc66c209050e09099a071303b1f681e423c992a7a1b5d4e15c5cc",
+    "docker_compose": "5.5.1",
+    "dockerfile_sha256": "9144298cec761cc3f7f162e232a2accda2203566c7fe91b9566f15e9f5d245de",
+    "machine": "arm64",
+    "python": "3.14.8",
+    "system": "Darwin"
+  },
+  "question": {
+    "id": "L4-01",
+    "level": 4,
+    "signals": [
+      "traces"
+    ],
+    "theme": "collector",
+    "title": "What double counts, and what goes invisible, in an agent plus gateway topology?"
+  },
+  "repetitions": 3,
+  "results_version": 2,
+  "runs": [
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "gateway": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "all three layers reachable",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "double_count_sum": 2000,
+        "sink_log_spans": 1000
+      },
+      "position": 1,
+      "repetition": 1,
+      "sending": {
+        "agent_accepted": 1000.0,
+        "agent_oom": false,
+        "agent_queue": 0.0,
+        "agent_restarts": 0,
+        "agent_running": true,
+        "agent_send_failed": null,
+        "agent_sent": 1000.0,
+        "double_count_sum": 2000,
+        "drain_s": 2.01,
+        "during_agent_queue": 0.0,
+        "during_agent_send_failed": null,
+        "during_gateway_accepted": null,
+        "during_gateway_queue": 0.0,
+        "during_sink_accepted": null,
+        "fault": "none",
+        "gateway_accepted": 1000.0,
+        "gateway_oom": false,
+        "gateway_queue": 0.0,
+        "gateway_restarts": 0,
+        "gateway_running": true,
+        "gateway_send_failed": null,
+        "gateway_sent": 1000.0,
+        "hold_s": 8.0,
+        "http_status": 200,
+        "queues_empty": true,
+        "restored": true,
+        "sink_accepted": 1000.0,
+        "sink_oom": false,
+        "sink_restarts": 0,
+        "sink_running": true,
+        "spans_sent": 1000
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "healthy"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "gateway": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "gateway paused between burst and recovery",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "double_count_sum": 2000,
+        "sink_log_spans": 1000
+      },
+      "position": 2,
+      "repetition": 1,
+      "sending": {
+        "agent_accepted": 1000.0,
+        "agent_oom": false,
+        "agent_queue": 0.0,
+        "agent_restarts": 0,
+        "agent_running": true,
+        "agent_send_failed": null,
+        "agent_sent": 1000.0,
+        "double_count_sum": 2000,
+        "drain_s": 3.02,
+        "during_agent_queue": 1.0,
+        "during_agent_send_failed": null,
+        "during_gateway_accepted": null,
+        "during_gateway_queue": null,
+        "during_sink_accepted": null,
+        "fault": "gateway",
+        "gateway_accepted": 1000.0,
+        "gateway_oom": false,
+        "gateway_queue": 0.0,
+        "gateway_restarts": 0,
+        "gateway_running": true,
+        "gateway_send_failed": null,
+        "gateway_sent": 1000.0,
+        "hold_s": 8.0,
+        "http_status": 200,
+        "queues_empty": true,
+        "restored": true,
+        "sink_accepted": 1000.0,
+        "sink_oom": false,
+        "sink_restarts": 0,
+        "sink_running": true,
+        "spans_sent": 1000
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "gateway-paused"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "gateway": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "sink paused between burst and recovery",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "double_count_sum": 2000,
+        "sink_log_spans": 1000
+      },
+      "position": 3,
+      "repetition": 1,
+      "sending": {
+        "agent_accepted": 1000.0,
+        "agent_oom": false,
+        "agent_queue": 0.0,
+        "agent_restarts": 0,
+        "agent_running": true,
+        "agent_send_failed": null,
+        "agent_sent": 1000.0,
+        "double_count_sum": 2000,
+        "drain_s": 3.02,
+        "during_agent_queue": 0.0,
+        "during_agent_send_failed": null,
+        "during_gateway_accepted": null,
+        "during_gateway_queue": 1.0,
+        "during_sink_accepted": null,
+        "fault": "sink",
+        "gateway_accepted": 1000.0,
+        "gateway_oom": false,
+        "gateway_queue": 0.0,
+        "gateway_restarts": 0,
+        "gateway_running": true,
+        "gateway_send_failed": null,
+        "gateway_sent": 1000.0,
+        "hold_s": 8.0,
+        "http_status": 200,
+        "queues_empty": true,
+        "restored": true,
+        "sink_accepted": 1000.0,
+        "sink_oom": false,
+        "sink_restarts": 0,
+        "sink_running": true,
+        "spans_sent": 1000
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-paused"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "gateway": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "gateway paused between burst and recovery",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "double_count_sum": 2000,
+        "sink_log_spans": 1000
+      },
+      "position": 1,
+      "repetition": 2,
+      "sending": {
+        "agent_accepted": 1000.0,
+        "agent_oom": false,
+        "agent_queue": 0.0,
+        "agent_restarts": 0,
+        "agent_running": true,
+        "agent_send_failed": null,
+        "agent_sent": 1000.0,
+        "double_count_sum": 2000,
+        "drain_s": 3.01,
+        "during_agent_queue": 1.0,
+        "during_agent_send_failed": null,
+        "during_gateway_accepted": null,
+        "during_gateway_queue": null,
+        "during_sink_accepted": null,
+        "fault": "gateway",
+        "gateway_accepted": 1000.0,
+        "gateway_oom": false,
+        "gateway_queue": 0.0,
+        "gateway_restarts": 0,
+        "gateway_running": true,
+        "gateway_send_failed": null,
+        "gateway_sent": 1000.0,
+        "hold_s": 8.0,
+        "http_status": 200,
+        "queues_empty": true,
+        "restored": true,
+        "sink_accepted": 1000.0,
+        "sink_oom": false,
+        "sink_restarts": 0,
+        "sink_running": true,
+        "spans_sent": 1000
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "gateway-paused"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "gateway": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "sink paused between burst and recovery",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "double_count_sum": 2000,
+        "sink_log_spans": 1000
+      },
+      "position": 2,
+      "repetition": 2,
+      "sending": {
+        "agent_accepted": 1000.0,
+        "agent_oom": false,
+        "agent_queue": 0.0,
+        "agent_restarts": 0,
+        "agent_running": true,
+        "agent_send_failed": null,
+        "agent_sent": 1000.0,
+        "double_count_sum": 2000,
+        "drain_s": 2.01,
+        "during_agent_queue": 0.0,
+        "during_agent_send_failed": null,
+        "during_gateway_accepted": null,
+        "during_gateway_queue": 1.0,
+        "during_sink_accepted": null,
+        "fault": "sink",
+        "gateway_accepted": 1000.0,
+        "gateway_oom": false,
+        "gateway_queue": 0.0,
+        "gateway_restarts": 0,
+        "gateway_running": true,
+        "gateway_send_failed": null,
+        "gateway_sent": 1000.0,
+        "hold_s": 8.0,
+        "http_status": 200,
+        "queues_empty": true,
+        "restored": true,
+        "sink_accepted": 1000.0,
+        "sink_oom": false,
+        "sink_restarts": 0,
+        "sink_running": true,
+        "spans_sent": 1000
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-paused"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "gateway": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "all three layers reachable",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "double_count_sum": 2000,
+        "sink_log_spans": 1000
+      },
+      "position": 3,
+      "repetition": 2,
+      "sending": {
+        "agent_accepted": 1000.0,
+        "agent_oom": false,
+        "agent_queue": 0.0,
+        "agent_restarts": 0,
+        "agent_running": true,
+        "agent_send_failed": null,
+        "agent_sent": 1000.0,
+        "double_count_sum": 2000,
+        "drain_s": 2.01,
+        "during_agent_queue": 0.0,
+        "during_agent_send_failed": null,
+        "during_gateway_accepted": null,
+        "during_gateway_queue": 0.0,
+        "during_sink_accepted": null,
+        "fault": "none",
+        "gateway_accepted": 1000.0,
+        "gateway_oom": false,
+        "gateway_queue": 0.0,
+        "gateway_restarts": 0,
+        "gateway_running": true,
+        "gateway_send_failed": null,
+        "gateway_sent": 1000.0,
+        "hold_s": 8.0,
+        "http_status": 200,
+        "queues_empty": true,
+        "restored": true,
+        "sink_accepted": 1000.0,
+        "sink_oom": false,
+        "sink_restarts": 0,
+        "sink_running": true,
+        "spans_sent": 1000
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "healthy"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "gateway": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "sink paused between burst and recovery",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "double_count_sum": 2000,
+        "sink_log_spans": 1000
+      },
+      "position": 1,
+      "repetition": 3,
+      "sending": {
+        "agent_accepted": 1000.0,
+        "agent_oom": false,
+        "agent_queue": 0.0,
+        "agent_restarts": 0,
+        "agent_running": true,
+        "agent_send_failed": null,
+        "agent_sent": 1000.0,
+        "double_count_sum": 2000,
+        "drain_s": 3.03,
+        "during_agent_queue": 0.0,
+        "during_agent_send_failed": null,
+        "during_gateway_accepted": null,
+        "during_gateway_queue": 1.0,
+        "during_sink_accepted": null,
+        "fault": "sink",
+        "gateway_accepted": 1000.0,
+        "gateway_oom": false,
+        "gateway_queue": 0.0,
+        "gateway_restarts": 0,
+        "gateway_running": true,
+        "gateway_send_failed": null,
+        "gateway_sent": 1000.0,
+        "hold_s": 8.0,
+        "http_status": 200,
+        "queues_empty": true,
+        "restored": true,
+        "sink_accepted": 1000.0,
+        "sink_oom": false,
+        "sink_restarts": 0,
+        "sink_running": true,
+        "spans_sent": 1000
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-paused"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "gateway": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "all three layers reachable",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "double_count_sum": 2000,
+        "sink_log_spans": 1000
+      },
+      "position": 2,
+      "repetition": 3,
+      "sending": {
+        "agent_accepted": 1000.0,
+        "agent_oom": false,
+        "agent_queue": 0.0,
+        "agent_restarts": 0,
+        "agent_running": true,
+        "agent_send_failed": null,
+        "agent_sent": 1000.0,
+        "double_count_sum": 2000,
+        "drain_s": 2.01,
+        "during_agent_queue": 0.0,
+        "during_agent_send_failed": null,
+        "during_gateway_accepted": null,
+        "during_gateway_queue": 0.0,
+        "during_sink_accepted": null,
+        "fault": "none",
+        "gateway_accepted": 1000.0,
+        "gateway_oom": false,
+        "gateway_queue": 0.0,
+        "gateway_restarts": 0,
+        "gateway_running": true,
+        "gateway_send_failed": null,
+        "gateway_sent": 1000.0,
+        "hold_s": 8.0,
+        "http_status": 200,
+        "queues_empty": true,
+        "restored": true,
+        "sink_accepted": 1000.0,
+        "sink_oom": false,
+        "sink_restarts": 0,
+        "sink_running": true,
+        "spans_sent": 1000
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "healthy"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "gateway": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "gateway paused between burst and recovery",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "double_count_sum": 2000,
+        "sink_log_spans": 1000
+      },
+      "position": 3,
+      "repetition": 3,
+      "sending": {
+        "agent_accepted": 1000.0,
+        "agent_oom": false,
+        "agent_queue": 0.0,
+        "agent_restarts": 0,
+        "agent_running": true,
+        "agent_send_failed": null,
+        "agent_sent": 1000.0,
+        "double_count_sum": 2000,
+        "drain_s": 3.01,
+        "during_agent_queue": 1.0,
+        "during_agent_send_failed": null,
+        "during_gateway_accepted": null,
+        "during_gateway_queue": null,
+        "during_sink_accepted": null,
+        "fault": "gateway",
+        "gateway_accepted": 1000.0,
+        "gateway_oom": false,
+        "gateway_queue": 0.0,
+        "gateway_restarts": 0,
+        "gateway_running": true,
+        "gateway_send_failed": null,
+        "gateway_sent": 1000.0,
+        "hold_s": 8.0,
+        "http_status": 200,
+        "queues_empty": true,
+        "restored": true,
+        "sink_accepted": 1000.0,
+        "sink_oom": false,
+        "sink_restarts": 0,
+        "sink_running": true,
+        "spans_sent": 1000
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "gateway-paused"
+    }
+  ],
+  "stack": {
+    "otelcol_contrib": "0.162.0",
+    "prometheus": "v3.15.0"
+  },
+  "variants": [
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "b6745d635eed7ad184944583432da0c7bd92745cae399a465aeda2227d8f0b1f",
+        "gateway": "354e2929a44f720f43f2fd2ec73069b21a30fbe4b83a67ff2f7512f8da680c10",
+        "prometheus": "1c0be1eb2042e3ed076b852b698478a18efc5841cba925af8f06d24a6325c81e",
+        "sink": "2d9ae84bbb4f93bd296a2242e151700adaea3acc267f90ae3cef7b74f5856f1a"
+      },
+      "description": "all three layers reachable",
+      "gateway_config": "./questions/L4-01-agent-vs-gateway/config/gateway.yaml",
+      "name": "healthy",
+      "options": {
+        "fault": null
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "b6745d635eed7ad184944583432da0c7bd92745cae399a465aeda2227d8f0b1f",
+        "gateway": "354e2929a44f720f43f2fd2ec73069b21a30fbe4b83a67ff2f7512f8da680c10",
+        "prometheus": "1c0be1eb2042e3ed076b852b698478a18efc5841cba925af8f06d24a6325c81e",
+        "sink": "2d9ae84bbb4f93bd296a2242e151700adaea3acc267f90ae3cef7b74f5856f1a"
+      },
+      "description": "gateway paused between burst and recovery",
+      "gateway_config": "./questions/L4-01-agent-vs-gateway/config/gateway.yaml",
+      "name": "gateway-paused",
+      "options": {
+        "fault": "gateway"
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "b6745d635eed7ad184944583432da0c7bd92745cae399a465aeda2227d8f0b1f",
+        "gateway": "354e2929a44f720f43f2fd2ec73069b21a30fbe4b83a67ff2f7512f8da680c10",
+        "prometheus": "1c0be1eb2042e3ed076b852b698478a18efc5841cba925af8f06d24a6325c81e",
+        "sink": "2d9ae84bbb4f93bd296a2242e151700adaea3acc267f90ae3cef7b74f5856f1a"
+      },
+      "description": "sink paused between burst and recovery",
+      "gateway_config": "./questions/L4-01-agent-vs-gateway/config/gateway.yaml",
+      "name": "sink-paused",
+      "options": {
+        "fault": "sink"
+      }
+    }
+  ]
+}

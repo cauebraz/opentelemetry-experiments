@@ -1,0 +1,1276 @@
+sink-1  | 	info	otelconftelemetry/tracer.go:47	Internal trace telemetry disabled	{"resource": {"service.instance.id": "6b63a0f6-be38-41a3-a681-6619e3a41929", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	service@v0.162.0/service.go:233	Starting otelcol-contrib...	{"resource": {"service.instance.id": "6b63a0f6-be38-41a3-a681-6619e3a41929", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "Version": "0.162.0", "NumCPU": 18}
+sink-1  | 	info	extensions/extensions.go:43	Starting extensions...	{"resource": {"service.instance.id": "6b63a0f6-be38-41a3-a681-6619e3a41929", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	extensions/extensions.go:47	Extension is starting...	{"resource": {"service.instance.id": "6b63a0f6-be38-41a3-a681-6619e3a41929", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension"}
+sink-1  | 	info	healthcheckextension@v0.162.0/healthcheckextension.go:32	Starting health_check extension	{"resource": {"service.instance.id": "6b63a0f6-be38-41a3-a681-6619e3a41929", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension", "config": {"Config":{"ServerConfig":{"NetAddr":{"DialerConfig":{"Timeout":0},"Endpoint":"0.0.0.0:13133","Transport":"tcp"},"TLS":{},"CORS":{},"Auth":{},"MaxRequestBodySize":0,"IncludeMetadata":false,"ResponseHeaders":null,"CompressionAlgorithms":null,"ReadTimeout":0,"ReadHeaderTimeout":60000000000,"WriteTimeout":30000000000,"Middlewares":null,"Keepalive":{},"IdleTimeout":0,"KeepAlivesEnabled":false},"Path":"/","ResponseBody":null,"CheckCollectorPipeline":{"Enabled":false,"Interval":"5m","ExporterFailureThreshold":5},"UseV2":false,"GRPCConfig":null,"HTTPConfig":null,"ComponentHealthConfig":null}}}
+sink-1  | 	info	extensions/extensions.go:65	Extension started.	{"resource": {"service.instance.id": "6b63a0f6-be38-41a3-a681-6619e3a41929", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension"}
+sink-1  | 	info	otlpreceiver@v0.162.0/otlp.go:120	Starting GRPC server	{"resource": {"service.instance.id": "6b63a0f6-be38-41a3-a681-6619e3a41929", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "otlp", "otelcol.component.kind": "receiver", "endpoint": "[::]:4317"}
+sink-1  | 	info	healthcheck/handler.go:131	Health Check state change	{"resource": {"service.instance.id": "6b63a0f6-be38-41a3-a681-6619e3a41929", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension", "status": "ready"}
+sink-1  | 	info	service@v0.162.0/service.go:256	Everything is ready. Begin running and processing data.	{"resource": {"service.instance.id": "6b63a0f6-be38-41a3-a681-6619e3a41929", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	Logs	{"resource": {"service.instance.id": "6b63a0f6-be38-41a3-a681-6619e3a41929", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs", "resource logs": 1, "log records": 90}
+sink-1  | 	info	ResourceLog #0
+sink-1  | Resource SchemaURL:
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454909252 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:01 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:01 INFO request 001 served)
+sink-1  | Attributes:
+sink-1  |      -> clock: Str(14:00:01)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 001 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454914919 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:02 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:02 INFO request 002 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:02)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 002 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454916502 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:03 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:03 INFO request 003 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:03)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 003 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454917002 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:04 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:04 INFO request 004 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:04)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 004 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.45491846 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:05 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:05 INFO request 005 served)
+sink-1  | Attributes:
+sink-1  |      -> clock: Str(14:00:05)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 005 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454919419 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:06 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:06 INFO request 006 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:06)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 006 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454920044 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:07 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:07 INFO request 007 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:07)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 007 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454924335 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:08 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:08 INFO request 008 served)
+sink-1  | Attributes:
+sink-1  |      -> message: Str(request 008 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:08)
+sink-1  |      -> level: Str(INFO)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.45492621 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:09 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:09 INFO request 009 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:09)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 009 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454929752 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:11 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:11 INFO request 011 served)
+sink-1  | Attributes:
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 011 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:11)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #10
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454930419 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:12 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:12 INFO request 012 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> message: Str(request 012 served)
+sink-1  |      -> clock: Str(14:00:12)
+sink-1  |      -> level: Str(INFO)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #11
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454931127 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:13 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:13 INFO request 013 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> message: Str(request 013 served)
+sink-1  |      -> clock: Str(14:00:13)
+sink-1  |      -> level: Str(INFO)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #12
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454931502 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:14 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:14 INFO request 014 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:14)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 014 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #13
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454932127 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:15 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:15 INFO request 015 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:15)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 015 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #14
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454933919 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:16 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:16 INFO request 016 served)
+sink-1  | Attributes:
+sink-1  |      -> message: Str(request 016 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:16)
+sink-1  |      -> level: Str(INFO)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #15
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454935002 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:17 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:17 INFO request 017 served)
+sink-1  | Attributes:
+sink-1  |      -> message: Str(request 017 served)
+sink-1  |      -> clock: Str(14:00:17)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> level: Str(INFO)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #16
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.45493596 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:18 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:18 INFO request 018 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:18)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 018 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #17
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.45493646 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:19 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:19 INFO request 019 served)
+sink-1  | Attributes:
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 019 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:19)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #18
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.45493746 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:21 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:21 INFO request 021 served)
+sink-1  | Attributes:
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 021 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:21)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #19
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454938127 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:22 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:22 INFO request 022 served)
+sink-1  | Attributes:
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 022 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:22)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #20
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454938502 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:23 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:23 INFO request 023 served)
+sink-1  | Attributes:
+sink-1  |      -> clock: Str(14:00:23)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 023 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #21
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454939169 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:24 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:24 INFO request 024 served)
+sink-1  | Attributes:
+sink-1  |      -> message: Str(request 024 served)
+sink-1  |      -> clock: Str(14:00:24)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #22
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454939544 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:25 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:25 INFO request 025 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:25)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 025 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #23
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454940127 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:26 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:26 INFO request 026 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:26)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 026 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #24
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454940544 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:27 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:27 INFO request 027 served)
+sink-1  | Attributes:
+sink-1  |      -> clock: Str(14:00:27)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 027 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #25
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454941294 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:28 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:28 INFO request 028 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> message: Str(request 028 served)
+sink-1  |      -> clock: Str(14:00:28)
+sink-1  |      -> level: Str(INFO)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #26
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454945085 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:29 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:29 INFO request 029 served)
+sink-1  | Attributes:
+sink-1  |      -> message: Str(request 029 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:29)
+sink-1  |      -> level: Str(INFO)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #27
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454946085 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:31 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:31 INFO request 031 served)
+sink-1  | Attributes:
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> message: Str(request 031 served)
+sink-1  |      -> clock: Str(14:00:31)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #28
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454946419 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:32 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:32 INFO request 032 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:32)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 032 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #29
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454946877 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:33 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:33 INFO request 033 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:33)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 033 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #30
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454950919 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:34 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:34 INFO request 034 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:34)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 034 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #31
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454951294 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:35 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:35 INFO request 035 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:35)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 035 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #32
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454952044 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:36 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:36 INFO request 036 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:36)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 036 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #33
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454952419 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:37 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:37 INFO request 037 served)
+sink-1  | Attributes:
+sink-1  |      -> message: Str(request 037 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:37)
+sink-1  |      -> level: Str(INFO)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #34
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454952794 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:38 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:38 INFO request 038 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:38)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 038 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #35
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454953127 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:39 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:39 INFO request 039 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:39)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 039 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #36
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454955252 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:41 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:41 INFO request 041 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 041 served)
+sink-1  |      -> clock: Str(14:00:41)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #37
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454955919 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:42 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:42 INFO request 042 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> message: Str(request 042 served)
+sink-1  |      -> clock: Str(14:00:42)
+sink-1  |      -> level: Str(INFO)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #38
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.45496021 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:43 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:43 INFO request 043 served)
+sink-1  | Attributes:
+sink-1  |      -> clock: Str(14:00:43)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 043 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #39
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454960669 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:44 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:44 INFO request 044 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> message: Str(request 044 served)
+sink-1  |      -> clock: Str(14:00:44)
+sink-1  |      -> level: Str(INFO)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #40
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454961085 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:45 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:45 INFO request 045 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:45)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 045 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #41
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454961502 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:46 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:46 INFO request 046 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:46)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 046 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #42
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454962335 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:47 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:47 INFO request 047 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:47)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 047 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #43
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454963127 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:48 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:48 INFO request 048 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:48)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 048 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #44
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454963669 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:49 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:49 INFO request 049 served)
+sink-1  | Attributes:
+sink-1  |      -> message: Str(request 049 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:49)
+sink-1  |      -> level: Str(INFO)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #45
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454966794 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:51 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:51 INFO request 051 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> message: Str(request 051 served)
+sink-1  |      -> clock: Str(14:00:51)
+sink-1  |      -> level: Str(INFO)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #46
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.45496721 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:52 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:52 INFO request 052 served)
+sink-1  | Attributes:
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 052 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:52)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #47
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454967669 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:53 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:53 INFO request 053 served)
+sink-1  | Attributes:
+sink-1  |      -> clock: Str(14:00:53)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 053 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #48
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454968085 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:54 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:54 INFO request 054 served)
+sink-1  | Attributes:
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 054 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:54)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #49
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454968544 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:55 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:55 INFO request 055 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:55)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 055 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #50
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.45496896 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:56 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:56 INFO request 056 served)
+sink-1  | Attributes:
+sink-1  |      -> message: Str(request 056 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:56)
+sink-1  |      -> level: Str(INFO)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #51
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454969377 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:57 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:57 INFO request 057 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:57)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 057 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #52
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454969794 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:58 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:58 INFO request 058 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 058 served)
+sink-1  |      -> clock: Str(14:00:58)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #53
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454970252 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:00:59 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:00:59 INFO request 059 served)
+sink-1  | Attributes:
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 059 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:00:59)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #54
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.45497121 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:01 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:01 INFO request 061 served)
+sink-1  | Attributes:
+sink-1  |      -> clock: Str(14:01:01)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 061 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #55
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454971627 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:02 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:02 INFO request 062 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:01:02)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 062 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #56
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454972002 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:03 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:03 INFO request 063 served)
+sink-1  | Attributes:
+sink-1  |      -> clock: Str(14:01:03)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 063 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #57
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454972335 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:04 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:04 INFO request 064 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:01:04)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 064 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #58
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454972835 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:05 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:05 INFO request 065 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:01:05)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 065 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #59
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454973169 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:06 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:06 INFO request 066 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:01:06)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 066 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #60
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454973544 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:07 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:07 INFO request 067 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 067 served)
+sink-1  |      -> clock: Str(14:01:07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #61
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454973919 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:08 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:08 INFO request 068 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:01:08)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 068 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #62
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454975919 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:09 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:09 INFO request 069 served)
+sink-1  | Attributes:
+sink-1  |      -> message: Str(request 069 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:01:09)
+sink-1  |      -> level: Str(INFO)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #63
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454979085 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:11 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:11 INFO request 071 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:01:11)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 071 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #64
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454979794 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:12 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:12 INFO request 072 served)
+sink-1  | Attributes:
+sink-1  |      -> clock: Str(14:01:12)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 072 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #65
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454984502 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:13 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:13 INFO request 073 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> message: Str(request 073 served)
+sink-1  |      -> clock: Str(14:01:13)
+sink-1  |      -> level: Str(INFO)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #66
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.45498521 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:14 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:14 INFO request 074 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:01:14)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 074 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #67
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454987294 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:15 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:15 INFO request 075 served)
+sink-1  | Attributes:
+sink-1  |      -> clock: Str(14:01:15)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 075 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #68
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454988002 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:16 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:16 INFO request 076 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:01:16)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 076 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #69
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454988377 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:17 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:17 INFO request 077 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> message: Str(request 077 served)
+sink-1  |      -> clock: Str(14:01:17)
+sink-1  |      -> level: Str(INFO)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #70
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454989085 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:18 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:18 INFO request 078 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:01:18)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 078 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #71
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.45498971 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:19 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:19 INFO request 079 served)
+sink-1  | Attributes:
+sink-1  |      -> message: Str(request 079 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:01:19)
+sink-1  |      -> level: Str(INFO)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #72
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454990502 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:21 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:21 INFO request 081 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:01:21)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 081 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #73
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454990877 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:22 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:22 INFO request 082 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:01:22)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 082 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #74
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454991252 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:23 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:23 INFO request 083 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:01:23)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 083 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #75
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454991585 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:24 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:24 INFO request 084 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:01:24)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 084 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #76
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.45499196 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:25 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:25 INFO request 085 served)
+sink-1  | Attributes:
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 085 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:01:25)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #77
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454992335 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:26 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:26 INFO request 086 served)
+sink-1  | Attributes:
+sink-1  |      -> clock: Str(14:01:26)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 086 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #78
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454992669 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:27 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:27 INFO request 087 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:01:27)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 087 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #79
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454993044 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:28 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:28 INFO request 088 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> message: Str(request 088 served)
+sink-1  |      -> clock: Str(14:01:28)
+sink-1  |      -> level: Str(INFO)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #80
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454994752 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:29 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:29 INFO request 089 served)
+sink-1  | Attributes:
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 089 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:01:29)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #81
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454995627 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:31 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:31 INFO request 091 served)
+sink-1  | Attributes:
+sink-1  |      -> clock: Str(14:01:31)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 091 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #82
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454996419 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:32 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:32 INFO request 092 served)
+sink-1  | Attributes:
+sink-1  |      -> clock: Str(14:01:32)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 092 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #83
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454996794 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:33 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:33 INFO request 093 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 093 served)
+sink-1  |      -> clock: Str(14:01:33)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #84
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454997127 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:34 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:34 INFO request 094 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:01:34)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 094 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #85
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454997794 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:35 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:35 INFO request 095 served)
+sink-1  | Attributes:
+sink-1  |      -> clock: Str(14:01:35)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 095 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #86
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.454998544 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:36 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:36 INFO request 096 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 096 served)
+sink-1  |      -> clock: Str(14:01:36)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #87
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.455000169 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:37 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:37 INFO request 097 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:01:37)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 097 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #88
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.455000794 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:38 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:38 INFO request 098 served)
+sink-1  | Attributes:
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 098 served)
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:01:38)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #89
+sink-1  | ObservedTimestamp: 2026-10-05 14:25:55.455001169 +0000 UTC
+sink-1  | Timestamp: 2026-01-01 14:01:39 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(14:01:39 INFO request 099 served)
+sink-1  | Attributes:
+sink-1  |      -> log.file.name: Str(app.log)
+sink-1  |      -> clock: Str(14:01:39)
+sink-1  |      -> level: Str(INFO)
+sink-1  |      -> message: Str(request 099 served)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | 	{"resource": {"service.instance.id": "6b63a0f6-be38-41a3-a681-6619e3a41929", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs"}

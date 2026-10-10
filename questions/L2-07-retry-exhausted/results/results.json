@@ -1,0 +1,417 @@
+{
+  "columns": [
+    {
+      "kind": "number",
+      "label": "HTTP status",
+      "path": "sending.http_status"
+    },
+    {
+      "kind": "number",
+      "label": "Accepted",
+      "path": "counters.collector.metrics.receiver_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Refused",
+      "path": "counters.collector.metrics.receiver_refused"
+    },
+    {
+      "kind": "number",
+      "label": "Sent to the sink",
+      "path": "measured.sent_to_sink"
+    },
+    {
+      "kind": "number",
+      "label": "Send failed",
+      "path": "counters.collector.metrics.exporter_send_failed"
+    },
+    {
+      "kind": "number",
+      "label": "Failed at exhaustion",
+      "path": "measured.send_failed_at_exhaustion"
+    },
+    {
+      "kind": "number",
+      "label": "Queue size max",
+      "path": "measured.queue_size_max"
+    },
+    {
+      "kind": "number",
+      "label": "Queue size at end",
+      "path": "measured.queue_size"
+    },
+    {
+      "kind": "number",
+      "label": "Sink target up",
+      "path": "measured.sink_up"
+    },
+    {
+      "kind": "number",
+      "label": "Seconds to exhaustion",
+      "path": "measured.retry_exhausted_seconds"
+    },
+    {
+      "kind": "number",
+      "label": "Retry log lines",
+      "path": "measured.retry_log_lines"
+    },
+    {
+      "kind": "number",
+      "label": "Drop log lines",
+      "path": "measured.drop_log_lines"
+    },
+    {
+      "kind": "number",
+      "label": "Warn lines",
+      "path": "log.warn_lines"
+    },
+    {
+      "kind": "number",
+      "label": "Error lines",
+      "path": "log.error_lines"
+    },
+    {
+      "kind": "text",
+      "label": "Exhaustion observed",
+      "path": "measured.exhaustion_observed"
+    }
+  ],
+  "question": {
+    "id": "L2-07",
+    "level": 2,
+    "signals": [
+      "metrics"
+    ],
+    "theme": "collector",
+    "title": "What becomes visible when the exporter stops retrying?"
+  },
+  "repetitions": 3,
+  "runs": [
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink remains reachable",
+      "log": {
+        "error_lines": 0,
+        "lines": 11,
+        "warn_lines": 0
+      },
+      "measured": {
+        "drop_log_lines": 0,
+        "exhaustion_observed": "not applicable",
+        "queue_size": 0.0,
+        "queue_size_max": 0.0,
+        "retry_exhausted_seconds": null,
+        "retry_log_lines": 0,
+        "send_failed_at_exhaustion": null,
+        "sent_to_sink": 100.0,
+        "sink_up": 1.0
+      },
+      "repetition": 1,
+      "sending": {
+        "datapoints_sent": 100,
+        "exhaustion_observed": "not applicable",
+        "http_status": 200,
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}",
+        "retry_exhausted_seconds": null,
+        "send_failed_at_exhaustion": null
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-up"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": 100.0,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "the sink stays stopped past the default 300s retry budget",
+      "log": {
+        "error_lines": 1,
+        "lines": 36,
+        "warn_lines": 3
+      },
+      "measured": {
+        "drop_log_lines": 1,
+        "exhaustion_observed": "yes",
+        "queue_size": 0.0,
+        "queue_size_max": 1.0,
+        "retry_exhausted_seconds": 281,
+        "retry_log_lines": 13,
+        "send_failed_at_exhaustion": 100.0,
+        "sent_to_sink": 0.0,
+        "sink_up": 0.0
+      },
+      "repetition": 1,
+      "sending": {
+        "datapoints_sent": 100,
+        "exhaustion_observed": "yes",
+        "http_status": 200,
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}",
+        "retry_exhausted_seconds": 281,
+        "send_failed_at_exhaustion": 100.0
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-stopped"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink remains reachable",
+      "log": {
+        "error_lines": 0,
+        "lines": 11,
+        "warn_lines": 0
+      },
+      "measured": {
+        "drop_log_lines": 0,
+        "exhaustion_observed": "not applicable",
+        "queue_size": 0.0,
+        "queue_size_max": 0.0,
+        "retry_exhausted_seconds": null,
+        "retry_log_lines": 0,
+        "send_failed_at_exhaustion": null,
+        "sent_to_sink": 100.0,
+        "sink_up": 1.0
+      },
+      "repetition": 2,
+      "sending": {
+        "datapoints_sent": 100,
+        "exhaustion_observed": "not applicable",
+        "http_status": 200,
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}",
+        "retry_exhausted_seconds": null,
+        "send_failed_at_exhaustion": null
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-up"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": 100.0,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "the sink stays stopped past the default 300s retry budget",
+      "log": {
+        "error_lines": 1,
+        "lines": 35,
+        "warn_lines": 3
+      },
+      "measured": {
+        "drop_log_lines": 1,
+        "exhaustion_observed": "yes",
+        "queue_size": 0.0,
+        "queue_size_max": 1.0,
+        "retry_exhausted_seconds": 300,
+        "retry_log_lines": 12,
+        "send_failed_at_exhaustion": 100.0,
+        "sent_to_sink": 0.0,
+        "sink_up": 0.0
+      },
+      "repetition": 2,
+      "sending": {
+        "datapoints_sent": 100,
+        "exhaustion_observed": "yes",
+        "http_status": 200,
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}",
+        "retry_exhausted_seconds": 300,
+        "send_failed_at_exhaustion": 100.0
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-stopped"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink remains reachable",
+      "log": {
+        "error_lines": 0,
+        "lines": 11,
+        "warn_lines": 0
+      },
+      "measured": {
+        "drop_log_lines": 0,
+        "exhaustion_observed": "not applicable",
+        "queue_size": 0.0,
+        "queue_size_max": 0.0,
+        "retry_exhausted_seconds": null,
+        "retry_log_lines": 0,
+        "send_failed_at_exhaustion": null,
+        "sent_to_sink": 100.0,
+        "sink_up": 1.0
+      },
+      "repetition": 3,
+      "sending": {
+        "datapoints_sent": 100,
+        "exhaustion_observed": "not applicable",
+        "http_status": 200,
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}",
+        "retry_exhausted_seconds": null,
+        "send_failed_at_exhaustion": null
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-up"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": 100.0,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "the sink stays stopped past the default 300s retry budget",
+      "log": {
+        "error_lines": 1,
+        "lines": 36,
+        "warn_lines": 3
+      },
+      "measured": {
+        "drop_log_lines": 1,
+        "exhaustion_observed": "yes",
+        "queue_size": 0.0,
+        "queue_size_max": 1.0,
+        "retry_exhausted_seconds": 265,
+        "retry_log_lines": 13,
+        "send_failed_at_exhaustion": 100.0,
+        "sent_to_sink": 0.0,
+        "sink_up": 0.0
+      },
+      "repetition": 3,
+      "sending": {
+        "datapoints_sent": 100,
+        "exhaustion_observed": "yes",
+        "http_status": 200,
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}",
+        "retry_exhausted_seconds": 265,
+        "send_failed_at_exhaustion": 100.0
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-stopped"
+    }
+  ],
+  "stack": {
+    "otelcol_contrib": "0.162.0",
+    "prometheus": "v3.15.0"
+  },
+  "variants": [
+    {
+      "description": "the sink remains reachable",
+      "name": "sink-up"
+    },
+    {
+      "description": "the sink stays stopped past the default 300s retry budget",
+      "name": "sink-stopped"
+    }
+  ]
+}

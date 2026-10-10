@@ -1,0 +1,105 @@
+name: opentelemetry-experiments
+
+services:
+  collector:
+    image: ${COLLECTOR_IMAGE:-opentelemetry-experiments-collector}
+    build:
+      context: ${COLLECTOR_BUILD_CONTEXT:-.}
+      dockerfile: ${COLLECTOR_DOCKERFILE:-Dockerfile.collector}
+      args:
+        OTELCOL_VERSION: "0.162.0"
+        OTELCOL_SHA256_AMD64: "fcc063749f730f8c21fe29f2d340ff174f5f1c5885bd3156fb6c985a3036fcc3"
+        OTELCOL_SHA256_ARM64: "ecf6a917e2b53beb1703b19a84bc4e112a2fcaba549639cf6b0ba58446bfd7d2"
+    volumes:
+      - ${COLLECTOR_CONFIG:-./config/collector-debug.yaml}:/etc/otelcol-contrib/config.yaml:ro
+      - ${COLLECTOR_INPUT_DIR:-./config/input}:/input:ro
+    ports:
+      - "127.0.0.1:24317:4317"
+      - "127.0.0.1:24318:4318"
+      - "127.0.0.1:28888:8888"
+      - "127.0.0.1:29464:9464"
+      - "127.0.0.1:23133:13133"
+    mem_limit: ${COLLECTOR_MEM_LIMIT:-0}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    command:
+      - --config=/etc/otelcol-contrib/config.yaml
+      - --feature-gates=${COLLECTOR_FEATURE_GATES:-}
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+
+  sink:
+    build:
+      context: .
+      dockerfile: Dockerfile.collector
+      args:
+        OTELCOL_VERSION: "0.162.0"
+        OTELCOL_SHA256_AMD64: "fcc063749f730f8c21fe29f2d340ff174f5f1c5885bd3156fb6c985a3036fcc3"
+        OTELCOL_SHA256_ARM64: "ecf6a917e2b53beb1703b19a84bc4e112a2fcaba549639cf6b0ba58446bfd7d2"
+    volumes:
+      - ${SINK_CONFIG:-./config/sink.yaml}:/etc/otelcol-contrib/config.yaml:ro
+    ports:
+      - "127.0.0.1:23134:13133"
+      - "127.0.0.1:28889:8888"
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+
+  # Opt-in middle tier for agent→gateway→sink questions. Started only when
+  # compose is invoked with `--profile gateway` (see stack.compose).
+  gateway:
+    profiles:
+      - gateway
+    build:
+      context: .
+      dockerfile: Dockerfile.collector
+      args:
+        OTELCOL_VERSION: "0.162.0"
+        OTELCOL_SHA256_AMD64: "fcc063749f730f8c21fe29f2d340ff174f5f1c5885bd3156fb6c985a3036fcc3"
+        OTELCOL_SHA256_ARM64: "ecf6a917e2b53beb1703b19a84bc4e112a2fcaba549639cf6b0ba58446bfd7d2"
+    volumes:
+      - ${GATEWAY_CONFIG:-./config/gateway.yaml}:/etc/otelcol-contrib/config.yaml:ro
+    ports:
+      - "127.0.0.1:24327:4317"
+      - "127.0.0.1:24328:4318"
+      - "127.0.0.1:28890:8888"
+      - "127.0.0.1:23135:13133"
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+
+  prometheus:
+    image: prom/prometheus:v3.15.0@sha256:efd719c99d83b060d9daefdcf00360461adf279f45ef5391f8d111892118753e
+    command:
+      - --config.file=/etc/prometheus/prometheus.yaml
+      - --storage.tsdb.path=/prometheus
+      - --storage.tsdb.retention.time=1h
+      - --web.enable-remote-write-receiver
+    volumes:
+      - ${PROMETHEUS_CONFIG:-./config/prometheus.yaml}:/etc/prometheus/prometheus.yaml:ro
+      - prometheus-data:/prometheus
+    ports:
+      - "127.0.0.1:29090:9090"
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+
+volumes:
+  prometheus-data:

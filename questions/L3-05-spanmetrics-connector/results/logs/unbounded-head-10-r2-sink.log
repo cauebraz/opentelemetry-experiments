@@ -1,0 +1,1670 @@
+sink-1  | 	info	otelconftelemetry/tracer.go:47	Internal trace telemetry disabled	{"resource": {"service.instance.id": "a9899086-e926-4a45-910d-220db0649d4a", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	service@v0.162.0/service.go:233	Starting otelcol-contrib...	{"resource": {"service.instance.id": "a9899086-e926-4a45-910d-220db0649d4a", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "Version": "0.162.0", "NumCPU": 18}
+sink-1  | 	info	extensions/extensions.go:43	Starting extensions...	{"resource": {"service.instance.id": "a9899086-e926-4a45-910d-220db0649d4a", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	extensions/extensions.go:47	Extension is starting...	{"resource": {"service.instance.id": "a9899086-e926-4a45-910d-220db0649d4a", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension"}
+sink-1  | 	info	healthcheckextension@v0.162.0/healthcheckextension.go:32	Starting health_check extension	{"resource": {"service.instance.id": "a9899086-e926-4a45-910d-220db0649d4a", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension", "config": {"Config":{"ServerConfig":{"NetAddr":{"DialerConfig":{"Timeout":0},"Endpoint":"0.0.0.0:13133","Transport":"tcp"},"TLS":{},"CORS":{},"Auth":{},"MaxRequestBodySize":0,"IncludeMetadata":false,"ResponseHeaders":null,"CompressionAlgorithms":null,"ReadTimeout":0,"ReadHeaderTimeout":60000000000,"WriteTimeout":30000000000,"Middlewares":null,"Keepalive":{},"IdleTimeout":0,"KeepAlivesEnabled":false},"Path":"/","ResponseBody":null,"CheckCollectorPipeline":{"Enabled":false,"Interval":"5m","ExporterFailureThreshold":5},"UseV2":false,"GRPCConfig":null,"HTTPConfig":null,"ComponentHealthConfig":null}}}
+sink-1  | 	info	extensions/extensions.go:65	Extension started.	{"resource": {"service.instance.id": "a9899086-e926-4a45-910d-220db0649d4a", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension"}
+sink-1  | 	info	otlpreceiver@v0.162.0/otlp.go:120	Starting GRPC server	{"resource": {"service.instance.id": "a9899086-e926-4a45-910d-220db0649d4a", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "otlp", "otelcol.component.kind": "receiver", "endpoint": "[::]:4317"}
+sink-1  | 	info	healthcheck/handler.go:131	Health Check state change	{"resource": {"service.instance.id": "a9899086-e926-4a45-910d-220db0649d4a", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension", "status": "ready"}
+sink-1  | 	info	service@v0.162.0/service.go:256	Everything is ready. Begin running and processing data.	{"resource": {"service.instance.id": "a9899086-e926-4a45-910d-220db0649d4a", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "a9899086-e926-4a45-910d-220db0649d4a", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 103}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(8432045a-9467-4824-b027-44218d603dee)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : c60ca01a14be7cae00e0e5f6c84c83dd
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 8d487c1202f77a5f
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.421053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.421053 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-0ce7cd0e697b)
+sink-1  | Span #1
+sink-1  |     Trace ID       : 81f0ee3257c9a40510363af84483b571
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 5ec5b3098c077a90
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.431053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.531053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-63c4ed679ff5)
+sink-1  | Span #2
+sink-1  |     Trace ID       : 6cf3d38d89c7c4f50b4c22113019996f
+sink-1  |     Parent ID      :
+sink-1  |     ID             : b91a2ac2a76c65ad
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.432053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.532053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-0f844dfa15a9)
+sink-1  | Span #3
+sink-1  |     Trace ID       : 5843d8752ee858e91407fe9ab3aed7d7
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 3b20680b3a9f6483
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.446053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.546053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-3c495ff84353)
+sink-1  | Span #4
+sink-1  |     Trace ID       : 997354bd5a2b347a00c5c07cdc4b1936
+sink-1  |     Parent ID      :
+sink-1  |     ID             : c66d35928e68c865
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.463053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.563053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-08b40ef0cdea)
+sink-1  | Span #5
+sink-1  |     Trace ID       : 96140afd4744ebe90f2b2120729eccf9
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 801ca8619990679d
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.476053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.576053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-de003e535381)
+sink-1  | Span #6
+sink-1  |     Trace ID       : f98a5089b0e30bee015f9b9bc4deef34
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 349bc2aa1fdfd07d
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.484053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.584053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-0859d4bd161d)
+sink-1  | Span #7
+sink-1  |     Trace ID       : 17511bf6aa739adb0051ff0882964b66
+sink-1  |     Parent ID      :
+sink-1  |     ID             : b467ddb9f7595191
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.498053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.598053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-7a6cff00b0c7)
+sink-1  | Span #8
+sink-1  |     Trace ID       : 79fff5530972dd6705204c87416ccec8
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 58c8e600da5f91d8
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.509053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.609053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-7ab493766c92)
+sink-1  | Span #9
+sink-1  |     Trace ID       : b2423fc08e47989b0899f7e4f9d40f20
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 1549af2ae9964555
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.524053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.624053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-74e331ac3345)
+sink-1  | Span #10
+sink-1  |     Trace ID       : 78fc072d05f5655b148ad27e0fbe2ccb
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 73c74b2651563f82
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.535053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.635053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-c0615b85ed54)
+sink-1  | Span #11
+sink-1  |     Trace ID       : 1e74157e3833362a02766ed1b5c357a0
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 951a725c7a4e66e3
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.537053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.637053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-be3bb1de8b38)
+sink-1  | Span #12
+sink-1  |     Trace ID       : 43cc03648d38f5f4193a946c6ef90c25
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 3cb088f8c1039ecd
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.539053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.639053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-f2a4519378cd)
+sink-1  | Span #13
+sink-1  |     Trace ID       : 94f18c8658b840211528ee49363ccf34
+sink-1  |     Parent ID      :
+sink-1  |     ID             : a06f8ee491035b2e
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.541053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.641053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-979f521b9a74)
+sink-1  | Span #14
+sink-1  |     Trace ID       : 7772dae47154f0f202c83a8fc697796a
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 1c64e8dc4e8b40f2
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.546053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.646053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-0ea2da79a434)
+sink-1  | Span #15
+sink-1  |     Trace ID       : 248b5c1978a2e63413e9b35d17c07a84
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 36db0f25790de706
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.549053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.649053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-91bbd65ed875)
+sink-1  | Span #16
+sink-1  |     Trace ID       : d3fcaf1f5ccd8725012c4670e707a954
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 7132cb5392cb55d6
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.553053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.653053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-429779f65bca)
+sink-1  | Span #17
+sink-1  |     Trace ID       : 8b5711284459eaf50a7048c1017ef10b
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 0779a7ffa0f5d6fb
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.562053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.662053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-6e980d037812)
+sink-1  | Span #18
+sink-1  |     Trace ID       : 5443b43423f64656197e89b07fd6bbac
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 81898757efeaec00
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.573053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.673053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-89f90e21531c)
+sink-1  | Span #19
+sink-1  |     Trace ID       : 3640c9b33d9e68731348f87df641cc17
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 043f91c3662087f0
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.598053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.698053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-6ead32aa446b)
+sink-1  | Span #20
+sink-1  |     Trace ID       : cfd57f382e10a35917ad28c505ea0745
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 58cbcdd917007559
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.599053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.699053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-b837f38ecbc9)
+sink-1  | Span #21
+sink-1  |     Trace ID       : 67666f4b5db4d66a00d1540b76b71743
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 4c2a7f676c09b2ee
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.614053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.714053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-7cf978340d28)
+sink-1  | Span #22
+sink-1  |     Trace ID       : 62a48d9e323b1dd00ddce09bf2ba8896
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 61fdf517cb96b7c6
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.642053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.742053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-274a6701f755)
+sink-1  | Span #23
+sink-1  |     Trace ID       : 84c06f34ff06db9902366ba2b4a51352
+sink-1  |     Parent ID      :
+sink-1  |     ID             : dad82ce43384d894
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.648053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.748053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-07f0cbae9089)
+sink-1  | Span #24
+sink-1  |     Trace ID       : 054adcda8ceef94015b9416053c36ed8
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 11359be0e8e92ab6
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.663053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.763053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-70dbb1fcd7db)
+sink-1  | Span #25
+sink-1  |     Trace ID       : 2aae18fa70b9307e0d61fa7ba21b029a
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 23ff52d2f5ee998d
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.676053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.776053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-c238f33979ba)
+sink-1  | Span #26
+sink-1  |     Trace ID       : 38f53b426e97cc010c34cd1ce961e9de
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 5d4b0370cb050df4
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.698053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.798053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-ab633beefd11)
+sink-1  | Span #27
+sink-1  |     Trace ID       : ede526e02ff539f5031ca43df9927c5a
+sink-1  |     Parent ID      :
+sink-1  |     ID             : c32f156ffd57741d
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.701053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.801053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-9a22c1bd611b)
+sink-1  | Span #28
+sink-1  |     Trace ID       : e8efd7aa2f84e106196f7c722cfbcd47
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 5b8e6e2948dcdb07
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.703053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.803053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-fcb49daf0dfc)
+sink-1  | Span #29
+sink-1  |     Trace ID       : 65e0c8319590501c0de4313b5403d4d0
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 7196294b430b09af
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.707053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.807053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-a97915fc0cb8)
+sink-1  | Span #30
+sink-1  |     Trace ID       : 4947fa7b19c67e1b0e7e67116adc4d82
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 302643611ff549a3
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.708053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.808053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-99618c5565f4)
+sink-1  | Span #31
+sink-1  |     Trace ID       : 04fe3d5ec431f7a3190aef9544c1ce93
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 326f0074338868e8
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.721053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.721053 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-ad967acdce60)
+sink-1  | Span #32
+sink-1  |     Trace ID       : 273c54bb1e0524d519510280ee51471e
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 4e565be4fa9dea0a
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.724053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.824053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-ff6f491055cf)
+sink-1  | Span #33
+sink-1  |     Trace ID       : 645a1d0dfecca27e059a3a6be476814c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 4a4d602669f6ae67
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.728053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.828053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-6ff6a5b96de9)
+sink-1  | Span #34
+sink-1  |     Trace ID       : 3792c2ce64a3eefa09ae343a787c61ce
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 74f8010bf276c3ad
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.744053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.844053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-8a07064ca610)
+sink-1  | Span #35
+sink-1  |     Trace ID       : 9205b73907e43b9d01a36dc0ac4d1f1f
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 9c47e0e758a4499b
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.749053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.849053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-3be2c647ab9d)
+sink-1  | Span #36
+sink-1  |     Trace ID       : ef96a59284f4643b17d352bceaba5d7d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 84344b33f5a0b3c4
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.753053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.853053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-50cb9cc5c3ca)
+sink-1  | Span #37
+sink-1  |     Trace ID       : f008ac7caed32a1c01a61187813950c6
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 7cedddd0f613e8fa
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.765053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.865053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-3f908b67f779)
+sink-1  | Span #38
+sink-1  |     Trace ID       : 44c5eaf0f7e3fb440cd8380badbbe8ed
+sink-1  |     Parent ID      :
+sink-1  |     ID             : edce90b6db48d5e7
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.776053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.876053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-4e632924bec0)
+sink-1  | Span #39
+sink-1  |     Trace ID       : 8b5ff3a389ea0e3a0452b70d7a2479fb
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 95ca6f9c8de2a998
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.777053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.877053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-70cfd96f4310)
+sink-1  | Span #40
+sink-1  |     Trace ID       : 8e25d8b04b0cdc540ebcec9c7293f348
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 26a42840e3a983e7
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.778053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.878053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-647aa4a46acd)
+sink-1  | Span #41
+sink-1  |     Trace ID       : 8ecd1dd8669d0bb200caef242b4fbcf2
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 28276788cae92b8d
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.779053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.879053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-f751252f80b1)
+sink-1  | Span #42
+sink-1  |     Trace ID       : 180f02aa02826c9e11d377c1299ddfbf
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 4bf7fb1b250d4e68
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.785053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.885053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-06498d8e6b66)
+sink-1  | Span #43
+sink-1  |     Trace ID       : ba246e287414213f0a3e23b6ef4317e0
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 78ad198b0be36262
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.793053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.893053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-9872d2de5f3f)
+sink-1  | Span #44
+sink-1  |     Trace ID       : 565f1db897aa6a0611341b0f6acc685d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : bd1f30b09ba6ae77
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.803053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.903053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-a066dcd4b789)
+sink-1  | Span #45
+sink-1  |     Trace ID       : e9a5050af1b0507a10315061386782c6
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 9beb46d98bf389c0
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.822053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.922053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-2bb7e8639528)
+sink-1  | Span #46
+sink-1  |     Trace ID       : f57a7f807a25ca2412d39868b16ba24d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 7d1f417c504758cd
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.850053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.950053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-a0bc479ce6c6)
+sink-1  | Span #47
+sink-1  |     Trace ID       : f87dd0ffd3bee3b806f3d5050bc7e342
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 7ef0dde870db8459
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.858053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.958053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-b436e95dd239)
+sink-1  | Span #48
+sink-1  |     Trace ID       : 8d18fadda050faa609f5c4eac08e43b3
+sink-1  |     Parent ID      :
+sink-1  |     ID             : c0006193b166641e
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.864053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:48.964053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-e4a08a11b8d6)
+sink-1  | Span #49
+sink-1  |     Trace ID       : eea8fe04c709d89310e06ebdb19a6b00
+sink-1  |     Parent ID      :
+sink-1  |     ID             : f2f70b494af073a5
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.907053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.007053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-73f9de609ace)
+sink-1  | Span #50
+sink-1  |     Trace ID       : f15d25ce7b94e68608a8276a4c6800d4
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 1d4156f0ba1d80fb
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.909053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.009053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-3dba7c7eb49d)
+sink-1  | Span #51
+sink-1  |     Trace ID       : 8c10782bf2a0549013564229b26b9d2e
+sink-1  |     Parent ID      :
+sink-1  |     ID             : ef4efbd0a87fb6a6
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.913053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.013053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-97c37948861a)
+sink-1  | Span #52
+sink-1  |     Trace ID       : 44e06ae2cbbab10d00b7c3708c4aedec
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 48d6ac27407654d8
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.925053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.025053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-60a17f94fdfd)
+sink-1  | Span #53
+sink-1  |     Trace ID       : 802811e92e27ed7605f1b091ea2f41f8
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 2eec0466003b0d58
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.927053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.027053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-6574365a98a4)
+sink-1  | Span #54
+sink-1  |     Trace ID       : bccc57bd6b4d165c18bc261a61888c92
+sink-1  |     Parent ID      :
+sink-1  |     ID             : ead19864c62afaca
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.934053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.034053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-e48f639cbe34)
+sink-1  | Span #55
+sink-1  |     Trace ID       : 5545cbe1aceb167b122fd4c8b4727dab
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 74b74c93c8eb8ef1
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.939053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.039053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-d06356dbae19)
+sink-1  | Span #56
+sink-1  |     Trace ID       : 71145312d0e2379c0dc64baf0563ab23
+sink-1  |     Parent ID      :
+sink-1  |     ID             : aaa806fc48d463cb
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.940053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.040053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-297470d730d7)
+sink-1  | Span #57
+sink-1  |     Trace ID       : dd62d0469a80210517b7c6fd3cf13dc0
+sink-1  |     Parent ID      :
+sink-1  |     ID             : c8b1d67d6d9d318f
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.944053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.044053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-7aa4313c3c4d)
+sink-1  | Span #58
+sink-1  |     Trace ID       : fc16c980adbcc5521800d88d5cc62a82
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 2223472dbd1d9322
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.947053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.047053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-09c96660e709)
+sink-1  | Span #59
+sink-1  |     Trace ID       : 1ff140b56f6256c00dd9c7b39601a165
+sink-1  |     Parent ID      :
+sink-1  |     ID             : ba445587992aefc0
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.955053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.055053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-c090fef89142)
+sink-1  | Span #60
+sink-1  |     Trace ID       : decf5dd4c8844794007374466fd059d9
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 4d499a003d00cbba
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.962053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.062053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-2b97cd8eef70)
+sink-1  | Span #61
+sink-1  |     Trace ID       : 0bafa0216fd21c6318ffa83699a4e470
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 248a8380562e95d6
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.965053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.065053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-4d3a4680781c)
+sink-1  | Span #62
+sink-1  |     Trace ID       : c62ad3a3477f6be016cfc90c0a03207d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 97f6d3ce916c2530
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.968053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.968053 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-fb67c77f8aa5)
+sink-1  | Span #63
+sink-1  |     Trace ID       : e98e4622d82644b912f2dd5a23a76d35
+sink-1  |     Parent ID      :
+sink-1  |     ID             : dfce17f2714eb7a2
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.980053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.080053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-9bf6075fe3e3)
+sink-1  | Span #64
+sink-1  |     Trace ID       : 89ca6d366f593f940dca09d4545dc04e
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 306fb9e16f4fbf5e
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.988053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.088053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-208996734dde)
+sink-1  | Span #65
+sink-1  |     Trace ID       : 77be118ec2188c68055006e50d4c1ae7
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 940812b2066dfd7b
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.989053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.089053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-69849bc3c339)
+sink-1  | Span #66
+sink-1  |     Trace ID       : 76fa0836b894087005ad6880fcedec86
+sink-1  |     Parent ID      :
+sink-1  |     ID             : ab7eecd25cd63371
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.990053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.090053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-d34ae077db13)
+sink-1  | Span #67
+sink-1  |     Trace ID       : cf88ed352175861314ab3cfda0706464
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 94f8f05e12bfbc01
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:48.991053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.091053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-6edf32f33de7)
+sink-1  | Span #68
+sink-1  |     Trace ID       : e72018683de8c2ae0195a629744f6a72
+sink-1  |     Parent ID      :
+sink-1  |     ID             : c70a7e7b4ec74a7e
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.019053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:50.019053 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-2f16f47a9123)
+sink-1  | Span #69
+sink-1  |     Trace ID       : df5035eb28fdfa6b16e146dc23adc9ec
+sink-1  |     Parent ID      :
+sink-1  |     ID             : a13dc7c4e5ffbbde
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.024053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.124053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-3ecb34abd13d)
+sink-1  | Span #70
+sink-1  |     Trace ID       : 8f937cdefa532eef0bc18f44bf5f9ca7
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e9d445a0d3680d6b
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.033053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.133053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-bd885157c0eb)
+sink-1  | Span #71
+sink-1  |     Trace ID       : 9a05cb7a0bdb9d1319449eea51760333
+sink-1  |     Parent ID      :
+sink-1  |     ID             : be0cd82eb4fba65e
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.040053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.140053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-f6abffd917ba)
+sink-1  | Span #72
+sink-1  |     Trace ID       : 1ae9f92d677d683c17082e2d31688e96
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 2c80aa4da80baabd
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.074053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.174053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-08a0dacd7070)
+sink-1  | Span #73
+sink-1  |     Trace ID       : 387e21c6ee069213126611d6acbc638a
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 3478d2f66cdd5245
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.078053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.178053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-859bbae3f80b)
+sink-1  | Span #74
+sink-1  |     Trace ID       : f90e180b0f41654a18b32e3ca7e42fdb
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 4e5c9d1d15c58c43
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.098053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.198053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-b2537bb9e719)
+sink-1  | Span #75
+sink-1  |     Trace ID       : ea591243870afdc20f18780825b5bcbd
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 940e3c40e0dc4e16
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.103053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.203053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-6e7bcfac2c1a)
+sink-1  | Span #76
+sink-1  |     Trace ID       : 0f2ba368b971a30e080a16f4efd60a70
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 8e0863eb6315cb96
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.108053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.208053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-364d520ee7a9)
+sink-1  | Span #77
+sink-1  |     Trace ID       : fdc85bbc17b0630807246e321d6cdc38
+sink-1  |     Parent ID      :
+sink-1  |     ID             : ae185555a60e6281
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.124053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.224053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-b4c0963ef0e6)
+sink-1  | Span #78
+sink-1  |     Trace ID       : f1b841e47c9bb97808ac612e0512cfc6
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 447a7adeb1d69727
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.125053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.225053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-ebd11cb2d6de)
+sink-1  | Span #79
+sink-1  |     Trace ID       : b96f1987026a67a911b53c3d35d341bc
+sink-1  |     Parent ID      :
+sink-1  |     ID             : dbb9f1685b18e786
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.132053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.232053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-7fecee84195c)
+sink-1  | Span #80
+sink-1  |     Trace ID       : 91387920128bcc31054b4121b4291abd
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 486858f70da88227
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.134053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.234053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-26c83890f7b7)
+sink-1  | Span #81
+sink-1  |     Trace ID       : d5221eba6ebe4ad40c2cc737286e464d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 057cc2093ea05947
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.143053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.243053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-59008b38a6cf)
+sink-1  | Span #82
+sink-1  |     Trace ID       : 4c9a2e0431f0fe5215b9950eeaaea534
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 5db8491a05d7a129
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.169053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:50.169053 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-8cd491184282)
+sink-1  | Span #83
+sink-1  |     Trace ID       : a6791b498a84d6d6049ce354241ba9a2
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 6060c2e027f4446b
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.178053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.278053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-057b03ec13ae)
+sink-1  | Span #84
+sink-1  |     Trace ID       : 66102474283e54941627f57ec29c6640
+sink-1  |     Parent ID      :
+sink-1  |     ID             : a1a7f524d896a3a9
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.181053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.281053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-54da851da9bf)
+sink-1  | Span #85
+sink-1  |     Trace ID       : c52fc50b75e423ae14b901061723db93
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 2938fe1faf9bde09
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.185053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.285053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-7dd2ba769623)
+sink-1  | Span #86
+sink-1  |     Trace ID       : 787b46d3b19004e2118b201719074af6
+sink-1  |     Parent ID      :
+sink-1  |     ID             : f2106e0c978286ed
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.219053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:50.219053 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-806aa3a4cbcc)
+sink-1  | Span #87
+sink-1  |     Trace ID       : bfd62dfbaab3df691864cfe7f662350f
+sink-1  |     Parent ID      :
+sink-1  |     ID             : af01f94f61689277
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.226053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.326053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-035210001f33)
+sink-1  | Span #88
+sink-1  |     Trace ID       : 3b0b8a08c684178209f0b4cd540ae9c9
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 0930d1ced20db221
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.236053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.336053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-0463485dd5c2)
+sink-1  | Span #89
+sink-1  |     Trace ID       : 15139b4485af70900111c7a79a587161
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 466ce2b6ed51abd4
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.245053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.345053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-bf713432489f)
+sink-1  | Span #90
+sink-1  |     Trace ID       : 0e71b7e5d7085b3e11e0cf57800e5c2f
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 55acdc9f1337ecfc
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.248053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.348053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-1dc8cd8c881e)
+sink-1  | Span #91
+sink-1  |     Trace ID       : b75ab6a23b317bf401035db26790d236
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e70464e068886b9c
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.288053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.388053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-3acc3b14625f)
+sink-1  | Span #92
+sink-1  |     Trace ID       : a99797bcb7c5e1e1166e8b257298b5f8
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 75f5a03c4c7d808a
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.325053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.425053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-8b3a16ff52f0)
+sink-1  | Span #93
+sink-1  |     Trace ID       : 52e3c5c793c8f1ef041d16b07430b9be
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 0215096c8b1bbf02
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.336053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.436053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-9896a33bc02f)
+sink-1  | Span #94
+sink-1  |     Trace ID       : 86ad3e49561ed3b8110a2fbf8b82d6a9
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e057574fffd6ec82
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.339053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.439053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-a83922c6d9e9)
+sink-1  | Span #95
+sink-1  |     Trace ID       : 295d44083ce85c140c2d37e24f9837f1
+sink-1  |     Parent ID      :
+sink-1  |     ID             : af612a1da905aff3
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.350053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.450053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-3fe1867aa85e)
+sink-1  | Span #96
+sink-1  |     Trace ID       : a664fa7715fcf30f0b168fe856d0e1d4
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 53f67d66d84e3f43
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.351053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.451053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-b60a6e6fed36)
+sink-1  | Span #97
+sink-1  |     Trace ID       : 87784e469c9834be162e0985cd313b9d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : b947b686c3270f1a
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.356053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.456053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-6b1c8901b6ac)
+sink-1  | Span #98
+sink-1  |     Trace ID       : 03d88949f56f782017dc6abddc2fd242
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 4d38b4443aac4648
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.377053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.477053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-653492d9129d)
+sink-1  | Span #99
+sink-1  |     Trace ID       : 0413651d682fe4fb0265750e651a4d8f
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 2c8215640b27e063
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.378053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.478053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-cc75ddd4862f)
+sink-1  | Span #100
+sink-1  |     Trace ID       : 0c06188038a8ca42175295b106c7c734
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 194e0323e17cbc78
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.382053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.482053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-d8fedcd84b34)
+sink-1  | Span #101
+sink-1  |     Trace ID       : a63ce5439109ac6301b8813eca5705bf
+sink-1  |     Parent ID      :
+sink-1  |     ID             : b0d3cbab3fec7ab4
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.390053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.490053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-48222ea49a00)
+sink-1  | Span #102
+sink-1  |     Trace ID       : 478f18d55865c3730f583359b1a3a02d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 464be1b1ecb3af6e
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:05:49.395053 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:49.495053 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-48fc3ea5151b)
+sink-1  | 	{"resource": {"service.instance.id": "a9899086-e926-4a45-910d-220db0649d4a", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}

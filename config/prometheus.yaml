@@ -1,0 +1,25 @@
+global:
+  scrape_interval: 1s
+  evaluation_interval: 1s
+
+scrape_configs:
+  - job_name: collector
+    static_configs:
+      - targets:
+          - collector:8888
+
+  - job_name: sink
+    static_configs:
+      - targets:
+          - sink:8888
+
+  - job_name: exported
+    scrape_native_histograms: true
+    scrape_protocols:
+      - PrometheusProto
+      - OpenMetricsText1.0.0
+      - OpenMetricsText0.0.1
+      - PrometheusText0.0.4
+    static_configs:
+      - targets:
+          - collector:9464

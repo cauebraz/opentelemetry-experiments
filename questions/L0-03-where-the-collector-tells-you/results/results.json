@@ -1,0 +1,797 @@
+{
+  "columns": [
+    {
+      "kind": "number",
+      "label": "Sent by us",
+      "path": "sending.datapoints_sent"
+    },
+    {
+      "kind": "number",
+      "label": "HTTP status",
+      "path": "sending.http_status"
+    },
+    {
+      "kind": "number",
+      "label": "Accepted",
+      "path": "counters.collector.metrics.receiver_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Refused",
+      "path": "counters.collector.metrics.receiver_refused"
+    },
+    {
+      "kind": "number",
+      "label": "Sent, all exporters",
+      "path": "counters.collector.metrics.exporter_sent"
+    },
+    {
+      "kind": "number",
+      "label": "Send failed",
+      "path": "counters.collector.metrics.exporter_send_failed"
+    },
+    {
+      "kind": "number",
+      "label": "Sent to the sink",
+      "path": "measured.sent_to_sink"
+    },
+    {
+      "kind": "number",
+      "label": "Arrived at the sink",
+      "path": "counters.sink.metrics.receiver_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Printed by debug",
+      "path": "measured.debug_datapoints"
+    },
+    {
+      "kind": "number",
+      "label": "Exporters counted",
+      "path": "measured.exporters_reporting"
+    },
+    {
+      "kind": "number",
+      "label": "Health status",
+      "path": "measured.health_status_code"
+    },
+    {
+      "kind": "number",
+      "label": "Warn lines",
+      "path": "log.warn_lines"
+    },
+    {
+      "kind": "number",
+      "label": "Error lines",
+      "path": "log.error_lines"
+    }
+  ],
+  "question": {
+    "id": "L0-03",
+    "level": 0,
+    "signals": [
+      "metrics"
+    ],
+    "theme": "collector",
+    "title": "Which surface tells you what the Collector actually did?"
+  },
+  "repetitions": 3,
+  "runs": [
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 300.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "every surface available, nothing failing",
+      "log": {
+        "error_lines": 0,
+        "lines": 627,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_datapoints": 100,
+        "exporters": "debug, otlp_grpc/sink, prometheus",
+        "exporters_reporting": 3,
+        "health_status_code": 200,
+        "sent_to_sink": 100.0
+      },
+      "repetition": 1,
+      "sending": {
+        "datapoints_sent": 100,
+        "health_status_code": 200,
+        "http_status": 200,
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "healthy"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 300.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "service.telemetry.metrics.level set to basic",
+      "log": {
+        "error_lines": 0,
+        "lines": 627,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_datapoints": 100,
+        "exporters": "debug, otlp_grpc/sink, prometheus",
+        "exporters_reporting": 3,
+        "health_status_code": 200,
+        "sent_to_sink": 100.0
+      },
+      "repetition": 1,
+      "sending": {
+        "datapoints_sent": 100,
+        "health_status_code": 200,
+        "http_status": 200,
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "telemetry-basic"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 0.0,
+            "receiver_accepted": 0.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "service.telemetry.metrics.level set to none",
+      "log": {
+        "error_lines": 0,
+        "lines": 628,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_datapoints": 100,
+        "exporters": "none",
+        "exporters_reporting": 0,
+        "health_status_code": 200,
+        "sent_to_sink": null
+      },
+      "repetition": 1,
+      "sending": {
+        "datapoints_sent": 100,
+        "health_status_code": 200,
+        "http_status": 200,
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "telemetry-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the same pipeline with the debug exporter removed",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_datapoints": 0,
+        "exporters": "otlp_grpc/sink, prometheus",
+        "exporters_reporting": 2,
+        "health_status_code": 200,
+        "sent_to_sink": 100.0
+      },
+      "repetition": 1,
+      "sending": {
+        "datapoints_sent": 100,
+        "health_status_code": 200,
+        "http_status": 200,
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "no-debug-exporter"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": 100.0,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 0.0,
+            "receiver_refused": 100.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": 0.0,
+            "exporter_sent": 0.0,
+            "receiver_accepted": 0.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the downstream collector stopped just before the burst",
+      "log": {
+        "error_lines": 1,
+        "lines": 671,
+        "warn_lines": 3
+      },
+      "measured": {
+        "debug_datapoints": 100,
+        "exporters": "debug, otlp_grpc/sink, prometheus",
+        "exporters_reporting": 3,
+        "health_status_code": 200,
+        "sent_to_sink": 0.0
+      },
+      "repetition": 1,
+      "sending": {
+        "datapoints_sent": 100,
+        "health_status_code": 200,
+        "http_status": 503,
+        "request_bytes": 18530,
+        "response_body": "{\"code\":14,\"message\":\"connection error: desc = \\\"transport: Error while dialing: dial tcp 172.25.0.2:4317: connect: connection refused\\\"\"}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-stopped"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 300.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "every surface available, nothing failing",
+      "log": {
+        "error_lines": 0,
+        "lines": 627,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_datapoints": 100,
+        "exporters": "debug, otlp_grpc/sink, prometheus",
+        "exporters_reporting": 3,
+        "health_status_code": 200,
+        "sent_to_sink": 100.0
+      },
+      "repetition": 2,
+      "sending": {
+        "datapoints_sent": 100,
+        "health_status_code": 200,
+        "http_status": 200,
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "healthy"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 300.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "service.telemetry.metrics.level set to basic",
+      "log": {
+        "error_lines": 0,
+        "lines": 627,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_datapoints": 100,
+        "exporters": "debug, otlp_grpc/sink, prometheus",
+        "exporters_reporting": 3,
+        "health_status_code": 200,
+        "sent_to_sink": 100.0
+      },
+      "repetition": 2,
+      "sending": {
+        "datapoints_sent": 100,
+        "health_status_code": 200,
+        "http_status": 200,
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "telemetry-basic"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 0.0,
+            "receiver_accepted": 0.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "service.telemetry.metrics.level set to none",
+      "log": {
+        "error_lines": 0,
+        "lines": 628,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_datapoints": 100,
+        "exporters": "none",
+        "exporters_reporting": 0,
+        "health_status_code": 200,
+        "sent_to_sink": null
+      },
+      "repetition": 2,
+      "sending": {
+        "datapoints_sent": 100,
+        "health_status_code": 200,
+        "http_status": 200,
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "telemetry-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the same pipeline with the debug exporter removed",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_datapoints": 0,
+        "exporters": "otlp_grpc/sink, prometheus",
+        "exporters_reporting": 2,
+        "health_status_code": 200,
+        "sent_to_sink": 100.0
+      },
+      "repetition": 2,
+      "sending": {
+        "datapoints_sent": 100,
+        "health_status_code": 200,
+        "http_status": 200,
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "no-debug-exporter"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": 100.0,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 0.0,
+            "receiver_refused": 100.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": 0.0,
+            "exporter_sent": 0.0,
+            "receiver_accepted": 0.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the downstream collector stopped just before the burst",
+      "log": {
+        "error_lines": 1,
+        "lines": 671,
+        "warn_lines": 3
+      },
+      "measured": {
+        "debug_datapoints": 100,
+        "exporters": "debug, otlp_grpc/sink, prometheus",
+        "exporters_reporting": 3,
+        "health_status_code": 200,
+        "sent_to_sink": 0.0
+      },
+      "repetition": 2,
+      "sending": {
+        "datapoints_sent": 100,
+        "health_status_code": 200,
+        "http_status": 503,
+        "request_bytes": 18530,
+        "response_body": "{\"code\":14,\"message\":\"connection error: desc = \\\"transport: Error while dialing: dial tcp 172.25.0.2:4317: connect: connection refused\\\"\"}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-stopped"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 300.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "every surface available, nothing failing",
+      "log": {
+        "error_lines": 0,
+        "lines": 627,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_datapoints": 100,
+        "exporters": "debug, otlp_grpc/sink, prometheus",
+        "exporters_reporting": 3,
+        "health_status_code": 200,
+        "sent_to_sink": 100.0
+      },
+      "repetition": 3,
+      "sending": {
+        "datapoints_sent": 100,
+        "health_status_code": 200,
+        "http_status": 200,
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "healthy"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 300.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "service.telemetry.metrics.level set to basic",
+      "log": {
+        "error_lines": 0,
+        "lines": 627,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_datapoints": 100,
+        "exporters": "debug, otlp_grpc/sink, prometheus",
+        "exporters_reporting": 3,
+        "health_status_code": 200,
+        "sent_to_sink": 100.0
+      },
+      "repetition": 3,
+      "sending": {
+        "datapoints_sent": 100,
+        "health_status_code": 200,
+        "http_status": 200,
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "telemetry-basic"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 0.0,
+            "receiver_accepted": 0.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "service.telemetry.metrics.level set to none",
+      "log": {
+        "error_lines": 0,
+        "lines": 628,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_datapoints": 100,
+        "exporters": "none",
+        "exporters_reporting": 0,
+        "health_status_code": 200,
+        "sent_to_sink": null
+      },
+      "repetition": 3,
+      "sending": {
+        "datapoints_sent": 100,
+        "health_status_code": 200,
+        "http_status": 200,
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "telemetry-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the same pipeline with the debug exporter removed",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_datapoints": 0,
+        "exporters": "otlp_grpc/sink, prometheus",
+        "exporters_reporting": 2,
+        "health_status_code": 200,
+        "sent_to_sink": 100.0
+      },
+      "repetition": 3,
+      "sending": {
+        "datapoints_sent": 100,
+        "health_status_code": 200,
+        "http_status": 200,
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "no-debug-exporter"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": 100.0,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 0.0,
+            "receiver_refused": 100.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": 0.0,
+            "exporter_sent": 0.0,
+            "receiver_accepted": 0.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the downstream collector stopped just before the burst",
+      "log": {
+        "error_lines": 1,
+        "lines": 671,
+        "warn_lines": 3
+      },
+      "measured": {
+        "debug_datapoints": 100,
+        "exporters": "debug, otlp_grpc/sink, prometheus",
+        "exporters_reporting": 3,
+        "health_status_code": 200,
+        "sent_to_sink": 0.0
+      },
+      "repetition": 3,
+      "sending": {
+        "datapoints_sent": 100,
+        "health_status_code": 200,
+        "http_status": 503,
+        "request_bytes": 18530,
+        "response_body": "{\"code\":14,\"message\":\"connection error: desc = \\\"transport: Error while dialing: dial tcp 172.25.0.2:4317: connect: connection refused\\\"\"}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-stopped"
+    }
+  ],
+  "stack": {
+    "otelcol_contrib": "0.162.0",
+    "prometheus": "v3.15.0"
+  },
+  "variants": [
+    {
+      "description": "every surface available, nothing failing",
+      "name": "healthy"
+    },
+    {
+      "description": "service.telemetry.metrics.level set to basic",
+      "name": "telemetry-basic"
+    },
+    {
+      "description": "service.telemetry.metrics.level set to none",
+      "name": "telemetry-none"
+    },
+    {
+      "description": "the same pipeline with the debug exporter removed",
+      "name": "no-debug-exporter"
+    },
+    {
+      "description": "the downstream collector stopped just before the burst",
+      "name": "sink-stopped"
+    }
+  ]
+}

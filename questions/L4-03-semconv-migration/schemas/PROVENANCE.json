@@ -1,0 +1,14 @@
+{
+  "1.20.0.yaml": {
+    "sha256": "7c666debe40fb098dafbca35b7c5fe5bb7b1fe7f48362dd7d43efa208a942894",
+    "source_tag": "v1.21.0",
+    "source_commit": "e531541025992b68177a68b87628c5dc75c4f7d9",
+    "source_url": "https://raw.githubusercontent.com/open-telemetry/semantic-conventions/v1.21.0/schemas/1.20.0"
+  },
+  "1.21.0.yaml": {
+    "sha256": "760446fd82516329d82a79922670740373e8252428599dca4e56294a315604f3",
+    "source_tag": "v1.21.0",
+    "source_commit": "e531541025992b68177a68b87628c5dc75c4f7d9",
+    "source_url": "https://raw.githubusercontent.com/open-telemetry/semantic-conventions/v1.21.0/schemas/1.21.0"
+  }
+}

@@ -1,0 +1,2711 @@
+sink-1  | 	info	otelconftelemetry/tracer.go:47	Internal trace telemetry disabled	{"resource": {"service.instance.id": "80028cba-a5be-42df-a8f8-c1770a3f308b", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	service@v0.162.0/service.go:233	Starting otelcol-contrib...	{"resource": {"service.instance.id": "80028cba-a5be-42df-a8f8-c1770a3f308b", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "Version": "0.162.0", "NumCPU": 18}
+sink-1  | 	info	extensions/extensions.go:43	Starting extensions...	{"resource": {"service.instance.id": "80028cba-a5be-42df-a8f8-c1770a3f308b", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	extensions/extensions.go:47	Extension is starting...	{"resource": {"service.instance.id": "80028cba-a5be-42df-a8f8-c1770a3f308b", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension"}
+sink-1  | 	info	healthcheckextension@v0.162.0/healthcheckextension.go:32	Starting health_check extension	{"resource": {"service.instance.id": "80028cba-a5be-42df-a8f8-c1770a3f308b", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension", "config": {"Config":{"ServerConfig":{"NetAddr":{"DialerConfig":{"Timeout":0},"Endpoint":"0.0.0.0:13133","Transport":"tcp"},"TLS":{},"CORS":{},"Auth":{},"MaxRequestBodySize":0,"IncludeMetadata":false,"ResponseHeaders":null,"CompressionAlgorithms":null,"ReadTimeout":0,"ReadHeaderTimeout":60000000000,"WriteTimeout":30000000000,"Middlewares":null,"Keepalive":{},"IdleTimeout":0,"KeepAlivesEnabled":false},"Path":"/","ResponseBody":null,"CheckCollectorPipeline":{"Enabled":false,"Interval":"5m","ExporterFailureThreshold":5},"UseV2":false,"GRPCConfig":null,"HTTPConfig":null,"ComponentHealthConfig":null}}}
+sink-1  | 	info	extensions/extensions.go:65	Extension started.	{"resource": {"service.instance.id": "80028cba-a5be-42df-a8f8-c1770a3f308b", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension"}
+sink-1  | 	info	otlpreceiver@v0.162.0/otlp.go:120	Starting GRPC server	{"resource": {"service.instance.id": "80028cba-a5be-42df-a8f8-c1770a3f308b", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "otlp", "otelcol.component.kind": "receiver", "endpoint": "[::]:4317"}
+sink-1  | 	info	healthcheck/handler.go:131	Health Check state change	{"resource": {"service.instance.id": "80028cba-a5be-42df-a8f8-c1770a3f308b", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension", "status": "ready"}
+sink-1  | 	info	service@v0.162.0/service.go:256	Everything is ready. Begin running and processing data.	{"resource": {"service.instance.id": "80028cba-a5be-42df-a8f8-c1770a3f308b", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "80028cba-a5be-42df-a8f8-c1770a3f308b", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 100, "spans": 100}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : e512f1ee2672c5d41ef03534d5057738
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 63d7cfbfec9d4b9e
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.471121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.471121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-3e693018eb6f)
+sink-1  | ResourceSpans #1
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 787b46d3b19004e2118b201719074af6
+sink-1  |     Parent ID      :
+sink-1  |     ID             : f2106e0c978286ed
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.073121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.073121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-806aa3a4cbcc)
+sink-1  | ResourceSpans #2
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 7065e84908cfb8aa79fc8bed81448709
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 98a8c46849edda0f
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.321121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.321121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-3b81f332ff76)
+sink-1  | ResourceSpans #3
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 722cebc67da6fde7765d8c2aa1545eda
+sink-1  |     Parent ID      :
+sink-1  |     ID             : aff1254c4cd4fe9b
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.821121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.821121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-bf17945428ff)
+sink-1  | ResourceSpans #4
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 27090580ef51ae0f6b4c9fcf51e5d55f
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 35cac47deaf4d784
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.021121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.021121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-aa339ce6f752)
+sink-1  | ResourceSpans #5
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : b35d56aa11d6d7dcd2b1bc26ad565044
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 7421abaa17327832
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.075121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.075121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-89149f0d2df0)
+sink-1  | ResourceSpans #6
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : c60ca01a14be7cae00e0e5f6c84c83dd
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 8d487c1202f77a5f
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.275121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.275121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-0ce7cd0e697b)
+sink-1  | ResourceSpans #7
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 4212b6de7b946526d844958a1aae8ee9
+sink-1  |     Parent ID      :
+sink-1  |     ID             : f0a4fa9efb6e7daf
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.622121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.622121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-0e527ea82d15)
+sink-1  | ResourceSpans #8
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : d92d5e660665ca87e683ce5267ce5f98
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 902eb905c867c365
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.423121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.423121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-c3fbb01f8234)
+sink-1  | ResourceSpans #9
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : f02f6c94b77f7cb280285ccd0c6345db
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 42be172c192c2a9f
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.924121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.924121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-114fce874fed)
+sink-1  | ResourceSpans #10
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : ee7125fa31ebc2ac3cc9aaae5d5b70c0
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 37a465571928913d
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.425121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.425121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-1a4efd25c7f0)
+sink-1  | ResourceSpans #11
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 4e2ab4601a6e15e97e9a0e1df1739e55
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e2b9eea0215853e5
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.972121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.972121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-70f1ecf00fa9)
+sink-1  | ResourceSpans #12
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : af95ce9c761e2f96915cf6ee4e7e14e9
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 46c4dbb9ad5e3a9e
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.472121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.472121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-e5d0d6f4a839)
+sink-1  | ResourceSpans #13
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 6439a2e928a2926ffbe4fd5193c01b0f
+sink-1  |     Parent ID      :
+sink-1  |     ID             : ec8d0bdd0d86ca48
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.623121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.623121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-685ff3accc1e)
+sink-1  | ResourceSpans #14
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 9363db1f69db2b9bc8471bece7ab3a82
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 7425fbdf763f7ff7
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.173121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.173121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-dd6cb1bfde74)
+sink-1  | ResourceSpans #15
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 9534a01f4e26e90148077053cdca1e40
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 16942807df72a97a
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.771121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.771121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-e4e8b3b75d3b)
+sink-1  | ResourceSpans #16
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 4b37a200c383eb86a40fde22629b8159
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 49cd5d1afddc7381
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.672121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.672121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-769beca12eaa)
+sink-1  | ResourceSpans #17
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 8c493a247108a9a72ef47a86193e5c7c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 111269f87d40b4f9
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.272121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.272121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-c5d448f0a47c)
+sink-1  | ResourceSpans #18
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 4f57c7ca590896d1f1c57af316e0d6c8
+sink-1  |     Parent ID      :
+sink-1  |     ID             : b2ee0b0c49e41be1
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.373121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.373121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-f8db61d9f965)
+sink-1  | ResourceSpans #19
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : f75fe0132876b17ae896ee1ada249bab
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 2b5b41a89c427454
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.922121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.922121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-c130f7e46da0)
+sink-1  | ResourceSpans #20
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 09a00ee8ef0e3510a6e9d54a6007e6d1
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 337d35fdd2cd62c3
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.722121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.722121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-beee66fa8149)
+sink-1  | ResourceSpans #21
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 0d78da0349985b6f20a14a32b286abe2
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 07febf020c6f26bc
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.372121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.372121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-37772d0335aa)
+sink-1  | ResourceSpans #22
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 247da71a08e083d260492c635a064036
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 96a6824516e16397
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.024121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.024121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-300ff66d04aa)
+sink-1  | ResourceSpans #23
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 07c1ded5a0e519e5d830a5af8890a368
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 7835dfeceb7f2c27
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.125121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.125121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-8709215a565b)
+sink-1  | ResourceSpans #24
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 790e5d9c04c6834dd80575bd411d3c9e
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 12cc35a6b04fae6f
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.071121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.071121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-92fc5b21a7e0)
+sink-1  | ResourceSpans #25
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 802f221cd85241f9dcfbc5c20ad94445
+sink-1  |     Parent ID      :
+sink-1  |     ID             : a27801fb908ecdd1
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.872121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.872121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-bab3557c541d)
+sink-1  | ResourceSpans #26
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : e72018683de8c2ae0195a629744f6a72
+sink-1  |     Parent ID      :
+sink-1  |     ID             : c70a7e7b4ec74a7e
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.873121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.873121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-2f16f47a9123)
+sink-1  | ResourceSpans #27
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 04fe3d5ec431f7a3190aef9544c1ce93
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 326f0074338868e8
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.575121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.575121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-ad967acdce60)
+sink-1  | ResourceSpans #28
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : a8f8f88c75476c9b43fd6ce7c505f739
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 01e7d0e9a0437d14
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.072121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.072121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-7e48fbd99adf)
+sink-1  | ResourceSpans #29
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 4ae8ae232793d4662167adedaf3b1c56
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 8c54a5a5f7b40d90
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.871121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.871121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-f51cfcd7b129)
+sink-1  | ResourceSpans #30
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : c4d2cbaaccbe5cf6b6e57489b49cb726
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 7ab223ab92b7b0d7
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.973121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.973121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-fb709c7923d7)
+sink-1  | ResourceSpans #31
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : a2457f2b29dc3128be9f855e796d6adf
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 4c1c129286a71a76
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.875121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.875121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-0dbd65bd0877)
+sink-1  | ResourceSpans #32
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : a70756f1470a99235bb84f0879377d98
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 673b51a7468970d4
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.325121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.325121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-3eb73aa7b9f0)
+sink-1  | ResourceSpans #33
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 14f046ac5f3a87149db18f3bf54894f8
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e6aad6f697e77076
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.774121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.774121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-2e32aec3680f)
+sink-1  | ResourceSpans #34
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 83dd581d0235475af578428ec203fda9
+sink-1  |     Parent ID      :
+sink-1  |     ID             : fa87595acd8b2e1b
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.422121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.422121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-b4265952a5fe)
+sink-1  | ResourceSpans #35
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 78eb837d8e337ffab48e4205d88772c7
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 0f06c09e69c0854c
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.172121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.172121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-8adeb3388a8d)
+sink-1  | ResourceSpans #36
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 0942464476c926633070b4dc155e28e6
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 489be569c22fe2b6
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.123121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.123121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-615caa060978)
+sink-1  | ResourceSpans #37
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : f6fad6039c93d0dbaf5e45f9e224d75b
+sink-1  |     Parent ID      :
+sink-1  |     ID             : c3e2c5ad7b29a194
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.274121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.274121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-d219bc5f364b)
+sink-1  | ResourceSpans #38
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 078c2b7973fe2c31d16d3863e4f1c203
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 22ef97430505c87e
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.572121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.572121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-86d63cd2cd25)
+sink-1  | ResourceSpans #39
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 5de5382f07b087e347aca2604ddf5530
+sink-1  |     Parent ID      :
+sink-1  |     ID             : ae33ff712c186d1d
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.473121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.473121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-b3297523d7e6)
+sink-1  | ResourceSpans #40
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : ba908fdd80baa6915d6e3af57af8496d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 3473f688dbe50998
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.022121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.022121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-55431930437a)
+sink-1  | ResourceSpans #41
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 867127723103380c4c4e10b5c72e8393
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 4acf2aecba088814
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.971121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.971121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-e5d37fb1c004)
+sink-1  | ResourceSpans #42
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 1a5a94ffe86390cce6b71f98b2d587ec
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 36eeeaa2e67dca1e
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.324121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.324121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-625f25ae95a9)
+sink-1  | ResourceSpans #43
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 0be487c88888bf2c686145d845c8225d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 1a783068fb70e36d
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.823121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.823121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-b10ee797f5ff)
+sink-1  | ResourceSpans #44
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : d440dd8a28f13b16a7d6ae6390f2685d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 02264ac9a24291cb
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.874121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.874121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-d356114bcdcb)
+sink-1  | ResourceSpans #45
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 72e0a735ea89eaab747e6a9ca42ed4f1
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 50d7376aa9ffbc42
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.374121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.374121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-00395c1880f0)
+sink-1  | ResourceSpans #46
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 07d2f699fcd4126f6c48b14e9fbbc35d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 187807d45635e1f8
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.773121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.773121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-f54daff0da39)
+sink-1  | ResourceSpans #47
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 9c428e696423686d2a165075d74f01a0
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 4e254b7a0e75a7a0
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.624121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.624121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-6aa13dff1f8d)
+sink-1  | ResourceSpans #48
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 8a93fbbbec7f671f416bfc42e3115d66
+sink-1  |     Parent ID      :
+sink-1  |     ID             : bf9912937e192209
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.925121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.925121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-2f10d9f36512)
+sink-1  | ResourceSpans #49
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 470c4053f6e26af29a0024c5169188d0
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 697753ffdb812788
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.323121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.323121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-89ab3df5e70e)
+sink-1  | ResourceSpans #50
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : c7a0f8e725b42381feed711f5e576112
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 2d2880b5759ef361
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.074121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.074121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-25ef2b5ecc78)
+sink-1  | ResourceSpans #51
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 3b9c7671331504a3d69758ca9d743714
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 2aa5b59ccd12d16f
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.574121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.574121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-8ddf76961f04)
+sink-1  | ResourceSpans #52
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : dd48ff355db3ab18750a1f1f8fc732cb
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 97e93e42a13cffda
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.721121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.721121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-8d3ca26b3e8b)
+sink-1  | ResourceSpans #53
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 5697afaf1e34ced0d7046dbc0ddd7aa1
+sink-1  |     Parent ID      :
+sink-1  |     ID             : c7a1f0c2d52fe716
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.171121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.171121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-c6afb342c187)
+sink-1  | ResourceSpans #54
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 8f16579a0dabb157372832edfb12dced
+sink-1  |     Parent ID      :
+sink-1  |     ID             : df2b2d3e3db70485
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.671121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.671121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-5a4ea5f8760d)
+sink-1  | ResourceSpans #55
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 7e25eb155831ef62c94bbaa35c02fdef
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 90fb835be319816b
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.522121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.522121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-0bac525703bf)
+sink-1  | ResourceSpans #56
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 5090f7bcba2f605625b2be7ecef454f5
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 489c4348aa40f345
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.271121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.271121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-a61ee66f0a9c)
+sink-1  | ResourceSpans #57
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : efa4add25aa1765f2c07e39b4c0cae3c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : c049cf34a362af76
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.921121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.921121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-8a7b418ead97)
+sink-1  | ResourceSpans #58
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 5b77c8c3f8c86411cb843afd125f9293
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 7dd90b468bb9b20a
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.225121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.225121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-da2a27ffbebe)
+sink-1  | ResourceSpans #59
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : b37fb2c4d9253f5ac68e3bcfd51e78f6
+sink-1  |     Parent ID      :
+sink-1  |     ID             : f5826c2a4da7aa06
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.525121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.525121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-c9e9bd8ea077)
+sink-1  | ResourceSpans #60
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : af887e3ae8e5528044fe29dd6f13c01f
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 2c113eb6e98ad6e0
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.521121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.521121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-eb2d0f0b378c)
+sink-1  | ResourceSpans #61
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 79e57f9765256b026d0cbbfcab90e163
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e6e5a7572b3fcad6
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.675121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.675121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-69eb57ac9d82)
+sink-1  | ResourceSpans #62
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 5b42d2c6e1354bc7783b7e778b9ffa29
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 9ba1d5f137c1f2c9
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.772121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.772121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-2c05b802c66e)
+sink-1  | ResourceSpans #63
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : bf7c53cab93b4c461eae2627f268f867
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 23c800bd0b0ba881
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.122121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.122121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-aad534cd7d55)
+sink-1  | ResourceSpans #64
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : c13518fbc77f2f0f7d95849773b5f2e8
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 5e1649976bd385b3
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.121121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.121121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-4bdcb52cd059)
+sink-1  | ResourceSpans #65
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 5c1cc7f4720570f52f1d9456ca6156fe
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 3aefd27dd0cc9865
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.375121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.375121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-4d35947ec7d9)
+sink-1  | ResourceSpans #66
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : f16c4b0d8f6a4664377b51a7cb28aee9
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 8af8cd33ed09514a
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.124121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.124121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-cf07f2d871b0)
+sink-1  | ResourceSpans #67
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : dd4d25041fe4b80be41e8695db184df3
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 2700c8df10528738
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.625121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.625121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-bf8fe4d3d681)
+sink-1  | ResourceSpans #68
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : dd7ce8eada1f95d11b7c682f0569b13e
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 40f3734301d2fb3c
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.725121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.725121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-6b8efd942448)
+sink-1  | ResourceSpans #69
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 90113f447b85409ccca9b14dcb9427ef
+sink-1  |     Parent ID      :
+sink-1  |     ID             : b430473b2c353620
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.974121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.974121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-3e4f16cf6ead)
+sink-1  | ResourceSpans #70
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : c62ad3a3477f6be016cfc90c0a03207d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 97f6d3ce916c2530
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.822121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.822121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-fb67c77f8aa5)
+sink-1  | ResourceSpans #71
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 7cc2fc5958612e865e7347fba21370f0
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 61753c256633845d
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.923121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.923121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-5318b8932429)
+sink-1  | ResourceSpans #72
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 08b31083298dc5ea64124486e200a828
+sink-1  |     Parent ID      :
+sink-1  |     ID             : cb9d1434287610ae
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.174121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.174121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-b921993ce148)
+sink-1  | ResourceSpans #73
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 4bd593a365fe0b5f3100cd1b87ed8920
+sink-1  |     Parent ID      :
+sink-1  |     ID             : d60e63f5bf5ae0ba
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.221121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.221121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-b5fcd273a0a6)
+sink-1  | ResourceSpans #74
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : b476c6091da97c3b6f129404d8930967
+sink-1  |     Parent ID      :
+sink-1  |     ID             : df9f23ed6e037462
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.673121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.673121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-a728238cb01a)
+sink-1  | ResourceSpans #75
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : d83561c2c29aba79fdf8d6d6dbc08139
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 1da425d2fa9b8f59
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.475121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.475121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-8902f432c7a1)
+sink-1  | ResourceSpans #76
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : f54ea370f8e6fa1291fb36b9ca3fc8e7
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 20fbfc883e32173c
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.371121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.371121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-45137ac1c52a)
+sink-1  | ResourceSpans #77
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 1654beb3377b70446d02151879718914
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 7349800d69f5c473
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.223121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.223121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-5f96b08e4e2c)
+sink-1  | ResourceSpans #78
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 9626d617eda6d6278d5228df2692f4be
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 82dea0035d0db468
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.474121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.474121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-5de0221c630f)
+sink-1  | ResourceSpans #79
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 44a6cf682b406f17c45f38e6749e07c2
+sink-1  |     Parent ID      :
+sink-1  |     ID             : cbd0ac6bef7e44cf
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.825121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.825121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-f2b858940849)
+sink-1  | ResourceSpans #80
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 39c87a97ad6c2c1479cfb529a42366fe
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 1f2e4e2c07d14cf5
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.723121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.723121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-d4b820ea84b1)
+sink-1  | ResourceSpans #81
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 6889ed761f31ebb6b268c894777c05b8
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 103ade6d26896399
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.273121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.273121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-2497077e6afd)
+sink-1  | ResourceSpans #82
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : d8784e7658c40dfa19f860ab619d4119
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 4fc87388ceffe17e
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.175121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.175121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-ec5b2543808b)
+sink-1  | ResourceSpans #83
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 90ffdc9befb220ab2fe383aa61013cdd
+sink-1  |     Parent ID      :
+sink-1  |     ID             : c0547ca05b7f9b63
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.824121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.824121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-5a0328f6f0cb)
+sink-1  | ResourceSpans #84
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 3a0584cad0383fb5df61b4ccb79e40a5
+sink-1  |     Parent ID      :
+sink-1  |     ID             : f6d91426ac33cea0
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.222121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.222121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-8753265bb4a9)
+sink-1  | ResourceSpans #85
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : d91855993276a9275d1b6b4c767fe9bf
+sink-1  |     Parent ID      :
+sink-1  |     ID             : ea1c382e800c9e61
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.975121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.975121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-1c787d775fc9)
+sink-1  | ResourceSpans #86
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 23e9d3961e6c062d5f7f454810493a07
+sink-1  |     Parent ID      :
+sink-1  |     ID             : d9a56881ab96fd45
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.674121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.674121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-18051de6aa8f)
+sink-1  | ResourceSpans #87
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 33ce3dc349ca0125669a6096b20a5d89
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 51fbe222e014f86b
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.424121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.424121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-990457cf6aa2)
+sink-1  | ResourceSpans #88
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 021a13be6a6fef22224286e55fe1ccb2
+sink-1  |     Parent ID      :
+sink-1  |     ID             : ed68aa2e568a40ae
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.724121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.724121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-72b524d1cedb)
+sink-1  | ResourceSpans #89
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : e4e8217eb722df76a6cb40cf99e24856
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 1fa592dea70dfd8f
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.571121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.571121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-289bab3df68f)
+sink-1  | ResourceSpans #90
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 888385bcd2f78b792b732dca82ddca20
+sink-1  |     Parent ID      :
+sink-1  |     ID             : be67bffbcd0f262c
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.573121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.573121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-4e7f463040d7)
+sink-1  | ResourceSpans #91
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 128f5b9053c865f745a5b0cb5b6a374d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 1b4ebf2dbb57b4cc
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.025121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.025121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-c090ea5a6833)
+sink-1  | ResourceSpans #92
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : d2992c63d88c0338b5b286ae5b5a668f
+sink-1  |     Parent ID      :
+sink-1  |     ID             : d5cff8eb0f6aaff4
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.421121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.421121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-c77a2daab8bc)
+sink-1  | ResourceSpans #93
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 1d533d92fd22ba212778a47c3a320ac4
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e4c98e5325482a50
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.224121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.224121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-625dc0d0e41f)
+sink-1  | ResourceSpans #94
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 21a4a8cfe27e0539513bd0589409013d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 00a168f551409f48
+sink-1  |     Name           : GET /cart
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.322121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.322121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/cart)
+sink-1  |      -> customer.id: Str(customer-3cdbe5d302e0)
+sink-1  | ResourceSpans #95
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 3d151328fda4f1eb6f80a9a3831c4d50
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 4bbb3c39f036bdad
+sink-1  |     Name           : GET /login
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.524121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.524121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/login)
+sink-1  |      -> customer.id: Str(customer-050ad9759fb3)
+sink-1  | ResourceSpans #96
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 1e1c222625dca059cdedb3c10a9d54ee
+sink-1  |     Parent ID      :
+sink-1  |     ID             : c8dcc93da24cb50e
+sink-1  |     Name           : GET /profile
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.775121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.775121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/profile)
+sink-1  |      -> customer.id: Str(customer-ca1a12fbb8e3)
+sink-1  | ResourceSpans #97
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 4c9a2e0431f0fe5215b9950eeaaea534
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 5db8491a05d7a129
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:59.023121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:05:00.023121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-8cd491184282)
+sink-1  | ResourceSpans #98
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 5fd181cbe439dbe8e3a70857f450fefc
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 40586ddfb2d88e92
+sink-1  |     Name           : GET /checkout
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.621121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.621121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/checkout)
+sink-1  |      -> customer.id: Str(customer-c296a2f66a2c)
+sink-1  | ResourceSpans #99
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(42df29b9-3cc9-4d27-9040-3b0d5e4ebb63)
+sink-1  |      -> service.name: Str(l3-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l3-05
+sink-1  | Span #0
+sink-1  |     Trace ID       : 72237a1fb69be9d981b01d0d4b6fbf5d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : fd36649873addc4e
+sink-1  |     Name           : GET /search
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-06 21:04:58.523121 +0000 UTC
+sink-1  |     End time       : 2026-10-06 21:04:59.523121 +0000 UTC
+sink-1  |     Status code    : Error
+sink-1  |     Status message : synthetic failure
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> http.route: Str(/search)
+sink-1  |      -> customer.id: Str(customer-45a27e431843)
+sink-1  | 	{"resource": {"service.instance.id": "80028cba-a5be-42df-a8f8-c1770a3f308b", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}

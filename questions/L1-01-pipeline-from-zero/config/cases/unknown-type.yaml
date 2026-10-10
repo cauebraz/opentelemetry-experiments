@@ -1,0 +1,18 @@
+receivers:
+  otlp:
+    protocols:
+      http:
+
+exporters:
+  debug:
+  otlp_grcp/typo:
+    endpoint: sink:4317
+
+service:
+  pipelines:
+    logs:
+      receivers:
+        - otlp
+      exporters:
+        - debug
+        - otlp_grcp/typo

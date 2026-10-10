@@ -1,0 +1,44 @@
+receivers:
+  file_log:
+    include:
+      - /input/app.log
+    start_at: beginning
+    operators:
+      - type: regex_parser
+        regex: '^(?P<clock>\d{2}:\d{2}:\d{2}) (?P<level>[A-Z]+) (?P<message>.*)$'
+        timestamp:
+          parse_from: attributes.clock
+          layout: '%H:%M:%S'
+        severity:
+          parse_from: attributes.level
+
+exporters:
+  otlp_grpc/sink:
+    endpoint: sink:4317
+    tls:
+      insecure: true
+
+extensions:
+  health_check:
+    endpoint: 0.0.0.0:13133
+
+service:
+  extensions:
+    - health_check
+  pipelines:
+    logs:
+      receivers:
+        - file_log
+      exporters:
+        - otlp_grpc/sink
+  telemetry:
+    metrics:
+      level: detailed
+      readers:
+        - pull:
+            exporter:
+              prometheus:
+                host: 0.0.0.0
+                port: 8888
+                without_type_suffix: true
+                without_units: true

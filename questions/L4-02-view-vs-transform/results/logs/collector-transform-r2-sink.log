@@ -1,0 +1,609 @@
+sink-1  | 	info	otelconftelemetry/tracer.go:47	Internal trace telemetry disabled	{"resource": {"service.instance.id": "bc8db963-591c-417f-943d-2b243f54b469", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	service@v0.162.0/service.go:233	Starting otelcol-contrib...	{"resource": {"service.instance.id": "bc8db963-591c-417f-943d-2b243f54b469", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "Version": "0.162.0", "NumCPU": 18}
+sink-1  | 	info	extensions/extensions.go:43	Starting extensions...	{"resource": {"service.instance.id": "bc8db963-591c-417f-943d-2b243f54b469", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	extensions/extensions.go:47	Extension is starting...	{"resource": {"service.instance.id": "bc8db963-591c-417f-943d-2b243f54b469", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension"}
+sink-1  | 	info	healthcheckextension@v0.162.0/healthcheckextension.go:32	Starting health_check extension	{"resource": {"service.instance.id": "bc8db963-591c-417f-943d-2b243f54b469", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension", "config": {"Config":{"ServerConfig":{"NetAddr":{"DialerConfig":{"Timeout":0},"Endpoint":"0.0.0.0:13133","Transport":"tcp"},"TLS":{},"CORS":{},"Auth":{},"MaxRequestBodySize":0,"IncludeMetadata":false,"ResponseHeaders":null,"CompressionAlgorithms":null,"ReadTimeout":0,"ReadHeaderTimeout":60000000000,"WriteTimeout":30000000000,"Middlewares":null,"Keepalive":{},"IdleTimeout":0,"KeepAlivesEnabled":false},"Path":"/","ResponseBody":null,"CheckCollectorPipeline":{"Enabled":false,"Interval":"5m","ExporterFailureThreshold":5},"UseV2":false,"GRPCConfig":null,"HTTPConfig":null,"ComponentHealthConfig":null}}}
+sink-1  | 	info	extensions/extensions.go:65	Extension started.	{"resource": {"service.instance.id": "bc8db963-591c-417f-943d-2b243f54b469", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension"}
+sink-1  | 	info	otlpreceiver@v0.162.0/otlp.go:120	Starting GRPC server	{"resource": {"service.instance.id": "bc8db963-591c-417f-943d-2b243f54b469", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "otlp", "otelcol.component.kind": "receiver", "endpoint": "[::]:4317"}
+sink-1  | 	info	healthcheck/handler.go:131	Health Check state change	{"resource": {"service.instance.id": "bc8db963-591c-417f-943d-2b243f54b469", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension", "status": "ready"}
+sink-1  | 	info	service@v0.162.0/service.go:256	Everything is ready. Begin running and processing data.	{"resource": {"service.instance.id": "bc8db963-591c-417f-943d-2b243f54b469", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	Metrics	{"resource": {"service.instance.id": "bc8db963-591c-417f-943d-2b243f54b469", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "metrics", "resource metrics": 1, "metrics": 1, "data points": 20}
+sink-1  | 	info	ResourceMetrics #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(e216ee71-a045-4691-9cef-49f408d4b107)
+sink-1  |      -> service.name: Str(l4-02)
+sink-1  | ScopeMetrics #0
+sink-1  | ScopeMetrics SchemaURL:
+sink-1  | InstrumentationScope l4-02
+sink-1  | Metric #0
+sink-1  | Descriptor:
+sink-1  |      -> Name: http.server.duration
+sink-1  |      -> Description:
+sink-1  |      -> Unit: ms
+sink-1  |      -> DataType: Histogram
+sink-1  |      -> AggregationTemporality: Delta
+sink-1  | HistogramDataPoints #0
+sink-1  | Data point attributes:
+sink-1  |      -> environment: Str(prod)
+sink-1  |      -> region: Str(us-east)
+sink-1  |      -> http.method: Str(POST)
+sink-1  |      -> http.status_code: Str(201)
+sink-1  | StartTimestamp: 2023-11-14 22:13:20 +0000 UTC
+sink-1  | Timestamp: 2023-11-14 22:13:21 +0000 UTC
+sink-1  | Count: 30
+sink-1  | Sum: 123.000000
+sink-1  | Min: 1.000000
+sink-1  | Max: 7.000000
+sink-1  | ExplicitBounds #0: 1.000000
+sink-1  | ExplicitBounds #1: 2.000000
+sink-1  | ExplicitBounds #2: 3.000000
+sink-1  | ExplicitBounds #3: 4.000000
+sink-1  | ExplicitBounds #4: 5.000000
+sink-1  | ExplicitBounds #5: 6.000000
+sink-1  | ExplicitBounds #6: 7.000000
+sink-1  | ExplicitBounds #7: 10.000000
+sink-1  | Buckets #0, Count: 4
+sink-1  | Buckets #1, Count: 4
+sink-1  | Buckets #2, Count: 4
+sink-1  | Buckets #3, Count: 4
+sink-1  | Buckets #4, Count: 5
+sink-1  | Buckets #5, Count: 5
+sink-1  | Buckets #6, Count: 4
+sink-1  | Buckets #7, Count: 0
+sink-1  | Buckets #8, Count: 0
+sink-1  | HistogramDataPoints #1
+sink-1  | Data point attributes:
+sink-1  |      -> environment: Str(prod)
+sink-1  |      -> region: Str(us-east)
+sink-1  |      -> http.method: Str(GET)
+sink-1  |      -> http.status_code: Str(500)
+sink-1  | StartTimestamp: 2023-11-14 22:13:20 +0000 UTC
+sink-1  | Timestamp: 2023-11-14 22:13:21 +0000 UTC
+sink-1  | Count: 30
+sink-1  | Sum: 120.000000
+sink-1  | Min: 1.000000
+sink-1  | Max: 7.000000
+sink-1  | ExplicitBounds #0: 1.000000
+sink-1  | ExplicitBounds #1: 2.000000
+sink-1  | ExplicitBounds #2: 3.000000
+sink-1  | ExplicitBounds #3: 4.000000
+sink-1  | ExplicitBounds #4: 5.000000
+sink-1  | ExplicitBounds #5: 6.000000
+sink-1  | ExplicitBounds #6: 7.000000
+sink-1  | ExplicitBounds #7: 10.000000
+sink-1  | Buckets #0, Count: 5
+sink-1  | Buckets #1, Count: 4
+sink-1  | Buckets #2, Count: 4
+sink-1  | Buckets #3, Count: 4
+sink-1  | Buckets #4, Count: 4
+sink-1  | Buckets #5, Count: 4
+sink-1  | Buckets #6, Count: 5
+sink-1  | Buckets #7, Count: 0
+sink-1  | Buckets #8, Count: 0
+sink-1  | HistogramDataPoints #2
+sink-1  | Data point attributes:
+sink-1  |      -> environment: Str(prod)
+sink-1  |      -> region: Str(us-east)
+sink-1  |      -> http.method: Str(PUT)
+sink-1  |      -> http.status_code: Str(201)
+sink-1  | StartTimestamp: 2023-11-14 22:13:20 +0000 UTC
+sink-1  | Timestamp: 2023-11-14 22:13:21 +0000 UTC
+sink-1  | Count: 30
+sink-1  | Sum: 125.000000
+sink-1  | Min: 1.000000
+sink-1  | Max: 7.000000
+sink-1  | ExplicitBounds #0: 1.000000
+sink-1  | ExplicitBounds #1: 2.000000
+sink-1  | ExplicitBounds #2: 3.000000
+sink-1  | ExplicitBounds #3: 4.000000
+sink-1  | ExplicitBounds #4: 5.000000
+sink-1  | ExplicitBounds #5: 6.000000
+sink-1  | ExplicitBounds #6: 7.000000
+sink-1  | ExplicitBounds #7: 10.000000
+sink-1  | Buckets #0, Count: 4
+sink-1  | Buckets #1, Count: 4
+sink-1  | Buckets #2, Count: 4
+sink-1  | Buckets #3, Count: 4
+sink-1  | Buckets #4, Count: 4
+sink-1  | Buckets #5, Count: 5
+sink-1  | Buckets #6, Count: 5
+sink-1  | Buckets #7, Count: 0
+sink-1  | Buckets #8, Count: 0
+sink-1  | HistogramDataPoints #3
+sink-1  | Data point attributes:
+sink-1  |      -> environment: Str(prod)
+sink-1  |      -> region: Str(us-east)
+sink-1  |      -> http.method: Str(DELETE)
+sink-1  |      -> http.status_code: Str(400)
+sink-1  | StartTimestamp: 2023-11-14 22:13:20 +0000 UTC
+sink-1  | Timestamp: 2023-11-14 22:13:21 +0000 UTC
+sink-1  | Count: 30
+sink-1  | Sum: 117.000000
+sink-1  | Min: 1.000000
+sink-1  | Max: 7.000000
+sink-1  | ExplicitBounds #0: 1.000000
+sink-1  | ExplicitBounds #1: 2.000000
+sink-1  | ExplicitBounds #2: 3.000000
+sink-1  | ExplicitBounds #3: 4.000000
+sink-1  | ExplicitBounds #4: 5.000000
+sink-1  | ExplicitBounds #5: 6.000000
+sink-1  | ExplicitBounds #6: 7.000000
+sink-1  | ExplicitBounds #7: 10.000000
+sink-1  | Buckets #0, Count: 4
+sink-1  | Buckets #1, Count: 5
+sink-1  | Buckets #2, Count: 5
+sink-1  | Buckets #3, Count: 4
+sink-1  | Buckets #4, Count: 4
+sink-1  | Buckets #5, Count: 4
+sink-1  | Buckets #6, Count: 4
+sink-1  | Buckets #7, Count: 0
+sink-1  | Buckets #8, Count: 0
+sink-1  | HistogramDataPoints #4
+sink-1  | Data point attributes:
+sink-1  |      -> environment: Str(prod)
+sink-1  |      -> region: Str(us-east)
+sink-1  |      -> http.method: Str(PUT)
+sink-1  |      -> http.status_code: Str(200)
+sink-1  | StartTimestamp: 2023-11-14 22:13:20 +0000 UTC
+sink-1  | Timestamp: 2023-11-14 22:13:21 +0000 UTC
+sink-1  | Count: 30
+sink-1  | Sum: 121.000000
+sink-1  | Min: 1.000000
+sink-1  | Max: 7.000000
+sink-1  | ExplicitBounds #0: 1.000000
+sink-1  | ExplicitBounds #1: 2.000000
+sink-1  | ExplicitBounds #2: 3.000000
+sink-1  | ExplicitBounds #3: 4.000000
+sink-1  | ExplicitBounds #4: 5.000000
+sink-1  | ExplicitBounds #5: 6.000000
+sink-1  | ExplicitBounds #6: 7.000000
+sink-1  | ExplicitBounds #7: 10.000000
+sink-1  | Buckets #0, Count: 4
+sink-1  | Buckets #1, Count: 4
+sink-1  | Buckets #2, Count: 4
+sink-1  | Buckets #3, Count: 5
+sink-1  | Buckets #4, Count: 5
+sink-1  | Buckets #5, Count: 4
+sink-1  | Buckets #6, Count: 4
+sink-1  | Buckets #7, Count: 0
+sink-1  | Buckets #8, Count: 0
+sink-1  | HistogramDataPoints #5
+sink-1  | Data point attributes:
+sink-1  |      -> environment: Str(prod)
+sink-1  |      -> region: Str(us-east)
+sink-1  |      -> http.method: Str(GET)
+sink-1  |      -> http.status_code: Str(400)
+sink-1  | StartTimestamp: 2023-11-14 22:13:20 +0000 UTC
+sink-1  | Timestamp: 2023-11-14 22:13:21 +0000 UTC
+sink-1  | Count: 30
+sink-1  | Sum: 119.000000
+sink-1  | Min: 1.000000
+sink-1  | Max: 7.000000
+sink-1  | ExplicitBounds #0: 1.000000
+sink-1  | ExplicitBounds #1: 2.000000
+sink-1  | ExplicitBounds #2: 3.000000
+sink-1  | ExplicitBounds #3: 4.000000
+sink-1  | ExplicitBounds #4: 5.000000
+sink-1  | ExplicitBounds #5: 6.000000
+sink-1  | ExplicitBounds #6: 7.000000
+sink-1  | ExplicitBounds #7: 10.000000
+sink-1  | Buckets #0, Count: 4
+sink-1  | Buckets #1, Count: 4
+sink-1  | Buckets #2, Count: 5
+sink-1  | Buckets #3, Count: 5
+sink-1  | Buckets #4, Count: 4
+sink-1  | Buckets #5, Count: 4
+sink-1  | Buckets #6, Count: 4
+sink-1  | Buckets #7, Count: 0
+sink-1  | Buckets #8, Count: 0
+sink-1  | HistogramDataPoints #6
+sink-1  | Data point attributes:
+sink-1  |      -> environment: Str(prod)
+sink-1  |      -> region: Str(us-east)
+sink-1  |      -> http.method: Str(DELETE)
+sink-1  |      -> http.status_code: Str(200)
+sink-1  | StartTimestamp: 2023-11-14 22:13:20 +0000 UTC
+sink-1  | Timestamp: 2023-11-14 22:13:21 +0000 UTC
+sink-1  | Count: 30
+sink-1  | Sum: 123.000000
+sink-1  | Min: 1.000000
+sink-1  | Max: 7.000000
+sink-1  | ExplicitBounds #0: 1.000000
+sink-1  | ExplicitBounds #1: 2.000000
+sink-1  | ExplicitBounds #2: 3.000000
+sink-1  | ExplicitBounds #3: 4.000000
+sink-1  | ExplicitBounds #4: 5.000000
+sink-1  | ExplicitBounds #5: 6.000000
+sink-1  | ExplicitBounds #6: 7.000000
+sink-1  | ExplicitBounds #7: 10.000000
+sink-1  | Buckets #0, Count: 4
+sink-1  | Buckets #1, Count: 4
+sink-1  | Buckets #2, Count: 4
+sink-1  | Buckets #3, Count: 4
+sink-1  | Buckets #4, Count: 5
+sink-1  | Buckets #5, Count: 5
+sink-1  | Buckets #6, Count: 4
+sink-1  | Buckets #7, Count: 0
+sink-1  | Buckets #8, Count: 0
+sink-1  | HistogramDataPoints #7
+sink-1  | Data point attributes:
+sink-1  |      -> environment: Str(prod)
+sink-1  |      -> region: Str(us-east)
+sink-1  |      -> http.method: Str(POST)
+sink-1  |      -> http.status_code: Str(200)
+sink-1  | StartTimestamp: 2023-11-14 22:13:20 +0000 UTC
+sink-1  | Timestamp: 2023-11-14 22:13:21 +0000 UTC
+sink-1  | Count: 30
+sink-1  | Sum: 119.000000
+sink-1  | Min: 1.000000
+sink-1  | Max: 7.000000
+sink-1  | ExplicitBounds #0: 1.000000
+sink-1  | ExplicitBounds #1: 2.000000
+sink-1  | ExplicitBounds #2: 3.000000
+sink-1  | ExplicitBounds #3: 4.000000
+sink-1  | ExplicitBounds #4: 5.000000
+sink-1  | ExplicitBounds #5: 6.000000
+sink-1  | ExplicitBounds #6: 7.000000
+sink-1  | ExplicitBounds #7: 10.000000
+sink-1  | Buckets #0, Count: 4
+sink-1  | Buckets #1, Count: 4
+sink-1  | Buckets #2, Count: 5
+sink-1  | Buckets #3, Count: 5
+sink-1  | Buckets #4, Count: 4
+sink-1  | Buckets #5, Count: 4
+sink-1  | Buckets #6, Count: 4
+sink-1  | Buckets #7, Count: 0
+sink-1  | Buckets #8, Count: 0
+sink-1  | HistogramDataPoints #8
+sink-1  | Data point attributes:
+sink-1  |      -> environment: Str(prod)
+sink-1  |      -> region: Str(us-east)
+sink-1  |      -> http.method: Str(DELETE)
+sink-1  |      -> http.status_code: Str(201)
+sink-1  | StartTimestamp: 2023-11-14 22:13:20 +0000 UTC
+sink-1  | Timestamp: 2023-11-14 22:13:21 +0000 UTC
+sink-1  | Count: 30
+sink-1  | Sum: 120.000000
+sink-1  | Min: 1.000000
+sink-1  | Max: 7.000000
+sink-1  | ExplicitBounds #0: 1.000000
+sink-1  | ExplicitBounds #1: 2.000000
+sink-1  | ExplicitBounds #2: 3.000000
+sink-1  | ExplicitBounds #3: 4.000000
+sink-1  | ExplicitBounds #4: 5.000000
+sink-1  | ExplicitBounds #5: 6.000000
+sink-1  | ExplicitBounds #6: 7.000000
+sink-1  | ExplicitBounds #7: 10.000000
+sink-1  | Buckets #0, Count: 5
+sink-1  | Buckets #1, Count: 4
+sink-1  | Buckets #2, Count: 4
+sink-1  | Buckets #3, Count: 4
+sink-1  | Buckets #4, Count: 4
+sink-1  | Buckets #5, Count: 4
+sink-1  | Buckets #6, Count: 5
+sink-1  | Buckets #7, Count: 0
+sink-1  | Buckets #8, Count: 0
+sink-1  | HistogramDataPoints #9
+sink-1  | Data point attributes:
+sink-1  |      -> environment: Str(prod)
+sink-1  |      -> region: Str(us-east)
+sink-1  |      -> http.method: Str(POST)
+sink-1  |      -> http.status_code: Str(404)
+sink-1  | StartTimestamp: 2023-11-14 22:13:20 +0000 UTC
+sink-1  | Timestamp: 2023-11-14 22:13:21 +0000 UTC
+sink-1  | Count: 30
+sink-1  | Sum: 125.000000
+sink-1  | Min: 1.000000
+sink-1  | Max: 7.000000
+sink-1  | ExplicitBounds #0: 1.000000
+sink-1  | ExplicitBounds #1: 2.000000
+sink-1  | ExplicitBounds #2: 3.000000
+sink-1  | ExplicitBounds #3: 4.000000
+sink-1  | ExplicitBounds #4: 5.000000
+sink-1  | ExplicitBounds #5: 6.000000
+sink-1  | ExplicitBounds #6: 7.000000
+sink-1  | ExplicitBounds #7: 10.000000
+sink-1  | Buckets #0, Count: 4
+sink-1  | Buckets #1, Count: 4
+sink-1  | Buckets #2, Count: 4
+sink-1  | Buckets #3, Count: 4
+sink-1  | Buckets #4, Count: 4
+sink-1  | Buckets #5, Count: 5
+sink-1  | Buckets #6, Count: 5
+sink-1  | Buckets #7, Count: 0
+sink-1  | Buckets #8, Count: 0
+sink-1  | HistogramDataPoints #10
+sink-1  | Data point attributes:
+sink-1  |      -> environment: Str(prod)
+sink-1  |      -> region: Str(us-east)
+sink-1  |      -> http.method: Str(PUT)
+sink-1  |      -> http.status_code: Str(404)
+sink-1  | StartTimestamp: 2023-11-14 22:13:20 +0000 UTC
+sink-1  | Timestamp: 2023-11-14 22:13:21 +0000 UTC
+sink-1  | Count: 30
+sink-1  | Sum: 120.000000
+sink-1  | Min: 1.000000
+sink-1  | Max: 7.000000
+sink-1  | ExplicitBounds #0: 1.000000
+sink-1  | ExplicitBounds #1: 2.000000
+sink-1  | ExplicitBounds #2: 3.000000
+sink-1  | ExplicitBounds #3: 4.000000
+sink-1  | ExplicitBounds #4: 5.000000
+sink-1  | ExplicitBounds #5: 6.000000
+sink-1  | ExplicitBounds #6: 7.000000
+sink-1  | ExplicitBounds #7: 10.000000
+sink-1  | Buckets #0, Count: 5
+sink-1  | Buckets #1, Count: 4
+sink-1  | Buckets #2, Count: 4
+sink-1  | Buckets #3, Count: 4
+sink-1  | Buckets #4, Count: 4
+sink-1  | Buckets #5, Count: 4
+sink-1  | Buckets #6, Count: 5
+sink-1  | Buckets #7, Count: 0
+sink-1  | Buckets #8, Count: 0
+sink-1  | HistogramDataPoints #11
+sink-1  | Data point attributes:
+sink-1  |      -> environment: Str(prod)
+sink-1  |      -> region: Str(us-east)
+sink-1  |      -> http.method: Str(GET)
+sink-1  |      -> http.status_code: Str(200)
+sink-1  | StartTimestamp: 2023-11-14 22:13:20 +0000 UTC
+sink-1  | Timestamp: 2023-11-14 22:13:21 +0000 UTC
+sink-1  | Count: 30
+sink-1  | Sum: 117.000000
+sink-1  | Min: 1.000000
+sink-1  | Max: 7.000000
+sink-1  | ExplicitBounds #0: 1.000000
+sink-1  | ExplicitBounds #1: 2.000000
+sink-1  | ExplicitBounds #2: 3.000000
+sink-1  | ExplicitBounds #3: 4.000000
+sink-1  | ExplicitBounds #4: 5.000000
+sink-1  | ExplicitBounds #5: 6.000000
+sink-1  | ExplicitBounds #6: 7.000000
+sink-1  | ExplicitBounds #7: 10.000000
+sink-1  | Buckets #0, Count: 4
+sink-1  | Buckets #1, Count: 5
+sink-1  | Buckets #2, Count: 5
+sink-1  | Buckets #3, Count: 4
+sink-1  | Buckets #4, Count: 4
+sink-1  | Buckets #5, Count: 4
+sink-1  | Buckets #6, Count: 4
+sink-1  | Buckets #7, Count: 0
+sink-1  | Buckets #8, Count: 0
+sink-1  | HistogramDataPoints #12
+sink-1  | Data point attributes:
+sink-1  |      -> environment: Str(prod)
+sink-1  |      -> region: Str(us-east)
+sink-1  |      -> http.method: Str(PUT)
+sink-1  |      -> http.status_code: Str(400)
+sink-1  | StartTimestamp: 2023-11-14 22:13:20 +0000 UTC
+sink-1  | Timestamp: 2023-11-14 22:13:21 +0000 UTC
+sink-1  | Count: 30
+sink-1  | Sum: 115.000000
+sink-1  | Min: 1.000000
+sink-1  | Max: 7.000000
+sink-1  | ExplicitBounds #0: 1.000000
+sink-1  | ExplicitBounds #1: 2.000000
+sink-1  | ExplicitBounds #2: 3.000000
+sink-1  | ExplicitBounds #3: 4.000000
+sink-1  | ExplicitBounds #4: 5.000000
+sink-1  | ExplicitBounds #5: 6.000000
+sink-1  | ExplicitBounds #6: 7.000000
+sink-1  | ExplicitBounds #7: 10.000000
+sink-1  | Buckets #0, Count: 5
+sink-1  | Buckets #1, Count: 5
+sink-1  | Buckets #2, Count: 4
+sink-1  | Buckets #3, Count: 4
+sink-1  | Buckets #4, Count: 4
+sink-1  | Buckets #5, Count: 4
+sink-1  | Buckets #6, Count: 4
+sink-1  | Buckets #7, Count: 0
+sink-1  | Buckets #8, Count: 0
+sink-1  | HistogramDataPoints #13
+sink-1  | Data point attributes:
+sink-1  |      -> environment: Str(prod)
+sink-1  |      -> region: Str(us-east)
+sink-1  |      -> http.method: Str(DELETE)
+sink-1  |      -> http.status_code: Str(404)
+sink-1  | StartTimestamp: 2023-11-14 22:13:20 +0000 UTC
+sink-1  | Timestamp: 2023-11-14 22:13:21 +0000 UTC
+sink-1  | Count: 30
+sink-1  | Sum: 121.000000
+sink-1  | Min: 1.000000
+sink-1  | Max: 7.000000
+sink-1  | ExplicitBounds #0: 1.000000
+sink-1  | ExplicitBounds #1: 2.000000
+sink-1  | ExplicitBounds #2: 3.000000
+sink-1  | ExplicitBounds #3: 4.000000
+sink-1  | ExplicitBounds #4: 5.000000
+sink-1  | ExplicitBounds #5: 6.000000
+sink-1  | ExplicitBounds #6: 7.000000
+sink-1  | ExplicitBounds #7: 10.000000
+sink-1  | Buckets #0, Count: 4
+sink-1  | Buckets #1, Count: 4
+sink-1  | Buckets #2, Count: 4
+sink-1  | Buckets #3, Count: 5
+sink-1  | Buckets #4, Count: 5
+sink-1  | Buckets #5, Count: 4
+sink-1  | Buckets #6, Count: 4
+sink-1  | Buckets #7, Count: 0
+sink-1  | Buckets #8, Count: 0
+sink-1  | HistogramDataPoints #14
+sink-1  | Data point attributes:
+sink-1  |      -> environment: Str(prod)
+sink-1  |      -> region: Str(us-east)
+sink-1  |      -> http.method: Str(PUT)
+sink-1  |      -> http.status_code: Str(500)
+sink-1  | StartTimestamp: 2023-11-14 22:13:20 +0000 UTC
+sink-1  | Timestamp: 2023-11-14 22:13:21 +0000 UTC
+sink-1  | Count: 30
+sink-1  | Sum: 117.000000
+sink-1  | Min: 1.000000
+sink-1  | Max: 7.000000
+sink-1  | ExplicitBounds #0: 1.000000
+sink-1  | ExplicitBounds #1: 2.000000
+sink-1  | ExplicitBounds #2: 3.000000
+sink-1  | ExplicitBounds #3: 4.000000
+sink-1  | ExplicitBounds #4: 5.000000
+sink-1  | ExplicitBounds #5: 6.000000
+sink-1  | ExplicitBounds #6: 7.000000
+sink-1  | ExplicitBounds #7: 10.000000
+sink-1  | Buckets #0, Count: 4
+sink-1  | Buckets #1, Count: 5
+sink-1  | Buckets #2, Count: 5
+sink-1  | Buckets #3, Count: 4
+sink-1  | Buckets #4, Count: 4
+sink-1  | Buckets #5, Count: 4
+sink-1  | Buckets #6, Count: 4
+sink-1  | Buckets #7, Count: 0
+sink-1  | Buckets #8, Count: 0
+sink-1  | HistogramDataPoints #15
+sink-1  | Data point attributes:
+sink-1  |      -> environment: Str(prod)
+sink-1  |      -> region: Str(us-east)
+sink-1  |      -> http.method: Str(GET)
+sink-1  |      -> http.status_code: Str(201)
+sink-1  | StartTimestamp: 2023-11-14 22:13:20 +0000 UTC
+sink-1  | Timestamp: 2023-11-14 22:13:21 +0000 UTC
+sink-1  | Count: 30
+sink-1  | Sum: 115.000000
+sink-1  | Min: 1.000000
+sink-1  | Max: 7.000000
+sink-1  | ExplicitBounds #0: 1.000000
+sink-1  | ExplicitBounds #1: 2.000000
+sink-1  | ExplicitBounds #2: 3.000000
+sink-1  | ExplicitBounds #3: 4.000000
+sink-1  | ExplicitBounds #4: 5.000000
+sink-1  | ExplicitBounds #5: 6.000000
+sink-1  | ExplicitBounds #6: 7.000000
+sink-1  | ExplicitBounds #7: 10.000000
+sink-1  | Buckets #0, Count: 5
+sink-1  | Buckets #1, Count: 5
+sink-1  | Buckets #2, Count: 4
+sink-1  | Buckets #3, Count: 4
+sink-1  | Buckets #4, Count: 4
+sink-1  | Buckets #5, Count: 4
+sink-1  | Buckets #6, Count: 4
+sink-1  | Buckets #7, Count: 0
+sink-1  | Buckets #8, Count: 0
+sink-1  | HistogramDataPoints #16
+sink-1  | Data point attributes:
+sink-1  |      -> environment: Str(prod)
+sink-1  |      -> region: Str(us-east)
+sink-1  |      -> http.method: Str(POST)
+sink-1  |      -> http.status_code: Str(400)
+sink-1  | StartTimestamp: 2023-11-14 22:13:20 +0000 UTC
+sink-1  | Timestamp: 2023-11-14 22:13:21 +0000 UTC
+sink-1  | Count: 30
+sink-1  | Sum: 121.000000
+sink-1  | Min: 1.000000
+sink-1  | Max: 7.000000
+sink-1  | ExplicitBounds #0: 1.000000
+sink-1  | ExplicitBounds #1: 2.000000
+sink-1  | ExplicitBounds #2: 3.000000
+sink-1  | ExplicitBounds #3: 4.000000
+sink-1  | ExplicitBounds #4: 5.000000
+sink-1  | ExplicitBounds #5: 6.000000
+sink-1  | ExplicitBounds #6: 7.000000
+sink-1  | ExplicitBounds #7: 10.000000
+sink-1  | Buckets #0, Count: 4
+sink-1  | Buckets #1, Count: 4
+sink-1  | Buckets #2, Count: 4
+sink-1  | Buckets #3, Count: 5
+sink-1  | Buckets #4, Count: 5
+sink-1  | Buckets #5, Count: 4
+sink-1  | Buckets #6, Count: 4
+sink-1  | Buckets #7, Count: 0
+sink-1  | Buckets #8, Count: 0
+sink-1  | HistogramDataPoints #17
+sink-1  | Data point attributes:
+sink-1  |      -> environment: Str(prod)
+sink-1  |      -> region: Str(us-east)
+sink-1  |      -> http.method: Str(DELETE)
+sink-1  |      -> http.status_code: Str(500)
+sink-1  | StartTimestamp: 2023-11-14 22:13:20 +0000 UTC
+sink-1  | Timestamp: 2023-11-14 22:13:21 +0000 UTC
+sink-1  | Count: 30
+sink-1  | Sum: 119.000000
+sink-1  | Min: 1.000000
+sink-1  | Max: 7.000000
+sink-1  | ExplicitBounds #0: 1.000000
+sink-1  | ExplicitBounds #1: 2.000000
+sink-1  | ExplicitBounds #2: 3.000000
+sink-1  | ExplicitBounds #3: 4.000000
+sink-1  | ExplicitBounds #4: 5.000000
+sink-1  | ExplicitBounds #5: 6.000000
+sink-1  | ExplicitBounds #6: 7.000000
+sink-1  | ExplicitBounds #7: 10.000000
+sink-1  | Buckets #0, Count: 4
+sink-1  | Buckets #1, Count: 4
+sink-1  | Buckets #2, Count: 5
+sink-1  | Buckets #3, Count: 5
+sink-1  | Buckets #4, Count: 4
+sink-1  | Buckets #5, Count: 4
+sink-1  | Buckets #6, Count: 4
+sink-1  | Buckets #7, Count: 0
+sink-1  | Buckets #8, Count: 0
+sink-1  | HistogramDataPoints #18
+sink-1  | Data point attributes:
+sink-1  |      -> environment: Str(prod)
+sink-1  |      -> region: Str(us-east)
+sink-1  |      -> http.method: Str(GET)
+sink-1  |      -> http.status_code: Str(404)
+sink-1  | StartTimestamp: 2023-11-14 22:13:20 +0000 UTC
+sink-1  | Timestamp: 2023-11-14 22:13:21 +0000 UTC
+sink-1  | Count: 30
+sink-1  | Sum: 123.000000
+sink-1  | Min: 1.000000
+sink-1  | Max: 7.000000
+sink-1  | ExplicitBounds #0: 1.000000
+sink-1  | ExplicitBounds #1: 2.000000
+sink-1  | ExplicitBounds #2: 3.000000
+sink-1  | ExplicitBounds #3: 4.000000
+sink-1  | ExplicitBounds #4: 5.000000
+sink-1  | ExplicitBounds #5: 6.000000
+sink-1  | ExplicitBounds #6: 7.000000
+sink-1  | ExplicitBounds #7: 10.000000
+sink-1  | Buckets #0, Count: 4
+sink-1  | Buckets #1, Count: 4
+sink-1  | Buckets #2, Count: 4
+sink-1  | Buckets #3, Count: 4
+sink-1  | Buckets #4, Count: 5
+sink-1  | Buckets #5, Count: 5
+sink-1  | Buckets #6, Count: 4
+sink-1  | Buckets #7, Count: 0
+sink-1  | Buckets #8, Count: 0
+sink-1  | HistogramDataPoints #19
+sink-1  | Data point attributes:
+sink-1  |      -> environment: Str(prod)
+sink-1  |      -> region: Str(us-east)
+sink-1  |      -> http.method: Str(POST)
+sink-1  |      -> http.status_code: Str(500)
+sink-1  | StartTimestamp: 2023-11-14 22:13:20 +0000 UTC
+sink-1  | Timestamp: 2023-11-14 22:13:21 +0000 UTC
+sink-1  | Count: 30
+sink-1  | Sum: 115.000000
+sink-1  | Min: 1.000000
+sink-1  | Max: 7.000000
+sink-1  | ExplicitBounds #0: 1.000000
+sink-1  | ExplicitBounds #1: 2.000000
+sink-1  | ExplicitBounds #2: 3.000000
+sink-1  | ExplicitBounds #3: 4.000000
+sink-1  | ExplicitBounds #4: 5.000000
+sink-1  | ExplicitBounds #5: 6.000000
+sink-1  | ExplicitBounds #6: 7.000000
+sink-1  | ExplicitBounds #7: 10.000000
+sink-1  | Buckets #0, Count: 5
+sink-1  | Buckets #1, Count: 5
+sink-1  | Buckets #2, Count: 4
+sink-1  | Buckets #3, Count: 4
+sink-1  | Buckets #4, Count: 4
+sink-1  | Buckets #5, Count: 4
+sink-1  | Buckets #6, Count: 4
+sink-1  | Buckets #7, Count: 0
+sink-1  | Buckets #8, Count: 0
+sink-1  | 	{"resource": {"service.instance.id": "bc8db963-591c-417f-943d-2b243f54b469", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "metrics"}

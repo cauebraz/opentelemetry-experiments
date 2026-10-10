@@ -1,0 +1,2409 @@
+sink-1  | 	info	otelconftelemetry/tracer.go:47	Internal trace telemetry disabled	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	service@v0.162.0/service.go:233	Starting otelcol-contrib...	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "Version": "0.162.0", "NumCPU": 18}
+sink-1  | 	info	extensions/extensions.go:43	Starting extensions...	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	extensions/extensions.go:47	Extension is starting...	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension"}
+sink-1  | 	info	healthcheckextension@v0.162.0/healthcheckextension.go:32	Starting health_check extension	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension", "config": {"Config":{"ServerConfig":{"NetAddr":{"DialerConfig":{"Timeout":0},"Endpoint":"0.0.0.0:13133","Transport":"tcp"},"TLS":{},"CORS":{},"Auth":{},"MaxRequestBodySize":0,"IncludeMetadata":false,"ResponseHeaders":null,"CompressionAlgorithms":null,"ReadTimeout":0,"ReadHeaderTimeout":60000000000,"WriteTimeout":30000000000,"Middlewares":null,"Keepalive":{},"IdleTimeout":0,"KeepAlivesEnabled":false},"Path":"/","ResponseBody":null,"CheckCollectorPipeline":{"Enabled":false,"Interval":"5m","ExporterFailureThreshold":5},"UseV2":false,"GRPCConfig":null,"HTTPConfig":null,"ComponentHealthConfig":null}}}
+sink-1  | 	info	extensions/extensions.go:65	Extension started.	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension"}
+sink-1  | 	info	otlpreceiver@v0.162.0/otlp.go:120	Starting GRPC server	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "otlp", "otelcol.component.kind": "receiver", "endpoint": "[::]:4317"}
+sink-1  | 	info	healthcheck/handler.go:131	Health Check state change	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension", "status": "ready"}
+sink-1  | 	info	service@v0.162.0/service.go:256	Everything is ready. Begin running and processing data.	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 81155e436bcee05f40f27282783d0db8
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 72854d4f01f1552d
+sink-1  |     Name           : step-0
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:38.530666 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:38.531666 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(0)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 58a76946e7d261bcd6e83695393405b3
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 1eee907a30fdedf7
+sink-1  |     Name           : step-0
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:38.937228 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:38.938228 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(0)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 2faffd3bc14ed1c91eebdf7521b99025
+sink-1  |     Parent ID      :
+sink-1  |     ID             : d4b6a55b110ec723
+sink-1  |     Name           : step-0
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:39.341316 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:39.342316 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(0)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 3dee947a214ced22d4e5aac4086db312
+sink-1  |     Parent ID      :
+sink-1  |     ID             : bdd3112994388943
+sink-1  |     Name           : step-0
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:39.748297 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:39.749297 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(0)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 5a305425194f8b000d5186e9877b5306
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 27823fbc19fece3e
+sink-1  |     Name           : step-0
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:40.153348 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:40.154348 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(0)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 3211c4f48232bc5b5905474b83bd9a95
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 94fa0d412840f004
+sink-1  |     Name           : step-0
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:40.556695 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:40.557695 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(0)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 963ac1ab0ac4124a107d824cb9cc21fd
+sink-1  |     Parent ID      :
+sink-1  |     ID             : ce6c2047b2cf5e58
+sink-1  |     Name           : step-0
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:40.964696 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:40.965696 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(0)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : d9edad12170e8a127f2c4cc7c0738ddc
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 19b00de17c212851
+sink-1  |     Name           : step-0
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:41.371006 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:41.372006 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(0)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : a2a1971060f4714ffcec55f6340ae93c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 54078c12bd9bc0cb
+sink-1  |     Name           : step-0
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:41.779227 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:41.780227 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(0)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 023d31576ea853e818b74ba9317dac8f
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 6e4b55d070271584
+sink-1  |     Name           : step-0
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:42.182966 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:42.183966 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(0)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 6d6f20a50f4b722a994cb8ed96244b6a
+sink-1  |     Parent ID      :
+sink-1  |     ID             : ec6dad00c2eeef13
+sink-1  |     Name           : step-0
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:42.591135 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:42.592135 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(0)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : eb1661bade6a4a9bb4fef138a9a8088d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : a82bab362f8cacbd
+sink-1  |     Name           : step-0
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:42.996279 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:42.997279 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(0)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : dee4ce2c542c154472a4835327bbb2d7
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 9a04ce6b6bcf2a94
+sink-1  |     Name           : step-0
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:43.402734 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:43.403734 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(0)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 0c4868c0f1f8bfd5e2541434fa6840a4
+sink-1  |     Parent ID      :
+sink-1  |     ID             : a2da06a373879b60
+sink-1  |     Name           : step-0
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:43.807538 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:43.808538 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(0)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : c1a7aee5cda8ab14144ab4d35375c279
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 19b25845f1d24299
+sink-1  |     Name           : step-0
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:44.210995 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:44.211995 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(0)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 4df2345194d1198811f7dd0e200f0bcf
+sink-1  |     Parent ID      :
+sink-1  |     ID             : d06c2c3699ac3b77
+sink-1  |     Name           : step-0
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:44.616686 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:44.617686 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(0)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : eebc9d5d2e384ecd0bbed9eeeac2d49d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 78c11bb31353bb08
+sink-1  |     Name           : step-0
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:45.024231 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:45.025231 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(0)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 4c635c0d3e9db8d23dd9c4b6aaa79100
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 15e7e3cd5d247166
+sink-1  |     Name           : step-0
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:45.431763 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:45.432763 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(0)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 3f720b0b8fabe471050d01a999fa598a
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 2558717fa8c32531
+sink-1  |     Name           : step-0
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:45.838732 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:45.839732 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(0)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : e7a00dbdc7b810119fee53500f6a27a3
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 00b96cd67a60f168
+sink-1  |     Name           : step-0
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:46.244075 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:46.245075 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(0)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 81155e436bcee05f40f27282783d0db8
+sink-1  |     Parent ID      : 72854d4f01f1552d
+sink-1  |     ID             : aaf0b403d0432b03
+sink-1  |     Name           : step-1
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:46.647848 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:46.648848 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(1)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 58a76946e7d261bcd6e83695393405b3
+sink-1  |     Parent ID      : 1eee907a30fdedf7
+sink-1  |     ID             : a75cc95f0816d8ea
+sink-1  |     Name           : step-1
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:47.054889 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:47.055889 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(1)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 2faffd3bc14ed1c91eebdf7521b99025
+sink-1  |     Parent ID      : d4b6a55b110ec723
+sink-1  |     ID             : e021ff72100a3abc
+sink-1  |     Name           : step-1
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:47.458875 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:47.459875 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(1)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 3dee947a214ced22d4e5aac4086db312
+sink-1  |     Parent ID      : bdd3112994388943
+sink-1  |     ID             : 6bbd568ab23558d6
+sink-1  |     Name           : step-1
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:47.863199 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:47.864199 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(1)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 5a305425194f8b000d5186e9877b5306
+sink-1  |     Parent ID      : 27823fbc19fece3e
+sink-1  |     ID             : df3382f18d70b673
+sink-1  |     Name           : step-1
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:48.268808 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:48.269808 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(1)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 3211c4f48232bc5b5905474b83bd9a95
+sink-1  |     Parent ID      : 94fa0d412840f004
+sink-1  |     ID             : 5aabf02c706376ac
+sink-1  |     Name           : step-1
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:48.675765 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:48.676765 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(1)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 963ac1ab0ac4124a107d824cb9cc21fd
+sink-1  |     Parent ID      : ce6c2047b2cf5e58
+sink-1  |     ID             : a5d931f8da2e80af
+sink-1  |     Name           : step-1
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:49.079258 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:49.080258 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(1)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : d9edad12170e8a127f2c4cc7c0738ddc
+sink-1  |     Parent ID      : 19b00de17c212851
+sink-1  |     ID             : 2f9f31bbee3d8362
+sink-1  |     Name           : step-1
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:49.486237 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:49.487237 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(1)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : a2a1971060f4714ffcec55f6340ae93c
+sink-1  |     Parent ID      : 54078c12bd9bc0cb
+sink-1  |     ID             : bcb6ac26ed0bc2e7
+sink-1  |     Name           : step-1
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:49.891193 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:49.892193 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(1)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 023d31576ea853e818b74ba9317dac8f
+sink-1  |     Parent ID      : 6e4b55d070271584
+sink-1  |     ID             : c8cb512bd15bb4d4
+sink-1  |     Name           : step-1
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:50.298829 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:50.299829 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(1)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 6d6f20a50f4b722a994cb8ed96244b6a
+sink-1  |     Parent ID      : ec6dad00c2eeef13
+sink-1  |     ID             : b40f66eceb910263
+sink-1  |     Name           : step-1
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:50.705148 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:50.706148 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(1)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : eb1661bade6a4a9bb4fef138a9a8088d
+sink-1  |     Parent ID      : a82bab362f8cacbd
+sink-1  |     ID             : 7f98b26c088d8991
+sink-1  |     Name           : step-1
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:51.113084 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:51.114084 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(1)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : dee4ce2c542c154472a4835327bbb2d7
+sink-1  |     Parent ID      : 9a04ce6b6bcf2a94
+sink-1  |     ID             : 9b90062bdaf9fdb6
+sink-1  |     Name           : step-1
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:51.519975 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:51.520975 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(1)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 0c4868c0f1f8bfd5e2541434fa6840a4
+sink-1  |     Parent ID      : a2da06a373879b60
+sink-1  |     ID             : aefcb3522d980d88
+sink-1  |     Name           : step-1
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:51.927305 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:51.928305 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(1)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : c1a7aee5cda8ab14144ab4d35375c279
+sink-1  |     Parent ID      : 19b25845f1d24299
+sink-1  |     ID             : abb41951a1149850
+sink-1  |     Name           : step-1
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:52.33551 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:52.33651 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(1)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 4df2345194d1198811f7dd0e200f0bcf
+sink-1  |     Parent ID      : d06c2c3699ac3b77
+sink-1  |     ID             : 7206458c928afa33
+sink-1  |     Name           : step-1
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:52.743713 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:52.744713 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(1)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : eebc9d5d2e384ecd0bbed9eeeac2d49d
+sink-1  |     Parent ID      : 78c11bb31353bb08
+sink-1  |     ID             : e2713d5d1e2fb360
+sink-1  |     Name           : step-1
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:53.152035 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:53.153035 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(1)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 4c635c0d3e9db8d23dd9c4b6aaa79100
+sink-1  |     Parent ID      : 15e7e3cd5d247166
+sink-1  |     ID             : a9301e9f624a251c
+sink-1  |     Name           : step-1
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:53.558385 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:53.559385 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(1)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 3f720b0b8fabe471050d01a999fa598a
+sink-1  |     Parent ID      : 2558717fa8c32531
+sink-1  |     ID             : 672d1ef1bb63591b
+sink-1  |     Name           : step-1
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:53.966952 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:53.967952 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(1)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : e7a00dbdc7b810119fee53500f6a27a3
+sink-1  |     Parent ID      : 00b96cd67a60f168
+sink-1  |     ID             : 84ac5956052a580f
+sink-1  |     Name           : step-1
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:54.375141 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:54.376141 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(1)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 81155e436bcee05f40f27282783d0db8
+sink-1  |     Parent ID      : 72854d4f01f1552d
+sink-1  |     ID             : da5d773a75c74e77
+sink-1  |     Name           : step-2
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:54.781523 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:54.782523 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(2)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 58a76946e7d261bcd6e83695393405b3
+sink-1  |     Parent ID      : 1eee907a30fdedf7
+sink-1  |     ID             : 63be3505c14ef3c1
+sink-1  |     Name           : step-2
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:55.188541 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:55.189541 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(2)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 2faffd3bc14ed1c91eebdf7521b99025
+sink-1  |     Parent ID      : d4b6a55b110ec723
+sink-1  |     ID             : 3e5162b93fc6e24b
+sink-1  |     Name           : step-2
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:55.59157 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:55.59257 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(2)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 3dee947a214ced22d4e5aac4086db312
+sink-1  |     Parent ID      : bdd3112994388943
+sink-1  |     ID             : a24bbcc67a8f728a
+sink-1  |     Name           : step-2
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:56.000095 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:56.001095 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(2)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 5a305425194f8b000d5186e9877b5306
+sink-1  |     Parent ID      : 27823fbc19fece3e
+sink-1  |     ID             : 31805c93fedeca1b
+sink-1  |     Name           : step-2
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:56.404775 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:56.405775 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(2)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 3211c4f48232bc5b5905474b83bd9a95
+sink-1  |     Parent ID      : 94fa0d412840f004
+sink-1  |     ID             : a3f0b204afe4bbf5
+sink-1  |     Name           : step-2
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:56.812928 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:56.813928 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(2)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 963ac1ab0ac4124a107d824cb9cc21fd
+sink-1  |     Parent ID      : ce6c2047b2cf5e58
+sink-1  |     ID             : 49b3744a7e17f002
+sink-1  |     Name           : step-2
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:57.22039 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:57.22139 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(2)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : d9edad12170e8a127f2c4cc7c0738ddc
+sink-1  |     Parent ID      : 19b00de17c212851
+sink-1  |     ID             : 58fcc3a910006af3
+sink-1  |     Name           : step-2
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:57.627251 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:57.628251 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(2)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : a2a1971060f4714ffcec55f6340ae93c
+sink-1  |     Parent ID      : 54078c12bd9bc0cb
+sink-1  |     ID             : b97974d77f005917
+sink-1  |     Name           : step-2
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:58.031994 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:58.032994 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(2)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 023d31576ea853e818b74ba9317dac8f
+sink-1  |     Parent ID      : 6e4b55d070271584
+sink-1  |     ID             : 74cc22b0a2b3cc5e
+sink-1  |     Name           : step-2
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:58.438299 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:58.439299 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(2)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 6d6f20a50f4b722a994cb8ed96244b6a
+sink-1  |     Parent ID      : ec6dad00c2eeef13
+sink-1  |     ID             : e866e00bf2ce6d65
+sink-1  |     Name           : step-2
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:58.845434 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:58.846434 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(2)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : eb1661bade6a4a9bb4fef138a9a8088d
+sink-1  |     Parent ID      : a82bab362f8cacbd
+sink-1  |     ID             : decb38dd4e61d3f5
+sink-1  |     Name           : step-2
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:59.25313 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:59.25413 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(2)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : dee4ce2c542c154472a4835327bbb2d7
+sink-1  |     Parent ID      : 9a04ce6b6bcf2a94
+sink-1  |     ID             : fa90f69b5edd1d03
+sink-1  |     Name           : step-2
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:28:59.658393 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:28:59.659393 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(2)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 0c4868c0f1f8bfd5e2541434fa6840a4
+sink-1  |     Parent ID      : a2da06a373879b60
+sink-1  |     ID             : fd5a5ee0f7e28588
+sink-1  |     Name           : step-2
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:00.063094 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:00.064094 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(2)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : c1a7aee5cda8ab14144ab4d35375c279
+sink-1  |     Parent ID      : 19b25845f1d24299
+sink-1  |     ID             : 830ee98e79a35f6f
+sink-1  |     Name           : step-2
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:00.468762 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:00.469762 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(2)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 4df2345194d1198811f7dd0e200f0bcf
+sink-1  |     Parent ID      : d06c2c3699ac3b77
+sink-1  |     ID             : f005cdf84c9c8b3b
+sink-1  |     Name           : step-2
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:00.87701 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:00.87801 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(2)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : eebc9d5d2e384ecd0bbed9eeeac2d49d
+sink-1  |     Parent ID      : 78c11bb31353bb08
+sink-1  |     ID             : bcc430a28d031630
+sink-1  |     Name           : step-2
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:01.284282 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:01.285282 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(2)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 4c635c0d3e9db8d23dd9c4b6aaa79100
+sink-1  |     Parent ID      : 15e7e3cd5d247166
+sink-1  |     ID             : b8a0ab906deb3ce2
+sink-1  |     Name           : step-2
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:01.691305 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:01.692305 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(2)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 3f720b0b8fabe471050d01a999fa598a
+sink-1  |     Parent ID      : 2558717fa8c32531
+sink-1  |     ID             : c6bd07bf83507231
+sink-1  |     Name           : step-2
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:02.096308 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:02.097308 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(2)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : e7a00dbdc7b810119fee53500f6a27a3
+sink-1  |     Parent ID      : 00b96cd67a60f168
+sink-1  |     ID             : 4b0e3f5802999e15
+sink-1  |     Name           : step-2
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:02.504637 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:02.505637 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(2)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 81155e436bcee05f40f27282783d0db8
+sink-1  |     Parent ID      : 72854d4f01f1552d
+sink-1  |     ID             : 9b2fd4ce4f3f79ab
+sink-1  |     Name           : step-3
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:02.91297 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:02.91397 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(3)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 58a76946e7d261bcd6e83695393405b3
+sink-1  |     Parent ID      : 1eee907a30fdedf7
+sink-1  |     ID             : 878069f9f08a49d8
+sink-1  |     Name           : step-3
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:03.317273 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:03.318273 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(3)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 2faffd3bc14ed1c91eebdf7521b99025
+sink-1  |     Parent ID      : d4b6a55b110ec723
+sink-1  |     ID             : c24af3b97198f0be
+sink-1  |     Name           : step-3
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:03.721258 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:03.722258 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(3)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 3dee947a214ced22d4e5aac4086db312
+sink-1  |     Parent ID      : bdd3112994388943
+sink-1  |     ID             : 67e1b263f98099df
+sink-1  |     Name           : step-3
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:04.133392 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:04.134392 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(3)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 5a305425194f8b000d5186e9877b5306
+sink-1  |     Parent ID      : 27823fbc19fece3e
+sink-1  |     ID             : 23ecd11cedbd93fe
+sink-1  |     Name           : step-3
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:04.54067 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:04.54167 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(3)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 3211c4f48232bc5b5905474b83bd9a95
+sink-1  |     Parent ID      : 94fa0d412840f004
+sink-1  |     ID             : f0a84c86c72ab6e4
+sink-1  |     Name           : step-3
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:04.946325 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:04.947325 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(3)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 963ac1ab0ac4124a107d824cb9cc21fd
+sink-1  |     Parent ID      : ce6c2047b2cf5e58
+sink-1  |     ID             : acb5626476c6d98e
+sink-1  |     Name           : step-3
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:05.35248 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:05.35348 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(3)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : d9edad12170e8a127f2c4cc7c0738ddc
+sink-1  |     Parent ID      : 19b00de17c212851
+sink-1  |     ID             : 2711506ff13d4fe6
+sink-1  |     Name           : step-3
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:05.760702 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:05.761702 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(3)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : a2a1971060f4714ffcec55f6340ae93c
+sink-1  |     Parent ID      : 54078c12bd9bc0cb
+sink-1  |     ID             : 12fa9bfb52c47a24
+sink-1  |     Name           : step-3
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:06.165898 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:06.166898 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(3)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 023d31576ea853e818b74ba9317dac8f
+sink-1  |     Parent ID      : 6e4b55d070271584
+sink-1  |     ID             : 783c47895b903517
+sink-1  |     Name           : step-3
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:06.568939 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:06.569939 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(3)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 6d6f20a50f4b722a994cb8ed96244b6a
+sink-1  |     Parent ID      : ec6dad00c2eeef13
+sink-1  |     ID             : 89b33e0cca7c78d5
+sink-1  |     Name           : step-3
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:06.976959 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:06.977959 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(3)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : eb1661bade6a4a9bb4fef138a9a8088d
+sink-1  |     Parent ID      : a82bab362f8cacbd
+sink-1  |     ID             : c936f93a2ff242b7
+sink-1  |     Name           : step-3
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:07.380343 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:07.381343 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(3)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : dee4ce2c542c154472a4835327bbb2d7
+sink-1  |     Parent ID      : 9a04ce6b6bcf2a94
+sink-1  |     ID             : 15b3f54cb1d03425
+sink-1  |     Name           : step-3
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:07.787482 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:07.788482 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(3)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 0c4868c0f1f8bfd5e2541434fa6840a4
+sink-1  |     Parent ID      : a2da06a373879b60
+sink-1  |     ID             : c836b3bafb1504ac
+sink-1  |     Name           : step-3
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:08.195406 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:08.196406 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(3)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : c1a7aee5cda8ab14144ab4d35375c279
+sink-1  |     Parent ID      : 19b25845f1d24299
+sink-1  |     ID             : d386f4260a8014e1
+sink-1  |     Name           : step-3
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:08.602859 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:08.603859 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(3)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 4df2345194d1198811f7dd0e200f0bcf
+sink-1  |     Parent ID      : d06c2c3699ac3b77
+sink-1  |     ID             : c03b465356e2c389
+sink-1  |     Name           : step-3
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:09.011077 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:09.012077 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(3)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : eebc9d5d2e384ecd0bbed9eeeac2d49d
+sink-1  |     Parent ID      : 78c11bb31353bb08
+sink-1  |     ID             : 8fc1bd4cc8ba75e4
+sink-1  |     Name           : step-3
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:09.417505 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:09.418505 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(3)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 4c635c0d3e9db8d23dd9c4b6aaa79100
+sink-1  |     Parent ID      : 15e7e3cd5d247166
+sink-1  |     ID             : c01201e42e0f0b33
+sink-1  |     Name           : step-3
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:09.821037 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:09.822037 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(3)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 3f720b0b8fabe471050d01a999fa598a
+sink-1  |     Parent ID      : 2558717fa8c32531
+sink-1  |     ID             : e8f76748ce57a1f4
+sink-1  |     Name           : step-3
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:10.227137 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:10.228137 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(3)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : e7a00dbdc7b810119fee53500f6a27a3
+sink-1  |     Parent ID      : 00b96cd67a60f168
+sink-1  |     ID             : 4d4e85dabf3f7f14
+sink-1  |     Name           : step-3
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:10.635129 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:10.636129 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(3)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 81155e436bcee05f40f27282783d0db8
+sink-1  |     Parent ID      : 72854d4f01f1552d
+sink-1  |     ID             : a1f553c454ff024d
+sink-1  |     Name           : step-4
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:11.042926 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:11.043926 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(4)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 58a76946e7d261bcd6e83695393405b3
+sink-1  |     Parent ID      : 1eee907a30fdedf7
+sink-1  |     ID             : c644650fcd1a0f06
+sink-1  |     Name           : step-4
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:11.446371 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:11.447371 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(4)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 2faffd3bc14ed1c91eebdf7521b99025
+sink-1  |     Parent ID      : d4b6a55b110ec723
+sink-1  |     ID             : d8f8dfafbb30e4fa
+sink-1  |     Name           : step-4
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:11.8519 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:11.8529 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(4)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 3dee947a214ced22d4e5aac4086db312
+sink-1  |     Parent ID      : bdd3112994388943
+sink-1  |     ID             : 32719580b1ab6ae5
+sink-1  |     Name           : step-4
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:12.259149 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:12.260149 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(4)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 5a305425194f8b000d5186e9877b5306
+sink-1  |     Parent ID      : 27823fbc19fece3e
+sink-1  |     ID             : 2f8ac57f6c96042f
+sink-1  |     Name           : step-4
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:12.663569 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:12.664569 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(4)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 3211c4f48232bc5b5905474b83bd9a95
+sink-1  |     Parent ID      : 94fa0d412840f004
+sink-1  |     ID             : fa3b067d49eab2b1
+sink-1  |     Name           : step-4
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:13.070382 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:13.071382 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(4)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 963ac1ab0ac4124a107d824cb9cc21fd
+sink-1  |     Parent ID      : ce6c2047b2cf5e58
+sink-1  |     ID             : c99222a371aacb61
+sink-1  |     Name           : step-4
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:13.475291 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:13.476291 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(4)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : d9edad12170e8a127f2c4cc7c0738ddc
+sink-1  |     Parent ID      : 19b00de17c212851
+sink-1  |     ID             : 03a45f3b8e27ecf0
+sink-1  |     Name           : step-4
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:13.883752 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:13.884752 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(4)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : a2a1971060f4714ffcec55f6340ae93c
+sink-1  |     Parent ID      : 54078c12bd9bc0cb
+sink-1  |     ID             : 31babed9e3cb42a5
+sink-1  |     Name           : step-4
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:14.288891 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:14.289891 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(4)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 023d31576ea853e818b74ba9317dac8f
+sink-1  |     Parent ID      : 6e4b55d070271584
+sink-1  |     ID             : 3cf6a42f7f48d1c5
+sink-1  |     Name           : step-4
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:14.69499 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:14.69599 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(4)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 6d6f20a50f4b722a994cb8ed96244b6a
+sink-1  |     Parent ID      : ec6dad00c2eeef13
+sink-1  |     ID             : d84945a1d3850067
+sink-1  |     Name           : step-4
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:15.100055 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:15.101055 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(4)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : eb1661bade6a4a9bb4fef138a9a8088d
+sink-1  |     Parent ID      : a82bab362f8cacbd
+sink-1  |     ID             : 923bdf0814aa4386
+sink-1  |     Name           : step-4
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:15.504629 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:15.505629 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(4)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : dee4ce2c542c154472a4835327bbb2d7
+sink-1  |     Parent ID      : 9a04ce6b6bcf2a94
+sink-1  |     ID             : 9eafbebe1380cfd5
+sink-1  |     Name           : step-4
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:15.908331 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:15.909331 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(4)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 0c4868c0f1f8bfd5e2541434fa6840a4
+sink-1  |     Parent ID      : a2da06a373879b60
+sink-1  |     ID             : 3741c59db650e215
+sink-1  |     Name           : step-4
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:16.314412 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:16.315412 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(4)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : c1a7aee5cda8ab14144ab4d35375c279
+sink-1  |     Parent ID      : 19b25845f1d24299
+sink-1  |     ID             : a6e6316dd90c5e3e
+sink-1  |     Name           : step-4
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:16.719584 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:16.720584 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(4)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 4df2345194d1198811f7dd0e200f0bcf
+sink-1  |     Parent ID      : d06c2c3699ac3b77
+sink-1  |     ID             : fdb5f7cdbc38ad60
+sink-1  |     Name           : step-4
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:17.127093 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:17.128093 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(4)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : eebc9d5d2e384ecd0bbed9eeeac2d49d
+sink-1  |     Parent ID      : 78c11bb31353bb08
+sink-1  |     ID             : 74faf3b7d9a77b0c
+sink-1  |     Name           : step-4
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:17.533975 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:17.534975 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(4)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 4c635c0d3e9db8d23dd9c4b6aaa79100
+sink-1  |     Parent ID      : 15e7e3cd5d247166
+sink-1  |     ID             : 2cf68e45d4b374da
+sink-1  |     Name           : step-4
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:17.942236 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:17.943236 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(4)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : 3f720b0b8fabe471050d01a999fa598a
+sink-1  |     Parent ID      : 2558717fa8c32531
+sink-1  |     ID             : cf558ab29d34091f
+sink-1  |     Name           : step-4
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:18.349633 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:18.350633 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(4)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 1}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-05)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : e7a00dbdc7b810119fee53500f6a27a3
+sink-1  |     Parent ID      : 00b96cd67a60f168
+sink-1  |     ID             : dbd232a649063201
+sink-1  |     Name           : step-4
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-05 15:29:18.7579 +0000 UTC
+sink-1  |     End time       : 2026-10-05 15:29:18.7589 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> l2_05.depth: Int(4)
+sink-1  | 	{"resource": {"service.instance.id": "4853e4e8-45df-443d-9c5b-760abec2fc1d", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}

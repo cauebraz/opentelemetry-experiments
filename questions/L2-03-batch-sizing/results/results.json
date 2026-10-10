@@ -1,0 +1,877 @@
+{
+  "columns": [
+    {
+      "kind": "number",
+      "label": "HTTP status",
+      "path": "sending.http_status"
+    },
+    {
+      "kind": "number",
+      "label": "Requests sent",
+      "path": "sending.requests_sent"
+    },
+    {
+      "kind": "number",
+      "label": "Pre-send idle",
+      "path": "sending.pre_send_idle"
+    },
+    {
+      "kind": "number",
+      "label": "Accepted",
+      "path": "counters.collector.metrics.receiver_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Size triggers",
+      "path": "measured.size_triggers"
+    },
+    {
+      "kind": "number",
+      "label": "Timer triggers",
+      "path": "measured.timeout_triggers"
+    },
+    {
+      "kind": "number",
+      "label": "Batches sent",
+      "path": "measured.batches_sent"
+    },
+    {
+      "kind": "number",
+      "label": "Mean batch size",
+      "path": "measured.mean_batch_size"
+    },
+    {
+      "kind": "number",
+      "label": "Bytes batched",
+      "path": "measured.bytes_batched"
+    },
+    {
+      "kind": "number",
+      "label": "Requests at the sink",
+      "path": "measured.requests_at_sink"
+    },
+    {
+      "kind": "number",
+      "label": "Largest request",
+      "path": "measured.largest_request_at_sink"
+    },
+    {
+      "kind": "number",
+      "label": "Sent to the sink",
+      "path": "measured.sent_to_sink"
+    },
+    {
+      "kind": "number",
+      "label": "Arrived at the sink",
+      "path": "counters.sink.metrics.receiver_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Seconds to complete",
+      "path": "measured.seconds_to_complete"
+    }
+  ],
+  "question": {
+    "id": "L2-03",
+    "level": 2,
+    "signals": [
+      "metrics"
+    ],
+    "theme": "collector",
+    "title": "When does batch actually send, and what does each setting cost?"
+  },
+  "repetitions": 3,
+  "runs": [
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "no batch processor in the pipeline",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batches_sent": null,
+        "bytes_batched": null,
+        "largest_request_at_sink": 1,
+        "mean_batch_size": null,
+        "requests_at_sink": 100,
+        "seconds_to_complete": 6,
+        "sent_to_sink": 100.0,
+        "size_triggers": null,
+        "timeout_triggers": null
+      },
+      "repetition": 1,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "pre_send_idle": 0.0,
+        "requests_sent": 100,
+        "seconds_sending": 5.6,
+        "seconds_to_complete": 6
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "no-batch"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "batch at its defaults, 8192 datapoints or 200ms",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batches_sent": 28.0,
+        "bytes_batched": 14500.0,
+        "largest_request_at_sink": 4,
+        "mean_batch_size": 3.6,
+        "requests_at_sink": 28,
+        "seconds_to_complete": 7,
+        "sent_to_sink": 100.0,
+        "size_triggers": null,
+        "timeout_triggers": 28.0
+      },
+      "repetition": 1,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "pre_send_idle": 0.0,
+        "requests_sent": 100,
+        "seconds_sending": 5.6,
+        "seconds_to_complete": 7
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "defaults"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "send_batch_size 1, timeout 200ms",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batches_sent": 100.0,
+        "bytes_batched": 14500.0,
+        "largest_request_at_sink": 1,
+        "mean_batch_size": 1.0,
+        "requests_at_sink": 100,
+        "seconds_to_complete": 6,
+        "sent_to_sink": 100.0,
+        "size_triggers": 100.0,
+        "timeout_triggers": null
+      },
+      "repetition": 1,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "pre_send_idle": 0.0,
+        "requests_sent": 100,
+        "seconds_sending": 5.5,
+        "seconds_to_complete": 6
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "size-1"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "send_batch_size 5, timeout 10s",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batches_sent": 20.0,
+        "bytes_batched": 14500.0,
+        "largest_request_at_sink": 5,
+        "mean_batch_size": 5.0,
+        "requests_at_sink": 20,
+        "seconds_to_complete": 6,
+        "sent_to_sink": 100.0,
+        "size_triggers": 20.0,
+        "timeout_triggers": null
+      },
+      "repetition": 1,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "pre_send_idle": 0.0,
+        "requests_sent": 100,
+        "seconds_sending": 5.6,
+        "seconds_to_complete": 6
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "size-5-timeout-10s"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "send_batch_size 8192, timeout 10s",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batches_sent": 1.0,
+        "bytes_batched": 14500.0,
+        "largest_request_at_sink": 100,
+        "mean_batch_size": 100.0,
+        "requests_at_sink": 1,
+        "seconds_to_complete": 11,
+        "sent_to_sink": 100.0,
+        "size_triggers": null,
+        "timeout_triggers": 1.0
+      },
+      "repetition": 1,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "pre_send_idle": 0.0,
+        "requests_sent": 100,
+        "seconds_sending": 5.6,
+        "seconds_to_complete": 11
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "size-8192-timeout-10s"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "no batch processor in the pipeline",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batches_sent": null,
+        "bytes_batched": null,
+        "largest_request_at_sink": 1,
+        "mean_batch_size": null,
+        "requests_at_sink": 100,
+        "seconds_to_complete": 6,
+        "sent_to_sink": 100.0,
+        "size_triggers": null,
+        "timeout_triggers": null
+      },
+      "repetition": 2,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "pre_send_idle": 0.0,
+        "requests_sent": 100,
+        "seconds_sending": 5.6,
+        "seconds_to_complete": 6
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "no-batch"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "batch at its defaults, 8192 datapoints or 200ms",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batches_sent": 28.0,
+        "bytes_batched": 14500.0,
+        "largest_request_at_sink": 4,
+        "mean_batch_size": 3.6,
+        "requests_at_sink": 28,
+        "seconds_to_complete": 6,
+        "sent_to_sink": 100.0,
+        "size_triggers": null,
+        "timeout_triggers": 28.0
+      },
+      "repetition": 2,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "pre_send_idle": 0.0,
+        "requests_sent": 100,
+        "seconds_sending": 5.6,
+        "seconds_to_complete": 6
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "defaults"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "send_batch_size 1, timeout 200ms",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batches_sent": 100.0,
+        "bytes_batched": 14500.0,
+        "largest_request_at_sink": 1,
+        "mean_batch_size": 1.0,
+        "requests_at_sink": 100,
+        "seconds_to_complete": 7,
+        "sent_to_sink": 100.0,
+        "size_triggers": 100.0,
+        "timeout_triggers": null
+      },
+      "repetition": 2,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "pre_send_idle": 0.0,
+        "requests_sent": 100,
+        "seconds_sending": 5.5,
+        "seconds_to_complete": 7
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "size-1"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "send_batch_size 5, timeout 10s",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batches_sent": 20.0,
+        "bytes_batched": 14500.0,
+        "largest_request_at_sink": 5,
+        "mean_batch_size": 5.0,
+        "requests_at_sink": 20,
+        "seconds_to_complete": 6,
+        "sent_to_sink": 100.0,
+        "size_triggers": 20.0,
+        "timeout_triggers": null
+      },
+      "repetition": 2,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "pre_send_idle": 0.0,
+        "requests_sent": 100,
+        "seconds_sending": 5.6,
+        "seconds_to_complete": 6
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "size-5-timeout-10s"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "send_batch_size 8192, timeout 10s",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batches_sent": 1.0,
+        "bytes_batched": 14500.0,
+        "largest_request_at_sink": 100,
+        "mean_batch_size": 100.0,
+        "requests_at_sink": 1,
+        "seconds_to_complete": 8,
+        "sent_to_sink": 100.0,
+        "size_triggers": null,
+        "timeout_triggers": 1.0
+      },
+      "repetition": 2,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "pre_send_idle": 3.0,
+        "requests_sent": 100,
+        "seconds_sending": 5.6,
+        "seconds_to_complete": 8
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "size-8192-timeout-10s"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "no batch processor in the pipeline",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batches_sent": null,
+        "bytes_batched": null,
+        "largest_request_at_sink": 1,
+        "mean_batch_size": null,
+        "requests_at_sink": 100,
+        "seconds_to_complete": 6,
+        "sent_to_sink": 100.0,
+        "size_triggers": null,
+        "timeout_triggers": null
+      },
+      "repetition": 3,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "pre_send_idle": 0.0,
+        "requests_sent": 100,
+        "seconds_sending": 5.7,
+        "seconds_to_complete": 6
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "no-batch"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "batch at its defaults, 8192 datapoints or 200ms",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batches_sent": 28.0,
+        "bytes_batched": 14500.0,
+        "largest_request_at_sink": 4,
+        "mean_batch_size": 3.6,
+        "requests_at_sink": 28,
+        "seconds_to_complete": 7,
+        "sent_to_sink": 100.0,
+        "size_triggers": null,
+        "timeout_triggers": 28.0
+      },
+      "repetition": 3,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "pre_send_idle": 0.0,
+        "requests_sent": 100,
+        "seconds_sending": 5.6,
+        "seconds_to_complete": 7
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "defaults"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "send_batch_size 1, timeout 200ms",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batches_sent": 100.0,
+        "bytes_batched": 14500.0,
+        "largest_request_at_sink": 1,
+        "mean_batch_size": 1.0,
+        "requests_at_sink": 100,
+        "seconds_to_complete": 7,
+        "sent_to_sink": 100.0,
+        "size_triggers": 100.0,
+        "timeout_triggers": null
+      },
+      "repetition": 3,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "pre_send_idle": 0.0,
+        "requests_sent": 100,
+        "seconds_sending": 5.6,
+        "seconds_to_complete": 7
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "size-1"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "send_batch_size 5, timeout 10s",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batches_sent": 20.0,
+        "bytes_batched": 14500.0,
+        "largest_request_at_sink": 5,
+        "mean_batch_size": 5.0,
+        "requests_at_sink": 20,
+        "seconds_to_complete": 6,
+        "sent_to_sink": 100.0,
+        "size_triggers": 20.0,
+        "timeout_triggers": null
+      },
+      "repetition": 3,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "pre_send_idle": 0.0,
+        "requests_sent": 100,
+        "seconds_sending": 5.6,
+        "seconds_to_complete": 6
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "size-5-timeout-10s"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "send_batch_size 8192, timeout 10s",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batches_sent": 2.0,
+        "bytes_batched": 14500.0,
+        "largest_request_at_sink": 50,
+        "mean_batch_size": 50.0,
+        "requests_at_sink": 2,
+        "seconds_to_complete": 14,
+        "sent_to_sink": 100.0,
+        "size_triggers": null,
+        "timeout_triggers": 2.0
+      },
+      "repetition": 3,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "pre_send_idle": 7.0,
+        "requests_sent": 100,
+        "seconds_sending": 5.6,
+        "seconds_to_complete": 14
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "size-8192-timeout-10s"
+    }
+  ],
+  "stack": {
+    "otelcol_contrib": "0.162.0",
+    "prometheus": "v3.15.0"
+  },
+  "variants": [
+    {
+      "description": "no batch processor in the pipeline",
+      "name": "no-batch"
+    },
+    {
+      "description": "batch at its defaults, 8192 datapoints or 200ms",
+      "name": "defaults"
+    },
+    {
+      "description": "send_batch_size 1, timeout 200ms",
+      "name": "size-1"
+    },
+    {
+      "description": "send_batch_size 5, timeout 10s",
+      "name": "size-5-timeout-10s"
+    },
+    {
+      "description": "send_batch_size 8192, timeout 10s",
+      "name": "size-8192-timeout-10s"
+    }
+  ]
+}

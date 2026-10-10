@@ -1,0 +1,1183 @@
+{
+  "columns": [
+    {
+      "kind": "number",
+      "label": "Points sent",
+      "path": "sending.points_sent"
+    },
+    {
+      "kind": "number",
+      "label": "Input request bytes",
+      "path": "sending.input_request_bytes"
+    },
+    {
+      "kind": "number",
+      "label": "Sink RX bytes",
+      "path": "sending.sink_rx_bytes"
+    },
+    {
+      "kind": "number",
+      "label": "RX bytes per point",
+      "path": "sending.rx_bytes_per_point"
+    },
+    {
+      "kind": "number",
+      "label": "Collector CPU ns",
+      "path": "sending.collector_cpu_ns"
+    },
+    {
+      "kind": "number",
+      "label": "Adjusted CPU ns per point",
+      "path": "sending.adjusted_cpu_ns_per_point"
+    },
+    {
+      "kind": "number",
+      "label": "Idle sink RX bytes",
+      "path": "sending.idle_sink_rx_bytes"
+    },
+    {
+      "kind": "number",
+      "label": "Background RX bytes",
+      "path": "sending.background_rx_bytes"
+    },
+    {
+      "kind": "number",
+      "label": "Net RX bytes",
+      "path": "sending.net_rx_bytes"
+    },
+    {
+      "kind": "number",
+      "label": "Work seconds",
+      "path": "sending.work_seconds"
+    },
+    {
+      "kind": "number",
+      "label": "Export requests",
+      "path": "measured.export_requests"
+    },
+    {
+      "kind": "number",
+      "label": "Delivered",
+      "path": "measured.delivered_points"
+    },
+    {
+      "kind": "number",
+      "label": "Collector accepted",
+      "path": "counters.collector.metrics.receiver_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Sink accepted",
+      "path": "counters.sink.metrics.receiver_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Send failed",
+      "path": "counters.collector.metrics.exporter_send_failed"
+    },
+    {
+      "kind": "number",
+      "label": "Order position",
+      "path": "position"
+    },
+    {
+      "kind": "number",
+      "label": "Warn lines",
+      "path": "log.warn_lines"
+    },
+    {
+      "kind": "number",
+      "label": "Error lines",
+      "path": "log.error_lines"
+    }
+  ],
+  "execution_order": [
+    [
+      "grpc-none",
+      "grpc-gzip",
+      "http-none",
+      "http-gzip"
+    ],
+    [
+      "grpc-gzip",
+      "http-none",
+      "http-gzip",
+      "grpc-none"
+    ],
+    [
+      "http-none",
+      "http-gzip",
+      "grpc-none",
+      "grpc-gzip"
+    ],
+    [
+      "http-gzip",
+      "grpc-none",
+      "grpc-gzip",
+      "http-none"
+    ]
+  ],
+  "provenance": {
+    "compose_sha256": "49991e9504b2cec047c838cfcbcb462847254b462c3785d3655a1048e4e32555",
+    "docker_compose": "5.5.1",
+    "dockerfile_sha256": "9144298cec761cc3f7f162e232a2accda2203566c7fe91b9566f15e9f5d245de",
+    "machine": "arm64",
+    "python": "3.14.8",
+    "system": "Darwin"
+  },
+  "question": {
+    "id": "L3-06",
+    "level": 3,
+    "signals": [
+      "metrics"
+    ],
+    "theme": "collector",
+    "title": "How many bytes does a datapoint cost on the wire?"
+  },
+  "repetitions": 4,
+  "results_version": 2,
+  "runs": [
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "OTLP/gRPC to the sink, compression none",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20,
+        "largest_request": 5000
+      },
+      "position": 1,
+      "repetition": 1,
+      "sending": {
+        "adjusted_cpu_ns": 172032889,
+        "adjusted_cpu_ns_per_point": 1720.3,
+        "background_rx_bytes": 866,
+        "collector_cpu_ns": 172185000,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "idle_collector_cpu_ns": 191000,
+        "idle_seconds": 5.0,
+        "idle_sink_rx_bytes": 1088,
+        "input_request_bytes": 23458000,
+        "net_rx_bytes": 7338395,
+        "non_200": 0,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "requests_sent": 200,
+        "rx_bytes_per_point": 73.4,
+        "sink_rx_bytes": 7339261,
+        "window_problems": [],
+        "work_seconds": 3.98
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "grpc-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "OTLP/gRPC to the sink, compression gzip",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20,
+        "largest_request": 5000
+      },
+      "position": 2,
+      "repetition": 1,
+      "sending": {
+        "adjusted_cpu_ns": 213901717,
+        "adjusted_cpu_ns_per_point": 2139.0,
+        "background_rx_bytes": 678,
+        "collector_cpu_ns": 214180000,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "idle_collector_cpu_ns": 348000,
+        "idle_seconds": 5.0,
+        "idle_sink_rx_bytes": 848,
+        "input_request_bytes": 23458000,
+        "net_rx_bytes": 844479,
+        "non_200": 0,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "requests_sent": 200,
+        "rx_bytes_per_point": 8.4,
+        "sink_rx_bytes": 845157,
+        "window_problems": [],
+        "work_seconds": 4.0
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "grpc-gzip"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "OTLP/HTTP protobuf to the sink, compression none",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20,
+        "largest_request": 5000
+      },
+      "position": 3,
+      "repetition": 1,
+      "sending": {
+        "adjusted_cpu_ns": 177597000,
+        "adjusted_cpu_ns_per_point": 1776.0,
+        "background_rx_bytes": 653,
+        "collector_cpu_ns": 177597000,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "idle_collector_cpu_ns": 0,
+        "idle_seconds": 5.0,
+        "idle_sink_rx_bytes": 826,
+        "input_request_bytes": 23458000,
+        "net_rx_bytes": 7339913,
+        "non_200": 0,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "requests_sent": 200,
+        "rx_bytes_per_point": 73.4,
+        "sink_rx_bytes": 7340566,
+        "window_problems": [],
+        "work_seconds": 3.95
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "http-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "OTLP/HTTP protobuf to the sink, compression gzip",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20,
+        "largest_request": 5000
+      },
+      "position": 4,
+      "repetition": 1,
+      "sending": {
+        "adjusted_cpu_ns": 217647000,
+        "adjusted_cpu_ns_per_point": 2176.5,
+        "background_rx_bytes": 873,
+        "collector_cpu_ns": 217647000,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "idle_collector_cpu_ns": 0,
+        "idle_seconds": 5.0,
+        "idle_sink_rx_bytes": 1088,
+        "input_request_bytes": 23458000,
+        "net_rx_bytes": 842540,
+        "non_200": 0,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "requests_sent": 200,
+        "rx_bytes_per_point": 8.4,
+        "sink_rx_bytes": 843413,
+        "window_problems": [],
+        "work_seconds": 4.01
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "http-gzip"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "OTLP/gRPC to the sink, compression gzip",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20,
+        "largest_request": 5000
+      },
+      "position": 1,
+      "repetition": 2,
+      "sending": {
+        "adjusted_cpu_ns": 207267193,
+        "adjusted_cpu_ns_per_point": 2072.7,
+        "background_rx_bytes": 904,
+        "collector_cpu_ns": 207356000,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "idle_collector_cpu_ns": 111000,
+        "idle_seconds": 5.0,
+        "idle_sink_rx_bytes": 1130,
+        "input_request_bytes": 23458000,
+        "net_rx_bytes": 844312,
+        "non_200": 0,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "requests_sent": 200,
+        "rx_bytes_per_point": 8.4,
+        "sink_rx_bytes": 845216,
+        "window_problems": [],
+        "work_seconds": 4.0
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "grpc-gzip"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "OTLP/HTTP protobuf to the sink, compression none",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20,
+        "largest_request": 5000
+      },
+      "position": 2,
+      "repetition": 2,
+      "sending": {
+        "adjusted_cpu_ns": 198245000,
+        "adjusted_cpu_ns_per_point": 1982.5,
+        "background_rx_bytes": 881,
+        "collector_cpu_ns": 198245000,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "idle_collector_cpu_ns": 0,
+        "idle_seconds": 5.0,
+        "idle_sink_rx_bytes": 1088,
+        "input_request_bytes": 23458000,
+        "net_rx_bytes": 7339751,
+        "non_200": 0,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "requests_sent": 200,
+        "rx_bytes_per_point": 73.4,
+        "sink_rx_bytes": 7340632,
+        "window_problems": [],
+        "work_seconds": 4.05
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "http-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "OTLP/HTTP protobuf to the sink, compression gzip",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20,
+        "largest_request": 5000
+      },
+      "position": 3,
+      "repetition": 2,
+      "sending": {
+        "adjusted_cpu_ns": 231414000,
+        "adjusted_cpu_ns_per_point": 2314.1,
+        "background_rx_bytes": 882,
+        "collector_cpu_ns": 231414000,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "idle_collector_cpu_ns": 0,
+        "idle_seconds": 5.0,
+        "idle_sink_rx_bytes": 1088,
+        "input_request_bytes": 23458000,
+        "net_rx_bytes": 842531,
+        "non_200": 0,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "requests_sent": 200,
+        "rx_bytes_per_point": 8.4,
+        "sink_rx_bytes": 843413,
+        "window_problems": [],
+        "work_seconds": 4.05
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "http-gzip"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "OTLP/gRPC to the sink, compression none",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20,
+        "largest_request": 5000
+      },
+      "position": 4,
+      "repetition": 2,
+      "sending": {
+        "adjusted_cpu_ns": 192665897,
+        "adjusted_cpu_ns_per_point": 1926.7,
+        "background_rx_bytes": 868,
+        "collector_cpu_ns": 192764000,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "idle_collector_cpu_ns": 123000,
+        "idle_seconds": 5.0,
+        "idle_sink_rx_bytes": 1088,
+        "input_request_bytes": 23458000,
+        "net_rx_bytes": 7338136,
+        "non_200": 0,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "requests_sent": 200,
+        "rx_bytes_per_point": 73.4,
+        "sink_rx_bytes": 7339004,
+        "window_problems": [],
+        "work_seconds": 3.99
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "grpc-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "OTLP/HTTP protobuf to the sink, compression none",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20,
+        "largest_request": 5000
+      },
+      "position": 1,
+      "repetition": 3,
+      "sending": {
+        "adjusted_cpu_ns": 178270000,
+        "adjusted_cpu_ns_per_point": 1782.7,
+        "background_rx_bytes": 665,
+        "collector_cpu_ns": 178270000,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "idle_collector_cpu_ns": 0,
+        "idle_seconds": 5.0,
+        "idle_sink_rx_bytes": 826,
+        "input_request_bytes": 23458000,
+        "net_rx_bytes": 7339835,
+        "non_200": 0,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "requests_sent": 200,
+        "rx_bytes_per_point": 73.4,
+        "sink_rx_bytes": 7340500,
+        "window_problems": [],
+        "work_seconds": 4.02
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "http-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "OTLP/HTTP protobuf to the sink, compression gzip",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20,
+        "largest_request": 5000
+      },
+      "position": 2,
+      "repetition": 3,
+      "sending": {
+        "adjusted_cpu_ns": 208883000,
+        "adjusted_cpu_ns_per_point": 2088.8,
+        "background_rx_bytes": 830,
+        "collector_cpu_ns": 208883000,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "idle_collector_cpu_ns": 0,
+        "idle_seconds": 5.0,
+        "idle_sink_rx_bytes": 1046,
+        "input_request_bytes": 23458000,
+        "net_rx_bytes": 842583,
+        "non_200": 0,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "requests_sent": 200,
+        "rx_bytes_per_point": 8.4,
+        "sink_rx_bytes": 843413,
+        "window_problems": [],
+        "work_seconds": 3.97
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "http-gzip"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "OTLP/gRPC to the sink, compression none",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20,
+        "largest_request": 5000
+      },
+      "position": 3,
+      "repetition": 3,
+      "sending": {
+        "adjusted_cpu_ns": 177623000,
+        "adjusted_cpu_ns_per_point": 1776.2,
+        "background_rx_bytes": 861,
+        "collector_cpu_ns": 177623000,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "idle_collector_cpu_ns": 0,
+        "idle_seconds": 5.0,
+        "idle_sink_rx_bytes": 1088,
+        "input_request_bytes": 23458000,
+        "net_rx_bytes": 7338914,
+        "non_200": 0,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "requests_sent": 200,
+        "rx_bytes_per_point": 73.4,
+        "sink_rx_bytes": 7339775,
+        "window_problems": [],
+        "work_seconds": 3.96
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "grpc-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "OTLP/gRPC to the sink, compression gzip",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20,
+        "largest_request": 5000
+      },
+      "position": 4,
+      "repetition": 3,
+      "sending": {
+        "adjusted_cpu_ns": 216129925,
+        "adjusted_cpu_ns_per_point": 2161.3,
+        "background_rx_bytes": 865,
+        "collector_cpu_ns": 216351000,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "idle_collector_cpu_ns": 278000,
+        "idle_seconds": 5.0,
+        "idle_sink_rx_bytes": 1088,
+        "input_request_bytes": 23458000,
+        "net_rx_bytes": 844417,
+        "non_200": 0,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "requests_sent": 200,
+        "rx_bytes_per_point": 8.4,
+        "sink_rx_bytes": 845282,
+        "window_problems": [],
+        "work_seconds": 3.98
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "grpc-gzip"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "OTLP/HTTP protobuf to the sink, compression gzip",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20,
+        "largest_request": 5000
+      },
+      "position": 1,
+      "repetition": 4,
+      "sending": {
+        "adjusted_cpu_ns": 243121000,
+        "adjusted_cpu_ns_per_point": 2431.2,
+        "background_rx_bytes": 766,
+        "collector_cpu_ns": 243121000,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "idle_collector_cpu_ns": 0,
+        "idle_seconds": 5.0,
+        "idle_sink_rx_bytes": 938,
+        "input_request_bytes": 23458000,
+        "net_rx_bytes": 842647,
+        "non_200": 0,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "requests_sent": 200,
+        "rx_bytes_per_point": 8.4,
+        "sink_rx_bytes": 843413,
+        "window_problems": [],
+        "work_seconds": 4.08
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "http-gzip"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "OTLP/gRPC to the sink, compression none",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20,
+        "largest_request": 5000
+      },
+      "position": 2,
+      "repetition": 4,
+      "sending": {
+        "adjusted_cpu_ns": 182907329,
+        "adjusted_cpu_ns_per_point": 1829.1,
+        "background_rx_bytes": 639,
+        "collector_cpu_ns": 183166000,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "idle_collector_cpu_ns": 324000,
+        "idle_seconds": 5.0,
+        "idle_sink_rx_bytes": 800,
+        "input_request_bytes": 23458000,
+        "net_rx_bytes": 7339181,
+        "non_200": 0,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "requests_sent": 200,
+        "rx_bytes_per_point": 73.4,
+        "sink_rx_bytes": 7339820,
+        "window_problems": [],
+        "work_seconds": 3.99
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "grpc-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "OTLP/gRPC to the sink, compression gzip",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20,
+        "largest_request": 5000
+      },
+      "position": 3,
+      "repetition": 4,
+      "sending": {
+        "adjusted_cpu_ns": 268795000,
+        "adjusted_cpu_ns_per_point": 2687.9,
+        "background_rx_bytes": 934,
+        "collector_cpu_ns": 268795000,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "idle_collector_cpu_ns": 0,
+        "idle_seconds": 5.0,
+        "idle_sink_rx_bytes": 1130,
+        "input_request_bytes": 23458000,
+        "net_rx_bytes": 844296,
+        "non_200": 0,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "requests_sent": 200,
+        "rx_bytes_per_point": 8.4,
+        "sink_rx_bytes": 845230,
+        "window_problems": [],
+        "work_seconds": 4.13
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "grpc-gzip"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "OTLP/HTTP protobuf to the sink, compression none",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20,
+        "largest_request": 5000
+      },
+      "position": 4,
+      "repetition": 4,
+      "sending": {
+        "adjusted_cpu_ns": 186908000,
+        "adjusted_cpu_ns_per_point": 1869.1,
+        "background_rx_bytes": 879,
+        "collector_cpu_ns": 186908000,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "idle_collector_cpu_ns": 0,
+        "idle_seconds": 5.0,
+        "idle_sink_rx_bytes": 1088,
+        "input_request_bytes": 23458000,
+        "net_rx_bytes": 7339555,
+        "non_200": 0,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "requests_sent": 200,
+        "rx_bytes_per_point": 73.4,
+        "sink_rx_bytes": 7340434,
+        "window_problems": [],
+        "work_seconds": 4.04
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "http-none"
+    }
+  ],
+  "stack": {
+    "otelcol_contrib": "0.162.0",
+    "prometheus": "v3.15.0"
+  },
+  "variants": [
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "1f8fcadffe88eadd9d0d38d00deb4920d95c7e0c50ee64890d04e2de06b867b1",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "457f34df027d6d29bce730fa14ee8fc57b6972c81cdbf1af0bdfdaa6023bd786"
+      },
+      "description": "OTLP/gRPC to the sink, compression none",
+      "name": "grpc-none",
+      "options": {}
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "411bad81a93c9c292f9aadab9dac815b8c9c10b000497007970a00bc863795e4",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "457f34df027d6d29bce730fa14ee8fc57b6972c81cdbf1af0bdfdaa6023bd786"
+      },
+      "description": "OTLP/gRPC to the sink, compression gzip",
+      "name": "grpc-gzip",
+      "options": {}
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "47daf74dcdbcbd480ba39d009f5b2c736b877915ee7fc0c3e022fd859db4849e",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "457f34df027d6d29bce730fa14ee8fc57b6972c81cdbf1af0bdfdaa6023bd786"
+      },
+      "description": "OTLP/HTTP protobuf to the sink, compression none",
+      "name": "http-none",
+      "options": {}
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "bf39395e6a587bc934c3e809c3887aec5b6f5f8a6208e5449ab1de8a44533f51",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "457f34df027d6d29bce730fa14ee8fc57b6972c81cdbf1af0bdfdaa6023bd786"
+      },
+      "description": "OTLP/HTTP protobuf to the sink, compression gzip",
+      "name": "http-gzip",
+      "options": {}
+    }
+  ]
+}

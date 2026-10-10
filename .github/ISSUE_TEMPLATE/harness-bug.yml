@@ -1,0 +1,25 @@
+name: Harness bug
+description: Something in the runner, stack or check recipes is wrong
+title: "[harness] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: Observed behaviour and the recipe that produced it.
+    validations:
+      required: true
+  - type: textarea
+    id: expect
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Python, Docker, uv and just versions, plus the otelcol-contrib pin.
+    validations:
+      required: true

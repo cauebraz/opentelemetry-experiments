@@ -1,0 +1,66 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+      http:
+        endpoint: 0.0.0.0:4318
+
+processors:
+  attributes/a:
+    actions:
+      - key: pipeline
+        value: a
+        action: insert
+  attributes/b:
+    actions:
+      - key: pipeline
+        value: b
+        action: insert
+
+exporters:
+  debug:
+    verbosity: detailed
+  otlp_grpc/sink:
+    endpoint: sink:4317
+    timeout: 2s
+    tls:
+      insecure: true
+    sending_queue:
+      enabled: false
+    retry_on_failure:
+      enabled: false
+
+extensions:
+  health_check:
+    endpoint: 0.0.0.0:13133
+
+service:
+  extensions:
+    - health_check
+  pipelines:
+    traces/a:
+      receivers:
+        - otlp
+      processors:
+        - attributes/a
+      exporters:
+        - debug
+    traces/b:
+      receivers:
+        - otlp
+      processors:
+        - attributes/b
+      exporters:
+        - otlp_grpc/sink
+  telemetry:
+    metrics:
+      level: detailed
+      readers:
+        - pull:
+            exporter:
+              prometheus:
+                host: 0.0.0.0
+                port: 8888
+                without_type_suffix: true
+                without_units: true

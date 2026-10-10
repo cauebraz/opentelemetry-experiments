@@ -1,0 +1,5491 @@
+sink-1  | 	info	otelconftelemetry/tracer.go:47	Internal trace telemetry disabled	{"resource": {"service.instance.id": "785a76d4-ee0f-4a1e-841e-a1ccf5960f31", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	service@v0.162.0/service.go:233	Starting otelcol-contrib...	{"resource": {"service.instance.id": "785a76d4-ee0f-4a1e-841e-a1ccf5960f31", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "Version": "0.162.0", "NumCPU": 18}
+sink-1  | 	info	extensions/extensions.go:43	Starting extensions...	{"resource": {"service.instance.id": "785a76d4-ee0f-4a1e-841e-a1ccf5960f31", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	extensions/extensions.go:47	Extension is starting...	{"resource": {"service.instance.id": "785a76d4-ee0f-4a1e-841e-a1ccf5960f31", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension"}
+sink-1  | 	info	healthcheckextension@v0.162.0/healthcheckextension.go:32	Starting health_check extension	{"resource": {"service.instance.id": "785a76d4-ee0f-4a1e-841e-a1ccf5960f31", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension", "config": {"Config":{"ServerConfig":{"NetAddr":{"DialerConfig":{"Timeout":0},"Endpoint":"0.0.0.0:13133","Transport":"tcp"},"TLS":{},"CORS":{},"Auth":{},"MaxRequestBodySize":0,"IncludeMetadata":false,"ResponseHeaders":null,"CompressionAlgorithms":null,"ReadTimeout":0,"ReadHeaderTimeout":60000000000,"WriteTimeout":30000000000,"Middlewares":null,"Keepalive":{},"IdleTimeout":0,"KeepAlivesEnabled":false},"Path":"/","ResponseBody":null,"CheckCollectorPipeline":{"Enabled":false,"Interval":"5m","ExporterFailureThreshold":5},"UseV2":false,"GRPCConfig":null,"HTTPConfig":null,"ComponentHealthConfig":null}}}
+sink-1  | 	info	extensions/extensions.go:65	Extension started.	{"resource": {"service.instance.id": "785a76d4-ee0f-4a1e-841e-a1ccf5960f31", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension"}
+sink-1  | 	info	otlpreceiver@v0.162.0/otlp.go:120	Starting GRPC server	{"resource": {"service.instance.id": "785a76d4-ee0f-4a1e-841e-a1ccf5960f31", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "otlp", "otelcol.component.kind": "receiver", "endpoint": "[::]:4317"}
+sink-1  | 	info	healthcheck/handler.go:131	Health Check state change	{"resource": {"service.instance.id": "785a76d4-ee0f-4a1e-841e-a1ccf5960f31", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension", "status": "ready"}
+sink-1  | 	info	service@v0.162.0/service.go:256	Everything is ready. Begin running and processing data.	{"resource": {"service.instance.id": "785a76d4-ee0f-4a1e-841e-a1ccf5960f31", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	otelcol@v0.162.0/collector.go:476	Received signal from OS	{"resource": {"service.instance.id": "785a76d4-ee0f-4a1e-841e-a1ccf5960f31", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "signal": "terminated"}
+sink-1  | 	info	service@v0.162.0/service.go:294	Starting shutdown...	{"resource": {"service.instance.id": "785a76d4-ee0f-4a1e-841e-a1ccf5960f31", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	healthcheck/handler.go:131	Health Check state change	{"resource": {"service.instance.id": "785a76d4-ee0f-4a1e-841e-a1ccf5960f31", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension", "status": "unavailable"}
+sink-1  | 	info	extensions/extensions.go:72	Stopping extensions...	{"resource": {"service.instance.id": "785a76d4-ee0f-4a1e-841e-a1ccf5960f31", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	service@v0.162.0/service.go:308	Shutdown complete.	{"resource": {"service.instance.id": "785a76d4-ee0f-4a1e-841e-a1ccf5960f31", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	otelconftelemetry/tracer.go:47	Internal trace telemetry disabled	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	service@v0.162.0/service.go:233	Starting otelcol-contrib...	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "Version": "0.162.0", "NumCPU": 18}
+sink-1  | 	info	extensions/extensions.go:43	Starting extensions...	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	extensions/extensions.go:47	Extension is starting...	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension"}
+sink-1  | 	info	healthcheckextension@v0.162.0/healthcheckextension.go:32	Starting health_check extension	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension", "config": {"Config":{"ServerConfig":{"NetAddr":{"DialerConfig":{"Timeout":0},"Endpoint":"0.0.0.0:13133","Transport":"tcp"},"TLS":{},"CORS":{},"Auth":{},"MaxRequestBodySize":0,"IncludeMetadata":false,"ResponseHeaders":null,"CompressionAlgorithms":null,"ReadTimeout":0,"ReadHeaderTimeout":60000000000,"WriteTimeout":30000000000,"Middlewares":null,"Keepalive":{},"IdleTimeout":0,"KeepAlivesEnabled":false},"Path":"/","ResponseBody":null,"CheckCollectorPipeline":{"Enabled":false,"Interval":"5m","ExporterFailureThreshold":5},"UseV2":false,"GRPCConfig":null,"HTTPConfig":null,"ComponentHealthConfig":null}}}
+sink-1  | 	info	extensions/extensions.go:65	Extension started.	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension"}
+sink-1  | 	info	otlpreceiver@v0.162.0/otlp.go:120	Starting GRPC server	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "otlp", "otelcol.component.kind": "receiver", "endpoint": "[::]:4317"}
+sink-1  | 	info	healthcheck/handler.go:131	Health Check state change	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension", "status": "ready"}
+sink-1  | 	info	service@v0.162.0/service.go:256	Everything is ready. Begin running and processing data.	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	Logs	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs", "resource logs": 3, "log records": 30}
+sink-1  | 	info	ResourceLog #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.996564 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0018-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.996592 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0018-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.996595 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0018-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.996597 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0018-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.996599 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0018-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.996602 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0018-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.996605 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0018-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.996608 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0018-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.996612 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0018-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.996614 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0018-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #1
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.059077 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0019-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.059103 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0019-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.059106 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0019-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.059108 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0019-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.05911 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0019-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.059112 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0019-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.059114 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0019-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.059116 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0019-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.059118 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0019-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.05912 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0019-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #2
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.123529 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0020-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.123559 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0020-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.123564 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0020-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.123567 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0020-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.12357 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0020-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.123573 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0020-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.123576 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0020-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.123578 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0020-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.123581 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0020-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.123584 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0020-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | 	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs"}
+sink-1  | 	info	Logs	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs", "resource logs": 3, "log records": 30}
+sink-1  | 	info	ResourceLog #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.812433 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0031-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.812447 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0031-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.812449 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0031-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.81245 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0031-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.812451 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0031-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.812453 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0031-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.812454 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0031-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.812455 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0031-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.812457 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0031-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.812458 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0031-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #1
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.871028 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0032-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.871046 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0032-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.871048 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0032-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.87105 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0032-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.871052 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0032-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.871053 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0032-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.871055 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0032-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.871056 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0032-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.871057 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0032-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.871059 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0032-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #2
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.930266 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0033-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.930276 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0033-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.930278 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0033-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.93028 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0033-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.930281 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0033-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.930282 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0033-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.930284 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0033-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.930285 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0033-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.930286 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0033-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.930288 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0033-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | 	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs"}
+sink-1  | 	info	Logs	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs", "resource logs": 3, "log records": 30}
+sink-1  | 	info	ResourceLog #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.988371 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0034-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.988395 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0034-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.988405 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0034-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.988407 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0034-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.988409 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0034-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.988411 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0034-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.988413 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0034-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.988414 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0034-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.988416 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0034-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.988418 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0034-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #1
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.05235 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0035-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.052377 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0035-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.05238 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0035-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.052382 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0035-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.052384 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0035-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.052386 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0035-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.052388 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0035-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.052391 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0035-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.052393 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0035-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.052395 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0035-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #2
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.119855 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0036-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.119888 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0036-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.119893 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0036-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.119897 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0036-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.1199 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0036-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.119903 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0036-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.119905 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0036-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.119907 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0036-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.119909 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0036-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.119912 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0036-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | 	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs"}
+sink-1  | 	info	Logs	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs", "resource logs": 4, "log records": 40}
+sink-1  | 	info	ResourceLog #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.188401 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0037-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.188434 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0037-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.18844 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0037-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.188444 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0037-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.188448 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0037-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.188452 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0037-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.188456 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0037-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.18846 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0037-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.188464 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0037-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.188467 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0037-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #1
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.250486 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0038-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.250515 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0038-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.25052 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0038-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.250523 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0038-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.250527 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0038-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.25053 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0038-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.250533 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0038-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.250537 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0038-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.250539 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0038-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.250543 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0038-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #2
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.31257 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0039-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.312588 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0039-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.312592 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0039-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.312594 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0039-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.312596 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0039-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.312599 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0039-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.312601 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0039-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.312603 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0039-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.312605 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0039-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.312607 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0039-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #3
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.372154 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0040-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.37219 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0040-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.372196 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0040-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.3722 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0040-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.372204 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0040-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.372209 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0040-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.372212 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0040-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.372217 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0040-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.37222 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0040-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.372224 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0040-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | 	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs"}
+sink-1  | 	info	Logs	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs", "resource logs": 3, "log records": 30}
+sink-1  | 	info	ResourceLog #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.434578 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0041-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.434604 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0041-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.434608 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0041-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.43461 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0041-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.434613 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0041-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.434615 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0041-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.434617 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0041-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.434619 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0041-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.434622 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0041-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.434625 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0041-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #1
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.496769 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0042-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.496806 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0042-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.496812 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0042-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.496816 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0042-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.49682 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0042-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.496825 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0042-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.49683 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0042-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.496834 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0042-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.496838 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0042-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.496842 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0042-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #2
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.561438 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0043-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.561467 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0043-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.56147 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0043-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.561473 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0043-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.561475 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0043-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.561476 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0043-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.561479 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0043-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.56148 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0043-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.561483 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0043-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.561485 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0043-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | 	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs"}
+sink-1  | 	info	Logs	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs", "resource logs": 3, "log records": 30}
+sink-1  | 	info	ResourceLog #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.6201 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0044-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.62012 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0044-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.620123 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0044-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.620125 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0044-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.620128 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0044-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.62013 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0044-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.620131 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0044-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.620133 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0044-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.620135 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0044-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.620137 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0044-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #1
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.678655 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0045-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.678665 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0045-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.678666 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0045-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.678667 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0045-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.678668 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0045-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.678669 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0045-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.67867 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0045-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.678671 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0045-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.678672 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0045-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.678673 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0045-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #2
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.745967 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0046-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.745977 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0046-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.745979 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0046-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.74598 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0046-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.745981 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0046-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.745982 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0046-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.745983 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0046-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.745983 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0046-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.745984 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0046-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.745985 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0046-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | 	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs"}
+sink-1  | 	info	Logs	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs", "resource logs": 4, "log records": 40}
+sink-1  | 	info	ResourceLog #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.806963 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0047-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.806981 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0047-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.806984 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0047-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.806986 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0047-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.806988 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0047-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.80699 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0047-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.806992 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0047-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.806993 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0047-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.806994 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0047-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.806995 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0047-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #1
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.869234 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0048-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.869258 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0048-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.869261 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0048-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.869263 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0048-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.869265 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0048-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.869267 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0048-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.869268 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0048-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.86927 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0048-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.869272 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0048-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.869274 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0048-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #2
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.931093 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0049-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.931106 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0049-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.931109 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0049-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.93111 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0049-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.931112 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0049-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.931113 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0049-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.931115 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0049-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.931116 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0049-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.931117 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0049-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.931119 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0049-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #3
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.992488 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0050-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.992511 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0050-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.992514 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0050-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.992516 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0050-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.992518 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0050-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.992521 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0050-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.992523 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0050-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.992525 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0050-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.992527 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0050-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:07.992529 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0050-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | 	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs"}
+sink-1  | 	info	Logs	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs", "resource logs": 3, "log records": 30}
+sink-1  | 	info	ResourceLog #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.055048 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0051-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.055073 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0051-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.055078 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0051-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.055081 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0051-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.055085 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0051-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.055088 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0051-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.055092 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0051-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.055095 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0051-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.055098 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0051-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.055102 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0051-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #1
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.118986 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0052-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.119013 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0052-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.119017 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0052-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.119019 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0052-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.119021 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0052-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.119024 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0052-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.119025 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0052-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.119028 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0052-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.11903 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0052-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.119032 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0052-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #2
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.178712 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0053-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.178753 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0053-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.178757 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0053-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.17876 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0053-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.178762 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0053-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.178764 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0053-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.178766 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0053-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.178767 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0053-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.178769 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0053-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.178771 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0053-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | 	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs"}
+sink-1  | 	info	Logs	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs", "resource logs": 2, "log records": 20}
+sink-1  | 	info	ResourceLog #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.243775 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0054-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.243801 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0054-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.243804 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0054-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.243806 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0054-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.243809 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0054-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.243811 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0054-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.243813 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0054-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.243815 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0054-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.243817 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0054-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.243819 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0054-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #1
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.31408 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0055-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.314113 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0055-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.314119 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0055-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.314123 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0055-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.314127 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0055-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.314132 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0055-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.314136 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0055-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.314138 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0055-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.314141 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0055-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:08.314145 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0055-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | 	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs"}
+sink-1  | 	info	Logs	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs", "resource logs": 4, "log records": 40}
+sink-1  | 	info	ResourceLog #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.367176 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0008-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.367201 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0008-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.367205 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0008-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.367207 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0008-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.367209 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0008-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.367211 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0008-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.367213 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0008-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.367216 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0008-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.367218 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0008-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.36722 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0008-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #1
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.431681 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0009-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.431696 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0009-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.431698 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0009-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.4317 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0009-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.431702 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0009-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.431703 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0009-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.431705 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0009-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.431706 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0009-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.431708 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0009-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.431709 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0009-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #2
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.495831 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0010-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.495848 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0010-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.495851 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0010-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.495853 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0010-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.495855 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0010-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.495857 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0010-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.49586 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0010-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.495861 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0010-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.495863 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0010-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.495865 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0010-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #3
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.55885 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0011-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.558875 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0011-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.558879 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0011-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.558881 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0011-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.558883 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0011-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.558886 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0011-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.558888 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0011-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.55889 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0011-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.558893 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0011-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.558894 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0011-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | 	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs"}
+sink-1  | 	info	Logs	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs", "resource logs": 4, "log records": 40}
+sink-1  | 	info	ResourceLog #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.56718 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0027-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.567207 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0027-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.567212 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0027-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.567215 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0027-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.567218 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0027-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.56722 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0027-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.567223 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0027-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.567225 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0027-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.567228 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0027-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.567231 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0027-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #1
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.634285 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0028-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.634294 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0028-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.634295 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0028-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.634296 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0028-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.634297 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0028-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.634298 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0028-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.634298 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0028-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.634299 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0028-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.6343 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0028-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.634301 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0028-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #2
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.691819 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0029-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.691828 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0029-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.69183 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0029-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.691831 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0029-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.691832 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0029-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.691833 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0029-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.691834 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0029-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.691834 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0029-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.691835 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0029-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.691836 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0029-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #3
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.752729 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0030-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.752749 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0030-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.752753 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0030-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.752755 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0030-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.752756 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0030-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.752757 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0030-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.752758 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0030-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.752759 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0030-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.75276 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0030-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.752761 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0030-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | 	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs"}
+sink-1  | 	info	Logs	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs", "resource logs": 3, "log records": 30}
+sink-1  | 	info	ResourceLog #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.982132 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0002-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.98216 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0002-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.982166 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0002-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.982169 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0002-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.982172 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0002-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.982174 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0002-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.982176 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0002-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.982179 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0002-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.982182 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0002-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.982185 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0002-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #1
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.044074 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0003-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.044101 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0003-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.044105 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0003-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.044107 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0003-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.044109 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0003-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.044112 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0003-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.044114 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0003-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.044116 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0003-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.044118 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0003-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.044121 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0003-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #2
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.106636 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0004-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.106662 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0004-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.106666 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0004-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.106669 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0004-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.106677 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0004-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.10668 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0004-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.106683 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0004-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.106685 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0004-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.106687 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0004-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.106689 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0004-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | 	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs"}
+sink-1  | 	info	Logs	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs", "resource logs": 2, "log records": 20}
+sink-1  | 	info	ResourceLog #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.862349 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0000-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.862362 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0000-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.862363 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0000-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.862364 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0000-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.862365 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0000-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.862366 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0000-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.862367 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0000-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.862367 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0000-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.862368 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0000-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.862369 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0000-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #1
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.923267 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0001-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.923285 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0001-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.923288 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0001-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.92329 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0001-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.923292 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0001-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.923294 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0001-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.923296 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0001-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.923298 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0001-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.9233 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0001-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:04.923302 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0001-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | 	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs"}
+sink-1  | 	info	Logs	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs", "resource logs": 4, "log records": 40}
+sink-1  | 	info	ResourceLog #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.18335 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0021-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.183378 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0021-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.183381 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0021-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.183384 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0021-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.183386 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0021-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.183388 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0021-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.183391 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0021-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.183393 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0021-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.183395 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0021-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.183397 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0021-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #1
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.245712 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0022-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.245743 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0022-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.245748 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0022-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.245751 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0022-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.245753 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0022-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.245757 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0022-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.245759 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0022-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.245762 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0022-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.245765 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0022-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.245768 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0022-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #2
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.308299 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0023-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.30832 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0023-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.308323 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0023-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.308325 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0023-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.308327 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0023-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.308329 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0023-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.308331 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0023-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.308333 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0023-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.308334 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0023-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.308336 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0023-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #3
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.370892 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0024-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.370922 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0024-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.370926 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0024-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.370929 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0024-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.370932 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0024-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.370944 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0024-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.370947 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0024-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.37095 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0024-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.370953 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0024-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.370956 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0024-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | 	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs"}
+sink-1  | 	info	Logs	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs", "resource logs": 3, "log records": 30}
+sink-1  | 	info	ResourceLog #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.809043 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0015-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.809079 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0015-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.809085 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0015-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.809089 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0015-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.809093 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0015-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.809098 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0015-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.809102 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0015-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.809105 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0015-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.809109 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0015-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.809113 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0015-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #1
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.878252 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0016-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.878268 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0016-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.878271 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0016-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.878273 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0016-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.878275 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0016-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.878276 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0016-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.878278 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0016-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.878279 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0016-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.878281 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0016-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.878282 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0016-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #2
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.936609 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0017-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.936635 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0017-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.936638 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0017-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.93664 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0017-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.936643 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0017-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.936645 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0017-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.936647 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0017-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.936649 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0017-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.93665 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0017-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.936652 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0017-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | 	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs"}
+sink-1  | 	info	Logs	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs", "resource logs": 3, "log records": 30}
+sink-1  | 	info	ResourceLog #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.620888 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0012-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.620919 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0012-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.620922 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0012-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.620925 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0012-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.620927 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0012-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.62093 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0012-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.620932 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0012-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.620934 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0012-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.620936 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0012-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.620938 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0012-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #1
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.683381 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0013-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.683417 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0013-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.683421 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0013-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.683424 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0013-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.683427 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0013-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.68343 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0013-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.683431 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0013-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.683433 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0013-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.683435 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0013-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.683438 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0013-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #2
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.746319 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0014-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.746334 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0014-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.746336 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0014-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.746337 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0014-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.746339 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0014-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.746341 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0014-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.746342 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0014-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.746344 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0014-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.746345 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0014-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.746347 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0014-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | 	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs"}
+sink-1  | 	info	Logs	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs", "resource logs": 3, "log records": 30}
+sink-1  | 	info	ResourceLog #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.168025 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0005-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.168056 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0005-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.168059 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0005-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.168061 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0005-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.168063 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0005-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.168066 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0005-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.168068 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0005-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.168071 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0005-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.168073 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0005-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.168075 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0005-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #1
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.239828 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0006-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.239854 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0006-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.239857 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0006-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.239859 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0006-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.239861 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0006-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.239863 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0006-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.239865 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0006-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.239868 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0006-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.23987 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0006-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.239872 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0006-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #2
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.304156 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0007-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.304175 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0007-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.304182 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0007-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.304184 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0007-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.304186 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0007-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.304188 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0007-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.304189 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0007-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.304191 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0007-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.304192 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0007-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:05.304194 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0007-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | 	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs"}
+sink-1  | 	info	Logs	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs", "resource logs": 2, "log records": 20}
+sink-1  | 	info	ResourceLog #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.432731 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0025-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.432762 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0025-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.432766 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0025-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.432769 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0025-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.432772 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0025-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.432775 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0025-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.432778 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0025-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.43278 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0025-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.432783 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0025-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.432786 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0025-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | ResourceLog #1
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l2-02)
+sink-1  | ScopeLogs #0
+sink-1  | ScopeLogs SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | LogRecord #0
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.504386 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0026-i00)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #1
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.50441 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0026-i01)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #2
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.504414 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0026-i02)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #3
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.504416 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0026-i03)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #4
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.504418 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0026-i04)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #5
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.504421 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0026-i05)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #6
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.504424 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0026-i06)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #7
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.504425 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0026-i07)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #8
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.504427 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0026-i08)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | LogRecord #9
+sink-1  | ObservedTimestamp: 1970-01-01 00:00:00 +0000 UTC
+sink-1  | Timestamp: 2026-10-06 13:41:06.504429 +0000 UTC
+sink-1  | SeverityText: INFO
+sink-1  | SeverityNumber: Info(9)
+sink-1  | Body: Str(r0026-i09)
+sink-1  | Trace ID:
+sink-1  | Span ID:
+sink-1  | Flags: 0
+sink-1  | 	{"resource": {"service.instance.id": "ff8d719c-b2d3-41af-ab7c-4fb17a6e2011", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "logs"}

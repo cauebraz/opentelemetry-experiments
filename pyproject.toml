@@ -1,0 +1,54 @@
+[project]
+name = "opentelemetry-experiments"
+version = "0.1.0"
+description = "Recorded OpenTelemetry experiments, one question at a time"
+readme = "README.md"
+license = "Apache-2.0"
+authors = [{ name = "Caue Braz" }]
+requires-python = "==3.14.*"
+keywords = [
+  "opentelemetry",
+  "otel",
+  "collector",
+  "observability",
+  "experiments",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: MacOS",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: System :: Monitoring",
+]
+dependencies = [
+  "grpcio==1.84.0",
+  "opentelemetry-exporter-otlp-proto-http==1.45.0",
+  "opentelemetry-sdk==1.45.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/cauebraz/opentelemetry-experiments"
+Repository = "https://github.com/cauebraz/opentelemetry-experiments"
+Issues = "https://github.com/cauebraz/opentelemetry-experiments/issues"
+
+[dependency-groups]
+dev = [
+  "pytest==9.1.1",
+  "ruff==0.16.10",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.uv]
+package = false

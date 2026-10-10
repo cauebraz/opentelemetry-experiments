@@ -1,0 +1,339 @@
+{
+  "columns": [
+    {
+      "kind": "number",
+      "label": "HTTP",
+      "path": "sending.http_status"
+    },
+    {
+      "kind": "number",
+      "label": "Delivered",
+      "path": "measured.delivered"
+    },
+    {
+      "kind": "number",
+      "label": "Stamped",
+      "path": "measured.stamped"
+    },
+    {
+      "kind": "number",
+      "label": "Kept",
+      "path": "measured.kept"
+    },
+    {
+      "kind": "number",
+      "label": "Startup s",
+      "path": "sending.startup_s"
+    },
+    {
+      "kind": "number",
+      "label": "Idle RSS",
+      "path": "sending.idle_rss_bytes"
+    },
+    {
+      "kind": "number",
+      "label": "Heap",
+      "path": "sending.heap_alloc_bytes"
+    },
+    {
+      "kind": "number",
+      "label": "Post s",
+      "path": "sending.post_s"
+    },
+    {
+      "kind": "number",
+      "label": "CPU ns",
+      "path": "sending.cpu_ns"
+    },
+    {
+      "kind": "number",
+      "label": "Stock reject",
+      "path": "sending.stock_reject_exit"
+    },
+    {
+      "kind": "number",
+      "label": "Custom accept",
+      "path": "sending.custom_accept_exit"
+    },
+    {
+      "kind": "number",
+      "label": "Binary B",
+      "path": "sending.binary_bytes"
+    },
+    {
+      "kind": "number",
+      "label": "Image B",
+      "path": "sending.image_bytes"
+    },
+    {
+      "kind": "number",
+      "label": "Build s",
+      "path": "sending.build_s"
+    }
+  ],
+  "execution_order": [
+    [
+      "stock-pass-through",
+      "custom-pass-through",
+      "custom-processor"
+    ]
+  ],
+  "provenance": {
+    "compose_sha256": "04296faeb6d1dedee99439198e116513a519edb74c4eecf0efba50ecb13a8074",
+    "docker_compose": "5.5.1",
+    "dockerfile_sha256": "9144298cec761cc3f7f162e232a2accda2203566c7fe91b9566f15e9f5d245de",
+    "machine": "arm64",
+    "python": "3.14.8",
+    "system": "Darwin"
+  },
+  "question": {
+    "id": "L4-04",
+    "level": 4,
+    "signals": [
+      "logs"
+    ],
+    "theme": "collector",
+    "title": "What does it take to run a processor you wrote yourself?"
+  },
+  "repetitions": 1,
+  "results_version": 2,
+  "runs": [
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "otelcol-contrib, batch only",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 1
+      },
+      "measured": {
+        "delivered": 1000,
+        "kept": 1000,
+        "records_printed": 1000,
+        "stamped": 0
+      },
+      "position": 1,
+      "repetition": 1,
+      "sending": {
+        "binary_bytes": 31719586,
+        "build_s": 87.9,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "cpu_ns": 5532000,
+        "cpu_problems": [],
+        "custom_accept_exit": 0,
+        "distribution": "stock",
+        "heap_alloc_bytes": 23089200.0,
+        "http_status": 200,
+        "idle_rss_bytes": 47028634,
+        "image_bytes": 42580242,
+        "logs_sent": 1000,
+        "post_s": 0.005,
+        "processor": false,
+        "sink_accepted": null,
+        "startup_s": 0.0,
+        "stock_reject_exit": 1
+      },
+      "validity": {
+        "notes": [
+          "the sink accepted None"
+        ],
+        "ok": false
+      },
+      "variant": "stock-pass-through"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "custom distribution, batch only",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 1
+      },
+      "measured": {
+        "delivered": 1000,
+        "kept": 1000,
+        "records_printed": 1000,
+        "stamped": 0
+      },
+      "position": 2,
+      "repetition": 1,
+      "sending": {
+        "binary_bytes": 31719586,
+        "build_s": 87.9,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "cpu_ns": 7690000,
+        "cpu_problems": [],
+        "custom_accept_exit": 0,
+        "distribution": "custom",
+        "heap_alloc_bytes": 3245368.0,
+        "http_status": 200,
+        "idle_rss_bytes": 13673431,
+        "image_bytes": 42580242,
+        "logs_sent": 1000,
+        "post_s": 0.005,
+        "processor": false,
+        "sink_accepted": null,
+        "startup_s": 0.0,
+        "stock_reject_exit": 1
+      },
+      "validity": {
+        "notes": [
+          "the sink accepted None"
+        ],
+        "ok": false
+      },
+      "variant": "custom-pass-through"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "custom distribution with the experiment processor",
+      "log": {
+        "error_lines": 0,
+        "lines": 11,
+        "warn_lines": 1
+      },
+      "measured": {
+        "delivered": 1000,
+        "kept": 1000,
+        "records_printed": 1000,
+        "stamped": 1000
+      },
+      "position": 3,
+      "repetition": 1,
+      "sending": {
+        "binary_bytes": 31719586,
+        "build_s": 87.9,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "cpu_ns": 9437000,
+        "cpu_problems": [],
+        "custom_accept_exit": 0,
+        "distribution": "custom",
+        "heap_alloc_bytes": 2813480.0,
+        "http_status": 200,
+        "idle_rss_bytes": 12719227,
+        "image_bytes": 42580242,
+        "logs_sent": 1000,
+        "post_s": 0.006,
+        "processor": true,
+        "sink_accepted": null,
+        "startup_s": 0.0,
+        "stock_reject_exit": 1
+      },
+      "validity": {
+        "notes": [
+          "the sink accepted None"
+        ],
+        "ok": false
+      },
+      "variant": "custom-processor"
+    }
+  ],
+  "stack": {
+    "otelcol_contrib": "0.162.0",
+    "prometheus": "v3.15.0"
+  },
+  "variants": [
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "fb28a8a17e5fbc9372b76c2d0a80bf15ac4bb5a17fb963c87e806fcac66d978a",
+        "prometheus": "1e33c42770ffeba75d035c75d6e48348d9d175129c434113864ba2c9c03956c4",
+        "sink": "3a30a96099408576ef0d59f0789426de9d0dc060d4cc0679105a151e343ffbc9", "boundary_allow": "boundary:allow sha256 digit run is not a document number"
+      },
+      "description": "otelcol-contrib, batch only",
+      "gateway_config": "",
+      "name": "stock-pass-through",
+      "options": {
+        "distribution": "stock",
+        "processor": false
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "fb28a8a17e5fbc9372b76c2d0a80bf15ac4bb5a17fb963c87e806fcac66d978a",
+        "prometheus": "1e33c42770ffeba75d035c75d6e48348d9d175129c434113864ba2c9c03956c4",
+        "sink": "3a30a96099408576ef0d59f0789426de9d0dc060d4cc0679105a151e343ffbc9", "boundary_allow": "boundary:allow sha256 digit run is not a document number"
+      },
+      "description": "custom distribution, batch only",
+      "gateway_config": "",
+      "name": "custom-pass-through",
+      "options": {
+        "distribution": "custom",
+        "processor": false
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "71b1a0bd516b7315ff53eac17ef150c42f862f2e9fd3dcbfee6ab35ce44ff934",
+        "prometheus": "1e33c42770ffeba75d035c75d6e48348d9d175129c434113864ba2c9c03956c4",
+        "sink": "3a30a96099408576ef0d59f0789426de9d0dc060d4cc0679105a151e343ffbc9", "boundary_allow": "boundary:allow sha256 digit run is not a document number"
+      },
+      "description": "custom distribution with the experiment processor",
+      "gateway_config": "",
+      "name": "custom-processor",
+      "options": {
+        "distribution": "custom",
+        "processor": true
+      }
+    }
+  ]
+}

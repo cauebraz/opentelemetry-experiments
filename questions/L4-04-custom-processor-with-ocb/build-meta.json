@@ -1,0 +1,9 @@
+{
+  "binary_bytes": 31719586,
+  "binary_sha256": "dc9ca48d2c4534ac6cdb9e48db8cea121e64976e3bb3739b23b378d61b3b9af8",
+  "build_s": 87.9,
+  "go": "go1.26.0",
+  "image": "opentelemetry-experiments-l4-04:0.162.0",
+  "image_bytes": 42580242,
+  "ocb": "v0.162.0"
+}

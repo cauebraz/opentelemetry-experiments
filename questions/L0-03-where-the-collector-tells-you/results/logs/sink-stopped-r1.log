@@ -1,0 +1,671 @@
+collector-1  | 	info	otelconftelemetry/tracer.go:47	Internal trace telemetry disabled	{"resource": {"service.instance.id": "b281da7c-1bdd-46b2-ae26-e8e2e83e4566", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+collector-1  | 	info	service@v0.162.0/service.go:233	Starting otelcol-contrib...	{"resource": {"service.instance.id": "b281da7c-1bdd-46b2-ae26-e8e2e83e4566", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "Version": "0.162.0", "NumCPU": 18}
+collector-1  | 	info	extensions/extensions.go:43	Starting extensions...	{"resource": {"service.instance.id": "b281da7c-1bdd-46b2-ae26-e8e2e83e4566", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+collector-1  | 	info	extensions/extensions.go:47	Extension is starting...	{"resource": {"service.instance.id": "b281da7c-1bdd-46b2-ae26-e8e2e83e4566", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension"}
+collector-1  | 	info	healthcheckextension@v0.162.0/healthcheckextension.go:32	Starting health_check extension	{"resource": {"service.instance.id": "b281da7c-1bdd-46b2-ae26-e8e2e83e4566", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension", "config": {"Config":{"ServerConfig":{"NetAddr":{"DialerConfig":{"Timeout":0},"Endpoint":"0.0.0.0:13133","Transport":"tcp"},"TLS":{},"CORS":{},"Auth":{},"MaxRequestBodySize":0,"IncludeMetadata":false,"ResponseHeaders":null,"CompressionAlgorithms":null,"ReadTimeout":0,"ReadHeaderTimeout":60000000000,"WriteTimeout":30000000000,"Middlewares":null,"Keepalive":{},"IdleTimeout":0,"KeepAlivesEnabled":false},"Path":"/","ResponseBody":null,"CheckCollectorPipeline":{"Enabled":false,"Interval":"5m","ExporterFailureThreshold":5},"UseV2":false,"GRPCConfig":null,"HTTPConfig":null,"ComponentHealthConfig":null}}}
+collector-1  | 	info	extensions/extensions.go:65	Extension started.	{"resource": {"service.instance.id": "b281da7c-1bdd-46b2-ae26-e8e2e83e4566", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension"}
+collector-1  | 	info	otlpreceiver@v0.162.0/otlp.go:120	Starting GRPC server	{"resource": {"service.instance.id": "b281da7c-1bdd-46b2-ae26-e8e2e83e4566", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "otlp", "otelcol.component.kind": "receiver", "endpoint": "[::]:4317"}
+collector-1  | 	info	otlpreceiver@v0.162.0/otlp.go:175	Starting HTTP server	{"resource": {"service.instance.id": "b281da7c-1bdd-46b2-ae26-e8e2e83e4566", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "otlp", "otelcol.component.kind": "receiver", "endpoint": "[::]:4318"}
+collector-1  | 	info	healthcheck/handler.go:131	Health Check state change	{"resource": {"service.instance.id": "b281da7c-1bdd-46b2-ae26-e8e2e83e4566", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension", "status": "ready"}
+collector-1  | 	info	service@v0.162.0/service.go:256	Everything is ready. Begin running and processing data.	{"resource": {"service.instance.id": "b281da7c-1bdd-46b2-ae26-e8e2e83e4566", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+collector-1  | 	warn	grpc@v1.83.2/clientconn.go:1532	[core] [Channel #2 SubChannel #9] grpc: addrConn.createTransport failed to connect to {Addr: "172.25.0.2:4317", ServerName: "sink:4317", }. Err: connection error: desc = "transport: Error while dialing: dial tcp 172.25.0.2:4317: connect: connection refused"	{"resource": {"service.instance.id": "b281da7c-1bdd-46b2-ae26-e8e2e83e4566", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "grpc_log": true}
+collector-1  | 	warn	grpc@v1.83.2/clientconn.go:1532	[core] [Channel #1 SubChannel #8] grpc: addrConn.createTransport failed to connect to {Addr: "172.25.0.2:4317", ServerName: "sink:4317", }. Err: connection error: desc = "transport: Error while dialing: dial tcp 172.25.0.2:4317: connect: connection refused"	{"resource": {"service.instance.id": "b281da7c-1bdd-46b2-ae26-e8e2e83e4566", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "grpc_log": true}
+collector-1  | 	warn	grpc@v1.83.2/clientconn.go:1532	[core] [Channel #3 SubChannel #6] grpc: addrConn.createTransport failed to connect to {Addr: "172.25.0.2:4317", ServerName: "sink:4317", }. Err: connection error: desc = "transport: Error while dialing: dial tcp 172.25.0.2:4317: connect: connection refused"	{"resource": {"service.instance.id": "b281da7c-1bdd-46b2-ae26-e8e2e83e4566", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "grpc_log": true}
+collector-1  | 	info	Metrics	{"resource": {"service.instance.id": "b281da7c-1bdd-46b2-ae26-e8e2e83e4566", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "metrics", "resource metrics": 1, "metrics": 1, "data points": 100}
+collector-1  | 	info	ResourceMetrics #0
+collector-1  | Resource SchemaURL:
+collector-1  | Resource attributes:
+collector-1  |      -> service.name: Str(l0-03)
+collector-1  | ScopeMetrics #0
+collector-1  | ScopeMetrics SchemaURL:
+collector-1  | InstrumentationScope opentelemetry_experiments
+collector-1  | Metric #0
+collector-1  | Descriptor:
+collector-1  |      -> Name: l0_03.requests
+collector-1  |      -> Description:
+collector-1  |      -> Unit: 1
+collector-1  |      -> DataType: Sum
+collector-1  |      -> IsMonotonic: true
+collector-1  |      -> AggregationTemporality: Delta
+collector-1  | NumberDataPoints #0
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-000)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 0.000000
+collector-1  | NumberDataPoints #1
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-001)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 1.000000
+collector-1  | NumberDataPoints #2
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-002)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 2.000000
+collector-1  | NumberDataPoints #3
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-003)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 3.000000
+collector-1  | NumberDataPoints #4
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-004)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 4.000000
+collector-1  | NumberDataPoints #5
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-005)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 5.000000
+collector-1  | NumberDataPoints #6
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-006)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 6.000000
+collector-1  | NumberDataPoints #7
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-007)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 7.000000
+collector-1  | NumberDataPoints #8
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-008)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 8.000000
+collector-1  | NumberDataPoints #9
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-009)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 9.000000
+collector-1  | NumberDataPoints #10
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-010)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 10.000000
+collector-1  | NumberDataPoints #11
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-011)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 11.000000
+collector-1  | NumberDataPoints #12
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-012)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 12.000000
+collector-1  | NumberDataPoints #13
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-013)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 13.000000
+collector-1  | NumberDataPoints #14
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-014)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 14.000000
+collector-1  | NumberDataPoints #15
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-015)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 15.000000
+collector-1  | NumberDataPoints #16
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-016)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 16.000000
+collector-1  | NumberDataPoints #17
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-017)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 17.000000
+collector-1  | NumberDataPoints #18
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-018)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 18.000000
+collector-1  | NumberDataPoints #19
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-019)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 19.000000
+collector-1  | NumberDataPoints #20
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-020)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 20.000000
+collector-1  | NumberDataPoints #21
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-021)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 21.000000
+collector-1  | NumberDataPoints #22
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-022)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 22.000000
+collector-1  | NumberDataPoints #23
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-023)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 23.000000
+collector-1  | NumberDataPoints #24
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-024)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 24.000000
+collector-1  | NumberDataPoints #25
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-025)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 25.000000
+collector-1  | NumberDataPoints #26
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-026)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 26.000000
+collector-1  | NumberDataPoints #27
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-027)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 27.000000
+collector-1  | NumberDataPoints #28
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-028)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 28.000000
+collector-1  | NumberDataPoints #29
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-029)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 29.000000
+collector-1  | NumberDataPoints #30
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-030)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 30.000000
+collector-1  | NumberDataPoints #31
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-031)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 31.000000
+collector-1  | NumberDataPoints #32
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-032)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 32.000000
+collector-1  | NumberDataPoints #33
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-033)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 33.000000
+collector-1  | NumberDataPoints #34
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-034)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 34.000000
+collector-1  | NumberDataPoints #35
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-035)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 35.000000
+collector-1  | NumberDataPoints #36
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-036)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 36.000000
+collector-1  | NumberDataPoints #37
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-037)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 37.000000
+collector-1  | NumberDataPoints #38
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-038)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 38.000000
+collector-1  | NumberDataPoints #39
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-039)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 39.000000
+collector-1  | NumberDataPoints #40
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-040)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 40.000000
+collector-1  | NumberDataPoints #41
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-041)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 41.000000
+collector-1  | NumberDataPoints #42
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-042)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 42.000000
+collector-1  | NumberDataPoints #43
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-043)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 43.000000
+collector-1  | NumberDataPoints #44
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-044)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 44.000000
+collector-1  | NumberDataPoints #45
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-045)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 45.000000
+collector-1  | NumberDataPoints #46
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-046)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 46.000000
+collector-1  | NumberDataPoints #47
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-047)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 47.000000
+collector-1  | NumberDataPoints #48
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-048)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 48.000000
+collector-1  | NumberDataPoints #49
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-049)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 49.000000
+collector-1  | NumberDataPoints #50
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-050)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 50.000000
+collector-1  | NumberDataPoints #51
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-051)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 51.000000
+collector-1  | NumberDataPoints #52
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-052)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 52.000000
+collector-1  | NumberDataPoints #53
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-053)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 53.000000
+collector-1  | NumberDataPoints #54
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-054)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 54.000000
+collector-1  | NumberDataPoints #55
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-055)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 55.000000
+collector-1  | NumberDataPoints #56
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-056)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 56.000000
+collector-1  | NumberDataPoints #57
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-057)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 57.000000
+collector-1  | NumberDataPoints #58
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-058)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 58.000000
+collector-1  | NumberDataPoints #59
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-059)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 59.000000
+collector-1  | NumberDataPoints #60
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-060)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 60.000000
+collector-1  | NumberDataPoints #61
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-061)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 61.000000
+collector-1  | NumberDataPoints #62
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-062)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 62.000000
+collector-1  | NumberDataPoints #63
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-063)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 63.000000
+collector-1  | NumberDataPoints #64
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-064)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 64.000000
+collector-1  | NumberDataPoints #65
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-065)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 65.000000
+collector-1  | NumberDataPoints #66
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-066)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 66.000000
+collector-1  | NumberDataPoints #67
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-067)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 67.000000
+collector-1  | NumberDataPoints #68
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-068)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 68.000000
+collector-1  | NumberDataPoints #69
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-069)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 69.000000
+collector-1  | NumberDataPoints #70
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-070)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 70.000000
+collector-1  | NumberDataPoints #71
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-071)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 71.000000
+collector-1  | NumberDataPoints #72
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-072)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 72.000000
+collector-1  | NumberDataPoints #73
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-073)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 73.000000
+collector-1  | NumberDataPoints #74
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-074)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 74.000000
+collector-1  | NumberDataPoints #75
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-075)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 75.000000
+collector-1  | NumberDataPoints #76
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-076)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 76.000000
+collector-1  | NumberDataPoints #77
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-077)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 77.000000
+collector-1  | NumberDataPoints #78
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-078)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 78.000000
+collector-1  | NumberDataPoints #79
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-079)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 79.000000
+collector-1  | NumberDataPoints #80
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-080)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 80.000000
+collector-1  | NumberDataPoints #81
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-081)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 81.000000
+collector-1  | NumberDataPoints #82
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-082)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 82.000000
+collector-1  | NumberDataPoints #83
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-083)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 83.000000
+collector-1  | NumberDataPoints #84
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-084)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 84.000000
+collector-1  | NumberDataPoints #85
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-085)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 85.000000
+collector-1  | NumberDataPoints #86
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-086)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 86.000000
+collector-1  | NumberDataPoints #87
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-087)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 87.000000
+collector-1  | NumberDataPoints #88
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-088)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 88.000000
+collector-1  | NumberDataPoints #89
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-089)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 89.000000
+collector-1  | NumberDataPoints #90
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-090)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 90.000000
+collector-1  | NumberDataPoints #91
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-091)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 91.000000
+collector-1  | NumberDataPoints #92
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-092)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 92.000000
+collector-1  | NumberDataPoints #93
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-093)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 93.000000
+collector-1  | NumberDataPoints #94
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-094)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 94.000000
+collector-1  | NumberDataPoints #95
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-095)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 95.000000
+collector-1  | NumberDataPoints #96
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-096)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 96.000000
+collector-1  | NumberDataPoints #97
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-097)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 97.000000
+collector-1  | NumberDataPoints #98
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-098)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 98.000000
+collector-1  | NumberDataPoints #99
+collector-1  | Data point attributes:
+collector-1  |      -> http.route: Str(/route-099)
+collector-1  | StartTimestamp: 2026-10-04 19:53:30.205849 +0000 UTC
+collector-1  | Timestamp: 2026-10-04 19:53:31.205849 +0000 UTC
+collector-1  | Value: 99.000000
+collector-1  | 	{"resource": {"service.instance.id": "b281da7c-1bdd-46b2-ae26-e8e2e83e4566", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "metrics"}
+collector-1  | 	error	internal/base_exporter.go:119	Exporting failed. Rejecting data. Try enabling retry_on_failure config option to retry on retryable errors. Try enabling sending_queue to survive temporary failures.	{"resource": {"service.instance.id": "b281da7c-1bdd-46b2-ae26-e8e2e83e4566", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "otlp_grpc/sink", "otelcol.component.kind": "exporter", "otelcol.signal": "metrics", "error": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 172.25.0.2:4317: connect: connection refused\"", "rejected_items": 100}
+collector-1  | go.opentelemetry.io/collector/exporter/exporterhelper/internal.(*BaseExporter).Send
+collector-1  | 	go.opentelemetry.io/collector/exporter/exporterhelper@v0.162.0/internal/base_exporter.go:119
+collector-1  | go.opentelemetry.io/collector/exporter/exporterhelper/internal.NewMetricsRequest.newConsumeMetrics.func1
+collector-1  | 	go.opentelemetry.io/collector/exporter/exporterhelper@v0.162.0/internal/new_request.go:176
+collector-1  | go.opentelemetry.io/collector/consumer.ConsumeMetricsFunc.ConsumeMetrics
+collector-1  | 	go.opentelemetry.io/collector/consumer@v1.68.0/metrics.go:27
+collector-1  | go.opentelemetry.io/collector/service/internal/refconsumer.refMetrics.ConsumeMetrics
+collector-1  | 	go.opentelemetry.io/collector/service@v0.162.0/internal/refconsumer/metrics.go:29
+collector-1  | go.opentelemetry.io/collector/internal/fanoutconsumer.(*metricsConsumer).ConsumeMetrics
+collector-1  | 	go.opentelemetry.io/collector/internal/fanoutconsumer@v0.162.0/metrics.go:71
+collector-1  | go.opentelemetry.io/collector/consumer.ConsumeMetricsFunc.ConsumeMetrics
+collector-1  | 	go.opentelemetry.io/collector/consumer@v1.68.0/metrics.go:27
+collector-1  | go.opentelemetry.io/collector/receiver/otlpreceiver/internal/metrics.(*Receiver).Export
+collector-1  | 	go.opentelemetry.io/collector/receiver/otlpreceiver@v0.162.0/internal/metrics/otlp.go:41
+collector-1  | go.opentelemetry.io/collector/receiver/otlpreceiver.handleMetrics
+collector-1  | 	go.opentelemetry.io/collector/receiver/otlpreceiver@v0.162.0/otlphttp.go:77
+collector-1  | go.opentelemetry.io/collector/receiver/otlpreceiver.(*otlpReceiver).startHTTPServer.func2
+collector-1  | 	go.opentelemetry.io/collector/receiver/otlpreceiver@v0.162.0/otlp.go:148
+collector-1  | net/http.HandlerFunc.ServeHTTP
+collector-1  | 	net/http/server.go:2286
+collector-1  | net/http.(*ServeMux).ServeHTTP
+collector-1  | 	net/http/server.go:2828
+collector-1  | go.opentelemetry.io/collector/config/confighttp.(*decompressor).ServeHTTP
+collector-1  | 	go.opentelemetry.io/collector/config/confighttp@v0.162.0/compression.go:287
+collector-1  | go.opentelemetry.io/collector/config/confighttp.(*ServerConfig).ToServer.maxRequestBodySizeInterceptor.func3
+collector-1  | 	go.opentelemetry.io/collector/config/confighttp@v0.162.0/server.go:611
+collector-1  | net/http.HandlerFunc.ServeHTTP
+collector-1  | 	net/http/server.go:2286
+collector-1  | go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp.(*middleware).serveHTTP
+collector-1  | 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp@v0.71.0/handler.go:185
+collector-1  | go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp.NewMiddleware.func2.1
+collector-1  | 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp@v0.71.0/handler.go:67
+collector-1  | net/http.HandlerFunc.ServeHTTP
+collector-1  | 	net/http/server.go:2286
+collector-1  | go.opentelemetry.io/collector/config/confighttp.(*clientInfoHandler).ServeHTTP
+collector-1  | 	go.opentelemetry.io/collector/config/confighttp@v0.162.0/clientinfohandler.go:26
+collector-1  | net/http.serverHandler.ServeHTTP
+collector-1  | 	net/http/server.go:3311
+collector-1  | net/http.(*conn).serve
+collector-1  | 	net/http/server.go:2067

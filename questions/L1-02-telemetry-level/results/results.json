@@ -1,0 +1,1019 @@
+{
+  "columns": [
+    {
+      "kind": "number",
+      "label": "HTTP status",
+      "path": "sending.http_status"
+    },
+    {
+      "kind": "number",
+      "label": "Metric families published",
+      "path": "measured.metric_families_published"
+    },
+    {
+      "kind": "number",
+      "label": "Documented at level",
+      "path": "measured.documented_for_level"
+    },
+    {
+      "kind": "number",
+      "label": "Of those, present",
+      "path": "measured.documented_present"
+    },
+    {
+      "kind": "number",
+      "label": "Of those, missing",
+      "path": "measured.documented_missing"
+    },
+    {
+      "kind": "number",
+      "label": "Undocumented present",
+      "path": "measured.undocumented_present"
+    },
+    {
+      "kind": "number",
+      "label": "Batch metrics of 4",
+      "path": "measured.batch_metrics_present"
+    },
+    {
+      "kind": "number",
+      "label": "Matched without unit",
+      "path": "measured.unit_suffix_dropped"
+    },
+    {
+      "kind": "number",
+      "label": "Accepted points",
+      "path": "counters.collector.metrics.receiver_accepted"
+    },
+    {
+      "kind": "text",
+      "label": "Published names",
+      "path": "measured.published_names"
+    },
+    {
+      "kind": "text",
+      "label": "Missing names",
+      "path": "measured.missing_names"
+    }
+  ],
+  "question": {
+    "id": "L1-02",
+    "level": 1,
+    "signals": [
+      "traces",
+      "metrics",
+      "logs"
+    ],
+    "theme": "collector",
+    "title": "Does the documented per-level metric list match what the Collector emits?"
+  },
+  "repetitions": 3,
+  "runs": [
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "service.telemetry.metrics.level set to none",
+      "log": {
+        "error_lines": 0,
+        "lines": 668,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batch_metrics_present": 0,
+        "documented_for_level": 0,
+        "documented_missing": 0,
+        "documented_present": 0,
+        "metric_families_published": 0,
+        "missing_names": "none",
+        "published_names": "none",
+        "undocumented_names": "none",
+        "undocumented_present": 0,
+        "unit_suffix_dropped": 0
+      },
+      "repetition": 1,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "per_signal_status": {
+          "logs": 200,
+          "metrics": 200,
+          "traces": 200
+        }
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "level-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 300.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "service.telemetry.metrics.level set to basic",
+      "log": {
+        "error_lines": 0,
+        "lines": 667,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batch_metrics_present": 0,
+        "documented_for_level": 28,
+        "documented_missing": 12,
+        "documented_present": 16,
+        "metric_families_published": 19,
+        "missing_names": "otelcol_exporter_enqueue_failed_log_records, otelcol_exporter_enqueue_failed_metric_points, otelcol_exporter_enqueue_failed_spans, otelcol_exporter_queue_capacity, otelcol_exporter_queue_size, otelcol_exporter_send_failed_log_records, otelcol_exporter_send_failed_metric_points, otelcol_exporter_send_failed_spans, otelcol_processor_incoming_items, otelcol_processor_outgoing_items, otelcol_scraper_errored_metric_points, otelcol_scraper_scraped_metric_points",
+        "published_names": "otelcol_exporter_in_flight_requests, otelcol_exporter_sent_log_records, otelcol_exporter_sent_metric_points, otelcol_exporter_sent_spans, otelcol_process_cpu_seconds, otelcol_process_memory_rss, otelcol_process_runtime_heap_alloc_bytes, otelcol_process_runtime_total_alloc_bytes, otelcol_process_runtime_total_sys_memory_bytes, otelcol_process_uptime, otelcol_receiver_accepted_log_records, otelcol_receiver_accepted_metric_points, otelcol_receiver_accepted_spans, otelcol_receiver_failed_log_records, otelcol_receiver_failed_metric_points, otelcol_receiver_failed_spans, otelcol_receiver_refused_log_records, otelcol_receiver_refused_metric_points, otelcol_receiver_refused_spans",
+        "undocumented_names": "otelcol_receiver_failed_log_records, otelcol_receiver_failed_metric_points, otelcol_receiver_failed_spans",
+        "undocumented_present": 3,
+        "unit_suffix_dropped": 0
+      },
+      "repetition": 1,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "per_signal_status": {
+          "logs": 200,
+          "metrics": 200,
+          "traces": 200
+        }
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "level-basic"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 300.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "service.telemetry.metrics.level set to normal",
+      "log": {
+        "error_lines": 0,
+        "lines": 667,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batch_metrics_present": 4,
+        "documented_for_level": 32,
+        "documented_missing": 12,
+        "documented_present": 20,
+        "metric_families_published": 23,
+        "missing_names": "otelcol_exporter_enqueue_failed_log_records, otelcol_exporter_enqueue_failed_metric_points, otelcol_exporter_enqueue_failed_spans, otelcol_exporter_queue_capacity, otelcol_exporter_queue_size, otelcol_exporter_send_failed_log_records, otelcol_exporter_send_failed_metric_points, otelcol_exporter_send_failed_spans, otelcol_processor_incoming_items, otelcol_processor_outgoing_items, otelcol_scraper_errored_metric_points, otelcol_scraper_scraped_metric_points",
+        "published_names": "otelcol_exporter_in_flight_requests, otelcol_exporter_sent_log_records, otelcol_exporter_sent_metric_points, otelcol_exporter_sent_spans, otelcol_process_cpu_seconds, otelcol_process_memory_rss, otelcol_process_runtime_heap_alloc_bytes, otelcol_process_runtime_total_alloc_bytes, otelcol_process_runtime_total_sys_memory_bytes, otelcol_process_uptime, otelcol_processor_batch_batch_send_size, otelcol_processor_batch_batch_size_trigger_send, otelcol_processor_batch_metadata_cardinality, otelcol_processor_batch_timeout_trigger_send, otelcol_receiver_accepted_log_records, otelcol_receiver_accepted_metric_points, otelcol_receiver_accepted_spans, otelcol_receiver_failed_log_records, otelcol_receiver_failed_metric_points, otelcol_receiver_failed_spans, otelcol_receiver_refused_log_records, otelcol_receiver_refused_metric_points, otelcol_receiver_refused_spans",
+        "undocumented_names": "otelcol_receiver_failed_log_records, otelcol_receiver_failed_metric_points, otelcol_receiver_failed_spans",
+        "undocumented_present": 3,
+        "unit_suffix_dropped": 0
+      },
+      "repetition": 1,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "per_signal_status": {
+          "logs": 200,
+          "metrics": 200,
+          "traces": 200
+        }
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "level-normal"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 300.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "service.telemetry.metrics.level set to detailed",
+      "log": {
+        "error_lines": 0,
+        "lines": 667,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batch_metrics_present": 4,
+        "documented_for_level": 42,
+        "documented_missing": 17,
+        "documented_present": 25,
+        "metric_families_published": 28,
+        "missing_names": "http.client.request.body.size, http.client.request.duration, otelcol_exporter_enqueue_failed_log_records, otelcol_exporter_enqueue_failed_metric_points, otelcol_exporter_enqueue_failed_spans, otelcol_exporter_enqueue_size, otelcol_exporter_enqueue_size_bytes, otelcol_exporter_queue_capacity, otelcol_exporter_queue_size, otelcol_exporter_send_failed_log_records, otelcol_exporter_send_failed_metric_points, otelcol_exporter_send_failed_spans, otelcol_processor_incoming_items, otelcol_processor_outgoing_items, otelcol_scraper_errored_metric_points, otelcol_scraper_scraped_metric_points, rpc.server.call.duration",
+        "published_names": "http_server_request_body_size, http_server_request_duration, http_server_response_body_size, otelcol_exporter_in_flight_requests, otelcol_exporter_sent_log_records, otelcol_exporter_sent_metric_points, otelcol_exporter_sent_spans, otelcol_process_cpu_seconds, otelcol_process_memory_rss, otelcol_process_runtime_heap_alloc_bytes, otelcol_process_runtime_total_alloc_bytes, otelcol_process_runtime_total_sys_memory_bytes, otelcol_process_uptime, otelcol_processor_batch_batch_send_size, otelcol_processor_batch_batch_send_size_bytes, otelcol_processor_batch_batch_size_trigger_send, otelcol_processor_batch_metadata_cardinality, otelcol_processor_batch_timeout_trigger_send, otelcol_receiver_accepted_log_records, otelcol_receiver_accepted_metric_points, otelcol_receiver_accepted_spans, otelcol_receiver_failed_log_records, otelcol_receiver_failed_metric_points, otelcol_receiver_failed_spans, otelcol_receiver_refused_log_records, otelcol_receiver_refused_metric_points, otelcol_receiver_refused_spans, rpc_client_call_duration",
+        "undocumented_names": "otelcol_receiver_failed_log_records, otelcol_receiver_failed_metric_points, otelcol_receiver_failed_spans",
+        "undocumented_present": 3,
+        "unit_suffix_dropped": 0
+      },
+      "repetition": 1,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "per_signal_status": {
+          "logs": 200,
+          "metrics": 200,
+          "traces": 200
+        }
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "level-detailed"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "service.telemetry.metrics.level set to none",
+      "log": {
+        "error_lines": 0,
+        "lines": 668,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batch_metrics_present": 0,
+        "documented_for_level": 0,
+        "documented_missing": 0,
+        "documented_present": 0,
+        "metric_families_published": 0,
+        "missing_names": "none",
+        "published_names": "none",
+        "undocumented_names": "none",
+        "undocumented_present": 0,
+        "unit_suffix_dropped": 0
+      },
+      "repetition": 2,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "per_signal_status": {
+          "logs": 200,
+          "metrics": 200,
+          "traces": 200
+        }
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "level-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 300.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "service.telemetry.metrics.level set to basic",
+      "log": {
+        "error_lines": 0,
+        "lines": 667,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batch_metrics_present": 0,
+        "documented_for_level": 28,
+        "documented_missing": 12,
+        "documented_present": 16,
+        "metric_families_published": 19,
+        "missing_names": "otelcol_exporter_enqueue_failed_log_records, otelcol_exporter_enqueue_failed_metric_points, otelcol_exporter_enqueue_failed_spans, otelcol_exporter_queue_capacity, otelcol_exporter_queue_size, otelcol_exporter_send_failed_log_records, otelcol_exporter_send_failed_metric_points, otelcol_exporter_send_failed_spans, otelcol_processor_incoming_items, otelcol_processor_outgoing_items, otelcol_scraper_errored_metric_points, otelcol_scraper_scraped_metric_points",
+        "published_names": "otelcol_exporter_in_flight_requests, otelcol_exporter_sent_log_records, otelcol_exporter_sent_metric_points, otelcol_exporter_sent_spans, otelcol_process_cpu_seconds, otelcol_process_memory_rss, otelcol_process_runtime_heap_alloc_bytes, otelcol_process_runtime_total_alloc_bytes, otelcol_process_runtime_total_sys_memory_bytes, otelcol_process_uptime, otelcol_receiver_accepted_log_records, otelcol_receiver_accepted_metric_points, otelcol_receiver_accepted_spans, otelcol_receiver_failed_log_records, otelcol_receiver_failed_metric_points, otelcol_receiver_failed_spans, otelcol_receiver_refused_log_records, otelcol_receiver_refused_metric_points, otelcol_receiver_refused_spans",
+        "undocumented_names": "otelcol_receiver_failed_log_records, otelcol_receiver_failed_metric_points, otelcol_receiver_failed_spans",
+        "undocumented_present": 3,
+        "unit_suffix_dropped": 0
+      },
+      "repetition": 2,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "per_signal_status": {
+          "logs": 200,
+          "metrics": 200,
+          "traces": 200
+        }
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "level-basic"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 300.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "service.telemetry.metrics.level set to normal",
+      "log": {
+        "error_lines": 0,
+        "lines": 667,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batch_metrics_present": 4,
+        "documented_for_level": 32,
+        "documented_missing": 12,
+        "documented_present": 20,
+        "metric_families_published": 23,
+        "missing_names": "otelcol_exporter_enqueue_failed_log_records, otelcol_exporter_enqueue_failed_metric_points, otelcol_exporter_enqueue_failed_spans, otelcol_exporter_queue_capacity, otelcol_exporter_queue_size, otelcol_exporter_send_failed_log_records, otelcol_exporter_send_failed_metric_points, otelcol_exporter_send_failed_spans, otelcol_processor_incoming_items, otelcol_processor_outgoing_items, otelcol_scraper_errored_metric_points, otelcol_scraper_scraped_metric_points",
+        "published_names": "otelcol_exporter_in_flight_requests, otelcol_exporter_sent_log_records, otelcol_exporter_sent_metric_points, otelcol_exporter_sent_spans, otelcol_process_cpu_seconds, otelcol_process_memory_rss, otelcol_process_runtime_heap_alloc_bytes, otelcol_process_runtime_total_alloc_bytes, otelcol_process_runtime_total_sys_memory_bytes, otelcol_process_uptime, otelcol_processor_batch_batch_send_size, otelcol_processor_batch_batch_size_trigger_send, otelcol_processor_batch_metadata_cardinality, otelcol_processor_batch_timeout_trigger_send, otelcol_receiver_accepted_log_records, otelcol_receiver_accepted_metric_points, otelcol_receiver_accepted_spans, otelcol_receiver_failed_log_records, otelcol_receiver_failed_metric_points, otelcol_receiver_failed_spans, otelcol_receiver_refused_log_records, otelcol_receiver_refused_metric_points, otelcol_receiver_refused_spans",
+        "undocumented_names": "otelcol_receiver_failed_log_records, otelcol_receiver_failed_metric_points, otelcol_receiver_failed_spans",
+        "undocumented_present": 3,
+        "unit_suffix_dropped": 0
+      },
+      "repetition": 2,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "per_signal_status": {
+          "logs": 200,
+          "metrics": 200,
+          "traces": 200
+        }
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "level-normal"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 300.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "service.telemetry.metrics.level set to detailed",
+      "log": {
+        "error_lines": 0,
+        "lines": 667,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batch_metrics_present": 4,
+        "documented_for_level": 42,
+        "documented_missing": 17,
+        "documented_present": 25,
+        "metric_families_published": 28,
+        "missing_names": "http.client.request.body.size, http.client.request.duration, otelcol_exporter_enqueue_failed_log_records, otelcol_exporter_enqueue_failed_metric_points, otelcol_exporter_enqueue_failed_spans, otelcol_exporter_enqueue_size, otelcol_exporter_enqueue_size_bytes, otelcol_exporter_queue_capacity, otelcol_exporter_queue_size, otelcol_exporter_send_failed_log_records, otelcol_exporter_send_failed_metric_points, otelcol_exporter_send_failed_spans, otelcol_processor_incoming_items, otelcol_processor_outgoing_items, otelcol_scraper_errored_metric_points, otelcol_scraper_scraped_metric_points, rpc.server.call.duration",
+        "published_names": "http_server_request_body_size, http_server_request_duration, http_server_response_body_size, otelcol_exporter_in_flight_requests, otelcol_exporter_sent_log_records, otelcol_exporter_sent_metric_points, otelcol_exporter_sent_spans, otelcol_process_cpu_seconds, otelcol_process_memory_rss, otelcol_process_runtime_heap_alloc_bytes, otelcol_process_runtime_total_alloc_bytes, otelcol_process_runtime_total_sys_memory_bytes, otelcol_process_uptime, otelcol_processor_batch_batch_send_size, otelcol_processor_batch_batch_send_size_bytes, otelcol_processor_batch_batch_size_trigger_send, otelcol_processor_batch_metadata_cardinality, otelcol_processor_batch_timeout_trigger_send, otelcol_receiver_accepted_log_records, otelcol_receiver_accepted_metric_points, otelcol_receiver_accepted_spans, otelcol_receiver_failed_log_records, otelcol_receiver_failed_metric_points, otelcol_receiver_failed_spans, otelcol_receiver_refused_log_records, otelcol_receiver_refused_metric_points, otelcol_receiver_refused_spans, rpc_client_call_duration",
+        "undocumented_names": "otelcol_receiver_failed_log_records, otelcol_receiver_failed_metric_points, otelcol_receiver_failed_spans",
+        "undocumented_present": 3,
+        "unit_suffix_dropped": 0
+      },
+      "repetition": 2,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "per_signal_status": {
+          "logs": 200,
+          "metrics": 200,
+          "traces": 200
+        }
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "level-detailed"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "service.telemetry.metrics.level set to none",
+      "log": {
+        "error_lines": 0,
+        "lines": 668,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batch_metrics_present": 0,
+        "documented_for_level": 0,
+        "documented_missing": 0,
+        "documented_present": 0,
+        "metric_families_published": 0,
+        "missing_names": "none",
+        "published_names": "none",
+        "undocumented_names": "none",
+        "undocumented_present": 0,
+        "unit_suffix_dropped": 0
+      },
+      "repetition": 3,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "per_signal_status": {
+          "logs": 200,
+          "metrics": 200,
+          "traces": 200
+        }
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "level-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 300.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "service.telemetry.metrics.level set to basic",
+      "log": {
+        "error_lines": 0,
+        "lines": 667,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batch_metrics_present": 0,
+        "documented_for_level": 28,
+        "documented_missing": 12,
+        "documented_present": 16,
+        "metric_families_published": 19,
+        "missing_names": "otelcol_exporter_enqueue_failed_log_records, otelcol_exporter_enqueue_failed_metric_points, otelcol_exporter_enqueue_failed_spans, otelcol_exporter_queue_capacity, otelcol_exporter_queue_size, otelcol_exporter_send_failed_log_records, otelcol_exporter_send_failed_metric_points, otelcol_exporter_send_failed_spans, otelcol_processor_incoming_items, otelcol_processor_outgoing_items, otelcol_scraper_errored_metric_points, otelcol_scraper_scraped_metric_points",
+        "published_names": "otelcol_exporter_in_flight_requests, otelcol_exporter_sent_log_records, otelcol_exporter_sent_metric_points, otelcol_exporter_sent_spans, otelcol_process_cpu_seconds, otelcol_process_memory_rss, otelcol_process_runtime_heap_alloc_bytes, otelcol_process_runtime_total_alloc_bytes, otelcol_process_runtime_total_sys_memory_bytes, otelcol_process_uptime, otelcol_receiver_accepted_log_records, otelcol_receiver_accepted_metric_points, otelcol_receiver_accepted_spans, otelcol_receiver_failed_log_records, otelcol_receiver_failed_metric_points, otelcol_receiver_failed_spans, otelcol_receiver_refused_log_records, otelcol_receiver_refused_metric_points, otelcol_receiver_refused_spans",
+        "undocumented_names": "otelcol_receiver_failed_log_records, otelcol_receiver_failed_metric_points, otelcol_receiver_failed_spans",
+        "undocumented_present": 3,
+        "unit_suffix_dropped": 0
+      },
+      "repetition": 3,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "per_signal_status": {
+          "logs": 200,
+          "metrics": 200,
+          "traces": 200
+        }
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "level-basic"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 300.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "service.telemetry.metrics.level set to normal",
+      "log": {
+        "error_lines": 0,
+        "lines": 667,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batch_metrics_present": 4,
+        "documented_for_level": 32,
+        "documented_missing": 12,
+        "documented_present": 20,
+        "metric_families_published": 23,
+        "missing_names": "otelcol_exporter_enqueue_failed_log_records, otelcol_exporter_enqueue_failed_metric_points, otelcol_exporter_enqueue_failed_spans, otelcol_exporter_queue_capacity, otelcol_exporter_queue_size, otelcol_exporter_send_failed_log_records, otelcol_exporter_send_failed_metric_points, otelcol_exporter_send_failed_spans, otelcol_processor_incoming_items, otelcol_processor_outgoing_items, otelcol_scraper_errored_metric_points, otelcol_scraper_scraped_metric_points",
+        "published_names": "otelcol_exporter_in_flight_requests, otelcol_exporter_sent_log_records, otelcol_exporter_sent_metric_points, otelcol_exporter_sent_spans, otelcol_process_cpu_seconds, otelcol_process_memory_rss, otelcol_process_runtime_heap_alloc_bytes, otelcol_process_runtime_total_alloc_bytes, otelcol_process_runtime_total_sys_memory_bytes, otelcol_process_uptime, otelcol_processor_batch_batch_send_size, otelcol_processor_batch_batch_size_trigger_send, otelcol_processor_batch_metadata_cardinality, otelcol_processor_batch_timeout_trigger_send, otelcol_receiver_accepted_log_records, otelcol_receiver_accepted_metric_points, otelcol_receiver_accepted_spans, otelcol_receiver_failed_log_records, otelcol_receiver_failed_metric_points, otelcol_receiver_failed_spans, otelcol_receiver_refused_log_records, otelcol_receiver_refused_metric_points, otelcol_receiver_refused_spans",
+        "undocumented_names": "otelcol_receiver_failed_log_records, otelcol_receiver_failed_metric_points, otelcol_receiver_failed_spans",
+        "undocumented_present": 3,
+        "unit_suffix_dropped": 0
+      },
+      "repetition": 3,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "per_signal_status": {
+          "logs": 200,
+          "metrics": 200,
+          "traces": 200
+        }
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "level-normal"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 300.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          },
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "service.telemetry.metrics.level set to detailed",
+      "log": {
+        "error_lines": 0,
+        "lines": 667,
+        "warn_lines": 0
+      },
+      "measured": {
+        "batch_metrics_present": 4,
+        "documented_for_level": 42,
+        "documented_missing": 17,
+        "documented_present": 25,
+        "metric_families_published": 28,
+        "missing_names": "http.client.request.body.size, http.client.request.duration, otelcol_exporter_enqueue_failed_log_records, otelcol_exporter_enqueue_failed_metric_points, otelcol_exporter_enqueue_failed_spans, otelcol_exporter_enqueue_size, otelcol_exporter_enqueue_size_bytes, otelcol_exporter_queue_capacity, otelcol_exporter_queue_size, otelcol_exporter_send_failed_log_records, otelcol_exporter_send_failed_metric_points, otelcol_exporter_send_failed_spans, otelcol_processor_incoming_items, otelcol_processor_outgoing_items, otelcol_scraper_errored_metric_points, otelcol_scraper_scraped_metric_points, rpc.server.call.duration",
+        "published_names": "http_server_request_body_size, http_server_request_duration, http_server_response_body_size, otelcol_exporter_in_flight_requests, otelcol_exporter_sent_log_records, otelcol_exporter_sent_metric_points, otelcol_exporter_sent_spans, otelcol_process_cpu_seconds, otelcol_process_memory_rss, otelcol_process_runtime_heap_alloc_bytes, otelcol_process_runtime_total_alloc_bytes, otelcol_process_runtime_total_sys_memory_bytes, otelcol_process_uptime, otelcol_processor_batch_batch_send_size, otelcol_processor_batch_batch_send_size_bytes, otelcol_processor_batch_batch_size_trigger_send, otelcol_processor_batch_metadata_cardinality, otelcol_processor_batch_timeout_trigger_send, otelcol_receiver_accepted_log_records, otelcol_receiver_accepted_metric_points, otelcol_receiver_accepted_spans, otelcol_receiver_failed_log_records, otelcol_receiver_failed_metric_points, otelcol_receiver_failed_spans, otelcol_receiver_refused_log_records, otelcol_receiver_refused_metric_points, otelcol_receiver_refused_spans, rpc_client_call_duration",
+        "undocumented_names": "otelcol_receiver_failed_log_records, otelcol_receiver_failed_metric_points, otelcol_receiver_failed_spans",
+        "undocumented_present": 3,
+        "unit_suffix_dropped": 0
+      },
+      "repetition": 3,
+      "sending": {
+        "datapoints_sent": 100,
+        "http_status": 200,
+        "per_signal_status": {
+          "logs": 200,
+          "metrics": 200,
+          "traces": 200
+        }
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "level-detailed"
+    }
+  ],
+  "stack": {
+    "otelcol_contrib": "0.162.0",
+    "prometheus": "v3.15.0"
+  },
+  "variants": [
+    {
+      "description": "service.telemetry.metrics.level set to none",
+      "name": "level-none"
+    },
+    {
+      "description": "service.telemetry.metrics.level set to basic",
+      "name": "level-basic"
+    },
+    {
+      "description": "service.telemetry.metrics.level set to normal",
+      "name": "level-normal"
+    },
+    {
+      "description": "service.telemetry.metrics.level set to detailed",
+      "name": "level-detailed"
+    }
+  ]
+}

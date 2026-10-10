@@ -1,0 +1,1325 @@
+{
+  "columns": [
+    {
+      "kind": "text",
+      "label": "Path",
+      "path": "sending.path"
+    },
+    {
+      "kind": "number",
+      "label": "HTTP",
+      "path": "sending.http_status"
+    },
+    {
+      "kind": "text",
+      "label": "Native",
+      "path": "sending.metric_native"
+    },
+    {
+      "kind": "number",
+      "label": "Native count",
+      "path": "sending.metric_native_count"
+    },
+    {
+      "kind": "number",
+      "label": "Classic count",
+      "path": "sending.metric_classic_count"
+    },
+    {
+      "kind": "number",
+      "label": "Native sum",
+      "path": "sending.metric_native_sum"
+    },
+    {
+      "kind": "number",
+      "label": "p95",
+      "path": "sending.metric_p95"
+    },
+    {
+      "kind": "number",
+      "label": "Series",
+      "path": "sending.metric_series_count"
+    },
+    {
+      "kind": "number",
+      "label": "Down s",
+      "path": "sending.prometheus_down_s"
+    },
+    {
+      "kind": "number",
+      "label": "During send_failed",
+      "path": "sending.during_send_failed"
+    },
+    {
+      "kind": "number",
+      "label": "During queue",
+      "path": "sending.during_queue_size"
+    },
+    {
+      "kind": "number",
+      "label": "During failed_tx",
+      "path": "sending.during_failed_translations"
+    },
+    {
+      "kind": "number",
+      "label": "After send_failed",
+      "path": "sending.after_send_failed"
+    },
+    {
+      "kind": "number",
+      "label": "After queue",
+      "path": "sending.after_queue_size"
+    },
+    {
+      "kind": "number",
+      "label": "After failed_tx",
+      "path": "sending.after_failed_translations"
+    },
+    {
+      "kind": "text",
+      "label": "Restored",
+      "path": "sending.prometheus_restored"
+    }
+  ],
+  "execution_order": [
+    [
+      "scrape-healthy",
+      "scrape-down",
+      "remote-write-healthy",
+      "remote-write-down"
+    ],
+    [
+      "scrape-down",
+      "remote-write-healthy",
+      "remote-write-down",
+      "scrape-healthy"
+    ],
+    [
+      "remote-write-healthy",
+      "remote-write-down",
+      "scrape-healthy",
+      "scrape-down"
+    ],
+    [
+      "remote-write-down",
+      "scrape-healthy",
+      "scrape-down",
+      "remote-write-healthy"
+    ]
+  ],
+  "provenance": {
+    "compose_sha256": "feb174b5d692aeb5f4234b3b8ef5b6e8e00708c501fd72e1a0eec3050bb636df",
+    "docker_compose": "5.5.1",
+    "dockerfile_sha256": "9144298cec761cc3f7f162e232a2accda2203566c7fe91b9566f15e9f5d245de",
+    "machine": "arm64",
+    "python": "3.14.8",
+    "system": "Darwin"
+  },
+  "question": {
+    "id": "L4-05",
+    "level": 4,
+    "signals": [
+      "metrics"
+    ],
+    "theme": "metrics",
+    "title": "Scrape or remote write for native histograms?"
+  },
+  "repetitions": 4,
+  "results_version": 2,
+  "runs": [
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "prometheus exporter, Prometheus up",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "failed_translations": null,
+        "native": true,
+        "observations": 200,
+        "series_names": [
+          "l4_05_duration_milliseconds"
+        ]
+      },
+      "position": 1,
+      "repetition": 1,
+      "sending": {
+        "after_failed_translations": null,
+        "after_queue_size": 0.0,
+        "after_send_failed": null,
+        "after_sent": 2.0,
+        "after_sent_batches": null,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "during_failed_translations": null,
+        "during_queue_size": null,
+        "during_send_failed": null,
+        "during_sent": null,
+        "http_status": 200,
+        "metric_classic_count": null,
+        "metric_classic_sum": null,
+        "metric_jobs": [
+          "exported"
+        ],
+        "metric_native": true,
+        "metric_native_count": 200,
+        "metric_native_sum": 500.0,
+        "metric_p95": 13.929,
+        "metric_series_count": 1,
+        "metric_series_names": [
+          "l4_05_duration_milliseconds"
+        ],
+        "observations_sent": 200,
+        "path": "scrape",
+        "prometheus_down_s": 0.0,
+        "prometheus_restored": true,
+        "request_bytes": 624
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "scrape-healthy"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "prometheus exporter, Prometheus stopped during the load",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "failed_translations": null,
+        "native": true,
+        "observations": 200,
+        "series_names": [
+          "l4_05_duration_milliseconds"
+        ]
+      },
+      "position": 2,
+      "repetition": 1,
+      "sending": {
+        "after_failed_translations": null,
+        "after_queue_size": 0.0,
+        "after_send_failed": null,
+        "after_sent": 2.0,
+        "after_sent_batches": null,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "during_failed_translations": null,
+        "during_queue_size": 0.0,
+        "during_send_failed": null,
+        "during_sent": null,
+        "http_status": 200,
+        "metric_classic_count": null,
+        "metric_classic_sum": null,
+        "metric_jobs": [
+          "exported"
+        ],
+        "metric_native": true,
+        "metric_native_count": 200,
+        "metric_native_sum": 500.0,
+        "metric_p95": 13.929,
+        "metric_series_count": 1,
+        "metric_series_names": [
+          "l4_05_duration_milliseconds"
+        ],
+        "observations_sent": 200,
+        "path": "scrape",
+        "prometheus_down_s": 8.4,
+        "prometheus_restored": true,
+        "request_bytes": 624
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "scrape-down"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "prometheusremotewrite RW1, Prometheus up",
+      "log": {
+        "error_lines": 0,
+        "lines": 12,
+        "warn_lines": 2
+      },
+      "measured": {
+        "failed_translations": 1.0,
+        "native": false,
+        "observations": null,
+        "series_names": []
+      },
+      "position": 3,
+      "repetition": 1,
+      "sending": {
+        "after_failed_translations": 1.0,
+        "after_queue_size": 0.0,
+        "after_send_failed": null,
+        "after_sent": 2.0,
+        "after_sent_batches": null,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "during_failed_translations": null,
+        "during_queue_size": null,
+        "during_send_failed": null,
+        "during_sent": null,
+        "http_status": 200,
+        "metric_classic_count": null,
+        "metric_classic_sum": null,
+        "metric_jobs": [],
+        "metric_native": false,
+        "metric_native_count": null,
+        "metric_native_sum": null,
+        "metric_p95": null,
+        "metric_series_count": 0,
+        "metric_series_names": [],
+        "observations_sent": 200,
+        "path": "remote-write",
+        "prometheus_down_s": 0.0,
+        "prometheus_restored": true,
+        "request_bytes": 624
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "remote-write-healthy"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "prometheusremotewrite RW1, Prometheus stopped during the load",
+      "log": {
+        "error_lines": 0,
+        "lines": 12,
+        "warn_lines": 2
+      },
+      "measured": {
+        "failed_translations": 1.0,
+        "native": false,
+        "observations": null,
+        "series_names": []
+      },
+      "position": 4,
+      "repetition": 1,
+      "sending": {
+        "after_failed_translations": 1.0,
+        "after_queue_size": 0.0,
+        "after_send_failed": null,
+        "after_sent": 2.0,
+        "after_sent_batches": null,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "during_failed_translations": null,
+        "during_queue_size": 0.0,
+        "during_send_failed": null,
+        "during_sent": null,
+        "http_status": 200,
+        "metric_classic_count": null,
+        "metric_classic_sum": null,
+        "metric_jobs": [],
+        "metric_native": false,
+        "metric_native_count": null,
+        "metric_native_sum": null,
+        "metric_p95": null,
+        "metric_series_count": 0,
+        "metric_series_names": [],
+        "observations_sent": 200,
+        "path": "remote-write",
+        "prometheus_down_s": 8.39,
+        "prometheus_restored": true,
+        "request_bytes": 624
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "remote-write-down"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "prometheus exporter, Prometheus stopped during the load",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "failed_translations": null,
+        "native": true,
+        "observations": 200,
+        "series_names": [
+          "l4_05_duration_milliseconds"
+        ]
+      },
+      "position": 1,
+      "repetition": 2,
+      "sending": {
+        "after_failed_translations": null,
+        "after_queue_size": 0.0,
+        "after_send_failed": null,
+        "after_sent": 2.0,
+        "after_sent_batches": null,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "during_failed_translations": null,
+        "during_queue_size": 0.0,
+        "during_send_failed": null,
+        "during_sent": null,
+        "http_status": 200,
+        "metric_classic_count": null,
+        "metric_classic_sum": null,
+        "metric_jobs": [
+          "exported"
+        ],
+        "metric_native": true,
+        "metric_native_count": 200,
+        "metric_native_sum": 500.0,
+        "metric_p95": 13.929,
+        "metric_series_count": 1,
+        "metric_series_names": [
+          "l4_05_duration_milliseconds"
+        ],
+        "observations_sent": 200,
+        "path": "scrape",
+        "prometheus_down_s": 8.4,
+        "prometheus_restored": true,
+        "request_bytes": 624
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "scrape-down"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "prometheusremotewrite RW1, Prometheus up",
+      "log": {
+        "error_lines": 0,
+        "lines": 12,
+        "warn_lines": 2
+      },
+      "measured": {
+        "failed_translations": 1.0,
+        "native": false,
+        "observations": null,
+        "series_names": []
+      },
+      "position": 2,
+      "repetition": 2,
+      "sending": {
+        "after_failed_translations": 1.0,
+        "after_queue_size": 0.0,
+        "after_send_failed": null,
+        "after_sent": 2.0,
+        "after_sent_batches": null,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "during_failed_translations": null,
+        "during_queue_size": null,
+        "during_send_failed": null,
+        "during_sent": null,
+        "http_status": 200,
+        "metric_classic_count": null,
+        "metric_classic_sum": null,
+        "metric_jobs": [],
+        "metric_native": false,
+        "metric_native_count": null,
+        "metric_native_sum": null,
+        "metric_p95": null,
+        "metric_series_count": 0,
+        "metric_series_names": [],
+        "observations_sent": 200,
+        "path": "remote-write",
+        "prometheus_down_s": 0.0,
+        "prometheus_restored": true,
+        "request_bytes": 624
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "remote-write-healthy"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "prometheusremotewrite RW1, Prometheus stopped during the load",
+      "log": {
+        "error_lines": 0,
+        "lines": 12,
+        "warn_lines": 2
+      },
+      "measured": {
+        "failed_translations": 1.0,
+        "native": false,
+        "observations": null,
+        "series_names": []
+      },
+      "position": 3,
+      "repetition": 2,
+      "sending": {
+        "after_failed_translations": 1.0,
+        "after_queue_size": 0.0,
+        "after_send_failed": null,
+        "after_sent": 2.0,
+        "after_sent_batches": null,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "during_failed_translations": null,
+        "during_queue_size": 0.0,
+        "during_send_failed": null,
+        "during_sent": null,
+        "http_status": 200,
+        "metric_classic_count": null,
+        "metric_classic_sum": null,
+        "metric_jobs": [],
+        "metric_native": false,
+        "metric_native_count": null,
+        "metric_native_sum": null,
+        "metric_p95": null,
+        "metric_series_count": 0,
+        "metric_series_names": [],
+        "observations_sent": 200,
+        "path": "remote-write",
+        "prometheus_down_s": 8.41,
+        "prometheus_restored": true,
+        "request_bytes": 624
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "remote-write-down"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "prometheus exporter, Prometheus up",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "failed_translations": null,
+        "native": true,
+        "observations": 200,
+        "series_names": [
+          "l4_05_duration_milliseconds"
+        ]
+      },
+      "position": 4,
+      "repetition": 2,
+      "sending": {
+        "after_failed_translations": null,
+        "after_queue_size": 0.0,
+        "after_send_failed": null,
+        "after_sent": 2.0,
+        "after_sent_batches": null,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "during_failed_translations": null,
+        "during_queue_size": null,
+        "during_send_failed": null,
+        "during_sent": null,
+        "http_status": 200,
+        "metric_classic_count": null,
+        "metric_classic_sum": null,
+        "metric_jobs": [
+          "exported"
+        ],
+        "metric_native": true,
+        "metric_native_count": 200,
+        "metric_native_sum": 500.0,
+        "metric_p95": 13.929,
+        "metric_series_count": 1,
+        "metric_series_names": [
+          "l4_05_duration_milliseconds"
+        ],
+        "observations_sent": 200,
+        "path": "scrape",
+        "prometheus_down_s": 0.0,
+        "prometheus_restored": true,
+        "request_bytes": 624
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "scrape-healthy"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "prometheusremotewrite RW1, Prometheus up",
+      "log": {
+        "error_lines": 0,
+        "lines": 12,
+        "warn_lines": 2
+      },
+      "measured": {
+        "failed_translations": 1.0,
+        "native": false,
+        "observations": null,
+        "series_names": []
+      },
+      "position": 1,
+      "repetition": 3,
+      "sending": {
+        "after_failed_translations": 1.0,
+        "after_queue_size": 0.0,
+        "after_send_failed": null,
+        "after_sent": 2.0,
+        "after_sent_batches": null,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "during_failed_translations": null,
+        "during_queue_size": null,
+        "during_send_failed": null,
+        "during_sent": null,
+        "http_status": 200,
+        "metric_classic_count": null,
+        "metric_classic_sum": null,
+        "metric_jobs": [],
+        "metric_native": false,
+        "metric_native_count": null,
+        "metric_native_sum": null,
+        "metric_p95": null,
+        "metric_series_count": 0,
+        "metric_series_names": [],
+        "observations_sent": 200,
+        "path": "remote-write",
+        "prometheus_down_s": 0.0,
+        "prometheus_restored": true,
+        "request_bytes": 624
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "remote-write-healthy"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "prometheusremotewrite RW1, Prometheus stopped during the load",
+      "log": {
+        "error_lines": 0,
+        "lines": 12,
+        "warn_lines": 2
+      },
+      "measured": {
+        "failed_translations": 1.0,
+        "native": false,
+        "observations": null,
+        "series_names": []
+      },
+      "position": 2,
+      "repetition": 3,
+      "sending": {
+        "after_failed_translations": 1.0,
+        "after_queue_size": 0.0,
+        "after_send_failed": null,
+        "after_sent": 2.0,
+        "after_sent_batches": null,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "during_failed_translations": null,
+        "during_queue_size": 0.0,
+        "during_send_failed": null,
+        "during_sent": null,
+        "http_status": 200,
+        "metric_classic_count": null,
+        "metric_classic_sum": null,
+        "metric_jobs": [],
+        "metric_native": false,
+        "metric_native_count": null,
+        "metric_native_sum": null,
+        "metric_p95": null,
+        "metric_series_count": 0,
+        "metric_series_names": [],
+        "observations_sent": 200,
+        "path": "remote-write",
+        "prometheus_down_s": 8.4,
+        "prometheus_restored": true,
+        "request_bytes": 624
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "remote-write-down"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "prometheus exporter, Prometheus up",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "failed_translations": null,
+        "native": true,
+        "observations": 200,
+        "series_names": [
+          "l4_05_duration_milliseconds"
+        ]
+      },
+      "position": 3,
+      "repetition": 3,
+      "sending": {
+        "after_failed_translations": null,
+        "after_queue_size": 0.0,
+        "after_send_failed": null,
+        "after_sent": 2.0,
+        "after_sent_batches": null,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "during_failed_translations": null,
+        "during_queue_size": null,
+        "during_send_failed": null,
+        "during_sent": null,
+        "http_status": 200,
+        "metric_classic_count": null,
+        "metric_classic_sum": null,
+        "metric_jobs": [
+          "exported"
+        ],
+        "metric_native": true,
+        "metric_native_count": 200,
+        "metric_native_sum": 500.0,
+        "metric_p95": 13.929,
+        "metric_series_count": 1,
+        "metric_series_names": [
+          "l4_05_duration_milliseconds"
+        ],
+        "observations_sent": 200,
+        "path": "scrape",
+        "prometheus_down_s": 0.0,
+        "prometheus_restored": true,
+        "request_bytes": 624
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "scrape-healthy"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "prometheus exporter, Prometheus stopped during the load",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "failed_translations": null,
+        "native": true,
+        "observations": 200,
+        "series_names": [
+          "l4_05_duration_milliseconds"
+        ]
+      },
+      "position": 4,
+      "repetition": 3,
+      "sending": {
+        "after_failed_translations": null,
+        "after_queue_size": 0.0,
+        "after_send_failed": null,
+        "after_sent": 2.0,
+        "after_sent_batches": null,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "during_failed_translations": null,
+        "during_queue_size": 0.0,
+        "during_send_failed": null,
+        "during_sent": null,
+        "http_status": 200,
+        "metric_classic_count": null,
+        "metric_classic_sum": null,
+        "metric_jobs": [
+          "exported"
+        ],
+        "metric_native": true,
+        "metric_native_count": 200,
+        "metric_native_sum": 500.0,
+        "metric_p95": 13.929,
+        "metric_series_count": 1,
+        "metric_series_names": [
+          "l4_05_duration_milliseconds"
+        ],
+        "observations_sent": 200,
+        "path": "scrape",
+        "prometheus_down_s": 8.39,
+        "prometheus_restored": true,
+        "request_bytes": 624
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "scrape-down"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "prometheusremotewrite RW1, Prometheus stopped during the load",
+      "log": {
+        "error_lines": 0,
+        "lines": 12,
+        "warn_lines": 2
+      },
+      "measured": {
+        "failed_translations": 1.0,
+        "native": false,
+        "observations": null,
+        "series_names": []
+      },
+      "position": 1,
+      "repetition": 4,
+      "sending": {
+        "after_failed_translations": 1.0,
+        "after_queue_size": 0.0,
+        "after_send_failed": null,
+        "after_sent": 2.0,
+        "after_sent_batches": null,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "during_failed_translations": null,
+        "during_queue_size": 0.0,
+        "during_send_failed": null,
+        "during_sent": null,
+        "http_status": 200,
+        "metric_classic_count": null,
+        "metric_classic_sum": null,
+        "metric_jobs": [],
+        "metric_native": false,
+        "metric_native_count": null,
+        "metric_native_sum": null,
+        "metric_p95": null,
+        "metric_series_count": 0,
+        "metric_series_names": [],
+        "observations_sent": 200,
+        "path": "remote-write",
+        "prometheus_down_s": 8.41,
+        "prometheus_restored": true,
+        "request_bytes": 624
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "remote-write-down"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "prometheus exporter, Prometheus up",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "failed_translations": null,
+        "native": true,
+        "observations": 200,
+        "series_names": [
+          "l4_05_duration_milliseconds"
+        ]
+      },
+      "position": 2,
+      "repetition": 4,
+      "sending": {
+        "after_failed_translations": null,
+        "after_queue_size": 0.0,
+        "after_send_failed": null,
+        "after_sent": 2.0,
+        "after_sent_batches": null,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "during_failed_translations": null,
+        "during_queue_size": null,
+        "during_send_failed": null,
+        "during_sent": null,
+        "http_status": 200,
+        "metric_classic_count": null,
+        "metric_classic_sum": null,
+        "metric_jobs": [
+          "exported"
+        ],
+        "metric_native": true,
+        "metric_native_count": 200,
+        "metric_native_sum": 500.0,
+        "metric_p95": 13.929,
+        "metric_series_count": 1,
+        "metric_series_names": [
+          "l4_05_duration_milliseconds"
+        ],
+        "observations_sent": 200,
+        "path": "scrape",
+        "prometheus_down_s": 0.0,
+        "prometheus_restored": true,
+        "request_bytes": 624
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "scrape-healthy"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "prometheus exporter, Prometheus stopped during the load",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "failed_translations": null,
+        "native": true,
+        "observations": 200,
+        "series_names": [
+          "l4_05_duration_milliseconds"
+        ]
+      },
+      "position": 3,
+      "repetition": 4,
+      "sending": {
+        "after_failed_translations": null,
+        "after_queue_size": 0.0,
+        "after_send_failed": null,
+        "after_sent": 2.0,
+        "after_sent_batches": null,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "during_failed_translations": null,
+        "during_queue_size": 0.0,
+        "during_send_failed": null,
+        "during_sent": null,
+        "http_status": 200,
+        "metric_classic_count": null,
+        "metric_classic_sum": null,
+        "metric_jobs": [
+          "exported"
+        ],
+        "metric_native": true,
+        "metric_native_count": 200,
+        "metric_native_sum": 500.0,
+        "metric_p95": 13.929,
+        "metric_series_count": 1,
+        "metric_series_names": [
+          "l4_05_duration_milliseconds"
+        ],
+        "observations_sent": 200,
+        "path": "scrape",
+        "prometheus_down_s": 8.4,
+        "prometheus_restored": true,
+        "request_bytes": 624
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "scrape-down"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "prometheusremotewrite RW1, Prometheus up",
+      "log": {
+        "error_lines": 0,
+        "lines": 12,
+        "warn_lines": 2
+      },
+      "measured": {
+        "failed_translations": 1.0,
+        "native": false,
+        "observations": null,
+        "series_names": []
+      },
+      "position": 4,
+      "repetition": 4,
+      "sending": {
+        "after_failed_translations": 1.0,
+        "after_queue_size": 0.0,
+        "after_send_failed": null,
+        "after_sent": 2.0,
+        "after_sent_batches": null,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "during_failed_translations": null,
+        "during_queue_size": null,
+        "during_send_failed": null,
+        "during_sent": null,
+        "http_status": 200,
+        "metric_classic_count": null,
+        "metric_classic_sum": null,
+        "metric_jobs": [],
+        "metric_native": false,
+        "metric_native_count": null,
+        "metric_native_sum": null,
+        "metric_p95": null,
+        "metric_series_count": 0,
+        "metric_series_names": [],
+        "observations_sent": 200,
+        "path": "remote-write",
+        "prometheus_down_s": 0.0,
+        "prometheus_restored": true,
+        "request_bytes": 624
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "remote-write-healthy"
+    }
+  ],
+  "stack": {
+    "otelcol_contrib": "0.162.0",
+    "prometheus": "v3.15.0"
+  },
+  "variants": [
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "da6b59f2ee859bcde06bb0f2b72a4bfa5417e6c0946c09f77e09dfae7b31198e",
+        "prometheus": "1e33c42770ffeba75d035c75d6e48348d9d175129c434113864ba2c9c03956c4",
+        "sink": "2d9ae84bbb4f93bd296a2242e151700adaea3acc267f90ae3cef7b74f5856f1a"
+      },
+      "description": "prometheus exporter, Prometheus up",
+      "name": "scrape-healthy",
+      "options": {
+        "stop_prometheus": false
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "da6b59f2ee859bcde06bb0f2b72a4bfa5417e6c0946c09f77e09dfae7b31198e",
+        "prometheus": "1e33c42770ffeba75d035c75d6e48348d9d175129c434113864ba2c9c03956c4",
+        "sink": "2d9ae84bbb4f93bd296a2242e151700adaea3acc267f90ae3cef7b74f5856f1a"
+      },
+      "description": "prometheus exporter, Prometheus stopped during the load",
+      "name": "scrape-down",
+      "options": {
+        "stop_prometheus": true
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "4294c3a47a1663385bf52f6207546cada2eb111bfd1ced4adccdcbcf8d6b5ed9",
+        "prometheus": "1e33c42770ffeba75d035c75d6e48348d9d175129c434113864ba2c9c03956c4",
+        "sink": "2d9ae84bbb4f93bd296a2242e151700adaea3acc267f90ae3cef7b74f5856f1a"
+      },
+      "description": "prometheusremotewrite RW1, Prometheus up",
+      "name": "remote-write-healthy",
+      "options": {
+        "stop_prometheus": false
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "4294c3a47a1663385bf52f6207546cada2eb111bfd1ced4adccdcbcf8d6b5ed9",
+        "prometheus": "1e33c42770ffeba75d035c75d6e48348d9d175129c434113864ba2c9c03956c4",
+        "sink": "2d9ae84bbb4f93bd296a2242e151700adaea3acc267f90ae3cef7b74f5856f1a"
+      },
+      "description": "prometheusremotewrite RW1, Prometheus stopped during the load",
+      "name": "remote-write-down",
+      "options": {
+        "stop_prometheus": true
+      }
+    }
+  ]
+}

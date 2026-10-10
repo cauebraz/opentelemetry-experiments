@@ -1,0 +1,694 @@
+{
+  "columns": [
+    {
+      "kind": "number",
+      "label": "Lines written",
+      "path": "sending.lines_written"
+    },
+    {
+      "kind": "number",
+      "label": "Unparsable",
+      "path": "sending.unparsable_written"
+    },
+    {
+      "kind": "number",
+      "label": "Accepted",
+      "path": "counters.collector.logs.receiver_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Refused",
+      "path": "counters.collector.logs.receiver_refused"
+    },
+    {
+      "kind": "number",
+      "label": "Receiver failed",
+      "path": "measured.receiver_failed"
+    },
+    {
+      "kind": "number",
+      "label": "Sent to the sink",
+      "path": "counters.collector.logs.exporter_sent"
+    },
+    {
+      "kind": "number",
+      "label": "Arrived at the sink",
+      "path": "counters.sink.logs.receiver_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Records printed",
+      "path": "measured.records_arrived"
+    },
+    {
+      "kind": "number",
+      "label": "With a level attribute",
+      "path": "measured.records_with_level"
+    },
+    {
+      "kind": "number",
+      "label": "Raw bodies",
+      "path": "measured.raw_bodies_arrived"
+    },
+    {
+      "kind": "number",
+      "label": "Requests at the sink",
+      "path": "measured.requests_at_sink"
+    },
+    {
+      "kind": "number",
+      "label": "Failed entry lines",
+      "path": "measured.failed_entry_lines"
+    },
+    {
+      "kind": "number",
+      "label": "Emit failure lines",
+      "path": "measured.emit_failure_lines"
+    },
+    {
+      "kind": "number",
+      "label": "Parser series",
+      "path": "measured.parser_series"
+    },
+    {
+      "kind": "number",
+      "label": "Warn lines",
+      "path": "log.warn_lines"
+    },
+    {
+      "kind": "number",
+      "label": "Error lines",
+      "path": "log.error_lines"
+    }
+  ],
+  "question": {
+    "id": "L2-04",
+    "level": 2,
+    "signals": [
+      "logs"
+    ],
+    "theme": "logs",
+    "title": "What happens to the 10% of log lines that do not match the parser?"
+  },
+  "repetitions": 3,
+  "runs": [
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "on_error left unset, which the documentation says is send",
+      "log": {
+        "error_lines": 11,
+        "lines": 247,
+        "warn_lines": 0
+      },
+      "measured": {
+        "emit_failure_lines": 1,
+        "failed_entry_lines": 10,
+        "parser_series": 0,
+        "raw_bodies_arrived": 10,
+        "receiver_failed": 0.0,
+        "records_arrived": 100,
+        "records_with_level": 90,
+        "requests_at_sink": 1
+      },
+      "repetition": 1,
+      "sending": {
+        "http_status": null,
+        "lines_written": 100,
+        "records_settled_at": 100.0,
+        "unparsable_written": 10
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "default"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "on_error send_quiet",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "emit_failure_lines": 0,
+        "failed_entry_lines": 0,
+        "parser_series": 0,
+        "raw_bodies_arrived": 10,
+        "receiver_failed": 0.0,
+        "records_arrived": 100,
+        "records_with_level": 90,
+        "requests_at_sink": 1
+      },
+      "repetition": 1,
+      "sending": {
+        "http_status": null,
+        "lines_written": 100,
+        "records_settled_at": 100.0,
+        "unparsable_written": 10
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "send-quiet"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 90.0,
+            "receiver_accepted": 90.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 90.0,
+            "receiver_accepted": 90.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "on_error drop",
+      "log": {
+        "error_lines": 11,
+        "lines": 247,
+        "warn_lines": 0
+      },
+      "measured": {
+        "emit_failure_lines": 1,
+        "failed_entry_lines": 10,
+        "parser_series": 0,
+        "raw_bodies_arrived": 0,
+        "receiver_failed": 0.0,
+        "records_arrived": 90,
+        "records_with_level": 90,
+        "requests_at_sink": 1
+      },
+      "repetition": 1,
+      "sending": {
+        "http_status": null,
+        "lines_written": 100,
+        "records_settled_at": 90.0,
+        "unparsable_written": 10
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "drop"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 90.0,
+            "receiver_accepted": 90.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 90.0,
+            "receiver_accepted": 90.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "on_error drop_quiet",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "emit_failure_lines": 0,
+        "failed_entry_lines": 0,
+        "parser_series": 0,
+        "raw_bodies_arrived": 0,
+        "receiver_failed": 0.0,
+        "records_arrived": 90,
+        "records_with_level": 90,
+        "requests_at_sink": 1
+      },
+      "repetition": 1,
+      "sending": {
+        "http_status": null,
+        "lines_written": 100,
+        "records_settled_at": 90.0,
+        "unparsable_written": 10
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "drop-quiet"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "on_error left unset, which the documentation says is send",
+      "log": {
+        "error_lines": 11,
+        "lines": 247,
+        "warn_lines": 0
+      },
+      "measured": {
+        "emit_failure_lines": 1,
+        "failed_entry_lines": 10,
+        "parser_series": 0,
+        "raw_bodies_arrived": 10,
+        "receiver_failed": 0.0,
+        "records_arrived": 100,
+        "records_with_level": 90,
+        "requests_at_sink": 1
+      },
+      "repetition": 2,
+      "sending": {
+        "http_status": null,
+        "lines_written": 100,
+        "records_settled_at": 100.0,
+        "unparsable_written": 10
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "default"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "on_error send_quiet",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "emit_failure_lines": 0,
+        "failed_entry_lines": 0,
+        "parser_series": 0,
+        "raw_bodies_arrived": 10,
+        "receiver_failed": 0.0,
+        "records_arrived": 100,
+        "records_with_level": 90,
+        "requests_at_sink": 1
+      },
+      "repetition": 2,
+      "sending": {
+        "http_status": null,
+        "lines_written": 100,
+        "records_settled_at": 100.0,
+        "unparsable_written": 10
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "send-quiet"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 90.0,
+            "receiver_accepted": 90.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 90.0,
+            "receiver_accepted": 90.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "on_error drop",
+      "log": {
+        "error_lines": 11,
+        "lines": 247,
+        "warn_lines": 0
+      },
+      "measured": {
+        "emit_failure_lines": 1,
+        "failed_entry_lines": 10,
+        "parser_series": 0,
+        "raw_bodies_arrived": 0,
+        "receiver_failed": 0.0,
+        "records_arrived": 90,
+        "records_with_level": 90,
+        "requests_at_sink": 1
+      },
+      "repetition": 2,
+      "sending": {
+        "http_status": null,
+        "lines_written": 100,
+        "records_settled_at": 90.0,
+        "unparsable_written": 10
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "drop"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 90.0,
+            "receiver_accepted": 90.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 90.0,
+            "receiver_accepted": 90.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "on_error drop_quiet",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "emit_failure_lines": 0,
+        "failed_entry_lines": 0,
+        "parser_series": 0,
+        "raw_bodies_arrived": 0,
+        "receiver_failed": 0.0,
+        "records_arrived": 90,
+        "records_with_level": 90,
+        "requests_at_sink": 1
+      },
+      "repetition": 2,
+      "sending": {
+        "http_status": null,
+        "lines_written": 100,
+        "records_settled_at": 90.0,
+        "unparsable_written": 10
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "drop-quiet"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "on_error left unset, which the documentation says is send",
+      "log": {
+        "error_lines": 11,
+        "lines": 247,
+        "warn_lines": 0
+      },
+      "measured": {
+        "emit_failure_lines": 1,
+        "failed_entry_lines": 10,
+        "parser_series": 0,
+        "raw_bodies_arrived": 10,
+        "receiver_failed": 0.0,
+        "records_arrived": 100,
+        "records_with_level": 90,
+        "requests_at_sink": 1
+      },
+      "repetition": 3,
+      "sending": {
+        "http_status": null,
+        "lines_written": 100,
+        "records_settled_at": 100.0,
+        "unparsable_written": 10
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "default"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "on_error send_quiet",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "emit_failure_lines": 0,
+        "failed_entry_lines": 0,
+        "parser_series": 0,
+        "raw_bodies_arrived": 10,
+        "receiver_failed": 0.0,
+        "records_arrived": 100,
+        "records_with_level": 90,
+        "requests_at_sink": 1
+      },
+      "repetition": 3,
+      "sending": {
+        "http_status": null,
+        "lines_written": 100,
+        "records_settled_at": 100.0,
+        "unparsable_written": 10
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "send-quiet"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 90.0,
+            "receiver_accepted": 90.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 90.0,
+            "receiver_accepted": 90.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "on_error drop",
+      "log": {
+        "error_lines": 11,
+        "lines": 247,
+        "warn_lines": 0
+      },
+      "measured": {
+        "emit_failure_lines": 1,
+        "failed_entry_lines": 10,
+        "parser_series": 0,
+        "raw_bodies_arrived": 0,
+        "receiver_failed": 0.0,
+        "records_arrived": 90,
+        "records_with_level": 90,
+        "requests_at_sink": 1
+      },
+      "repetition": 3,
+      "sending": {
+        "http_status": null,
+        "lines_written": 100,
+        "records_settled_at": 90.0,
+        "unparsable_written": 10
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "drop"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 90.0,
+            "receiver_accepted": 90.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 90.0,
+            "receiver_accepted": 90.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "on_error drop_quiet",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "emit_failure_lines": 0,
+        "failed_entry_lines": 0,
+        "parser_series": 0,
+        "raw_bodies_arrived": 0,
+        "receiver_failed": 0.0,
+        "records_arrived": 90,
+        "records_with_level": 90,
+        "requests_at_sink": 1
+      },
+      "repetition": 3,
+      "sending": {
+        "http_status": null,
+        "lines_written": 100,
+        "records_settled_at": 90.0,
+        "unparsable_written": 10
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "drop-quiet"
+    }
+  ],
+  "stack": {
+    "otelcol_contrib": "0.162.0",
+    "prometheus": "v3.15.0"
+  },
+  "variants": [
+    {
+      "description": "on_error left unset, which the documentation says is send",
+      "name": "default"
+    },
+    {
+      "description": "on_error send_quiet",
+      "name": "send-quiet"
+    },
+    {
+      "description": "on_error drop",
+      "name": "drop"
+    },
+    {
+      "description": "on_error drop_quiet",
+      "name": "drop-quiet"
+    }
+  ]
+}

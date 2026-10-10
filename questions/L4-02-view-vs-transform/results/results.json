@@ -1,0 +1,823 @@
+{
+  "columns": [
+    {
+      "kind": "number",
+      "label": "SDK request B",
+      "path": "sending.sdk_request_bytes"
+    },
+    {
+      "kind": "number",
+      "label": "Collector RX B",
+      "path": "sending.collector_rx_bytes"
+    },
+    {
+      "kind": "number",
+      "label": "SDK wall s",
+      "path": "sending.sdk_wall_s"
+    },
+    {
+      "kind": "number",
+      "label": "SDK CPU s",
+      "path": "sending.sdk_cpu_s"
+    },
+    {
+      "kind": "number",
+      "label": "Collector CPU ns",
+      "path": "sending.adjusted_collector_cpu_ns"
+    },
+    {
+      "kind": "number",
+      "label": "Inbound user.id values",
+      "path": "sending.metric_inbound_user_values"
+    },
+    {
+      "kind": "number",
+      "label": "Inbound with user.id",
+      "path": "sending.metric_inbound_with_user_id"
+    },
+    {
+      "kind": "number",
+      "label": "Identity series",
+      "path": "sending.metric_identity_series"
+    },
+    {
+      "kind": "number",
+      "label": "Family series",
+      "path": "sending.metric_family_series"
+    },
+    {
+      "kind": "number",
+      "label": "Observations",
+      "path": "sending.metric_observations"
+    },
+    {
+      "kind": "number",
+      "label": "p95 overall",
+      "path": "sending.metric_p95_overall"
+    },
+    {
+      "kind": "text",
+      "label": "user.id after",
+      "path": "sending.metric_user_id_after"
+    },
+    {
+      "kind": "number",
+      "label": "Sink datapoints",
+      "path": "measured.delivered_datapoints"
+    },
+    {
+      "kind": "number",
+      "label": "Exports",
+      "path": "sending.exports"
+    }
+  ],
+  "execution_order": [
+    [
+      "baseline",
+      "sdk-view",
+      "collector-transform"
+    ],
+    [
+      "sdk-view",
+      "collector-transform",
+      "baseline"
+    ],
+    [
+      "collector-transform",
+      "baseline",
+      "sdk-view"
+    ]
+  ],
+  "provenance": {
+    "compose_sha256": "49991e9504b2cec047c838cfcbcb462847254b462c3785d3655a1048e4e32555",
+    "docker_compose": "5.5.1",
+    "dockerfile_sha256": "9144298cec761cc3f7f162e232a2accda2203566c7fe91b9566f15e9f5d245de",
+    "machine": "arm64",
+    "python": "3.14.8",
+    "system": "Darwin"
+  },
+  "question": {
+    "id": "L4-02",
+    "level": 4,
+    "signals": [
+      "metrics"
+    ],
+    "theme": "sdk, metrics",
+    "title": "Should the fix live in the SDK or in the platform?"
+  },
+  "repetitions": 3,
+  "results_version": 2,
+  "runs": [
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 601.0,
+            "receiver_accepted": 200.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 200.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "full attributes, no SDK view, no Collector transform",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_datapoints": 200,
+        "export_requests": 1,
+        "largest_request": 200
+      },
+      "position": 1,
+      "repetition": 1,
+      "sending": {
+        "adjusted_collector_cpu_ns": 3611476,
+        "collector_cpu_ns": 8140000,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "collector_rx_bytes": 63379,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "exports": 1,
+        "flushed": true,
+        "metric_family_series": 2200,
+        "metric_identity_series": 200,
+        "metric_inbound_user_values": 200,
+        "metric_inbound_with_user_id": 200,
+        "metric_inbound_without_user_id": 0,
+        "metric_observations": 600,
+        "metric_p95_by_method": {
+          "DELETE": 6.643,
+          "GET": 6.643,
+          "POST": 6.643,
+          "PUT": 6.659
+        },
+        "metric_p95_overall": 6.643,
+        "metric_user_id_after": true,
+        "observations_sent": 600,
+        "prometheus_restored": true,
+        "sdk_cpu_s": 0.007,
+        "sdk_request_bytes": 63054,
+        "sdk_wall_s": 0.01,
+        "use_view": false,
+        "window_problems": [],
+        "work_seconds": 4.524
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "baseline"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 42.0,
+            "receiver_accepted": 20.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 20.0,
+            "receiver_accepted": 20.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "SDK View attribute_keys, baseline Collector config",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_datapoints": 20,
+        "export_requests": 1,
+        "largest_request": 20
+      },
+      "position": 2,
+      "repetition": 1,
+      "sending": {
+        "adjusted_collector_cpu_ns": 3661299,
+        "collector_cpu_ns": 6477000,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "collector_rx_bytes": 6261,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "exports": 1,
+        "flushed": true,
+        "metric_family_series": 220,
+        "metric_identity_series": 20,
+        "metric_inbound_user_values": 0,
+        "metric_inbound_with_user_id": 0,
+        "metric_inbound_without_user_id": 20,
+        "metric_observations": 600,
+        "metric_p95_by_method": {
+          "DELETE": 6.643,
+          "GET": 6.643,
+          "POST": 6.643,
+          "PUT": 6.659
+        },
+        "metric_p95_overall": 6.659,
+        "metric_user_id_after": false,
+        "observations_sent": 600,
+        "prometheus_restored": true,
+        "sdk_cpu_s": 0.005,
+        "sdk_request_bytes": 6070,
+        "sdk_wall_s": 0.007,
+        "use_view": true,
+        "window_problems": [],
+        "work_seconds": 3.454
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sdk-view"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 241.0,
+            "receiver_accepted": 200.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 20.0,
+            "receiver_accepted": 20.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "full attributes, aggregate_on_attributes in the Collector",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_datapoints": 20,
+        "export_requests": 1,
+        "largest_request": 20
+      },
+      "position": 3,
+      "repetition": 1,
+      "sending": {
+        "adjusted_collector_cpu_ns": 5844679,
+        "collector_cpu_ns": 10144000,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "collector_rx_bytes": 63383,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "exports": 1,
+        "flushed": true,
+        "metric_family_series": 220,
+        "metric_identity_series": 20,
+        "metric_inbound_user_values": 200,
+        "metric_inbound_with_user_id": 200,
+        "metric_inbound_without_user_id": 0,
+        "metric_observations": 600,
+        "metric_p95_by_method": {
+          "DELETE": 6.643,
+          "GET": 6.643,
+          "POST": 6.643,
+          "PUT": 6.659
+        },
+        "metric_p95_overall": 6.659,
+        "metric_user_id_after": false,
+        "observations_sent": 600,
+        "prometheus_restored": true,
+        "sdk_cpu_s": 0.007,
+        "sdk_request_bytes": 63054,
+        "sdk_wall_s": 0.012,
+        "use_view": false,
+        "window_problems": [],
+        "work_seconds": 4.485
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "collector-transform"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 42.0,
+            "receiver_accepted": 20.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 20.0,
+            "receiver_accepted": 20.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "SDK View attribute_keys, baseline Collector config",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_datapoints": 20,
+        "export_requests": 1,
+        "largest_request": 20
+      },
+      "position": 1,
+      "repetition": 2,
+      "sending": {
+        "adjusted_collector_cpu_ns": 4779991,
+        "collector_cpu_ns": 8618000,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "collector_rx_bytes": 5968,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "exports": 1,
+        "flushed": true,
+        "metric_family_series": 220,
+        "metric_identity_series": 20,
+        "metric_inbound_user_values": 0,
+        "metric_inbound_with_user_id": 0,
+        "metric_inbound_without_user_id": 20,
+        "metric_observations": 600,
+        "metric_p95_by_method": {
+          "DELETE": 6.643,
+          "GET": 6.643,
+          "POST": 6.643,
+          "PUT": 6.659
+        },
+        "metric_p95_overall": 6.643,
+        "metric_user_id_after": false,
+        "observations_sent": 600,
+        "prometheus_restored": true,
+        "sdk_cpu_s": 0.004,
+        "sdk_request_bytes": 6070,
+        "sdk_wall_s": 0.007,
+        "use_view": true,
+        "window_problems": [],
+        "work_seconds": 4.491
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sdk-view"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 241.0,
+            "receiver_accepted": 200.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 20.0,
+            "receiver_accepted": 20.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "full attributes, aggregate_on_attributes in the Collector",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_datapoints": 20,
+        "export_requests": 1,
+        "largest_request": 20
+      },
+      "position": 2,
+      "repetition": 2,
+      "sending": {
+        "adjusted_collector_cpu_ns": 6232202,
+        "collector_cpu_ns": 10008000,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "collector_rx_bytes": 63646,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "exports": 1,
+        "flushed": true,
+        "metric_family_series": 220,
+        "metric_identity_series": 20,
+        "metric_inbound_user_values": 200,
+        "metric_inbound_with_user_id": 200,
+        "metric_inbound_without_user_id": 0,
+        "metric_observations": 600,
+        "metric_p95_by_method": {
+          "DELETE": 6.643,
+          "GET": 6.643,
+          "POST": 6.643,
+          "PUT": 6.659
+        },
+        "metric_p95_overall": 6.643,
+        "metric_user_id_after": false,
+        "observations_sent": 600,
+        "prometheus_restored": true,
+        "sdk_cpu_s": 0.007,
+        "sdk_request_bytes": 63054,
+        "sdk_wall_s": 0.012,
+        "use_view": false,
+        "window_problems": [],
+        "work_seconds": 3.452
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "collector-transform"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 601.0,
+            "receiver_accepted": 200.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 200.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "full attributes, no SDK view, no Collector transform",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_datapoints": 200,
+        "export_requests": 1,
+        "largest_request": 200
+      },
+      "position": 3,
+      "repetition": 2,
+      "sending": {
+        "adjusted_collector_cpu_ns": 6966842,
+        "collector_cpu_ns": 13564000,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "collector_rx_bytes": 63504,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "exports": 1,
+        "flushed": true,
+        "metric_family_series": 2200,
+        "metric_identity_series": 200,
+        "metric_inbound_user_values": 200,
+        "metric_inbound_with_user_id": 200,
+        "metric_inbound_without_user_id": 0,
+        "metric_observations": 600,
+        "metric_p95_by_method": {
+          "DELETE": 6.643,
+          "GET": 6.643,
+          "POST": 6.643,
+          "PUT": 6.659
+        },
+        "metric_p95_overall": 6.643,
+        "metric_user_id_after": true,
+        "observations_sent": 600,
+        "prometheus_restored": true,
+        "sdk_cpu_s": 0.007,
+        "sdk_request_bytes": 63054,
+        "sdk_wall_s": 0.011,
+        "use_view": false,
+        "window_problems": [],
+        "work_seconds": 4.536
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "baseline"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 241.0,
+            "receiver_accepted": 200.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 20.0,
+            "receiver_accepted": 20.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "full attributes, aggregate_on_attributes in the Collector",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_datapoints": 20,
+        "export_requests": 1,
+        "largest_request": 20
+      },
+      "position": 1,
+      "repetition": 3,
+      "sending": {
+        "adjusted_collector_cpu_ns": 5187495,
+        "collector_cpu_ns": 10100000,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "collector_rx_bytes": 63376,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "exports": 1,
+        "flushed": true,
+        "metric_family_series": 220,
+        "metric_identity_series": 20,
+        "metric_inbound_user_values": 200,
+        "metric_inbound_with_user_id": 200,
+        "metric_inbound_without_user_id": 0,
+        "metric_observations": 600,
+        "metric_p95_by_method": {
+          "DELETE": 6.643,
+          "GET": 6.643,
+          "POST": 6.643,
+          "PUT": 6.659
+        },
+        "metric_p95_overall": 6.643,
+        "metric_user_id_after": false,
+        "observations_sent": 600,
+        "prometheus_restored": true,
+        "sdk_cpu_s": 0.007,
+        "sdk_request_bytes": 63054,
+        "sdk_wall_s": 0.013,
+        "use_view": false,
+        "window_problems": [],
+        "work_seconds": 4.516
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "collector-transform"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 601.0,
+            "receiver_accepted": 200.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 200.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "full attributes, no SDK view, no Collector transform",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_datapoints": 200,
+        "export_requests": 1,
+        "largest_request": 200
+      },
+      "position": 2,
+      "repetition": 3,
+      "sending": {
+        "adjusted_collector_cpu_ns": 5360209,
+        "collector_cpu_ns": 10544000,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "collector_rx_bytes": 63265,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "exports": 1,
+        "flushed": true,
+        "metric_family_series": 2200,
+        "metric_identity_series": 200,
+        "metric_inbound_user_values": 200,
+        "metric_inbound_with_user_id": 200,
+        "metric_inbound_without_user_id": 0,
+        "metric_observations": 600,
+        "metric_p95_by_method": {
+          "DELETE": 6.643,
+          "GET": 6.643,
+          "POST": 6.643,
+          "PUT": 6.659
+        },
+        "metric_p95_overall": 6.643,
+        "metric_user_id_after": true,
+        "observations_sent": 600,
+        "prometheus_restored": true,
+        "sdk_cpu_s": 0.007,
+        "sdk_request_bytes": 63054,
+        "sdk_wall_s": 0.009,
+        "use_view": false,
+        "window_problems": [],
+        "work_seconds": 4.564
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "baseline"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 42.0,
+            "receiver_accepted": 20.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 20.0,
+            "receiver_accepted": 20.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "SDK View attribute_keys, baseline Collector config",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_datapoints": 20,
+        "export_requests": 1,
+        "largest_request": 20
+      },
+      "position": 3,
+      "repetition": 3,
+      "sending": {
+        "adjusted_collector_cpu_ns": 3592727,
+        "collector_cpu_ns": 8583000,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "collector_rx_bytes": 5974,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "exports": 1,
+        "flushed": true,
+        "metric_family_series": 220,
+        "metric_identity_series": 20,
+        "metric_inbound_user_values": 0,
+        "metric_inbound_with_user_id": 0,
+        "metric_inbound_without_user_id": 20,
+        "metric_observations": 600,
+        "metric_p95_by_method": {
+          "DELETE": 6.643,
+          "GET": 6.643,
+          "POST": 6.643,
+          "PUT": 6.659
+        },
+        "metric_p95_overall": 6.643,
+        "metric_user_id_after": false,
+        "observations_sent": 600,
+        "prometheus_restored": true,
+        "sdk_cpu_s": 0.005,
+        "sdk_request_bytes": 6070,
+        "sdk_wall_s": 0.007,
+        "use_view": true,
+        "window_problems": [],
+        "work_seconds": 4.554
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sdk-view"
+    }
+  ],
+  "stack": {
+    "otelcol_contrib": "0.162.0",
+    "prometheus": "v3.15.0"
+  },
+  "variants": [
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "742c81de5c4cda2f192bc0a0dbce60de7e2eff3fcaec7660c9f3ed8359b0f061",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "3a30a96099408576ef0d59f0789426de9d0dc060d4cc0679105a151e343ffbc9"
+      },
+      "description": "full attributes, no SDK view, no Collector transform",
+      "name": "baseline",
+      "options": {
+        "use_view": false
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "742c81de5c4cda2f192bc0a0dbce60de7e2eff3fcaec7660c9f3ed8359b0f061",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "3a30a96099408576ef0d59f0789426de9d0dc060d4cc0679105a151e343ffbc9"
+      },
+      "description": "SDK View attribute_keys, baseline Collector config",
+      "name": "sdk-view",
+      "options": {
+        "use_view": true
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "93419ae54c8c58fbe78bbdf293f8ced0b5168d8052978c96c7bb694ef774d6ce",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "3a30a96099408576ef0d59f0789426de9d0dc060d4cc0679105a151e343ffbc9"
+      },
+      "description": "full attributes, aggregate_on_attributes in the Collector",
+      "name": "collector-transform",
+      "options": {
+        "use_view": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,975 @@
+{
+  "columns": [
+    {
+      "kind": "number",
+      "label": "HTTP status",
+      "path": "sending.http_status"
+    },
+    {
+      "kind": "number",
+      "label": "Spans sent",
+      "path": "sending.spans_sent"
+    },
+    {
+      "kind": "number",
+      "label": "Accepted",
+      "path": "counters.collector.traces.receiver_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Sent to the sink",
+      "path": "measured.sent_to_sink"
+    },
+    {
+      "kind": "number",
+      "label": "Send failed",
+      "path": "measured.send_failed"
+    },
+    {
+      "kind": "number",
+      "label": "Enqueue failed",
+      "path": "measured.enqueue_failed"
+    },
+    {
+      "kind": "number",
+      "label": "Queue size max",
+      "path": "measured.queue_size_max"
+    },
+    {
+      "kind": "number",
+      "label": "Queue at recovery",
+      "path": "measured.queue_at_recovery"
+    },
+    {
+      "kind": "number",
+      "label": "Spans arrived",
+      "path": "measured.spans_arrived"
+    },
+    {
+      "kind": "number",
+      "label": "Sink accepted",
+      "path": "measured.sink_accepted_total"
+    },
+    {
+      "kind": "number",
+      "label": "Complete traces",
+      "path": "measured.traces_complete"
+    },
+    {
+      "kind": "number",
+      "label": "Incomplete traces",
+      "path": "measured.traces_incomplete"
+    },
+    {
+      "kind": "number",
+      "label": "Missing traces",
+      "path": "measured.traces_missing"
+    },
+    {
+      "kind": "text",
+      "label": "Trace size distribution",
+      "path": "measured.trace_size_distribution"
+    },
+    {
+      "kind": "number",
+      "label": "Roots arrived",
+      "path": "measured.roots_arrived"
+    },
+    {
+      "kind": "number",
+      "label": "Largest hole",
+      "path": "measured.largest_hole"
+    },
+    {
+      "kind": "number",
+      "label": "Seconds to drain",
+      "path": "measured.drain_seconds"
+    },
+    {
+      "kind": "number",
+      "label": "Requests at the sink",
+      "path": "measured.requests_at_sink"
+    },
+    {
+      "kind": "number",
+      "label": "Retry lines",
+      "path": "measured.retry_log_lines"
+    },
+    {
+      "kind": "number",
+      "label": "Drop lines",
+      "path": "measured.drop_log_lines"
+    },
+    {
+      "kind": "number",
+      "label": "Sink target up",
+      "path": "measured.sink_up"
+    },
+    {
+      "kind": "number",
+      "label": "Error lines",
+      "path": "log.error_lines"
+    },
+    {
+      "kind": "text",
+      "label": "Recovered",
+      "path": "measured.recovered"
+    }
+  ],
+  "question": {
+    "id": "L2-05",
+    "level": 2,
+    "signals": [
+      "traces"
+    ],
+    "theme": "traces",
+    "title": "What does a trace look like when the exporter failed halfway through it?"
+  },
+  "repetitions": 3,
+  "runs": [
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink reachable throughout, default retry",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "drain_seconds": null,
+        "drop_log_lines": 0,
+        "enqueue_failed": null,
+        "largest_hole": 0,
+        "queue_at_recovery": null,
+        "queue_size_max": 0.0,
+        "recovered": "not applicable",
+        "requests_at_sink": 100,
+        "retry_log_lines": 0,
+        "roots_arrived": 20,
+        "send_failed": null,
+        "sent_to_sink": 100.0,
+        "sink_accepted_total": 100.0,
+        "sink_up": 1.0,
+        "spans_arrived": 100,
+        "trace_size_counts": {
+          "5": 20
+        },
+        "trace_size_distribution": "5:20",
+        "traces_complete": 20,
+        "traces_incomplete": 0,
+        "traces_missing": 0,
+        "traces_seen": 20
+      },
+      "repetition": 1,
+      "sending": {
+        "drain_seconds": null,
+        "http_status": 200,
+        "queue_at_recovery": null,
+        "recovered": "not applicable",
+        "requests_sent": 100,
+        "sink_counter_offset": null,
+        "spans_at_quiet": 100.0,
+        "spans_during_outage": 0,
+        "spans_sent": 100
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-up"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 75.0,
+            "receiver_accepted": 75.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink stopped for 20s of the 40s, retry at its defaults",
+      "log": {
+        "error_lines": 0,
+        "lines": 35,
+        "warn_lines": 2
+      },
+      "measured": {
+        "drain_seconds": 23.4,
+        "drop_log_lines": 0,
+        "enqueue_failed": null,
+        "largest_hole": 0,
+        "queue_at_recovery": 50.0,
+        "queue_size_max": 61.0,
+        "recovered": "yes",
+        "requests_at_sink": 100,
+        "retry_log_lines": 23,
+        "roots_arrived": 20,
+        "send_failed": null,
+        "sent_to_sink": 100.0,
+        "sink_accepted_total": 100.0,
+        "sink_up": 1.0,
+        "spans_arrived": 100,
+        "trace_size_counts": {
+          "5": 20
+        },
+        "trace_size_distribution": "5:20",
+        "traces_complete": 20,
+        "traces_incomplete": 0,
+        "traces_missing": 0,
+        "traces_seen": 20
+      },
+      "repetition": 1,
+      "sending": {
+        "drain_seconds": 23.4,
+        "http_status": 200,
+        "queue_at_recovery": 50.0,
+        "recovered": "yes",
+        "requests_sent": 100,
+        "sink_counter_offset": 25.0,
+        "spans_at_quiet": 100.0,
+        "spans_during_outage": 50,
+        "spans_sent": 100
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "retry-default"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": 52.0,
+            "exporter_sent": 48.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 23.0,
+            "receiver_accepted": 23.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink stopped for 20s of the 40s, retry_on_failure disabled",
+      "log": {
+        "error_lines": 22,
+        "lines": 210,
+        "warn_lines": 2
+      },
+      "measured": {
+        "drain_seconds": 10.3,
+        "drop_log_lines": 22,
+        "enqueue_failed": null,
+        "largest_hole": 3,
+        "queue_at_recovery": 0.0,
+        "queue_size_max": 0.0,
+        "recovered": "yes",
+        "requests_at_sink": 48,
+        "retry_log_lines": 0,
+        "roots_arrived": 20,
+        "send_failed": 52.0,
+        "sent_to_sink": 48.0,
+        "sink_accepted_total": 48.0,
+        "sink_up": 1.0,
+        "spans_arrived": 48,
+        "trace_size_counts": {
+          "2": 12,
+          "3": 8
+        },
+        "trace_size_distribution": "2:12; 3:8",
+        "traces_complete": 0,
+        "traces_incomplete": 20,
+        "traces_missing": 0,
+        "traces_seen": 20
+      },
+      "repetition": 1,
+      "sending": {
+        "drain_seconds": 10.3,
+        "http_status": 200,
+        "queue_at_recovery": 0.0,
+        "recovered": "yes",
+        "requests_sent": 100,
+        "sink_counter_offset": 25.0,
+        "spans_at_quiet": 48.0,
+        "spans_during_outage": 50,
+        "spans_sent": 100
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "retry-off"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": 22.0,
+            "exporter_sent": 78.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 53.0,
+            "receiver_accepted": 53.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink stopped for 20s of the 40s, max_elapsed_time 10s",
+      "log": {
+        "error_lines": 20,
+        "lines": 217,
+        "warn_lines": 2
+      },
+      "measured": {
+        "drain_seconds": 10.3,
+        "drop_log_lines": 20,
+        "enqueue_failed": null,
+        "largest_hole": 2,
+        "queue_at_recovery": 32.0,
+        "queue_size_max": 33.0,
+        "recovered": "yes",
+        "requests_at_sink": 78,
+        "retry_log_lines": 25,
+        "roots_arrived": 20,
+        "send_failed": 22.0,
+        "sent_to_sink": 78.0,
+        "sink_accepted_total": 78.0,
+        "sink_up": 1.0,
+        "spans_arrived": 78,
+        "trace_size_counts": {
+          "3": 2,
+          "4": 18
+        },
+        "trace_size_distribution": "3:2; 4:18",
+        "traces_complete": 0,
+        "traces_incomplete": 20,
+        "traces_missing": 0,
+        "traces_seen": 20
+      },
+      "repetition": 1,
+      "sending": {
+        "drain_seconds": 10.3,
+        "http_status": 200,
+        "queue_at_recovery": 32.0,
+        "recovered": "yes",
+        "requests_sent": 100,
+        "sink_counter_offset": 25.0,
+        "spans_at_quiet": 78.0,
+        "spans_during_outage": 50,
+        "spans_sent": 100
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "retry-10s"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink reachable throughout, default retry",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "drain_seconds": null,
+        "drop_log_lines": 0,
+        "enqueue_failed": null,
+        "largest_hole": 0,
+        "queue_at_recovery": null,
+        "queue_size_max": 0.0,
+        "recovered": "not applicable",
+        "requests_at_sink": 100,
+        "retry_log_lines": 0,
+        "roots_arrived": 20,
+        "send_failed": null,
+        "sent_to_sink": 100.0,
+        "sink_accepted_total": 100.0,
+        "sink_up": 1.0,
+        "spans_arrived": 100,
+        "trace_size_counts": {
+          "5": 20
+        },
+        "trace_size_distribution": "5:20",
+        "traces_complete": 20,
+        "traces_incomplete": 0,
+        "traces_missing": 0,
+        "traces_seen": 20
+      },
+      "repetition": 2,
+      "sending": {
+        "drain_seconds": null,
+        "http_status": 200,
+        "queue_at_recovery": null,
+        "recovered": "not applicable",
+        "requests_sent": 100,
+        "sink_counter_offset": null,
+        "spans_at_quiet": 100.0,
+        "spans_during_outage": 0,
+        "spans_sent": 100
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-up"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 75.0,
+            "receiver_accepted": 75.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink stopped for 20s of the 40s, retry at its defaults",
+      "log": {
+        "error_lines": 0,
+        "lines": 33,
+        "warn_lines": 2
+      },
+      "measured": {
+        "drain_seconds": 20.4,
+        "drop_log_lines": 0,
+        "enqueue_failed": null,
+        "largest_hole": 0,
+        "queue_at_recovery": 48.0,
+        "queue_size_max": 55.0,
+        "recovered": "yes",
+        "requests_at_sink": 100,
+        "retry_log_lines": 21,
+        "roots_arrived": 20,
+        "send_failed": null,
+        "sent_to_sink": 100.0,
+        "sink_accepted_total": 100.0,
+        "sink_up": 1.0,
+        "spans_arrived": 100,
+        "trace_size_counts": {
+          "5": 20
+        },
+        "trace_size_distribution": "5:20",
+        "traces_complete": 20,
+        "traces_incomplete": 0,
+        "traces_missing": 0,
+        "traces_seen": 20
+      },
+      "repetition": 2,
+      "sending": {
+        "drain_seconds": 20.4,
+        "http_status": 200,
+        "queue_at_recovery": 48.0,
+        "recovered": "yes",
+        "requests_sent": 100,
+        "sink_counter_offset": 25.0,
+        "spans_at_quiet": 100.0,
+        "spans_during_outage": 50,
+        "spans_sent": 100
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "retry-default"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": 51.0,
+            "exporter_sent": 49.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 24.0,
+            "receiver_accepted": 24.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink stopped for 20s of the 40s, retry_on_failure disabled",
+      "log": {
+        "error_lines": 21,
+        "lines": 201,
+        "warn_lines": 2
+      },
+      "measured": {
+        "drain_seconds": 10.3,
+        "drop_log_lines": 21,
+        "enqueue_failed": null,
+        "largest_hole": 3,
+        "queue_at_recovery": 0.0,
+        "queue_size_max": 0.0,
+        "recovered": "yes",
+        "requests_at_sink": 49,
+        "retry_log_lines": 0,
+        "roots_arrived": 20,
+        "send_failed": 51.0,
+        "sent_to_sink": 49.0,
+        "sink_accepted_total": 49.0,
+        "sink_up": 1.0,
+        "spans_arrived": 49,
+        "trace_size_counts": {
+          "2": 11,
+          "3": 9
+        },
+        "trace_size_distribution": "2:11; 3:9",
+        "traces_complete": 0,
+        "traces_incomplete": 20,
+        "traces_missing": 0,
+        "traces_seen": 20
+      },
+      "repetition": 2,
+      "sending": {
+        "drain_seconds": 10.3,
+        "http_status": 200,
+        "queue_at_recovery": 0.0,
+        "recovered": "yes",
+        "requests_sent": 100,
+        "sink_counter_offset": 25.0,
+        "spans_at_quiet": 49.0,
+        "spans_during_outage": 50,
+        "spans_sent": 100
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "retry-off"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": 20.0,
+            "exporter_sent": 80.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 55.0,
+            "receiver_accepted": 55.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink stopped for 20s of the 40s, max_elapsed_time 10s",
+      "log": {
+        "error_lines": 14,
+        "lines": 158,
+        "warn_lines": 2
+      },
+      "measured": {
+        "drain_seconds": 11.3,
+        "drop_log_lines": 14,
+        "enqueue_failed": null,
+        "largest_hole": 2,
+        "queue_at_recovery": 30.0,
+        "queue_size_max": 30.0,
+        "recovered": "yes",
+        "requests_at_sink": 80,
+        "retry_log_lines": 20,
+        "roots_arrived": 20,
+        "send_failed": 20.0,
+        "sent_to_sink": 80.0,
+        "sink_accepted_total": 80.0,
+        "sink_up": 1.0,
+        "spans_arrived": 80,
+        "trace_size_counts": {
+          "3": 1,
+          "4": 18,
+          "5": 1
+        },
+        "trace_size_distribution": "3:1; 4:18; 5:1",
+        "traces_complete": 1,
+        "traces_incomplete": 19,
+        "traces_missing": 0,
+        "traces_seen": 20
+      },
+      "repetition": 2,
+      "sending": {
+        "drain_seconds": 11.3,
+        "http_status": 200,
+        "queue_at_recovery": 30.0,
+        "recovered": "yes",
+        "requests_sent": 100,
+        "sink_counter_offset": 25.0,
+        "spans_at_quiet": 80.0,
+        "spans_during_outage": 50,
+        "spans_sent": 100
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "retry-10s"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink reachable throughout, default retry",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "drain_seconds": null,
+        "drop_log_lines": 0,
+        "enqueue_failed": null,
+        "largest_hole": 0,
+        "queue_at_recovery": null,
+        "queue_size_max": 0.0,
+        "recovered": "not applicable",
+        "requests_at_sink": 100,
+        "retry_log_lines": 0,
+        "roots_arrived": 20,
+        "send_failed": null,
+        "sent_to_sink": 100.0,
+        "sink_accepted_total": 100.0,
+        "sink_up": 1.0,
+        "spans_arrived": 100,
+        "trace_size_counts": {
+          "5": 20
+        },
+        "trace_size_distribution": "5:20",
+        "traces_complete": 20,
+        "traces_incomplete": 0,
+        "traces_missing": 0,
+        "traces_seen": 20
+      },
+      "repetition": 3,
+      "sending": {
+        "drain_seconds": null,
+        "http_status": 200,
+        "queue_at_recovery": null,
+        "recovered": "not applicable",
+        "requests_sent": 100,
+        "sink_counter_offset": null,
+        "spans_at_quiet": 100.0,
+        "spans_during_outage": 0,
+        "spans_sent": 100
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-up"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 75.0,
+            "receiver_accepted": 75.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink stopped for 20s of the 40s, retry at its defaults",
+      "log": {
+        "error_lines": 0,
+        "lines": 33,
+        "warn_lines": 2
+      },
+      "measured": {
+        "drain_seconds": 26.4,
+        "drop_log_lines": 0,
+        "enqueue_failed": null,
+        "largest_hole": 0,
+        "queue_at_recovery": 49.0,
+        "queue_size_max": 61.0,
+        "recovered": "yes",
+        "requests_at_sink": 100,
+        "retry_log_lines": 21,
+        "roots_arrived": 20,
+        "send_failed": null,
+        "sent_to_sink": 100.0,
+        "sink_accepted_total": 100.0,
+        "sink_up": 1.0,
+        "spans_arrived": 100,
+        "trace_size_counts": {
+          "5": 20
+        },
+        "trace_size_distribution": "5:20",
+        "traces_complete": 20,
+        "traces_incomplete": 0,
+        "traces_missing": 0,
+        "traces_seen": 20
+      },
+      "repetition": 3,
+      "sending": {
+        "drain_seconds": 26.4,
+        "http_status": 200,
+        "queue_at_recovery": 49.0,
+        "recovered": "yes",
+        "requests_sent": 100,
+        "sink_counter_offset": 25.0,
+        "spans_at_quiet": 100.0,
+        "spans_during_outage": 50,
+        "spans_sent": 100
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "retry-default"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": 56.0,
+            "exporter_sent": 44.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 19.0,
+            "receiver_accepted": 19.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink stopped for 20s of the 40s, retry_on_failure disabled",
+      "log": {
+        "error_lines": 26,
+        "lines": 246,
+        "warn_lines": 2
+      },
+      "measured": {
+        "drain_seconds": 10.3,
+        "drop_log_lines": 26,
+        "enqueue_failed": null,
+        "largest_hole": 3,
+        "queue_at_recovery": 0.0,
+        "queue_size_max": 0.0,
+        "recovered": "yes",
+        "requests_at_sink": 44,
+        "retry_log_lines": 0,
+        "roots_arrived": 20,
+        "send_failed": 56.0,
+        "sent_to_sink": 44.0,
+        "sink_accepted_total": 44.0,
+        "sink_up": 1.0,
+        "spans_arrived": 44,
+        "trace_size_counts": {
+          "2": 16,
+          "3": 4
+        },
+        "trace_size_distribution": "2:16; 3:4",
+        "traces_complete": 0,
+        "traces_incomplete": 20,
+        "traces_missing": 0,
+        "traces_seen": 20
+      },
+      "repetition": 3,
+      "sending": {
+        "drain_seconds": 10.3,
+        "http_status": 200,
+        "queue_at_recovery": 0.0,
+        "recovered": "yes",
+        "requests_sent": 100,
+        "sink_counter_offset": 25.0,
+        "spans_at_quiet": 44.0,
+        "spans_during_outage": 50,
+        "spans_sent": 100
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "retry-off"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": 20.0,
+            "exporter_sent": 80.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 55.0,
+            "receiver_accepted": 55.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink stopped for 20s of the 40s, max_elapsed_time 10s",
+      "log": {
+        "error_lines": 16,
+        "lines": 179,
+        "warn_lines": 2
+      },
+      "measured": {
+        "drain_seconds": 10.3,
+        "drop_log_lines": 16,
+        "enqueue_failed": null,
+        "largest_hole": 1,
+        "queue_at_recovery": 30.0,
+        "queue_size_max": 32.0,
+        "recovered": "yes",
+        "requests_at_sink": 80,
+        "retry_log_lines": 23,
+        "roots_arrived": 20,
+        "send_failed": 20.0,
+        "sent_to_sink": 80.0,
+        "sink_accepted_total": 80.0,
+        "sink_up": 1.0,
+        "spans_arrived": 80,
+        "trace_size_counts": {
+          "4": 20
+        },
+        "trace_size_distribution": "4:20",
+        "traces_complete": 0,
+        "traces_incomplete": 20,
+        "traces_missing": 0,
+        "traces_seen": 20
+      },
+      "repetition": 3,
+      "sending": {
+        "drain_seconds": 10.3,
+        "http_status": 200,
+        "queue_at_recovery": 30.0,
+        "recovered": "yes",
+        "requests_sent": 100,
+        "sink_counter_offset": 25.0,
+        "spans_at_quiet": 80.0,
+        "spans_during_outage": 50,
+        "spans_sent": 100
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "retry-10s"
+    }
+  ],
+  "stack": {
+    "otelcol_contrib": "0.162.0",
+    "prometheus": "v3.15.0"
+  },
+  "variants": [
+    {
+      "description": "the sink reachable throughout, default retry",
+      "name": "sink-up"
+    },
+    {
+      "description": "the sink stopped for 20s of the 40s, retry at its defaults",
+      "name": "retry-default"
+    },
+    {
+      "description": "the sink stopped for 20s of the 40s, retry_on_failure disabled",
+      "name": "retry-off"
+    },
+    {
+      "description": "the sink stopped for 20s of the 40s, max_elapsed_time 10s",
+      "name": "retry-10s"
+    }
+  ]
+}

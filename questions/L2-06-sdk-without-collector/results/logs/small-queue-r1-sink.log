@@ -1,0 +1,672 @@
+sink-1  | 	info	otelconftelemetry/tracer.go:47	Internal trace telemetry disabled	{"resource": {"service.instance.id": "a90dcc14-2867-4b76-9564-06c52144c2ea", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	service@v0.162.0/service.go:233	Starting otelcol-contrib...	{"resource": {"service.instance.id": "a90dcc14-2867-4b76-9564-06c52144c2ea", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "Version": "0.162.0", "NumCPU": 18}
+sink-1  | 	info	extensions/extensions.go:43	Starting extensions...	{"resource": {"service.instance.id": "a90dcc14-2867-4b76-9564-06c52144c2ea", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	extensions/extensions.go:47	Extension is starting...	{"resource": {"service.instance.id": "a90dcc14-2867-4b76-9564-06c52144c2ea", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension"}
+sink-1  | 	info	healthcheckextension@v0.162.0/healthcheckextension.go:32	Starting health_check extension	{"resource": {"service.instance.id": "a90dcc14-2867-4b76-9564-06c52144c2ea", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension", "config": {"Config":{"ServerConfig":{"NetAddr":{"DialerConfig":{"Timeout":0},"Endpoint":"0.0.0.0:13133","Transport":"tcp"},"TLS":{},"CORS":{},"Auth":{},"MaxRequestBodySize":0,"IncludeMetadata":false,"ResponseHeaders":null,"CompressionAlgorithms":null,"ReadTimeout":0,"ReadHeaderTimeout":60000000000,"WriteTimeout":30000000000,"Middlewares":null,"Keepalive":{},"IdleTimeout":0,"KeepAlivesEnabled":false},"Path":"/","ResponseBody":null,"CheckCollectorPipeline":{"Enabled":false,"Interval":"5m","ExporterFailureThreshold":5},"UseV2":false,"GRPCConfig":null,"HTTPConfig":null,"ComponentHealthConfig":null}}}
+sink-1  | 	info	extensions/extensions.go:65	Extension started.	{"resource": {"service.instance.id": "a90dcc14-2867-4b76-9564-06c52144c2ea", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension"}
+sink-1  | 	info	otlpreceiver@v0.162.0/otlp.go:120	Starting GRPC server	{"resource": {"service.instance.id": "a90dcc14-2867-4b76-9564-06c52144c2ea", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "otlp", "otelcol.component.kind": "receiver", "endpoint": "[::]:4317"}
+sink-1  | 	info	healthcheck/handler.go:131	Health Check state change	{"resource": {"service.instance.id": "a90dcc14-2867-4b76-9564-06c52144c2ea", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension", "status": "ready"}
+sink-1  | 	info	service@v0.162.0/service.go:256	Everything is ready. Begin running and processing data.	{"resource": {"service.instance.id": "a90dcc14-2867-4b76-9564-06c52144c2ea", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "a90dcc14-2867-4b76-9564-06c52144c2ea", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 50}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL:
+sink-1  | Resource attributes:
+sink-1  |      -> telemetry.sdk.language: Str(python)
+sink-1  |      -> telemetry.sdk.name: Str(opentelemetry)
+sink-1  |      -> telemetry.sdk.version: Str(1.45.0)
+sink-1  |      -> service.instance.id: Str(5141a2bc-6996-421d-890d-1d0cb246b7b2)
+sink-1  |      -> service.name: Str(l2-06)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope l2-06
+sink-1  | Span #0
+sink-1  |     Trace ID       : 5dbbad6b510e6f07eacd84cab00ca2b8
+sink-1  |     Parent ID      :
+sink-1  |     ID             : cbf56a3b9866214a
+sink-1  |     Name           : span-0150
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.758809 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.758809 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #1
+sink-1  |     Trace ID       : b7b5a8754ff828d5f91e3d5b39b8f346
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 9aa2492d55a31254
+sink-1  |     Name           : span-0151
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.758818 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.758818 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #2
+sink-1  |     Trace ID       : a3ee0ab66e73b47c7e6b38ea58028f5c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : cf65a5f3220d203f
+sink-1  |     Name           : span-0152
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.758827 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.758827 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #3
+sink-1  |     Trace ID       : f0136e78b1ffbf4e31712e58eb718c17
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 381f1c8d3dbbaecb
+sink-1  |     Name           : span-0153
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.758836 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.758836 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #4
+sink-1  |     Trace ID       : b43ca339065ce458cbfd7a955fe908ba
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 888ae3287a0501e6
+sink-1  |     Name           : span-0154
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.758845 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.758846 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #5
+sink-1  |     Trace ID       : 78dee621a6aa12977c8e1c9d07c7bb87
+sink-1  |     Parent ID      :
+sink-1  |     ID             : b924bd40d4e2628b
+sink-1  |     Name           : span-0155
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.758854 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.758854 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #6
+sink-1  |     Trace ID       : cec5874dace9b51f88a6b9ff017d5922
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 3519234537d1d549
+sink-1  |     Name           : span-0156
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.758863 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.758863 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #7
+sink-1  |     Trace ID       : fc8e7005a1e13938c28fcc6944c663f8
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e52c467871e606cb
+sink-1  |     Name           : span-0157
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.758872 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.758872 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #8
+sink-1  |     Trace ID       : 3e8b114f0e5ff2e9dc2510ee15fadfeb
+sink-1  |     Parent ID      :
+sink-1  |     ID             : a0ca5737470a47ae
+sink-1  |     Name           : span-0158
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.758881 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.758881 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #9
+sink-1  |     Trace ID       : 68a53ed4ab43a8fd56a40b10f42d81db
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 5732210e7cbc2218
+sink-1  |     Name           : span-0159
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.758889 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.75889 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #10
+sink-1  |     Trace ID       : c349fb82f44d7c7af743ba20356e7c2d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 7c79d3644eb92996
+sink-1  |     Name           : span-0160
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.758898 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.758898 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #11
+sink-1  |     Trace ID       : 171d8c706a955a3feee183af9b0764d3
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 8955c6762e1696ac
+sink-1  |     Name           : span-0161
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.758907 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.758907 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #12
+sink-1  |     Trace ID       : c49ce427fb7f862317f1b2cfae3dcba9
+sink-1  |     Parent ID      :
+sink-1  |     ID             : f52093556997f8da
+sink-1  |     Name           : span-0162
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.758915 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.758916 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #13
+sink-1  |     Trace ID       : a5a784f5823008f97961dbe2dda673a9
+sink-1  |     Parent ID      :
+sink-1  |     ID             : d8ee8acc35ec88c8
+sink-1  |     Name           : span-0163
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.758924 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.758924 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #14
+sink-1  |     Trace ID       : 4f534e510ceacc0ad53eb0ecb9bb8e26
+sink-1  |     Parent ID      :
+sink-1  |     ID             : d9a138c567e70e9b
+sink-1  |     Name           : span-0164
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.758933 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.758933 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #15
+sink-1  |     Trace ID       : 7b986066e55b127e8f9d9fbf5a8cb9c3
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 48bd7853cebcd9ec
+sink-1  |     Name           : span-0165
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.758941 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.758942 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #16
+sink-1  |     Trace ID       : db3cf04ae6f716ef038b807b61d4c751
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 5bb3d90d1be815a7
+sink-1  |     Name           : span-0166
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.75895 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.75895 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #17
+sink-1  |     Trace ID       : 4edeed9be4e61211f0f3c6952283ce32
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 54b5ac3c38b3e58e
+sink-1  |     Name           : span-0167
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.758958 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.758959 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #18
+sink-1  |     Trace ID       : 3a1dd3c57aae3030d9e872a2ad7167e1
+sink-1  |     Parent ID      :
+sink-1  |     ID             : aa7cd195957f2557
+sink-1  |     Name           : span-0168
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.758967 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.758967 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #19
+sink-1  |     Trace ID       : 6c738211246d96b18b7983318b9b2d1f
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 7e828576b959b9a1
+sink-1  |     Name           : span-0169
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.758976 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.758976 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #20
+sink-1  |     Trace ID       : 6afe1380615b159284bd2c62cd059ac2
+sink-1  |     Parent ID      :
+sink-1  |     ID             : b13f598d099aefac
+sink-1  |     Name           : span-0170
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.758984 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.758985 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #21
+sink-1  |     Trace ID       : d8f3accec4bc5e0a1aa4004a4da56058
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 5b78a4f4872922e3
+sink-1  |     Name           : span-0171
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759038 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.75904 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #22
+sink-1  |     Trace ID       : 4e1ddce57a305a1981d2dc05fd601637
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 944a13b558777875
+sink-1  |     Name           : span-0172
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759131 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759132 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #23
+sink-1  |     Trace ID       : 7d25f9f3838ec689b02b8bf9d2a0864e
+sink-1  |     Parent ID      :
+sink-1  |     ID             : a58d0c781c090bc4
+sink-1  |     Name           : span-0173
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759162 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759162 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #24
+sink-1  |     Trace ID       : a23c7b1b100d96485bf8efdcd915ba85
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 884a357ab273aa82
+sink-1  |     Name           : span-0174
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759177 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759178 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #25
+sink-1  |     Trace ID       : d5f804a23197e098680b0f92c7efacc5
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 8345a2dc9a07426f
+sink-1  |     Name           : span-0175
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759189 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759189 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #26
+sink-1  |     Trace ID       : 94dfa9dfd6ee7998f59d4a648c2641c0
+sink-1  |     Parent ID      :
+sink-1  |     ID             : b96d3b41a447fa8d
+sink-1  |     Name           : span-0176
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759199 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759199 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #27
+sink-1  |     Trace ID       : c1aa964d788de2ca733490582498ff59
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e3e8575e48d0a5fb
+sink-1  |     Name           : span-0177
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759209 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759209 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #28
+sink-1  |     Trace ID       : 1abd5660dd027561932d50dfe9a4781a
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e7742b5ebe8168cf
+sink-1  |     Name           : span-0178
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759218 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759218 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #29
+sink-1  |     Trace ID       : 4e87fd80f8eeb5bf1f9c1fd67cc57b37
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 37a38e2e91d72df7
+sink-1  |     Name           : span-0179
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759228 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759228 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #30
+sink-1  |     Trace ID       : bee67ad002006bb1c6d472c10d81d688
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 37da4ea9d32201a7
+sink-1  |     Name           : span-0180
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759237 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759237 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #31
+sink-1  |     Trace ID       : 40d0e4ab1519e2561c16d9d88a4dbda6
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 796c5e7acf1558f1
+sink-1  |     Name           : span-0181
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759246 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759246 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #32
+sink-1  |     Trace ID       : 26c149fd44279b1d49a6b935cb6a2053
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 9a5421bcef9577f0
+sink-1  |     Name           : span-0182
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759254 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759255 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #33
+sink-1  |     Trace ID       : 6b15391934872d833a9a31d230621def
+sink-1  |     Parent ID      :
+sink-1  |     ID             : cb370bd18e01ccd7
+sink-1  |     Name           : span-0183
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759263 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759263 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #34
+sink-1  |     Trace ID       : c20fef10c49909a7626d52d7849f3dd3
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 024df897bfbbb7aa
+sink-1  |     Name           : span-0184
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759272 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759272 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #35
+sink-1  |     Trace ID       : abb1b0abfd0a0176db40d5f81f9fdebf
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 1f6424f23b8f88f4
+sink-1  |     Name           : span-0185
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759281 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759281 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #36
+sink-1  |     Trace ID       : e17f69dca904b9c954b9e0935db60a19
+sink-1  |     Parent ID      :
+sink-1  |     ID             : c99fbff6784c26c4
+sink-1  |     Name           : span-0186
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759289 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.75929 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #37
+sink-1  |     Trace ID       : 22b16747ce75729a3b02ebf5be942f7e
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 841ce5dd19b34b84
+sink-1  |     Name           : span-0187
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759298 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759298 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #38
+sink-1  |     Trace ID       : 1d77b741ab8ce31e8f22c77259c1397b
+sink-1  |     Parent ID      :
+sink-1  |     ID             : ff057314b5aa05c2
+sink-1  |     Name           : span-0188
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759307 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759307 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #39
+sink-1  |     Trace ID       : 3b547f2ab489e1b0bd5e2eae1c260894
+sink-1  |     Parent ID      :
+sink-1  |     ID             : cded11e84848afcb
+sink-1  |     Name           : span-0189
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759316 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759316 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #40
+sink-1  |     Trace ID       : 4f9363fec460566a7b3decafae61bc44
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 90461054e9c6765a
+sink-1  |     Name           : span-0190
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759324 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759324 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #41
+sink-1  |     Trace ID       : ba6b760306986b8c36d29994301bcadc
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 5c92a4057d77ab97
+sink-1  |     Name           : span-0191
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759333 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759333 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #42
+sink-1  |     Trace ID       : e71ad184b2436a6a952ae1e60d513580
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 37b25ad257403dc7
+sink-1  |     Name           : span-0192
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759341 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759342 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #43
+sink-1  |     Trace ID       : 18ee9e04c66f091e6fb6500e29c7763e
+sink-1  |     Parent ID      :
+sink-1  |     ID             : d436e8f936596b61
+sink-1  |     Name           : span-0193
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.75935 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759351 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #44
+sink-1  |     Trace ID       : 8164df993601a0aa13882f4f1270f59f
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 8746da68bca51bac
+sink-1  |     Name           : span-0194
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759362 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759363 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #45
+sink-1  |     Trace ID       : 83efb44f075c6c5fa56addf5457fa33e
+sink-1  |     Parent ID      :
+sink-1  |     ID             : a3ea7afbefda259a
+sink-1  |     Name           : span-0195
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759371 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759372 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #46
+sink-1  |     Trace ID       : 6ba53159f39f78448bea9d9703943ec8
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 18e66f6a2ebcbbda
+sink-1  |     Name           : span-0196
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.75938 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.75938 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #47
+sink-1  |     Trace ID       : c6f9f7ffa44a34a0c116bd0cdd1dde5d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 6bf4169a0832b244
+sink-1  |     Name           : span-0197
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759389 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759389 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #48
+sink-1  |     Trace ID       : 52c10a652515edabfb53915c3e6d0178
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 156f0fc5d3256e18
+sink-1  |     Name           : span-0198
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759397 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759397 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Span #49
+sink-1  |     Trace ID       : 4b15b8a2be8be13a33d5563118684b3c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : d375459901a75515
+sink-1  |     Name           : span-0199
+sink-1  |     Kind           : Internal
+sink-1  |     Start time     : 2026-10-06 13:44:34.759406 +0000 UTC
+sink-1  |     End time       : 2026-10-06 13:44:34.759406 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | 	{"resource": {"service.instance.id": "a90dcc14-2867-4b76-9564-06c52144c2ea", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}

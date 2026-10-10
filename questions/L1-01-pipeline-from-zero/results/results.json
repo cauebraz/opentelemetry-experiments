@@ -1,0 +1,1074 @@
+{
+  "columns": [
+    {
+      "kind": "number",
+      "label": "Exit code",
+      "path": "sending.exit_code"
+    },
+    {
+      "kind": "text",
+      "label": "Names token",
+      "path": "measured.names_token"
+    },
+    {
+      "kind": "text",
+      "label": "Line number",
+      "path": "measured.line_number"
+    },
+    {
+      "kind": "text",
+      "label": "Suggestion",
+      "path": "measured.suggestion"
+    },
+    {
+      "kind": "number",
+      "label": "Output lines",
+      "path": "measured.output_lines"
+    },
+    {
+      "kind": "number",
+      "label": "Seconds",
+      "path": "sending.seconds"
+    },
+    {
+      "kind": "text",
+      "label": "Output digest",
+      "path": "measured.output_digest"
+    }
+  ],
+  "execution_order": [
+    [
+      "minimal",
+      "no-receivers",
+      "no-exporters",
+      "configured-unused",
+      "used-undeclared",
+      "unknown-type",
+      "misspelled-key",
+      "wrong-type",
+      "undefined-env",
+      "bad-indentation"
+    ],
+    [
+      "minimal",
+      "no-receivers",
+      "no-exporters",
+      "configured-unused",
+      "used-undeclared",
+      "unknown-type",
+      "misspelled-key",
+      "wrong-type",
+      "undefined-env",
+      "bad-indentation"
+    ],
+    [
+      "minimal",
+      "no-receivers",
+      "no-exporters",
+      "configured-unused",
+      "used-undeclared",
+      "unknown-type",
+      "misspelled-key",
+      "wrong-type",
+      "undefined-env",
+      "bad-indentation"
+    ]
+  ],
+  "provenance": {
+    "compose_sha256": "49991e9504b2cec047c838cfcbcb462847254b462c3785d3655a1048e4e32555",
+    "docker_compose": "5.5.1",
+    "dockerfile_sha256": "9144298cec761cc3f7f162e232a2accda2203566c7fe91b9566f15e9f5d245de",
+    "machine": "arm64",
+    "python": "3.14.8",
+    "system": "Darwin"
+  },
+  "question": {
+    "id": "L1-01",
+    "level": 1,
+    "signals": [
+      "logs"
+    ],
+    "theme": "collector",
+    "title": "What is the smallest Collector config that works, and what does it say when it is wrong?"
+  },
+  "repetitions": 3,
+  "results_version": 2,
+  "runs": [
+    {
+      "counters": {},
+      "description": "the smallest logs pipeline",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": null,
+        "output_digest": "e3b0c44298fc",
+        "output_lines": 0,
+        "suggestion": false
+      },
+      "position": 1,
+      "repetition": 1,
+      "sending": {
+        "exit_code": 0,
+        "output": "",
+        "seconds": 0.29
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "minimal"
+    },
+    {
+      "counters": {},
+      "description": "the pipeline lists no receiver",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": true,
+        "output_digest": "3afe60867a37",
+        "output_lines": 1,
+        "suggestion": false
+      },
+      "position": 2,
+      "repetition": 1,
+      "sending": {
+        "exit_code": 1,
+        "output": "Error: service::pipelines::logs: must have at least one receiver\n\n",
+        "seconds": 0.31
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "no-receivers"
+    },
+    {
+      "counters": {},
+      "description": "the pipeline lists no exporter",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": true,
+        "output_digest": "2481048051ae",
+        "output_lines": 1,
+        "suggestion": false
+      },
+      "position": 3,
+      "repetition": 1,
+      "sending": {
+        "exit_code": 1,
+        "output": "Error: service::pipelines::logs: must have at least one exporter\n\n",
+        "seconds": 0.27
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "no-exporters"
+    },
+    {
+      "counters": {},
+      "description": "an exporter configured and in no pipeline",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": false,
+        "output_digest": "e3b0c44298fc",
+        "output_lines": 0,
+        "suggestion": false
+      },
+      "position": 4,
+      "repetition": 1,
+      "sending": {
+        "exit_code": 0,
+        "output": "",
+        "seconds": 0.27
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "configured-unused"
+    },
+    {
+      "counters": {},
+      "description": "a pipeline exporter that is not configured",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": true,
+        "output_digest": "093c3721c32d",
+        "output_lines": 1,
+        "suggestion": false
+      },
+      "position": 5,
+      "repetition": 1,
+      "sending": {
+        "exit_code": 1,
+        "output": "Error: service::pipelines::logs: references exporter \"otlp_grpc/missing\" which is not configured\n\n",
+        "seconds": 0.27
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "used-undeclared"
+    },
+    {
+      "counters": {},
+      "description": "an exporter of type otlp_grcp",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": true,
+        "output_digest": "17f4407d2790",
+        "output_lines": 2,
+        "suggestion": false
+      },
+      "position": 6,
+      "repetition": 1,
+      "sending": {
+        "exit_code": 1,
+        "output": "Error: failed to get config: cannot unmarshal the configuration: decoding failed due to the following error(s):\n\n'exporters' unknown type: \"otlp_grcp\" for id: \"otlp_grcp/typo\" (valid values: [awscloudwatchlogs azure_monitor dataset googlemanagedprometheus honeycomb_marker tinybird awsxray azuremonitor pulsar splunk_hec opensearch bmc_helix elasticsearch googlecloudpubsub honeycombmarker kafka otlp_grpc file syslog otlp_http azure_blob faro load_balancing prometheus_remote_write stef doris signalfx alibabacloud_logservice loadbalancing logzio rabbitmq sumologic logicmonitor zipkin prometheus tencentcloud_logservice debug otlp azureblob bmchelix cassandra datadog awsemf awskinesis awss3 googlecloud google_cloud_storage otlphttp googlecloudstorage clickhouse coralogix influxdb prometheusremotewrite nop azuredataexplorer otelarrow sentry])\n\n",
+        "seconds": 0.27
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "unknown-type"
+    },
+    {
+      "counters": {},
+      "description": "debug has verbosty",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": true,
+        "output_digest": "348c4f9da7a7",
+        "output_lines": 3,
+        "suggestion": false
+      },
+      "position": 7,
+      "repetition": 1,
+      "sending": {
+        "exit_code": 1,
+        "output": "Error: failed to get config: cannot unmarshal the configuration: decoding failed due to the following error(s):\n\n'exporters' error reading configuration for \"debug\": decoding failed due to the following error(s):\n\n'debugexporter.Config' has invalid keys: verbosty\n\n",
+        "seconds": 0.27
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "misspelled-key"
+    },
+    {
+      "counters": {},
+      "description": "debug has sampling_initial: many",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": true,
+        "output_digest": "212fa5d00d6b",
+        "output_lines": 3,
+        "suggestion": false
+      },
+      "position": 8,
+      "repetition": 1,
+      "sending": {
+        "exit_code": 1,
+        "output": "Error: failed to get config: cannot unmarshal the configuration: decoding failed due to the following error(s):\n\n'exporters' error reading configuration for \"debug\": decoding failed due to the following error(s):\n\n'sampling_initial' expected type 'int', got unconvertible type 'string'\n\n",
+        "seconds": 0.27
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "wrong-type"
+    },
+    {
+      "counters": {},
+      "description": "the endpoint is an undefined env var",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": false,
+        "output_digest": "e3b0c44298fc",
+        "output_lines": 0,
+        "suggestion": false
+      },
+      "position": 9,
+      "repetition": 1,
+      "sending": {
+        "exit_code": 0,
+        "output": "",
+        "seconds": 0.29
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "undefined-env"
+    },
+    {
+      "counters": {},
+      "description": "the exporters list is mis-indented",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": true,
+        "names_token": null,
+        "output_digest": "3b6a0ac4ae75",
+        "output_lines": 1,
+        "suggestion": false
+      },
+      "position": 10,
+      "repetition": 1,
+      "sending": {
+        "exit_code": 1,
+        "output": "Error: failed to get config: cannot resolve the configuration: retrieved value (type=string) cannot be used as a Conf: assuming string type since contents are not valid YAML: yaml: line 10: did not find expected key\n\n",
+        "seconds": 0.27
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "bad-indentation"
+    },
+    {
+      "counters": {},
+      "description": "the smallest logs pipeline",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": null,
+        "output_digest": "e3b0c44298fc",
+        "output_lines": 0,
+        "suggestion": false
+      },
+      "position": 1,
+      "repetition": 2,
+      "sending": {
+        "exit_code": 0,
+        "output": "",
+        "seconds": 0.25
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "minimal"
+    },
+    {
+      "counters": {},
+      "description": "the pipeline lists no receiver",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": true,
+        "output_digest": "3afe60867a37",
+        "output_lines": 1,
+        "suggestion": false
+      },
+      "position": 2,
+      "repetition": 2,
+      "sending": {
+        "exit_code": 1,
+        "output": "Error: service::pipelines::logs: must have at least one receiver\n\n",
+        "seconds": 0.27
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "no-receivers"
+    },
+    {
+      "counters": {},
+      "description": "the pipeline lists no exporter",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": true,
+        "output_digest": "2481048051ae",
+        "output_lines": 1,
+        "suggestion": false
+      },
+      "position": 3,
+      "repetition": 2,
+      "sending": {
+        "exit_code": 1,
+        "output": "Error: service::pipelines::logs: must have at least one exporter\n\n",
+        "seconds": 0.27
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "no-exporters"
+    },
+    {
+      "counters": {},
+      "description": "an exporter configured and in no pipeline",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": false,
+        "output_digest": "e3b0c44298fc",
+        "output_lines": 0,
+        "suggestion": false
+      },
+      "position": 4,
+      "repetition": 2,
+      "sending": {
+        "exit_code": 0,
+        "output": "",
+        "seconds": 0.28
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "configured-unused"
+    },
+    {
+      "counters": {},
+      "description": "a pipeline exporter that is not configured",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": true,
+        "output_digest": "093c3721c32d",
+        "output_lines": 1,
+        "suggestion": false
+      },
+      "position": 5,
+      "repetition": 2,
+      "sending": {
+        "exit_code": 1,
+        "output": "Error: service::pipelines::logs: references exporter \"otlp_grpc/missing\" which is not configured\n\n",
+        "seconds": 0.29
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "used-undeclared"
+    },
+    {
+      "counters": {},
+      "description": "an exporter of type otlp_grcp",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": true,
+        "output_digest": "5eae20f01084",
+        "output_lines": 2,
+        "suggestion": false
+      },
+      "position": 6,
+      "repetition": 2,
+      "sending": {
+        "exit_code": 1,
+        "output": "Error: failed to get config: cannot unmarshal the configuration: decoding failed due to the following error(s):\n\n'exporters' unknown type: \"otlp_grcp\" for id: \"otlp_grcp/typo\" (valid values: [awskinesis googlecloudstorage otelarrow tencentcloud_logservice nop googlecloud signalfx alibabacloud_logservice azuredataexplorer prometheusremotewrite syslog azureblob bmc_helix loadbalancing otlp_grpc faro file stef splunk_hec otlphttp azuremonitor bmchelix datadog prometheus dataset influxdb sumologic awsemf coralogix doris elasticsearch load_balancing logicmonitor awss3 googlecloudpubsub google_cloud_storage prometheus_remote_write otlp honeycombmarker awscloudwatchlogs azure_monitor debug otlp_http googlemanagedprometheus logzio zipkin tinybird awsxray cassandra rabbitmq azure_blob opensearch sentry clickhouse honeycomb_marker kafka pulsar])\n\n",
+        "seconds": 0.28
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "unknown-type"
+    },
+    {
+      "counters": {},
+      "description": "debug has verbosty",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": true,
+        "output_digest": "348c4f9da7a7",
+        "output_lines": 3,
+        "suggestion": false
+      },
+      "position": 7,
+      "repetition": 2,
+      "sending": {
+        "exit_code": 1,
+        "output": "Error: failed to get config: cannot unmarshal the configuration: decoding failed due to the following error(s):\n\n'exporters' error reading configuration for \"debug\": decoding failed due to the following error(s):\n\n'debugexporter.Config' has invalid keys: verbosty\n\n",
+        "seconds": 0.27
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "misspelled-key"
+    },
+    {
+      "counters": {},
+      "description": "debug has sampling_initial: many",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": true,
+        "output_digest": "212fa5d00d6b",
+        "output_lines": 3,
+        "suggestion": false
+      },
+      "position": 8,
+      "repetition": 2,
+      "sending": {
+        "exit_code": 1,
+        "output": "Error: failed to get config: cannot unmarshal the configuration: decoding failed due to the following error(s):\n\n'exporters' error reading configuration for \"debug\": decoding failed due to the following error(s):\n\n'sampling_initial' expected type 'int', got unconvertible type 'string'\n\n",
+        "seconds": 0.27
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "wrong-type"
+    },
+    {
+      "counters": {},
+      "description": "the endpoint is an undefined env var",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": false,
+        "output_digest": "e3b0c44298fc",
+        "output_lines": 0,
+        "suggestion": false
+      },
+      "position": 9,
+      "repetition": 2,
+      "sending": {
+        "exit_code": 0,
+        "output": "",
+        "seconds": 0.28
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "undefined-env"
+    },
+    {
+      "counters": {},
+      "description": "the exporters list is mis-indented",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": true,
+        "names_token": null,
+        "output_digest": "3b6a0ac4ae75",
+        "output_lines": 1,
+        "suggestion": false
+      },
+      "position": 10,
+      "repetition": 2,
+      "sending": {
+        "exit_code": 1,
+        "output": "Error: failed to get config: cannot resolve the configuration: retrieved value (type=string) cannot be used as a Conf: assuming string type since contents are not valid YAML: yaml: line 10: did not find expected key\n\n",
+        "seconds": 0.27
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "bad-indentation"
+    },
+    {
+      "counters": {},
+      "description": "the smallest logs pipeline",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": null,
+        "output_digest": "e3b0c44298fc",
+        "output_lines": 0,
+        "suggestion": false
+      },
+      "position": 1,
+      "repetition": 3,
+      "sending": {
+        "exit_code": 0,
+        "output": "",
+        "seconds": 0.29
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "minimal"
+    },
+    {
+      "counters": {},
+      "description": "the pipeline lists no receiver",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": true,
+        "output_digest": "3afe60867a37",
+        "output_lines": 1,
+        "suggestion": false
+      },
+      "position": 2,
+      "repetition": 3,
+      "sending": {
+        "exit_code": 1,
+        "output": "Error: service::pipelines::logs: must have at least one receiver\n\n",
+        "seconds": 0.27
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "no-receivers"
+    },
+    {
+      "counters": {},
+      "description": "the pipeline lists no exporter",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": true,
+        "output_digest": "2481048051ae",
+        "output_lines": 1,
+        "suggestion": false
+      },
+      "position": 3,
+      "repetition": 3,
+      "sending": {
+        "exit_code": 1,
+        "output": "Error: service::pipelines::logs: must have at least one exporter\n\n",
+        "seconds": 0.28
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "no-exporters"
+    },
+    {
+      "counters": {},
+      "description": "an exporter configured and in no pipeline",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": false,
+        "output_digest": "e3b0c44298fc",
+        "output_lines": 0,
+        "suggestion": false
+      },
+      "position": 4,
+      "repetition": 3,
+      "sending": {
+        "exit_code": 0,
+        "output": "",
+        "seconds": 0.28
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "configured-unused"
+    },
+    {
+      "counters": {},
+      "description": "a pipeline exporter that is not configured",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": true,
+        "output_digest": "093c3721c32d",
+        "output_lines": 1,
+        "suggestion": false
+      },
+      "position": 5,
+      "repetition": 3,
+      "sending": {
+        "exit_code": 1,
+        "output": "Error: service::pipelines::logs: references exporter \"otlp_grpc/missing\" which is not configured\n\n",
+        "seconds": 0.28
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "used-undeclared"
+    },
+    {
+      "counters": {},
+      "description": "an exporter of type otlp_grcp",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": true,
+        "output_digest": "b8a7c2145956",
+        "output_lines": 2,
+        "suggestion": false
+      },
+      "position": 6,
+      "repetition": 3,
+      "sending": {
+        "exit_code": 1,
+        "output": "Error: failed to get config: cannot unmarshal the configuration: decoding failed due to the following error(s):\n\n'exporters' unknown type: \"otlp_grcp\" for id: \"otlp_grcp/typo\" (valid values: [alibabacloud_logservice awsemf clickhouse datadog honeycomb_marker otlphttp googlecloudstorage otlp_grpc bmc_helix cassandra googlecloudpubsub azuredataexplorer elasticsearch load_balancing opensearch signalfx splunk_hec sumologic awscloudwatchlogs googlecloud sentry tencentcloud_logservice nop googlemanagedprometheus logicmonitor file kafka otelarrow prometheusremotewrite coralogix prometheus_remote_write rabbitmq influxdb loadbalancing prometheus syslog zipkin azure_blob honeycombmarker tinybird awskinesis awsxray azureblob azuremonitor dataset otlp_http logzio debug bmchelix otlp awss3 azure_monitor doris pulsar faro google_cloud_storage stef])\n\n",
+        "seconds": 0.26
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "unknown-type"
+    },
+    {
+      "counters": {},
+      "description": "debug has verbosty",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": true,
+        "output_digest": "348c4f9da7a7",
+        "output_lines": 3,
+        "suggestion": false
+      },
+      "position": 7,
+      "repetition": 3,
+      "sending": {
+        "exit_code": 1,
+        "output": "Error: failed to get config: cannot unmarshal the configuration: decoding failed due to the following error(s):\n\n'exporters' error reading configuration for \"debug\": decoding failed due to the following error(s):\n\n'debugexporter.Config' has invalid keys: verbosty\n\n",
+        "seconds": 0.28
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "misspelled-key"
+    },
+    {
+      "counters": {},
+      "description": "debug has sampling_initial: many",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": true,
+        "output_digest": "212fa5d00d6b",
+        "output_lines": 3,
+        "suggestion": false
+      },
+      "position": 8,
+      "repetition": 3,
+      "sending": {
+        "exit_code": 1,
+        "output": "Error: failed to get config: cannot unmarshal the configuration: decoding failed due to the following error(s):\n\n'exporters' error reading configuration for \"debug\": decoding failed due to the following error(s):\n\n'sampling_initial' expected type 'int', got unconvertible type 'string'\n\n",
+        "seconds": 0.28
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "wrong-type"
+    },
+    {
+      "counters": {},
+      "description": "the endpoint is an undefined env var",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": false,
+        "names_token": false,
+        "output_digest": "e3b0c44298fc",
+        "output_lines": 0,
+        "suggestion": false
+      },
+      "position": 9,
+      "repetition": 3,
+      "sending": {
+        "exit_code": 0,
+        "output": "",
+        "seconds": 0.28
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "undefined-env"
+    },
+    {
+      "counters": {},
+      "description": "the exporters list is mis-indented",
+      "log": {
+        "error_lines": 0,
+        "lines": 0,
+        "warn_lines": 0
+      },
+      "measured": {
+        "line_number": true,
+        "names_token": null,
+        "output_digest": "3b6a0ac4ae75",
+        "output_lines": 1,
+        "suggestion": false
+      },
+      "position": 10,
+      "repetition": 3,
+      "sending": {
+        "exit_code": 1,
+        "output": "Error: failed to get config: cannot resolve the configuration: retrieved value (type=string) cannot be used as a Conf: assuming string type since contents are not valid YAML: yaml: line 10: did not find expected key\n\n",
+        "seconds": 0.27
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "bad-indentation"
+    }
+  ],
+  "stack": {
+    "otelcol_contrib": "0.162.0",
+    "prometheus": "v3.15.0"
+  },
+  "variants": [
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "ab53f36020ff8c0b9f60146464066b56c7dfcfa2761f716763e1249fbddb3c19",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "2d9ae84bbb4f93bd296a2242e151700adaea3acc267f90ae3cef7b74f5856f1a"
+      },
+      "description": "the smallest logs pipeline",
+      "name": "minimal",
+      "options": {
+        "token": null
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "1cb87d8c9807b3166a197893c9f70304f78482d2fd266ebc95e04b021302e9a3",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "2d9ae84bbb4f93bd296a2242e151700adaea3acc267f90ae3cef7b74f5856f1a"
+      },
+      "description": "the pipeline lists no receiver",
+      "name": "no-receivers",
+      "options": {
+        "token": "logs"
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "be26ea8c1d746ef4f510b8087d576a472163c559da181ca6359b88c23b436db0",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "2d9ae84bbb4f93bd296a2242e151700adaea3acc267f90ae3cef7b74f5856f1a"
+      },
+      "description": "the pipeline lists no exporter",
+      "name": "no-exporters",
+      "options": {
+        "token": "logs"
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "0dbcc5cae3d019b5d8c82aeb80b2a8265f2e604d3f1326fe3365fe75240ed766",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "2d9ae84bbb4f93bd296a2242e151700adaea3acc267f90ae3cef7b74f5856f1a"
+      },
+      "description": "an exporter configured and in no pipeline",
+      "name": "configured-unused",
+      "options": {
+        "token": "unused"
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "316068c77f577831921cc2dd5152c5ad0ee937fae7db6a4f0e5f6abfb193d3ff",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "2d9ae84bbb4f93bd296a2242e151700adaea3acc267f90ae3cef7b74f5856f1a"
+      },
+      "description": "a pipeline exporter that is not configured",
+      "name": "used-undeclared",
+      "options": {
+        "token": "missing"
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "3754690d62e654813246dda2da79c8642b4eab6abb41845a060cf3ca71ddebdc",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "2d9ae84bbb4f93bd296a2242e151700adaea3acc267f90ae3cef7b74f5856f1a"
+      },
+      "description": "an exporter of type otlp_grcp",
+      "name": "unknown-type",
+      "options": {
+        "token": "otlp_grcp"
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "7c578b4840995a52f0218afbb18379c8e345e7319d90b2af4fd0eb22100af3a2",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "2d9ae84bbb4f93bd296a2242e151700adaea3acc267f90ae3cef7b74f5856f1a"
+      },
+      "description": "debug has verbosty",
+      "name": "misspelled-key",
+      "options": {
+        "token": "verbosty"
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "f10ecbeb5c665ca4d01e6a2d38dc6a2f5025a32841335fce51d85899ab09acbc",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "2d9ae84bbb4f93bd296a2242e151700adaea3acc267f90ae3cef7b74f5856f1a"
+      },
+      "description": "debug has sampling_initial: many",
+      "name": "wrong-type",
+      "options": {
+        "token": "sampling_initial"
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "4dacfbfdf4674cfc3c3c7d77f2ba0d64581bfa7250a39adc53d8374f1010fda1",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "2d9ae84bbb4f93bd296a2242e151700adaea3acc267f90ae3cef7b74f5856f1a"
+      },
+      "description": "the endpoint is an undefined env var",
+      "name": "undefined-env",
+      "options": {
+        "token": "L1_01_UNDEFINED"
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "b1a0796d6f404719c672964c17676d1959ec6aefd6190e14bcb5d83815864e3a",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "2d9ae84bbb4f93bd296a2242e151700adaea3acc267f90ae3cef7b74f5856f1a"
+      },
+      "description": "the exporters list is mis-indented",
+      "name": "bad-indentation",
+      "options": {
+        "token": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,696 @@
+{
+  "columns": [
+    {
+      "kind": "number",
+      "label": "HTTP status",
+      "path": "sending.http_status"
+    },
+    {
+      "kind": "number",
+      "label": "Accepted",
+      "path": "counters.collector.metrics.receiver_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Refused",
+      "path": "counters.collector.metrics.receiver_refused"
+    },
+    {
+      "kind": "number",
+      "label": "Sent to the sink",
+      "path": "measured.sent_to_sink"
+    },
+    {
+      "kind": "number",
+      "label": "Send failed",
+      "path": "counters.collector.metrics.exporter_send_failed"
+    },
+    {
+      "kind": "number",
+      "label": "Enqueue failed",
+      "path": "measured.enqueue_failed"
+    },
+    {
+      "kind": "number",
+      "label": "Queue size max",
+      "path": "measured.queue_size_max"
+    },
+    {
+      "kind": "number",
+      "label": "Queue capacity",
+      "path": "measured.queue_capacity"
+    },
+    {
+      "kind": "number",
+      "label": "Arrived at the sink",
+      "path": "counters.sink.metrics.receiver_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Sink target up",
+      "path": "measured.sink_up"
+    },
+    {
+      "kind": "number",
+      "label": "Seconds to drain",
+      "path": "measured.drain_seconds"
+    },
+    {
+      "kind": "number",
+      "label": "Warn lines",
+      "path": "log.warn_lines"
+    },
+    {
+      "kind": "number",
+      "label": "Error lines",
+      "path": "log.error_lines"
+    },
+    {
+      "kind": "text",
+      "label": "Recovered",
+      "path": "measured.recovered"
+    }
+  ],
+  "question": {
+    "id": "L2-01",
+    "level": 2,
+    "signals": [
+      "metrics"
+    ],
+    "theme": "collector",
+    "title": "What happens to a burst when the backend is down and the queue is on?"
+  },
+  "repetitions": 3,
+  "runs": [
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink reachable throughout",
+      "log": {
+        "error_lines": 0,
+        "lines": 11,
+        "warn_lines": 0
+      },
+      "measured": {
+        "drain_seconds": null,
+        "enqueue_failed": null,
+        "queue_capacity": 1000.0,
+        "queue_size_max": 0.0,
+        "recovered": "not applicable",
+        "sent_to_sink": 100.0,
+        "sink_up": 1.0
+      },
+      "repetition": 1,
+      "sending": {
+        "datapoints_sent": 100,
+        "drain_seconds": null,
+        "http_status": 200,
+        "recovered": "not applicable",
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-up"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink paused for 20s, which holds the connection open",
+      "log": {
+        "error_lines": 0,
+        "lines": 13,
+        "warn_lines": 0
+      },
+      "measured": {
+        "drain_seconds": 6,
+        "enqueue_failed": null,
+        "queue_capacity": 1000.0,
+        "queue_size_max": 1.0,
+        "recovered": "yes",
+        "sent_to_sink": 100.0,
+        "sink_up": 1.0
+      },
+      "repetition": 1,
+      "sending": {
+        "datapoints_sent": 100,
+        "drain_seconds": 6,
+        "http_status": 200,
+        "recovered": "yes",
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-paused"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink stopped for 20s, then started again",
+      "log": {
+        "error_lines": 0,
+        "lines": 17,
+        "warn_lines": 2
+      },
+      "measured": {
+        "drain_seconds": 29,
+        "enqueue_failed": null,
+        "queue_capacity": 1000.0,
+        "queue_size_max": 1.0,
+        "recovered": "yes",
+        "sent_to_sink": 100.0,
+        "sink_up": 1.0
+      },
+      "repetition": 1,
+      "sending": {
+        "datapoints_sent": 100,
+        "drain_seconds": 29,
+        "http_status": 200,
+        "recovered": "yes",
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-stopped-restarted"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "the sink stopped before the burst and never started",
+      "log": {
+        "error_lines": 0,
+        "lines": 16,
+        "warn_lines": 2
+      },
+      "measured": {
+        "drain_seconds": null,
+        "enqueue_failed": null,
+        "queue_capacity": 1000.0,
+        "queue_size_max": 1.0,
+        "recovered": "no",
+        "sent_to_sink": null,
+        "sink_up": 0.0
+      },
+      "repetition": 1,
+      "sending": {
+        "datapoints_sent": 100,
+        "drain_seconds": null,
+        "http_status": 200,
+        "recovered": "no",
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-stopped"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink reachable throughout",
+      "log": {
+        "error_lines": 0,
+        "lines": 11,
+        "warn_lines": 0
+      },
+      "measured": {
+        "drain_seconds": null,
+        "enqueue_failed": null,
+        "queue_capacity": 1000.0,
+        "queue_size_max": 0.0,
+        "recovered": "not applicable",
+        "sent_to_sink": 100.0,
+        "sink_up": 1.0
+      },
+      "repetition": 2,
+      "sending": {
+        "datapoints_sent": 100,
+        "drain_seconds": null,
+        "http_status": 200,
+        "recovered": "not applicable",
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-up"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink paused for 20s, which holds the connection open",
+      "log": {
+        "error_lines": 0,
+        "lines": 13,
+        "warn_lines": 0
+      },
+      "measured": {
+        "drain_seconds": 2,
+        "enqueue_failed": null,
+        "queue_capacity": 1000.0,
+        "queue_size_max": 1.0,
+        "recovered": "yes",
+        "sent_to_sink": 100.0,
+        "sink_up": 1.0
+      },
+      "repetition": 2,
+      "sending": {
+        "datapoints_sent": 100,
+        "drain_seconds": 2,
+        "http_status": 200,
+        "recovered": "yes",
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-paused"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink stopped for 20s, then started again",
+      "log": {
+        "error_lines": 0,
+        "lines": 17,
+        "warn_lines": 2
+      },
+      "measured": {
+        "drain_seconds": 17,
+        "enqueue_failed": null,
+        "queue_capacity": 1000.0,
+        "queue_size_max": 1.0,
+        "recovered": "yes",
+        "sent_to_sink": 100.0,
+        "sink_up": 1.0
+      },
+      "repetition": 2,
+      "sending": {
+        "datapoints_sent": 100,
+        "drain_seconds": 17,
+        "http_status": 200,
+        "recovered": "yes",
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-stopped-restarted"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "the sink stopped before the burst and never started",
+      "log": {
+        "error_lines": 0,
+        "lines": 17,
+        "warn_lines": 2
+      },
+      "measured": {
+        "drain_seconds": null,
+        "enqueue_failed": null,
+        "queue_capacity": 1000.0,
+        "queue_size_max": 1.0,
+        "recovered": "no",
+        "sent_to_sink": null,
+        "sink_up": 0.0
+      },
+      "repetition": 2,
+      "sending": {
+        "datapoints_sent": 100,
+        "drain_seconds": null,
+        "http_status": 200,
+        "recovered": "no",
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-stopped"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink reachable throughout",
+      "log": {
+        "error_lines": 0,
+        "lines": 11,
+        "warn_lines": 0
+      },
+      "measured": {
+        "drain_seconds": null,
+        "enqueue_failed": null,
+        "queue_capacity": 1000.0,
+        "queue_size_max": 0.0,
+        "recovered": "not applicable",
+        "sent_to_sink": 100.0,
+        "sink_up": 1.0
+      },
+      "repetition": 3,
+      "sending": {
+        "datapoints_sent": 100,
+        "drain_seconds": null,
+        "http_status": 200,
+        "recovered": "not applicable",
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-up"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink paused for 20s, which holds the connection open",
+      "log": {
+        "error_lines": 0,
+        "lines": 13,
+        "warn_lines": 0
+      },
+      "measured": {
+        "drain_seconds": 3,
+        "enqueue_failed": null,
+        "queue_capacity": 1000.0,
+        "queue_size_max": 1.0,
+        "recovered": "yes",
+        "sent_to_sink": 100.0,
+        "sink_up": 1.0
+      },
+      "repetition": 3,
+      "sending": {
+        "datapoints_sent": 100,
+        "drain_seconds": 3,
+        "http_status": 200,
+        "recovered": "yes",
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-paused"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the sink stopped for 20s, then started again",
+      "log": {
+        "error_lines": 0,
+        "lines": 16,
+        "warn_lines": 1
+      },
+      "measured": {
+        "drain_seconds": 13,
+        "enqueue_failed": null,
+        "queue_capacity": 1000.0,
+        "queue_size_max": 1.0,
+        "recovered": "yes",
+        "sent_to_sink": 100.0,
+        "sink_up": 1.0
+      },
+      "repetition": 3,
+      "sending": {
+        "datapoints_sent": 100,
+        "drain_seconds": 13,
+        "http_status": 200,
+        "recovered": "yes",
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-stopped-restarted"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "the sink stopped before the burst and never started",
+      "log": {
+        "error_lines": 0,
+        "lines": 17,
+        "warn_lines": 2
+      },
+      "measured": {
+        "drain_seconds": null,
+        "enqueue_failed": null,
+        "queue_capacity": 1000.0,
+        "queue_size_max": 1.0,
+        "recovered": "no",
+        "sent_to_sink": null,
+        "sink_up": 0.0
+      },
+      "repetition": 3,
+      "sending": {
+        "datapoints_sent": 100,
+        "drain_seconds": null,
+        "http_status": 200,
+        "recovered": "no",
+        "request_bytes": 18530,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sink-stopped"
+    }
+  ],
+  "stack": {
+    "otelcol_contrib": "0.162.0",
+    "prometheus": "v3.15.0"
+  },
+  "variants": [
+    {
+      "description": "the sink reachable throughout",
+      "name": "sink-up"
+    },
+    {
+      "description": "the sink paused for 20s, which holds the connection open",
+      "name": "sink-paused"
+    },
+    {
+      "description": "the sink stopped for 20s, then started again",
+      "name": "sink-stopped-restarted"
+    },
+    {
+      "description": "the sink stopped before the burst and never started",
+      "name": "sink-stopped"
+    }
+  ]
+}

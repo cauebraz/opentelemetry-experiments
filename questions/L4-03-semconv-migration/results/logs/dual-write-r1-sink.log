@@ -1,0 +1,3527 @@
+sink-1  | 	info	otelconftelemetry/tracer.go:47	Internal trace telemetry disabled	{"resource": {"service.instance.id": "271ebcd6-8db8-48d2-abda-eace554a2c81", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	service@v0.162.0/service.go:233	Starting otelcol-contrib...	{"resource": {"service.instance.id": "271ebcd6-8db8-48d2-abda-eace554a2c81", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "Version": "0.162.0", "NumCPU": 18}
+sink-1  | 	info	extensions/extensions.go:43	Starting extensions...	{"resource": {"service.instance.id": "271ebcd6-8db8-48d2-abda-eace554a2c81", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	extensions/extensions.go:47	Extension is starting...	{"resource": {"service.instance.id": "271ebcd6-8db8-48d2-abda-eace554a2c81", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension"}
+sink-1  | 	info	healthcheckextension@v0.162.0/healthcheckextension.go:32	Starting health_check extension	{"resource": {"service.instance.id": "271ebcd6-8db8-48d2-abda-eace554a2c81", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension", "config": {"Config":{"ServerConfig":{"NetAddr":{"DialerConfig":{"Timeout":0},"Endpoint":"0.0.0.0:13133","Transport":"tcp"},"TLS":{},"CORS":{},"Auth":{},"MaxRequestBodySize":0,"IncludeMetadata":false,"ResponseHeaders":null,"CompressionAlgorithms":null,"ReadTimeout":0,"ReadHeaderTimeout":60000000000,"WriteTimeout":30000000000,"Middlewares":null,"Keepalive":{},"IdleTimeout":0,"KeepAlivesEnabled":false},"Path":"/","ResponseBody":null,"CheckCollectorPipeline":{"Enabled":false,"Interval":"5m","ExporterFailureThreshold":5},"UseV2":false,"GRPCConfig":null,"HTTPConfig":null,"ComponentHealthConfig":null}}}
+sink-1  | 	info	extensions/extensions.go:65	Extension started.	{"resource": {"service.instance.id": "271ebcd6-8db8-48d2-abda-eace554a2c81", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension"}
+sink-1  | 	info	otlpreceiver@v0.162.0/otlp.go:120	Starting GRPC server	{"resource": {"service.instance.id": "271ebcd6-8db8-48d2-abda-eace554a2c81", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "otlp", "otelcol.component.kind": "receiver", "endpoint": "[::]:4317"}
+sink-1  | 	info	healthcheck/handler.go:131	Health Check state change	{"resource": {"service.instance.id": "271ebcd6-8db8-48d2-abda-eace554a2c81", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "health_check", "otelcol.component.kind": "extension", "status": "ready"}
+sink-1  | 	info	service@v0.162.0/service.go:256	Everything is ready. Begin running and processing data.	{"resource": {"service.instance.id": "271ebcd6-8db8-48d2-abda-eace554a2c81", "service.name": "otelcol-contrib", "service.version": "0.162.0"}}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "271ebcd6-8db8-48d2-abda-eace554a2c81", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 100}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL: http://host.docker.internal:28080/1.20.0
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l4-03)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL:
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : aff51919ef06d99435db375e6ed20ade
+sink-1  |     Parent ID      :
+sink-1  |     ID             : d3927a424c9ba88b
+sink-1  |     Name           : GET /item/0
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393707 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394707 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(0)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #1
+sink-1  |     Trace ID       : fbccf229de9d5711d5b5f89d745955eb
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 7e004fb7f637d08b
+sink-1  |     Name           : GET /item/1
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393719 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394719 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(1)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #2
+sink-1  |     Trace ID       : f8c1ad639f7f057de6f57b1ea5591bd7
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 10c6662ba1734ee9
+sink-1  |     Name           : GET /item/2
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393722 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394722 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(2)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #3
+sink-1  |     Trace ID       : 6ba91577988302c1331208054dd546bc
+sink-1  |     Parent ID      :
+sink-1  |     ID             : db2fcd35861ca12d
+sink-1  |     Name           : GET /item/3
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393724 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394724 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(3)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #4
+sink-1  |     Trace ID       : 63998bab42f19d9851fc7efac99c97de
+sink-1  |     Parent ID      :
+sink-1  |     ID             : cea880f6a5df3432
+sink-1  |     Name           : GET /item/4
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393726 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394726 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(4)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #5
+sink-1  |     Trace ID       : 7109c40ac8256134d7194afec2d3d96f
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 488f005e3402f708
+sink-1  |     Name           : GET /item/5
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393728 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394728 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(5)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #6
+sink-1  |     Trace ID       : 21523bf4b6d8ec7d6ac129a8e8913bf7
+sink-1  |     Parent ID      :
+sink-1  |     ID             : f84a1807a0683f06
+sink-1  |     Name           : GET /item/6
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.39373 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.39473 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(6)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #7
+sink-1  |     Trace ID       : a2032a9cb698fa68829102312cbebdfc
+sink-1  |     Parent ID      :
+sink-1  |     ID             : a507bb6bb54ba098
+sink-1  |     Name           : GET /item/7
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393732 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394732 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(7)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #8
+sink-1  |     Trace ID       : fc7601081f5d6b9f624c8ab34488cf5c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 33921b71426680b3
+sink-1  |     Name           : GET /item/8
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393733 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394733 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(8)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #9
+sink-1  |     Trace ID       : 651ccada43cbdc220be978678d662c3f
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 3d28d37b4df62655
+sink-1  |     Name           : GET /item/9
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393735 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394735 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(9)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #10
+sink-1  |     Trace ID       : 5fb0ddfa2a317c59fd044279004e402d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : f8e5e3a1a38a18ff
+sink-1  |     Name           : GET /item/10
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393737 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394737 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(10)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #11
+sink-1  |     Trace ID       : cca5d10842ca610a0b28ed6a8ffa9e9d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : f80c69fb5e150056
+sink-1  |     Name           : GET /item/11
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393739 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394739 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(11)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #12
+sink-1  |     Trace ID       : 5da1da0df8d99a1cf8f33170bea77589
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 9c4ee832b2864487
+sink-1  |     Name           : GET /item/12
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393743 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394743 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(12)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #13
+sink-1  |     Trace ID       : 8c8a3ca34f02ab4dbd1f71b0cae0a427
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 29e3700114d0af12
+sink-1  |     Name           : GET /item/13
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393745 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394745 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(13)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #14
+sink-1  |     Trace ID       : 73ae96a045273455c6780258db936282
+sink-1  |     Parent ID      :
+sink-1  |     ID             : f3677d28e2d0d198
+sink-1  |     Name           : GET /item/14
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393747 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394747 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(14)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #15
+sink-1  |     Trace ID       : 9f051a048e8aa12ff3c9d60802787918
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 5bc9918d47b31e98
+sink-1  |     Name           : GET /item/15
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393749 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394749 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(15)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #16
+sink-1  |     Trace ID       : 2e00cc7b93f42f0c13541de37289d240
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 22e01e96bd47752a
+sink-1  |     Name           : GET /item/16
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.39375 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.39475 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(16)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #17
+sink-1  |     Trace ID       : 05ede65a9f4029b30836b3c44b997b30
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 3161ec55b9056001
+sink-1  |     Name           : GET /item/17
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393752 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394752 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(17)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #18
+sink-1  |     Trace ID       : da4c845257da2f9f9806a3f38acf16df
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 67f8f3389d58c3ae
+sink-1  |     Name           : GET /item/18
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393756 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394756 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(18)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #19
+sink-1  |     Trace ID       : a95c2c1f8d7e65539aeb56e1b14151ee
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 85a75e6badf3f33f
+sink-1  |     Name           : GET /item/19
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393758 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394758 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(19)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #20
+sink-1  |     Trace ID       : 43f6c26bce8c765e0406d77a3e4512f1
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 1b74c93c70a73482
+sink-1  |     Name           : GET /item/20
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393759 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394759 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(20)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #21
+sink-1  |     Trace ID       : 97b77fb14aa4a3a06031136893a76490
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 20bc0155d45e8b89
+sink-1  |     Name           : GET /item/21
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393761 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394761 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(21)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #22
+sink-1  |     Trace ID       : 70232e036e679d3c0a54ecf27599d528
+sink-1  |     Parent ID      :
+sink-1  |     ID             : c7b59d321b1e7330
+sink-1  |     Name           : GET /item/22
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393763 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394763 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(22)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #23
+sink-1  |     Trace ID       : 2af5aac11ccd12fd417887434f1368e8
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 5779da37327f5181
+sink-1  |     Name           : GET /item/23
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393765 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394765 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(23)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #24
+sink-1  |     Trace ID       : d44a91c932c5563ccf12dddff62dd6d7
+sink-1  |     Parent ID      :
+sink-1  |     ID             : b73cfb9df64e9671
+sink-1  |     Name           : GET /item/24
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393767 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394767 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(24)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #25
+sink-1  |     Trace ID       : b9b7b167d930e3264a4bff4c8f4a794a
+sink-1  |     Parent ID      :
+sink-1  |     ID             : c2567c4714b3ca07
+sink-1  |     Name           : GET /item/25
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393769 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394769 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(25)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #26
+sink-1  |     Trace ID       : 03d5a026bdb87890e0b4d761f6eadc8c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : c3b05e83acaa4201
+sink-1  |     Name           : GET /item/26
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.39377 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.39477 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(26)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #27
+sink-1  |     Trace ID       : 2b654e609a5c50243ea204ef6cd2e294
+sink-1  |     Parent ID      :
+sink-1  |     ID             : af54d887b988038b
+sink-1  |     Name           : GET /item/27
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393772 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394772 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(27)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #28
+sink-1  |     Trace ID       : 191ddc00bf469cb81fd107729579a7d8
+sink-1  |     Parent ID      :
+sink-1  |     ID             : d7ee14bd5056b1ca
+sink-1  |     Name           : GET /item/28
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393773 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394773 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(28)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #29
+sink-1  |     Trace ID       : b909a39264f7011f8c910901cd56eabb
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 6d25f723c9cf1a29
+sink-1  |     Name           : GET /item/29
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393776 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394776 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(29)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #30
+sink-1  |     Trace ID       : 80e2398985fc9c932b1b245509a2ae6a
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 78559c414d1666bb
+sink-1  |     Name           : GET /item/30
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393778 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394778 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(30)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #31
+sink-1  |     Trace ID       : 8c1634c4beaf6eeeab43b6f9c4c3de76
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 77edb65102d7ee85
+sink-1  |     Name           : GET /item/31
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.39378 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.39478 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(31)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #32
+sink-1  |     Trace ID       : 5f842bb29b4426d80c3ec8b1ee65f128
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 6ae9836a808f08cf
+sink-1  |     Name           : GET /item/32
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393783 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394783 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(32)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #33
+sink-1  |     Trace ID       : 2028dd707ffe1da3d7b2fdd029e59821
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 2b37e3f82eefc99c
+sink-1  |     Name           : GET /item/33
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393785 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394785 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(33)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #34
+sink-1  |     Trace ID       : a738e41deeeae650f2c16462ef83f1a4
+sink-1  |     Parent ID      :
+sink-1  |     ID             : b55c020cf1bf7e1e
+sink-1  |     Name           : GET /item/34
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393787 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394787 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(34)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #35
+sink-1  |     Trace ID       : ab8d470c84f0010591a0c4df849c4969
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 78c29a18103fc58d
+sink-1  |     Name           : GET /item/35
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393788 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394788 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(35)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #36
+sink-1  |     Trace ID       : 50b8a9d151652bf5f88ecad335f42553
+sink-1  |     Parent ID      :
+sink-1  |     ID             : da4d000c0cb59e35
+sink-1  |     Name           : GET /item/36
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.39379 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.39479 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(36)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #37
+sink-1  |     Trace ID       : a261e68767231df0a67b68d0a8b9d247
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 5cc6c8dd808d2ccf
+sink-1  |     Name           : GET /item/37
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393792 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394792 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(37)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #38
+sink-1  |     Trace ID       : ab9f57b0b5c3262af76ae9a2731771de
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 19194184832e64b8
+sink-1  |     Name           : GET /item/38
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393793 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394793 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(38)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #39
+sink-1  |     Trace ID       : 3686b85dae3c2a6e3dc8f814c2a1490c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : d9e5de7f79f3c842
+sink-1  |     Name           : GET /item/39
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393796 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394796 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(39)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #40
+sink-1  |     Trace ID       : 77a09ca1c032d897d89df66a03c6d8be
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 6a5dce1eb5353c0a
+sink-1  |     Name           : GET /item/40
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393797 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394797 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(40)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #41
+sink-1  |     Trace ID       : a9c850495813497d5f9d0ff569e67fae
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 1b625a98dab1ca4f
+sink-1  |     Name           : GET /item/41
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393799 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394799 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(41)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #42
+sink-1  |     Trace ID       : 2d48dea2084cdfe81512a26f428f9552
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 5e135cf4f65986df
+sink-1  |     Name           : GET /item/42
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393801 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394801 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(42)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #43
+sink-1  |     Trace ID       : aa5c1cb34eed09711cf0a6029c5bf87f
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 9dd1ace86be2e770
+sink-1  |     Name           : GET /item/43
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393803 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394803 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(43)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #44
+sink-1  |     Trace ID       : 53c2b4ca0d9e1c898fbff1d6972da7da
+sink-1  |     Parent ID      :
+sink-1  |     ID             : d7091dbdfb5c66ea
+sink-1  |     Name           : GET /item/44
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393805 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394805 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(44)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #45
+sink-1  |     Trace ID       : 10d70f793c31407253d41c58e86dc1ff
+sink-1  |     Parent ID      :
+sink-1  |     ID             : ec529128c1b0122a
+sink-1  |     Name           : GET /item/45
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393806 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394806 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(45)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #46
+sink-1  |     Trace ID       : 7af8b02232d9fe6b25d8b5ef000b82dc
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 2b5b3c3e8e9ce5ea
+sink-1  |     Name           : GET /item/46
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393808 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394808 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(46)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #47
+sink-1  |     Trace ID       : 4a5bcecfe811364fb98c08278e1f001f
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 205f00086e21c5de
+sink-1  |     Name           : GET /item/47
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393809 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394809 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(47)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #48
+sink-1  |     Trace ID       : 25ba7651058d3fa724743f7d25680178
+sink-1  |     Parent ID      :
+sink-1  |     ID             : aaea6f2e2cc6ceac
+sink-1  |     Name           : GET /item/48
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393811 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394811 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(48)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #49
+sink-1  |     Trace ID       : 88adbf75f94ab7bf9556e31983e013c8
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 02479e9bc325cf18
+sink-1  |     Name           : GET /item/49
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393815 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394815 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(49)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #50
+sink-1  |     Trace ID       : a09216001c4646fdbb6e181bb8ac2cfa
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e43cee6cd1bbd29b
+sink-1  |     Name           : GET /item/50
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393818 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394818 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(50)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #51
+sink-1  |     Trace ID       : 71bf88038cc058b5d896f44750472b74
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 143d4a8f56ecbad3
+sink-1  |     Name           : GET /item/51
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.39382 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.39482 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(51)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #52
+sink-1  |     Trace ID       : c7082ce103d58286e34f4646110935c6
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e4f6d1758cf092c9
+sink-1  |     Name           : GET /item/52
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393821 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394821 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(52)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #53
+sink-1  |     Trace ID       : c2ea0bcdc8cc09e77aa6da5298cc6bf8
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e4712398668ab3ee
+sink-1  |     Name           : GET /item/53
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393824 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394824 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(53)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #54
+sink-1  |     Trace ID       : 0d0cb0577b459a97ffe187dca89d5722
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e75f03fb6a117663
+sink-1  |     Name           : GET /item/54
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393826 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394826 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(54)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #55
+sink-1  |     Trace ID       : 091738b15f6fc7ab45372218e926d37d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : ae0c4b9dc6c98696
+sink-1  |     Name           : GET /item/55
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.39384 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.39484 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(55)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #56
+sink-1  |     Trace ID       : 705f0c5548d5d651cdf652a6593e3756
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 3c25949522178e30
+sink-1  |     Name           : GET /item/56
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393843 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394843 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(56)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #57
+sink-1  |     Trace ID       : 8882231d7bd103da22a1450c82c8f19d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : ee0609824e0094e5
+sink-1  |     Name           : GET /item/57
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393846 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394846 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(57)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #58
+sink-1  |     Trace ID       : 6aaa3ce4551a071c08da4d0ecad4660c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 946febcdf225056d
+sink-1  |     Name           : GET /item/58
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393848 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394848 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(58)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #59
+sink-1  |     Trace ID       : cd08f33b31883782469a0fc7d8cf3955
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 1b547735dbafd55b
+sink-1  |     Name           : GET /item/59
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393851 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394851 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(59)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #60
+sink-1  |     Trace ID       : 048f4b29ceb9d14788db7a13cf230c68
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 24c5edac6626e746
+sink-1  |     Name           : GET /item/60
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393853 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394853 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(60)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #61
+sink-1  |     Trace ID       : 82a4fcb8efe8a85c697cf78a58caed04
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 67a9bab67d42de1d
+sink-1  |     Name           : GET /item/61
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393854 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394854 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(61)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #62
+sink-1  |     Trace ID       : 08405b479247e482c42ca376fc48c6eb
+sink-1  |     Parent ID      :
+sink-1  |     ID             : f9524ee10d41dfad
+sink-1  |     Name           : GET /item/62
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393856 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394856 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(62)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #63
+sink-1  |     Trace ID       : 708409f5f4cd3bdc0b44dcfdd0032920
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 9b1b4e92cb28135e
+sink-1  |     Name           : GET /item/63
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393857 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394857 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(63)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #64
+sink-1  |     Trace ID       : 179561dcd1db57fbb315b5cb3e59179c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e450951c369286d4
+sink-1  |     Name           : GET /item/64
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393859 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394859 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(64)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #65
+sink-1  |     Trace ID       : f08cd8d966253a2b6fb34562ba8741c5
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 088aaa88c7f6fd19
+sink-1  |     Name           : GET /item/65
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393862 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394862 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(65)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #66
+sink-1  |     Trace ID       : f6928ae775aa3baf9f4226fb0b406add
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 4a1c0a36ec02c845
+sink-1  |     Name           : GET /item/66
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393864 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394864 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(66)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #67
+sink-1  |     Trace ID       : 9413b05e9c02bed6b236e81370bb82f4
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 4243071b4c742206
+sink-1  |     Name           : GET /item/67
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393865 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394865 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(67)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #68
+sink-1  |     Trace ID       : 087e6d5c135853786a14def1d75e9575
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 83d4846dbf11963b
+sink-1  |     Name           : GET /item/68
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393867 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394867 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(68)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #69
+sink-1  |     Trace ID       : d97d42694fd418f0b85b7efb4540c9c4
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 1373454855e5e1c9
+sink-1  |     Name           : GET /item/69
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393868 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394868 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(69)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #70
+sink-1  |     Trace ID       : 7c93110173ec0c84d2151e21318a258c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 212121a1f29e9066
+sink-1  |     Name           : GET /item/70
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.39387 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.39487 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(70)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #71
+sink-1  |     Trace ID       : 6d018e1053bc9d27ea98502d32b22d2d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : fd5c68a5ef057807
+sink-1  |     Name           : GET /item/71
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393873 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394873 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(71)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #72
+sink-1  |     Trace ID       : 020d26c6d0b1353e8bc33e137db0b6c3
+sink-1  |     Parent ID      :
+sink-1  |     ID             : fa2d2ac1b850b4aa
+sink-1  |     Name           : GET /item/72
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393874 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394874 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(72)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #73
+sink-1  |     Trace ID       : e78c5be2c870b10b41cdd686ebae5f22
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e25db7da2ad793e3
+sink-1  |     Name           : GET /item/73
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393876 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394876 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(73)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #74
+sink-1  |     Trace ID       : bf92c35b6232b23149644eae7f79c302
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 006095eb260d1c06
+sink-1  |     Name           : GET /item/74
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393877 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394877 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(74)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #75
+sink-1  |     Trace ID       : 8f98bd8925f8dd55d1ac10d8e0135d5c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : d3e587d688936216
+sink-1  |     Name           : GET /item/75
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393879 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394879 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(75)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #76
+sink-1  |     Trace ID       : 76d7a6ee4cac69a1790cd284d606914a
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 04299a305bce10e6
+sink-1  |     Name           : GET /item/76
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.39388 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.39488 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(76)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #77
+sink-1  |     Trace ID       : 91ae4d08882a0a617c43e852029eebb1
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 356aced586dd66ef
+sink-1  |     Name           : GET /item/77
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393883 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394883 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(77)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #78
+sink-1  |     Trace ID       : b0f5b47a839c3f9a52a3b4d1d56dfbec
+sink-1  |     Parent ID      :
+sink-1  |     ID             : a43babc7bf804731
+sink-1  |     Name           : GET /item/78
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393884 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394884 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(78)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #79
+sink-1  |     Trace ID       : 56a4735e1f467df20d509d44c7b30518
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 5930c843533c7911
+sink-1  |     Name           : GET /item/79
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393886 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394886 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(79)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #80
+sink-1  |     Trace ID       : fa64229553d2ecb9870cb93ec6763369
+sink-1  |     Parent ID      :
+sink-1  |     ID             : c3a83cd6b2406460
+sink-1  |     Name           : GET /item/80
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393887 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394887 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(80)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #81
+sink-1  |     Trace ID       : c50357b75ac7a79fd385ae71290aca1e
+sink-1  |     Parent ID      :
+sink-1  |     ID             : b20b8fa9cd739756
+sink-1  |     Name           : GET /item/81
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393889 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394889 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(81)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #82
+sink-1  |     Trace ID       : 4ea0e2f2f09861170f8fb34168fca33c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : d8108f64a8aeea22
+sink-1  |     Name           : GET /item/82
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393891 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394891 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(82)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #83
+sink-1  |     Trace ID       : a163cde7ab6f576ecc37aebaeb6c00ce
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 218010a24ec5a8c7
+sink-1  |     Name           : GET /item/83
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393892 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394892 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(83)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #84
+sink-1  |     Trace ID       : f3d955a958afd324697a201157ec10f6
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 0948d174365d1df9
+sink-1  |     Name           : GET /item/84
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393894 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394894 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(84)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #85
+sink-1  |     Trace ID       : ae33a5e280e94b8766ba27b0955823d4
+sink-1  |     Parent ID      :
+sink-1  |     ID             : a7478e6438719ee8
+sink-1  |     Name           : GET /item/85
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393895 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394895 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(85)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #86
+sink-1  |     Trace ID       : 8b5bef063ac13de76ed4aec9aff956ab
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 159ea1b0f96e66bf
+sink-1  |     Name           : GET /item/86
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393897 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394897 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(86)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #87
+sink-1  |     Trace ID       : 078f6e09400e6e81ced629fc5e7b1fab
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e90b18e7262cdb1e
+sink-1  |     Name           : GET /item/87
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393898 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394898 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(87)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #88
+sink-1  |     Trace ID       : 3a4b4266a61215c15818abd03d16a506
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 32a74351621b97a2
+sink-1  |     Name           : GET /item/88
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.3939 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.3949 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(88)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #89
+sink-1  |     Trace ID       : 8d71f659d7e470d90ef38a459577f1ab
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 067a07cc2971bf21
+sink-1  |     Name           : GET /item/89
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393901 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394901 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(89)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #90
+sink-1  |     Trace ID       : 9027e02cc7dfc7dcb684436da557f05a
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 69c15462ac36510d
+sink-1  |     Name           : GET /item/90
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393903 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394903 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(90)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #91
+sink-1  |     Trace ID       : 82772671fd88da06ba8539d02910618f
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e9cab60fcdb57a9f
+sink-1  |     Name           : GET /item/91
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393904 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394904 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(91)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #92
+sink-1  |     Trace ID       : f56347f65ec5de8511e68c56db708c2a
+sink-1  |     Parent ID      :
+sink-1  |     ID             : d03b9542ada366c6
+sink-1  |     Name           : GET /item/92
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393907 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394907 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(92)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #93
+sink-1  |     Trace ID       : 1e2c570561b9cdcb4d5967f970fc643c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e11d85330e3ebbc0
+sink-1  |     Name           : GET /item/93
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393911 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394911 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(93)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #94
+sink-1  |     Trace ID       : 2edd8a576a8a8221be924d7ec6fb3d11
+sink-1  |     Parent ID      :
+sink-1  |     ID             : eb5e88a6c0bc7979
+sink-1  |     Name           : GET /item/94
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393913 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394913 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(94)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #95
+sink-1  |     Trace ID       : e8ae7462848748d62b6b48858666b777
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 43518eb3a4949b6b
+sink-1  |     Name           : GET /item/95
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393914 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394914 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(95)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #96
+sink-1  |     Trace ID       : 735ff4cda3837f07587709a2cbbe5d6e
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 878dd913b8519774
+sink-1  |     Name           : GET /item/96
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393916 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394916 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(96)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #97
+sink-1  |     Trace ID       : 3adea0c0dc9c91e83b4529f765c3ddaf
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 0ff3d91237a5939a
+sink-1  |     Name           : GET /item/97
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393917 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394917 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(97)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #98
+sink-1  |     Trace ID       : ef12d8defc8da04ea52d109a713afa03
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 6092d053682788b1
+sink-1  |     Name           : GET /item/98
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.393919 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.394919 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(98)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(historical)
+sink-1  | Span #99
+sink-1  |     Trace ID       : ee746f90ce10f6dae44d56669c497073
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 4950d19ef4b51095
+sink-1  |     Name           : GET /item/99
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:50.39392 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:50.39492 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(99)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(historical)
+sink-1  | 	{"resource": {"service.instance.id": "271ebcd6-8db8-48d2-abda-eace554a2c81", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}
+sink-1  | 	info	Traces	{"resource": {"service.instance.id": "271ebcd6-8db8-48d2-abda-eace554a2c81", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces", "resource spans": 1, "spans": 100}
+sink-1  | 	info	ResourceSpans #0
+sink-1  | Resource SchemaURL: http://host.docker.internal:28080/1.21.0
+sink-1  | Resource attributes:
+sink-1  |      -> service.name: Str(l4-03)
+sink-1  | ScopeSpans #0
+sink-1  | ScopeSpans SchemaURL: http://host.docker.internal:28080/1.21.0
+sink-1  | InstrumentationScope opentelemetry_experiments
+sink-1  | Span #0
+sink-1  |     Trace ID       : aff51919ef06d99435db375e6ed20ade
+sink-1  |     Parent ID      :
+sink-1  |     ID             : d3927a424c9ba88b
+sink-1  |     Name           : GET /item/0
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950129 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951129 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(0)
+sink-1  |      -> http.response.status_code: Int(200)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #1
+sink-1  |     Trace ID       : fbccf229de9d5711d5b5f89d745955eb
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 7e004fb7f637d08b
+sink-1  |     Name           : GET /item/1
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950146 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951146 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(1)
+sink-1  |      -> http.response.status_code: Int(201)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #2
+sink-1  |     Trace ID       : f8c1ad639f7f057de6f57b1ea5591bd7
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 10c6662ba1734ee9
+sink-1  |     Name           : GET /item/2
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.95015 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.95115 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(2)
+sink-1  |      -> http.response.status_code: Int(202)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #3
+sink-1  |     Trace ID       : 6ba91577988302c1331208054dd546bc
+sink-1  |     Parent ID      :
+sink-1  |     ID             : db2fcd35861ca12d
+sink-1  |     Name           : GET /item/3
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950152 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951152 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(3)
+sink-1  |      -> http.response.status_code: Int(203)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #4
+sink-1  |     Trace ID       : 63998bab42f19d9851fc7efac99c97de
+sink-1  |     Parent ID      :
+sink-1  |     ID             : cea880f6a5df3432
+sink-1  |     Name           : GET /item/4
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950154 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951154 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(4)
+sink-1  |      -> http.response.status_code: Int(204)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #5
+sink-1  |     Trace ID       : 7109c40ac8256134d7194afec2d3d96f
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 488f005e3402f708
+sink-1  |     Name           : GET /item/5
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950156 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951156 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(5)
+sink-1  |      -> http.response.status_code: Int(200)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #6
+sink-1  |     Trace ID       : 21523bf4b6d8ec7d6ac129a8e8913bf7
+sink-1  |     Parent ID      :
+sink-1  |     ID             : f84a1807a0683f06
+sink-1  |     Name           : GET /item/6
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950157 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951157 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(6)
+sink-1  |      -> http.response.status_code: Int(201)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #7
+sink-1  |     Trace ID       : a2032a9cb698fa68829102312cbebdfc
+sink-1  |     Parent ID      :
+sink-1  |     ID             : a507bb6bb54ba098
+sink-1  |     Name           : GET /item/7
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950159 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951159 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(7)
+sink-1  |      -> http.response.status_code: Int(202)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #8
+sink-1  |     Trace ID       : fc7601081f5d6b9f624c8ab34488cf5c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 33921b71426680b3
+sink-1  |     Name           : GET /item/8
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950161 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951161 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(8)
+sink-1  |      -> http.response.status_code: Int(203)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #9
+sink-1  |     Trace ID       : 651ccada43cbdc220be978678d662c3f
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 3d28d37b4df62655
+sink-1  |     Name           : GET /item/9
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950163 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951163 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(9)
+sink-1  |      -> http.response.status_code: Int(204)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #10
+sink-1  |     Trace ID       : 5fb0ddfa2a317c59fd044279004e402d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : f8e5e3a1a38a18ff
+sink-1  |     Name           : GET /item/10
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950171 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951171 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(10)
+sink-1  |      -> http.response.status_code: Int(200)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #11
+sink-1  |     Trace ID       : cca5d10842ca610a0b28ed6a8ffa9e9d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : f80c69fb5e150056
+sink-1  |     Name           : GET /item/11
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950176 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951176 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(11)
+sink-1  |      -> http.response.status_code: Int(201)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #12
+sink-1  |     Trace ID       : 5da1da0df8d99a1cf8f33170bea77589
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 9c4ee832b2864487
+sink-1  |     Name           : GET /item/12
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950177 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951177 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(12)
+sink-1  |      -> http.response.status_code: Int(202)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #13
+sink-1  |     Trace ID       : 8c8a3ca34f02ab4dbd1f71b0cae0a427
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 29e3700114d0af12
+sink-1  |     Name           : GET /item/13
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950179 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951179 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(13)
+sink-1  |      -> http.response.status_code: Int(203)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #14
+sink-1  |     Trace ID       : 73ae96a045273455c6780258db936282
+sink-1  |     Parent ID      :
+sink-1  |     ID             : f3677d28e2d0d198
+sink-1  |     Name           : GET /item/14
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950181 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951181 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(14)
+sink-1  |      -> http.response.status_code: Int(204)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #15
+sink-1  |     Trace ID       : 9f051a048e8aa12ff3c9d60802787918
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 5bc9918d47b31e98
+sink-1  |     Name           : GET /item/15
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950182 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951182 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(15)
+sink-1  |      -> http.response.status_code: Int(200)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #16
+sink-1  |     Trace ID       : 2e00cc7b93f42f0c13541de37289d240
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 22e01e96bd47752a
+sink-1  |     Name           : GET /item/16
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950189 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951189 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(16)
+sink-1  |      -> http.response.status_code: Int(201)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #17
+sink-1  |     Trace ID       : 05ede65a9f4029b30836b3c44b997b30
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 3161ec55b9056001
+sink-1  |     Name           : GET /item/17
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950191 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951191 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(17)
+sink-1  |      -> http.response.status_code: Int(202)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #18
+sink-1  |     Trace ID       : da4c845257da2f9f9806a3f38acf16df
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 67f8f3389d58c3ae
+sink-1  |     Name           : GET /item/18
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950193 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951193 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(18)
+sink-1  |      -> http.response.status_code: Int(203)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #19
+sink-1  |     Trace ID       : a95c2c1f8d7e65539aeb56e1b14151ee
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 85a75e6badf3f33f
+sink-1  |     Name           : GET /item/19
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950195 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951195 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(19)
+sink-1  |      -> http.response.status_code: Int(204)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #20
+sink-1  |     Trace ID       : 43f6c26bce8c765e0406d77a3e4512f1
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 1b74c93c70a73482
+sink-1  |     Name           : GET /item/20
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950196 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951196 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(20)
+sink-1  |      -> http.response.status_code: Int(200)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #21
+sink-1  |     Trace ID       : 97b77fb14aa4a3a06031136893a76490
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 20bc0155d45e8b89
+sink-1  |     Name           : GET /item/21
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950198 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951198 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(21)
+sink-1  |      -> http.response.status_code: Int(201)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #22
+sink-1  |     Trace ID       : 70232e036e679d3c0a54ecf27599d528
+sink-1  |     Parent ID      :
+sink-1  |     ID             : c7b59d321b1e7330
+sink-1  |     Name           : GET /item/22
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950199 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951199 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(22)
+sink-1  |      -> http.response.status_code: Int(202)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #23
+sink-1  |     Trace ID       : 2af5aac11ccd12fd417887434f1368e8
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 5779da37327f5181
+sink-1  |     Name           : GET /item/23
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950201 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951201 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(23)
+sink-1  |      -> http.response.status_code: Int(203)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #24
+sink-1  |     Trace ID       : d44a91c932c5563ccf12dddff62dd6d7
+sink-1  |     Parent ID      :
+sink-1  |     ID             : b73cfb9df64e9671
+sink-1  |     Name           : GET /item/24
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950203 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951203 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(24)
+sink-1  |      -> http.response.status_code: Int(204)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #25
+sink-1  |     Trace ID       : b9b7b167d930e3264a4bff4c8f4a794a
+sink-1  |     Parent ID      :
+sink-1  |     ID             : c2567c4714b3ca07
+sink-1  |     Name           : GET /item/25
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950208 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951208 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(25)
+sink-1  |      -> http.response.status_code: Int(200)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #26
+sink-1  |     Trace ID       : 03d5a026bdb87890e0b4d761f6eadc8c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : c3b05e83acaa4201
+sink-1  |     Name           : GET /item/26
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.95021 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.95121 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(26)
+sink-1  |      -> http.response.status_code: Int(201)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #27
+sink-1  |     Trace ID       : 2b654e609a5c50243ea204ef6cd2e294
+sink-1  |     Parent ID      :
+sink-1  |     ID             : af54d887b988038b
+sink-1  |     Name           : GET /item/27
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950212 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951212 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(27)
+sink-1  |      -> http.response.status_code: Int(202)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #28
+sink-1  |     Trace ID       : 191ddc00bf469cb81fd107729579a7d8
+sink-1  |     Parent ID      :
+sink-1  |     ID             : d7ee14bd5056b1ca
+sink-1  |     Name           : GET /item/28
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950213 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951213 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(28)
+sink-1  |      -> http.response.status_code: Int(203)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #29
+sink-1  |     Trace ID       : b909a39264f7011f8c910901cd56eabb
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 6d25f723c9cf1a29
+sink-1  |     Name           : GET /item/29
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950215 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951215 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(29)
+sink-1  |      -> http.response.status_code: Int(204)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #30
+sink-1  |     Trace ID       : 80e2398985fc9c932b1b245509a2ae6a
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 78559c414d1666bb
+sink-1  |     Name           : GET /item/30
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950217 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951217 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(30)
+sink-1  |      -> http.response.status_code: Int(200)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #31
+sink-1  |     Trace ID       : 8c1634c4beaf6eeeab43b6f9c4c3de76
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 77edb65102d7ee85
+sink-1  |     Name           : GET /item/31
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950218 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951218 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(31)
+sink-1  |      -> http.response.status_code: Int(201)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #32
+sink-1  |     Trace ID       : 5f842bb29b4426d80c3ec8b1ee65f128
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 6ae9836a808f08cf
+sink-1  |     Name           : GET /item/32
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950227 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951227 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(32)
+sink-1  |      -> http.response.status_code: Int(202)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #33
+sink-1  |     Trace ID       : 2028dd707ffe1da3d7b2fdd029e59821
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 2b37e3f82eefc99c
+sink-1  |     Name           : GET /item/33
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950229 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951229 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(33)
+sink-1  |      -> http.response.status_code: Int(203)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #34
+sink-1  |     Trace ID       : a738e41deeeae650f2c16462ef83f1a4
+sink-1  |     Parent ID      :
+sink-1  |     ID             : b55c020cf1bf7e1e
+sink-1  |     Name           : GET /item/34
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950231 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951231 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(34)
+sink-1  |      -> http.response.status_code: Int(204)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #35
+sink-1  |     Trace ID       : ab8d470c84f0010591a0c4df849c4969
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 78c29a18103fc58d
+sink-1  |     Name           : GET /item/35
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950232 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951232 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(35)
+sink-1  |      -> http.response.status_code: Int(200)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #36
+sink-1  |     Trace ID       : 50b8a9d151652bf5f88ecad335f42553
+sink-1  |     Parent ID      :
+sink-1  |     ID             : da4d000c0cb59e35
+sink-1  |     Name           : GET /item/36
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950234 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951234 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(36)
+sink-1  |      -> http.response.status_code: Int(201)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #37
+sink-1  |     Trace ID       : a261e68767231df0a67b68d0a8b9d247
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 5cc6c8dd808d2ccf
+sink-1  |     Name           : GET /item/37
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950235 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951235 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(37)
+sink-1  |      -> http.response.status_code: Int(202)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #38
+sink-1  |     Trace ID       : ab9f57b0b5c3262af76ae9a2731771de
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 19194184832e64b8
+sink-1  |     Name           : GET /item/38
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950237 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951237 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(38)
+sink-1  |      -> http.response.status_code: Int(203)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #39
+sink-1  |     Trace ID       : 3686b85dae3c2a6e3dc8f814c2a1490c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : d9e5de7f79f3c842
+sink-1  |     Name           : GET /item/39
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950239 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951239 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(39)
+sink-1  |      -> http.response.status_code: Int(204)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #40
+sink-1  |     Trace ID       : 77a09ca1c032d897d89df66a03c6d8be
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 6a5dce1eb5353c0a
+sink-1  |     Name           : GET /item/40
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950241 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951241 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(40)
+sink-1  |      -> http.response.status_code: Int(200)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #41
+sink-1  |     Trace ID       : a9c850495813497d5f9d0ff569e67fae
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 1b625a98dab1ca4f
+sink-1  |     Name           : GET /item/41
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950242 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951242 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(41)
+sink-1  |      -> http.response.status_code: Int(201)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #42
+sink-1  |     Trace ID       : 2d48dea2084cdfe81512a26f428f9552
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 5e135cf4f65986df
+sink-1  |     Name           : GET /item/42
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950244 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951244 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(42)
+sink-1  |      -> http.response.status_code: Int(202)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #43
+sink-1  |     Trace ID       : aa5c1cb34eed09711cf0a6029c5bf87f
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 9dd1ace86be2e770
+sink-1  |     Name           : GET /item/43
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950246 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951246 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(43)
+sink-1  |      -> http.response.status_code: Int(203)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #44
+sink-1  |     Trace ID       : 53c2b4ca0d9e1c898fbff1d6972da7da
+sink-1  |     Parent ID      :
+sink-1  |     ID             : d7091dbdfb5c66ea
+sink-1  |     Name           : GET /item/44
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950247 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951247 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(44)
+sink-1  |      -> http.response.status_code: Int(204)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #45
+sink-1  |     Trace ID       : 10d70f793c31407253d41c58e86dc1ff
+sink-1  |     Parent ID      :
+sink-1  |     ID             : ec529128c1b0122a
+sink-1  |     Name           : GET /item/45
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950249 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951249 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(45)
+sink-1  |      -> http.response.status_code: Int(200)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #46
+sink-1  |     Trace ID       : 7af8b02232d9fe6b25d8b5ef000b82dc
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 2b5b3c3e8e9ce5ea
+sink-1  |     Name           : GET /item/46
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950251 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951251 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(46)
+sink-1  |      -> http.response.status_code: Int(201)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #47
+sink-1  |     Trace ID       : 4a5bcecfe811364fb98c08278e1f001f
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 205f00086e21c5de
+sink-1  |     Name           : GET /item/47
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950253 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951253 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(47)
+sink-1  |      -> http.response.status_code: Int(202)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #48
+sink-1  |     Trace ID       : 25ba7651058d3fa724743f7d25680178
+sink-1  |     Parent ID      :
+sink-1  |     ID             : aaea6f2e2cc6ceac
+sink-1  |     Name           : GET /item/48
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950254 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951254 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(48)
+sink-1  |      -> http.response.status_code: Int(203)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #49
+sink-1  |     Trace ID       : 88adbf75f94ab7bf9556e31983e013c8
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 02479e9bc325cf18
+sink-1  |     Name           : GET /item/49
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950256 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951256 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(49)
+sink-1  |      -> http.response.status_code: Int(204)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #50
+sink-1  |     Trace ID       : a09216001c4646fdbb6e181bb8ac2cfa
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e43cee6cd1bbd29b
+sink-1  |     Name           : GET /item/50
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950258 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951258 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(50)
+sink-1  |      -> http.response.status_code: Int(200)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #51
+sink-1  |     Trace ID       : 71bf88038cc058b5d896f44750472b74
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 143d4a8f56ecbad3
+sink-1  |     Name           : GET /item/51
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.95026 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.95126 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(51)
+sink-1  |      -> http.response.status_code: Int(201)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #52
+sink-1  |     Trace ID       : c7082ce103d58286e34f4646110935c6
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e4f6d1758cf092c9
+sink-1  |     Name           : GET /item/52
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950263 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951263 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(52)
+sink-1  |      -> http.response.status_code: Int(202)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #53
+sink-1  |     Trace ID       : c2ea0bcdc8cc09e77aa6da5298cc6bf8
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e4712398668ab3ee
+sink-1  |     Name           : GET /item/53
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950266 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951266 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(53)
+sink-1  |      -> http.response.status_code: Int(203)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #54
+sink-1  |     Trace ID       : 0d0cb0577b459a97ffe187dca89d5722
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e75f03fb6a117663
+sink-1  |     Name           : GET /item/54
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950268 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951268 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(54)
+sink-1  |      -> http.response.status_code: Int(204)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #55
+sink-1  |     Trace ID       : 091738b15f6fc7ab45372218e926d37d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : ae0c4b9dc6c98696
+sink-1  |     Name           : GET /item/55
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.95027 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.95127 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(55)
+sink-1  |      -> http.response.status_code: Int(200)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #56
+sink-1  |     Trace ID       : 705f0c5548d5d651cdf652a6593e3756
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 3c25949522178e30
+sink-1  |     Name           : GET /item/56
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950271 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951271 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(56)
+sink-1  |      -> http.response.status_code: Int(201)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #57
+sink-1  |     Trace ID       : 8882231d7bd103da22a1450c82c8f19d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : ee0609824e0094e5
+sink-1  |     Name           : GET /item/57
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950273 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951273 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(57)
+sink-1  |      -> http.response.status_code: Int(202)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #58
+sink-1  |     Trace ID       : 6aaa3ce4551a071c08da4d0ecad4660c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 946febcdf225056d
+sink-1  |     Name           : GET /item/58
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950275 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951275 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(58)
+sink-1  |      -> http.response.status_code: Int(203)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #59
+sink-1  |     Trace ID       : cd08f33b31883782469a0fc7d8cf3955
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 1b547735dbafd55b
+sink-1  |     Name           : GET /item/59
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950276 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951276 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(59)
+sink-1  |      -> http.response.status_code: Int(204)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #60
+sink-1  |     Trace ID       : 048f4b29ceb9d14788db7a13cf230c68
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 24c5edac6626e746
+sink-1  |     Name           : GET /item/60
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950278 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951278 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(60)
+sink-1  |      -> http.response.status_code: Int(200)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #61
+sink-1  |     Trace ID       : 82a4fcb8efe8a85c697cf78a58caed04
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 67a9bab67d42de1d
+sink-1  |     Name           : GET /item/61
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.95028 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.95128 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(61)
+sink-1  |      -> http.response.status_code: Int(201)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #62
+sink-1  |     Trace ID       : 08405b479247e482c42ca376fc48c6eb
+sink-1  |     Parent ID      :
+sink-1  |     ID             : f9524ee10d41dfad
+sink-1  |     Name           : GET /item/62
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950282 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951282 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(62)
+sink-1  |      -> http.response.status_code: Int(202)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #63
+sink-1  |     Trace ID       : 708409f5f4cd3bdc0b44dcfdd0032920
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 9b1b4e92cb28135e
+sink-1  |     Name           : GET /item/63
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950283 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951283 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(63)
+sink-1  |      -> http.response.status_code: Int(203)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #64
+sink-1  |     Trace ID       : 179561dcd1db57fbb315b5cb3e59179c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e450951c369286d4
+sink-1  |     Name           : GET /item/64
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950285 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951285 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(64)
+sink-1  |      -> http.response.status_code: Int(204)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #65
+sink-1  |     Trace ID       : f08cd8d966253a2b6fb34562ba8741c5
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 088aaa88c7f6fd19
+sink-1  |     Name           : GET /item/65
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950289 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951289 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(65)
+sink-1  |      -> http.response.status_code: Int(200)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #66
+sink-1  |     Trace ID       : f6928ae775aa3baf9f4226fb0b406add
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 4a1c0a36ec02c845
+sink-1  |     Name           : GET /item/66
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950291 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951291 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(66)
+sink-1  |      -> http.response.status_code: Int(201)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #67
+sink-1  |     Trace ID       : 9413b05e9c02bed6b236e81370bb82f4
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 4243071b4c742206
+sink-1  |     Name           : GET /item/67
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950293 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951293 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(67)
+sink-1  |      -> http.response.status_code: Int(202)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #68
+sink-1  |     Trace ID       : 087e6d5c135853786a14def1d75e9575
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 83d4846dbf11963b
+sink-1  |     Name           : GET /item/68
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950294 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951294 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(68)
+sink-1  |      -> http.response.status_code: Int(203)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #69
+sink-1  |     Trace ID       : d97d42694fd418f0b85b7efb4540c9c4
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 1373454855e5e1c9
+sink-1  |     Name           : GET /item/69
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950296 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951296 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(69)
+sink-1  |      -> http.response.status_code: Int(204)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #70
+sink-1  |     Trace ID       : 7c93110173ec0c84d2151e21318a258c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 212121a1f29e9066
+sink-1  |     Name           : GET /item/70
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950298 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951298 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(70)
+sink-1  |      -> http.response.status_code: Int(200)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #71
+sink-1  |     Trace ID       : 6d018e1053bc9d27ea98502d32b22d2d
+sink-1  |     Parent ID      :
+sink-1  |     ID             : fd5c68a5ef057807
+sink-1  |     Name           : GET /item/71
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950299 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951299 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(71)
+sink-1  |      -> http.response.status_code: Int(201)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #72
+sink-1  |     Trace ID       : 020d26c6d0b1353e8bc33e137db0b6c3
+sink-1  |     Parent ID      :
+sink-1  |     ID             : fa2d2ac1b850b4aa
+sink-1  |     Name           : GET /item/72
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950302 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951302 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(72)
+sink-1  |      -> http.response.status_code: Int(202)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #73
+sink-1  |     Trace ID       : e78c5be2c870b10b41cdd686ebae5f22
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e25db7da2ad793e3
+sink-1  |     Name           : GET /item/73
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950304 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951304 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(73)
+sink-1  |      -> http.response.status_code: Int(203)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #74
+sink-1  |     Trace ID       : bf92c35b6232b23149644eae7f79c302
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 006095eb260d1c06
+sink-1  |     Name           : GET /item/74
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950307 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951307 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(74)
+sink-1  |      -> http.response.status_code: Int(204)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #75
+sink-1  |     Trace ID       : 8f98bd8925f8dd55d1ac10d8e0135d5c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : d3e587d688936216
+sink-1  |     Name           : GET /item/75
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950308 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951308 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(75)
+sink-1  |      -> http.response.status_code: Int(200)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #76
+sink-1  |     Trace ID       : 76d7a6ee4cac69a1790cd284d606914a
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 04299a305bce10e6
+sink-1  |     Name           : GET /item/76
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.95031 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.95131 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(76)
+sink-1  |      -> http.response.status_code: Int(201)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #77
+sink-1  |     Trace ID       : 91ae4d08882a0a617c43e852029eebb1
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 356aced586dd66ef
+sink-1  |     Name           : GET /item/77
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950312 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951312 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(77)
+sink-1  |      -> http.response.status_code: Int(202)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #78
+sink-1  |     Trace ID       : b0f5b47a839c3f9a52a3b4d1d56dfbec
+sink-1  |     Parent ID      :
+sink-1  |     ID             : a43babc7bf804731
+sink-1  |     Name           : GET /item/78
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950314 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951314 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(78)
+sink-1  |      -> http.response.status_code: Int(203)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #79
+sink-1  |     Trace ID       : 56a4735e1f467df20d509d44c7b30518
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 5930c843533c7911
+sink-1  |     Name           : GET /item/79
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950316 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951316 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(79)
+sink-1  |      -> http.response.status_code: Int(204)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #80
+sink-1  |     Trace ID       : fa64229553d2ecb9870cb93ec6763369
+sink-1  |     Parent ID      :
+sink-1  |     ID             : c3a83cd6b2406460
+sink-1  |     Name           : GET /item/80
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950318 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951318 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(80)
+sink-1  |      -> http.response.status_code: Int(200)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #81
+sink-1  |     Trace ID       : c50357b75ac7a79fd385ae71290aca1e
+sink-1  |     Parent ID      :
+sink-1  |     ID             : b20b8fa9cd739756
+sink-1  |     Name           : GET /item/81
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.95032 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.95132 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(81)
+sink-1  |      -> http.response.status_code: Int(201)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #82
+sink-1  |     Trace ID       : 4ea0e2f2f09861170f8fb34168fca33c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : d8108f64a8aeea22
+sink-1  |     Name           : GET /item/82
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950322 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951322 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(82)
+sink-1  |      -> http.response.status_code: Int(202)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #83
+sink-1  |     Trace ID       : a163cde7ab6f576ecc37aebaeb6c00ce
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 218010a24ec5a8c7
+sink-1  |     Name           : GET /item/83
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950324 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951324 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(83)
+sink-1  |      -> http.response.status_code: Int(203)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #84
+sink-1  |     Trace ID       : f3d955a958afd324697a201157ec10f6
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 0948d174365d1df9
+sink-1  |     Name           : GET /item/84
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950326 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951326 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(84)
+sink-1  |      -> http.response.status_code: Int(204)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #85
+sink-1  |     Trace ID       : ae33a5e280e94b8766ba27b0955823d4
+sink-1  |     Parent ID      :
+sink-1  |     ID             : a7478e6438719ee8
+sink-1  |     Name           : GET /item/85
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950328 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951328 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(85)
+sink-1  |      -> http.response.status_code: Int(200)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #86
+sink-1  |     Trace ID       : 8b5bef063ac13de76ed4aec9aff956ab
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 159ea1b0f96e66bf
+sink-1  |     Name           : GET /item/86
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950329 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951329 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(86)
+sink-1  |      -> http.response.status_code: Int(201)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #87
+sink-1  |     Trace ID       : 078f6e09400e6e81ced629fc5e7b1fab
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e90b18e7262cdb1e
+sink-1  |     Name           : GET /item/87
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950331 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951331 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(87)
+sink-1  |      -> http.response.status_code: Int(202)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #88
+sink-1  |     Trace ID       : 3a4b4266a61215c15818abd03d16a506
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 32a74351621b97a2
+sink-1  |     Name           : GET /item/88
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950333 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951333 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(88)
+sink-1  |      -> http.response.status_code: Int(203)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #89
+sink-1  |     Trace ID       : 8d71f659d7e470d90ef38a459577f1ab
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 067a07cc2971bf21
+sink-1  |     Name           : GET /item/89
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950334 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951334 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(89)
+sink-1  |      -> http.response.status_code: Int(204)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #90
+sink-1  |     Trace ID       : 9027e02cc7dfc7dcb684436da557f05a
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 69c15462ac36510d
+sink-1  |     Name           : GET /item/90
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950337 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951337 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(90)
+sink-1  |      -> http.response.status_code: Int(500)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #91
+sink-1  |     Trace ID       : 82772671fd88da06ba8539d02910618f
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e9cab60fcdb57a9f
+sink-1  |     Name           : GET /item/91
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.95034 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.95134 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(91)
+sink-1  |      -> http.response.status_code: Int(501)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #92
+sink-1  |     Trace ID       : f56347f65ec5de8511e68c56db708c2a
+sink-1  |     Parent ID      :
+sink-1  |     ID             : d03b9542ada366c6
+sink-1  |     Name           : GET /item/92
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950343 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951343 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(92)
+sink-1  |      -> http.response.status_code: Int(502)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #93
+sink-1  |     Trace ID       : 1e2c570561b9cdcb4d5967f970fc643c
+sink-1  |     Parent ID      :
+sink-1  |     ID             : e11d85330e3ebbc0
+sink-1  |     Name           : GET /item/93
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950347 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951347 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(93)
+sink-1  |      -> http.response.status_code: Int(503)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #94
+sink-1  |     Trace ID       : 2edd8a576a8a8221be924d7ec6fb3d11
+sink-1  |     Parent ID      :
+sink-1  |     ID             : eb5e88a6c0bc7979
+sink-1  |     Name           : GET /item/94
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.95035 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.95135 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(94)
+sink-1  |      -> http.response.status_code: Int(504)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #95
+sink-1  |     Trace ID       : e8ae7462848748d62b6b48858666b777
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 43518eb3a4949b6b
+sink-1  |     Name           : GET /item/95
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950353 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951353 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(95)
+sink-1  |      -> http.response.status_code: Int(500)
+sink-1  |      -> http.status_code: Int(200)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #96
+sink-1  |     Trace ID       : 735ff4cda3837f07587709a2cbbe5d6e
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 878dd913b8519774
+sink-1  |     Name           : GET /item/96
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950357 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951357 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(96)
+sink-1  |      -> http.response.status_code: Int(501)
+sink-1  |      -> http.status_code: Int(201)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #97
+sink-1  |     Trace ID       : 3adea0c0dc9c91e83b4529f765c3ddaf
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 0ff3d91237a5939a
+sink-1  |     Name           : GET /item/97
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950359 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951359 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(97)
+sink-1  |      -> http.response.status_code: Int(502)
+sink-1  |      -> http.status_code: Int(202)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #98
+sink-1  |     Trace ID       : ef12d8defc8da04ea52d109a713afa03
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 6092d053682788b1
+sink-1  |     Name           : GET /item/98
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950361 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951361 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(98)
+sink-1  |      -> http.response.status_code: Int(503)
+sink-1  |      -> http.status_code: Int(203)
+sink-1  |      -> phase: Str(live)
+sink-1  | Span #99
+sink-1  |     Trace ID       : ee746f90ce10f6dae44d56669c497073
+sink-1  |     Parent ID      :
+sink-1  |     ID             : 4950d19ef4b51095
+sink-1  |     Name           : GET /item/99
+sink-1  |     Kind           : Server
+sink-1  |     Start time     : 2026-10-09 23:57:56.950362 +0000 UTC
+sink-1  |     End time       : 2026-10-09 23:57:56.951362 +0000 UTC
+sink-1  |     Status code    : Unset
+sink-1  |     Status message :
+sink-1  |     DroppedAttributesCount: 0
+sink-1  |     DroppedEventsCount: 0
+sink-1  |     DroppedLinksCount: 0
+sink-1  | Attributes:
+sink-1  |      -> event.sequence: Int(99)
+sink-1  |      -> http.response.status_code: Int(504)
+sink-1  |      -> http.status_code: Int(204)
+sink-1  |      -> phase: Str(live)
+sink-1  | 	{"resource": {"service.instance.id": "271ebcd6-8db8-48d2-abda-eace554a2c81", "service.name": "otelcol-contrib", "service.version": "0.162.0"}, "otelcol.component.id": "debug", "otelcol.component.kind": "exporter", "otelcol.signal": "traces"}

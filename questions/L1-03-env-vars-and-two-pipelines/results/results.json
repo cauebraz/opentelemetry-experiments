@@ -1,0 +1,489 @@
+{
+  "columns": [
+    {
+      "kind": "number",
+      "label": "HTTP status",
+      "path": "sending.http_status"
+    },
+    {
+      "kind": "number",
+      "label": "Accepted",
+      "path": "counters.collector.traces.receiver_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Sent by both pipelines",
+      "path": "counters.collector.traces.exporter_sent"
+    },
+    {
+      "kind": "number",
+      "label": "Arrived at the sink",
+      "path": "counters.sink.traces.receiver_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Spans printed by a",
+      "path": "measured.spans_printed_by_a"
+    },
+    {
+      "kind": "number",
+      "label": "Spans printed at the sink",
+      "path": "measured.spans_printed_at_sink"
+    },
+    {
+      "kind": "number",
+      "label": "Values at the sink",
+      "path": "measured.distinct_values_at_sink"
+    },
+    {
+      "kind": "number",
+      "label": "Warn lines",
+      "path": "log.warn_lines"
+    },
+    {
+      "kind": "text",
+      "label": "pipeline= in a",
+      "path": "measured.pipeline_attr_in_a"
+    },
+    {
+      "kind": "text",
+      "label": "pipeline= at the sink",
+      "path": "measured.pipeline_attr_at_sink"
+    }
+  ],
+  "question": {
+    "id": "L1-03",
+    "level": 1,
+    "signals": [
+      "traces"
+    ],
+    "theme": "collector",
+    "title": "Does a processor in one pipeline change what another pipeline sees?"
+  },
+  "repetitions": 3,
+  "runs": [
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "two pipelines, no processor in either",
+      "log": {
+        "error_lines": 0,
+        "lines": 34,
+        "warn_lines": 0
+      },
+      "measured": {
+        "distinct_values_at_sink": 0,
+        "pipeline_attr_at_sink": "absent",
+        "pipeline_attr_in_a": "absent",
+        "spans_printed_at_sink": 1,
+        "spans_printed_by_a": 1
+      },
+      "repetition": 1,
+      "sending": {
+        "http_status": 200,
+        "request_bytes": 425,
+        "response_body": "{\"partialSuccess\":{}}",
+        "spans_sent": 1
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "neither-mutates"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "pipeline a inserts pipeline=a, pipeline b has no processor",
+      "log": {
+        "error_lines": 0,
+        "lines": 35,
+        "warn_lines": 0
+      },
+      "measured": {
+        "distinct_values_at_sink": 0,
+        "pipeline_attr_at_sink": "absent",
+        "pipeline_attr_in_a": "a",
+        "spans_printed_at_sink": 1,
+        "spans_printed_by_a": 1
+      },
+      "repetition": 1,
+      "sending": {
+        "http_status": 200,
+        "request_bytes": 425,
+        "response_body": "{\"partialSuccess\":{}}",
+        "spans_sent": 1
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "one-mutates"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "pipeline a inserts pipeline=a, pipeline b inserts pipeline=b",
+      "log": {
+        "error_lines": 0,
+        "lines": 35,
+        "warn_lines": 0
+      },
+      "measured": {
+        "distinct_values_at_sink": 1,
+        "pipeline_attr_at_sink": "b",
+        "pipeline_attr_in_a": "a",
+        "spans_printed_at_sink": 1,
+        "spans_printed_by_a": 1
+      },
+      "repetition": 1,
+      "sending": {
+        "http_status": 200,
+        "request_bytes": 425,
+        "response_body": "{\"partialSuccess\":{}}",
+        "spans_sent": 1
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "both-mutate"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "two pipelines, no processor in either",
+      "log": {
+        "error_lines": 0,
+        "lines": 34,
+        "warn_lines": 0
+      },
+      "measured": {
+        "distinct_values_at_sink": 0,
+        "pipeline_attr_at_sink": "absent",
+        "pipeline_attr_in_a": "absent",
+        "spans_printed_at_sink": 1,
+        "spans_printed_by_a": 1
+      },
+      "repetition": 2,
+      "sending": {
+        "http_status": 200,
+        "request_bytes": 425,
+        "response_body": "{\"partialSuccess\":{}}",
+        "spans_sent": 1
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "neither-mutates"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "pipeline a inserts pipeline=a, pipeline b has no processor",
+      "log": {
+        "error_lines": 0,
+        "lines": 35,
+        "warn_lines": 0
+      },
+      "measured": {
+        "distinct_values_at_sink": 0,
+        "pipeline_attr_at_sink": "absent",
+        "pipeline_attr_in_a": "a",
+        "spans_printed_at_sink": 1,
+        "spans_printed_by_a": 1
+      },
+      "repetition": 2,
+      "sending": {
+        "http_status": 200,
+        "request_bytes": 425,
+        "response_body": "{\"partialSuccess\":{}}",
+        "spans_sent": 1
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "one-mutates"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "pipeline a inserts pipeline=a, pipeline b inserts pipeline=b",
+      "log": {
+        "error_lines": 0,
+        "lines": 35,
+        "warn_lines": 0
+      },
+      "measured": {
+        "distinct_values_at_sink": 1,
+        "pipeline_attr_at_sink": "b",
+        "pipeline_attr_in_a": "a",
+        "spans_printed_at_sink": 1,
+        "spans_printed_by_a": 1
+      },
+      "repetition": 2,
+      "sending": {
+        "http_status": 200,
+        "request_bytes": 425,
+        "response_body": "{\"partialSuccess\":{}}",
+        "spans_sent": 1
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "both-mutate"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "two pipelines, no processor in either",
+      "log": {
+        "error_lines": 0,
+        "lines": 34,
+        "warn_lines": 0
+      },
+      "measured": {
+        "distinct_values_at_sink": 0,
+        "pipeline_attr_at_sink": "absent",
+        "pipeline_attr_in_a": "absent",
+        "spans_printed_at_sink": 1,
+        "spans_printed_by_a": 1
+      },
+      "repetition": 3,
+      "sending": {
+        "http_status": 200,
+        "request_bytes": 425,
+        "response_body": "{\"partialSuccess\":{}}",
+        "spans_sent": 1
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "neither-mutates"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "pipeline a inserts pipeline=a, pipeline b has no processor",
+      "log": {
+        "error_lines": 0,
+        "lines": 35,
+        "warn_lines": 0
+      },
+      "measured": {
+        "distinct_values_at_sink": 0,
+        "pipeline_attr_at_sink": "absent",
+        "pipeline_attr_in_a": "a",
+        "spans_printed_at_sink": 1,
+        "spans_printed_by_a": 1
+      },
+      "repetition": 3,
+      "sending": {
+        "http_status": 200,
+        "request_bytes": 425,
+        "response_body": "{\"partialSuccess\":{}}",
+        "spans_sent": 1
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "one-mutates"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "pipeline a inserts pipeline=a, pipeline b inserts pipeline=b",
+      "log": {
+        "error_lines": 0,
+        "lines": 35,
+        "warn_lines": 0
+      },
+      "measured": {
+        "distinct_values_at_sink": 1,
+        "pipeline_attr_at_sink": "b",
+        "pipeline_attr_in_a": "a",
+        "spans_printed_at_sink": 1,
+        "spans_printed_by_a": 1
+      },
+      "repetition": 3,
+      "sending": {
+        "http_status": 200,
+        "request_bytes": 425,
+        "response_body": "{\"partialSuccess\":{}}",
+        "spans_sent": 1
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "both-mutate"
+    }
+  ],
+  "stack": {
+    "otelcol_contrib": "0.162.0",
+    "prometheus": "v3.15.0"
+  },
+  "variants": [
+    {
+      "description": "two pipelines, no processor in either",
+      "name": "neither-mutates"
+    },
+    {
+      "description": "pipeline a inserts pipeline=a, pipeline b has no processor",
+      "name": "one-mutates"
+    },
+    {
+      "description": "pipeline a inserts pipeline=a, pipeline b inserts pipeline=b",
+      "name": "both-mutate"
+    }
+  ]
+}

@@ -1,0 +1,756 @@
+{
+  "columns": [
+    {
+      "kind": "number",
+      "label": "Historical",
+      "path": "sending.historical_delivered"
+    },
+    {
+      "kind": "number",
+      "label": "Total delivered",
+      "path": "sending.total_delivered"
+    },
+    {
+      "kind": "number",
+      "label": "Old-only",
+      "path": "sending.coverage_old_only"
+    },
+    {
+      "kind": "number",
+      "label": "New-only",
+      "path": "sending.coverage_new_only"
+    },
+    {
+      "kind": "number",
+      "label": "Old or new",
+      "path": "sending.coverage_either"
+    },
+    {
+      "kind": "number",
+      "label": "Both names",
+      "path": "sending.coverage_both"
+    },
+    {
+      "kind": "number",
+      "label": "Live attrs/span",
+      "path": "sending.attrs_per_live_span"
+    },
+    {
+      "kind": "number",
+      "label": "Both kept",
+      "path": "sending.both_kept"
+    },
+    {
+      "kind": "number",
+      "label": "Translated",
+      "path": "sending.translated"
+    },
+    {
+      "kind": "number",
+      "label": "Batch item B",
+      "path": "sending.batch_item_bytes"
+    },
+    {
+      "kind": "text",
+      "label": "Schema URLs",
+      "path": "sending.resource_schema_urls"
+    },
+    {
+      "kind": "number",
+      "label": "Unique traces",
+      "path": "measured.unique_traces"
+    }
+  ],
+  "execution_order": [
+    [
+      "none",
+      "hard-rename",
+      "dual-write"
+    ],
+    [
+      "hard-rename",
+      "dual-write",
+      "none"
+    ],
+    [
+      "dual-write",
+      "none",
+      "hard-rename"
+    ]
+  ],
+  "provenance": {
+    "compose_sha256": "4af907fe0f70c06f65d2ac0c8d69d17a6c6b320dbaeb37eaa3e39cc699e178f2",
+    "docker_compose": "5.5.1",
+    "dockerfile_sha256": "9144298cec761cc3f7f162e232a2accda2203566c7fe91b9566f15e9f5d245de",
+    "machine": "arm64",
+    "python": "3.14.8",
+    "system": "Darwin"
+  },
+  "question": {
+    "id": "L4-03",
+    "level": 4,
+    "signals": [
+      "traces"
+    ],
+    "theme": "semconv",
+    "title": "How do you rename an attribute without losing the history behind it?"
+  },
+  "repetitions": 3,
+  "results_version": 2,
+  "runs": [
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 200.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "pass-through Collector, no schema processor",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "printed_spans": 200,
+        "resource_schema_urls": [
+          "http://host.docker.internal:28080/1.20.0"
+        ],
+        "unique_traces": 100
+      },
+      "position": 1,
+      "repetition": 1,
+      "sending": {
+        "attrs_per_live_span": 3.1,
+        "batch_item_bytes": 13734.0,
+        "both_kept": 10,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "coverage_both": 10,
+        "coverage_either": 200,
+        "coverage_new_only": 0,
+        "coverage_old_only": 190,
+        "historical_delivered": 100,
+        "history_http_status": 200,
+        "history_request_bytes": 39125,
+        "live_both": 10,
+        "live_http_status": 200,
+        "live_new_only": 0,
+        "live_old_only": 90,
+        "live_request_bytes": 39205,
+        "live_spans": 100,
+        "resource_schema_urls": [
+          "http://host.docker.internal:28080/1.20.0"
+        ],
+        "schema_fetch_host": "host.docker.internal",
+        "total_delivered": 200,
+        "translated": null
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 200.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "schema target 1.21.0, hard rename",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "printed_spans": 200,
+        "resource_schema_urls": [
+          "http://host.docker.internal:28080/1.20.0",
+          "http://host.docker.internal:28080/1.21.0"
+        ],
+        "unique_traces": 100
+      },
+      "position": 2,
+      "repetition": 1,
+      "sending": {
+        "attrs_per_live_span": 3.0,
+        "batch_item_bytes": 14336.0,
+        "both_kept": 0,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "coverage_both": 0,
+        "coverage_either": 200,
+        "coverage_new_only": 100,
+        "coverage_old_only": 100,
+        "historical_delivered": 100,
+        "history_http_status": 200,
+        "history_request_bytes": 39125,
+        "live_both": 0,
+        "live_http_status": 200,
+        "live_new_only": 100,
+        "live_old_only": 0,
+        "live_request_bytes": 39205,
+        "live_spans": 100,
+        "resource_schema_urls": [
+          "http://host.docker.internal:28080/1.20.0",
+          "http://host.docker.internal:28080/1.21.0"
+        ],
+        "schema_fetch_host": "host.docker.internal",
+        "total_delivered": 200,
+        "translated": null
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "hard-rename"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 200.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "schema target 1.21.0 with migration.from 1.20.0",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 1
+      },
+      "measured": {
+        "printed_spans": 200,
+        "resource_schema_urls": [
+          "http://host.docker.internal:28080/1.20.0",
+          "http://host.docker.internal:28080/1.21.0"
+        ],
+        "unique_traces": 100
+      },
+      "position": 3,
+      "repetition": 1,
+      "sending": {
+        "attrs_per_live_span": 4.0,
+        "batch_item_bytes": 16838.0,
+        "both_kept": 100,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "coverage_both": 100,
+        "coverage_either": 200,
+        "coverage_new_only": 0,
+        "coverage_old_only": 100,
+        "historical_delivered": 100,
+        "history_http_status": 200,
+        "history_request_bytes": 39125,
+        "live_both": 100,
+        "live_http_status": 200,
+        "live_new_only": 0,
+        "live_old_only": 0,
+        "live_request_bytes": 39205,
+        "live_spans": 100,
+        "resource_schema_urls": [
+          "http://host.docker.internal:28080/1.20.0",
+          "http://host.docker.internal:28080/1.21.0"
+        ],
+        "schema_fetch_host": "host.docker.internal",
+        "total_delivered": 200,
+        "translated": null
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "dual-write"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 200.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "schema target 1.21.0, hard rename",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "printed_spans": 200,
+        "resource_schema_urls": [
+          "http://host.docker.internal:28080/1.20.0",
+          "http://host.docker.internal:28080/1.21.0"
+        ],
+        "unique_traces": 100
+      },
+      "position": 1,
+      "repetition": 2,
+      "sending": {
+        "attrs_per_live_span": 3.0,
+        "batch_item_bytes": 14336.0,
+        "both_kept": 0,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "coverage_both": 0,
+        "coverage_either": 200,
+        "coverage_new_only": 100,
+        "coverage_old_only": 100,
+        "historical_delivered": 100,
+        "history_http_status": 200,
+        "history_request_bytes": 39125,
+        "live_both": 0,
+        "live_http_status": 200,
+        "live_new_only": 100,
+        "live_old_only": 0,
+        "live_request_bytes": 39205,
+        "live_spans": 100,
+        "resource_schema_urls": [
+          "http://host.docker.internal:28080/1.20.0",
+          "http://host.docker.internal:28080/1.21.0"
+        ],
+        "schema_fetch_host": "host.docker.internal",
+        "total_delivered": 200,
+        "translated": null
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "hard-rename"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 200.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "schema target 1.21.0 with migration.from 1.20.0",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 1
+      },
+      "measured": {
+        "printed_spans": 200,
+        "resource_schema_urls": [
+          "http://host.docker.internal:28080/1.20.0",
+          "http://host.docker.internal:28080/1.21.0"
+        ],
+        "unique_traces": 100
+      },
+      "position": 2,
+      "repetition": 2,
+      "sending": {
+        "attrs_per_live_span": 4.0,
+        "batch_item_bytes": 16838.0,
+        "both_kept": 100,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "coverage_both": 100,
+        "coverage_either": 200,
+        "coverage_new_only": 0,
+        "coverage_old_only": 100,
+        "historical_delivered": 100,
+        "history_http_status": 200,
+        "history_request_bytes": 39125,
+        "live_both": 100,
+        "live_http_status": 200,
+        "live_new_only": 0,
+        "live_old_only": 0,
+        "live_request_bytes": 39205,
+        "live_spans": 100,
+        "resource_schema_urls": [
+          "http://host.docker.internal:28080/1.20.0",
+          "http://host.docker.internal:28080/1.21.0"
+        ],
+        "schema_fetch_host": "host.docker.internal",
+        "total_delivered": 200,
+        "translated": null
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "dual-write"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 200.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "pass-through Collector, no schema processor",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "printed_spans": 200,
+        "resource_schema_urls": [
+          "http://host.docker.internal:28080/1.20.0"
+        ],
+        "unique_traces": 100
+      },
+      "position": 3,
+      "repetition": 2,
+      "sending": {
+        "attrs_per_live_span": 3.1,
+        "batch_item_bytes": 13734.0,
+        "both_kept": 10,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "coverage_both": 10,
+        "coverage_either": 200,
+        "coverage_new_only": 0,
+        "coverage_old_only": 190,
+        "historical_delivered": 100,
+        "history_http_status": 200,
+        "history_request_bytes": 39125,
+        "live_both": 10,
+        "live_http_status": 200,
+        "live_new_only": 0,
+        "live_old_only": 90,
+        "live_request_bytes": 39205,
+        "live_spans": 100,
+        "resource_schema_urls": [
+          "http://host.docker.internal:28080/1.20.0"
+        ],
+        "schema_fetch_host": "host.docker.internal",
+        "total_delivered": 200,
+        "translated": null
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 200.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "schema target 1.21.0 with migration.from 1.20.0",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 1
+      },
+      "measured": {
+        "printed_spans": 200,
+        "resource_schema_urls": [
+          "http://host.docker.internal:28080/1.20.0",
+          "http://host.docker.internal:28080/1.21.0"
+        ],
+        "unique_traces": 100
+      },
+      "position": 1,
+      "repetition": 3,
+      "sending": {
+        "attrs_per_live_span": 4.0,
+        "batch_item_bytes": 16838.0,
+        "both_kept": 100,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "coverage_both": 100,
+        "coverage_either": 200,
+        "coverage_new_only": 0,
+        "coverage_old_only": 100,
+        "historical_delivered": 100,
+        "history_http_status": 200,
+        "history_request_bytes": 39125,
+        "live_both": 100,
+        "live_http_status": 200,
+        "live_new_only": 0,
+        "live_old_only": 0,
+        "live_request_bytes": 39205,
+        "live_spans": 100,
+        "resource_schema_urls": [
+          "http://host.docker.internal:28080/1.20.0",
+          "http://host.docker.internal:28080/1.21.0"
+        ],
+        "schema_fetch_host": "host.docker.internal",
+        "total_delivered": 200,
+        "translated": null
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "dual-write"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 200.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "pass-through Collector, no schema processor",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "printed_spans": 200,
+        "resource_schema_urls": [
+          "http://host.docker.internal:28080/1.20.0"
+        ],
+        "unique_traces": 100
+      },
+      "position": 2,
+      "repetition": 3,
+      "sending": {
+        "attrs_per_live_span": 3.1,
+        "batch_item_bytes": 13734.0,
+        "both_kept": 10,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "coverage_both": 10,
+        "coverage_either": 200,
+        "coverage_new_only": 0,
+        "coverage_old_only": 190,
+        "historical_delivered": 100,
+        "history_http_status": 200,
+        "history_request_bytes": 39125,
+        "live_both": 10,
+        "live_http_status": 200,
+        "live_new_only": 0,
+        "live_old_only": 90,
+        "live_request_bytes": 39205,
+        "live_spans": 100,
+        "resource_schema_urls": [
+          "http://host.docker.internal:28080/1.20.0"
+        ],
+        "schema_fetch_host": "host.docker.internal",
+        "total_delivered": 200,
+        "translated": null
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 200.0,
+            "receiver_accepted": 200.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "schema target 1.21.0, hard rename",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "printed_spans": 200,
+        "resource_schema_urls": [
+          "http://host.docker.internal:28080/1.20.0",
+          "http://host.docker.internal:28080/1.21.0"
+        ],
+        "unique_traces": 100
+      },
+      "position": 3,
+      "repetition": 3,
+      "sending": {
+        "attrs_per_live_span": 3.0,
+        "batch_item_bytes": 14336.0,
+        "both_kept": 0,
+        "collector_oom": false,
+        "collector_restarts": 0,
+        "collector_running": true,
+        "coverage_both": 0,
+        "coverage_either": 200,
+        "coverage_new_only": 100,
+        "coverage_old_only": 100,
+        "historical_delivered": 100,
+        "history_http_status": 200,
+        "history_request_bytes": 39125,
+        "live_both": 0,
+        "live_http_status": 200,
+        "live_new_only": 100,
+        "live_old_only": 0,
+        "live_request_bytes": 39205,
+        "live_spans": 100,
+        "resource_schema_urls": [
+          "http://host.docker.internal:28080/1.20.0",
+          "http://host.docker.internal:28080/1.21.0"
+        ],
+        "schema_fetch_host": "host.docker.internal",
+        "total_delivered": 200,
+        "translated": null
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "hard-rename"
+    }
+  ],
+  "stack": {
+    "otelcol_contrib": "0.162.0",
+    "prometheus": "v3.15.0"
+  },
+  "variants": [
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "870ea0091c3c02d7e3d84ba924b243eac8a6ad7b538ffa770242c5222559d1b6",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "3a30a96099408576ef0d59f0789426de9d0dc060d4cc0679105a151e343ffbc9"
+      },
+      "description": "pass-through Collector, no schema processor",
+      "name": "none",
+      "options": {}
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "a0ee906e21fe301f6a34c880b60bad8a3d3cb673705aedb3061fe3c6808f2cf7",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "3a30a96099408576ef0d59f0789426de9d0dc060d4cc0679105a151e343ffbc9"
+      },
+      "description": "schema target 1.21.0, hard rename",
+      "name": "hard-rename",
+      "options": {}
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "c43a8200d4f613945ba82a7661afca940767d29274930728aaae5580fd87b6b9",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "3a30a96099408576ef0d59f0789426de9d0dc060d4cc0679105a151e343ffbc9"
+      },
+      "description": "schema target 1.21.0 with migration.from 1.20.0",
+      "name": "dual-write",
+      "options": {}
+    }
+  ]
+}

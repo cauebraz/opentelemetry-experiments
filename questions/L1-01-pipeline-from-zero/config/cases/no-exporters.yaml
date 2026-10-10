@@ -1,0 +1,13 @@
+receivers:
+  otlp:
+    protocols:
+      http:
+
+exporters:
+  debug:
+
+service:
+  pipelines:
+    logs:
+      receivers:
+        - otlp

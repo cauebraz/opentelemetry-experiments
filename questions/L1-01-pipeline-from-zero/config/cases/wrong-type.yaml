@@ -1,0 +1,16 @@
+receivers:
+  otlp:
+    protocols:
+      http:
+
+exporters:
+  debug:
+    sampling_initial: many
+
+service:
+  pipelines:
+    logs:
+      receivers:
+        - otlp
+      exporters:
+        - debug

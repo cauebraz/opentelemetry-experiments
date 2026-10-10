@@ -1,0 +1,16 @@
+receivers:
+  otlp:
+    protocols:
+      http:
+
+exporters:
+  debug:
+    verbosty: detailed
+
+service:
+  pipelines:
+    logs:
+      receivers:
+        - otlp
+      exporters:
+        - debug

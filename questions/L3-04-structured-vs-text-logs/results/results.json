@@ -1,0 +1,737 @@
+{
+  "columns": [
+    {
+      "kind": "number",
+      "label": "Records sent",
+      "path": "sending.records_sent"
+    },
+    {
+      "kind": "number",
+      "label": "Request bytes",
+      "path": "sending.request_bytes"
+    },
+    {
+      "kind": "number",
+      "label": "Request bytes per record",
+      "path": "sending.request_bytes_per_record"
+    },
+    {
+      "kind": "number",
+      "label": "Batch item bytes",
+      "path": "sending.batch_item_bytes"
+    },
+    {
+      "kind": "number",
+      "label": "Batch bytes per record",
+      "path": "sending.batch_item_bytes_per_record"
+    },
+    {
+      "kind": "number",
+      "label": "Collector accepted",
+      "path": "counters.collector.logs.receiver_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Sink accepted",
+      "path": "counters.sink.logs.receiver_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Delivered",
+      "path": "measured.delivered_records"
+    },
+    {
+      "kind": "number",
+      "label": "Unique sequences",
+      "path": "measured.unique_sequences"
+    },
+    {
+      "kind": "number",
+      "label": "Parsed records",
+      "path": "measured.parsed_records"
+    },
+    {
+      "kind": "number",
+      "label": "Control count",
+      "path": "sending.control_count"
+    },
+    {
+      "kind": "number",
+      "label": "Categorized",
+      "path": "sending.categorized_count"
+    },
+    {
+      "kind": "number",
+      "label": "Unparsed",
+      "path": "sending.unparsed_count"
+    },
+    {
+      "kind": "number",
+      "label": "Request series",
+      "path": "sending.request_series"
+    },
+    {
+      "kind": "number",
+      "label": "Miscounted",
+      "path": "sending.miscounted"
+    },
+    {
+      "kind": "number",
+      "label": "Warn lines",
+      "path": "log.warn_lines"
+    },
+    {
+      "kind": "number",
+      "label": "Error lines",
+      "path": "log.error_lines"
+    }
+  ],
+  "provenance": {
+    "compose_sha256": "49991e9504b2cec047c838cfcbcb462847254b462c3785d3655a1048e4e32555",
+    "docker_compose": "5.5.1",
+    "dockerfile_sha256": "9144298cec761cc3f7f162e232a2accda2203566c7fe91b9566f15e9f5d245de",
+    "machine": "arm64",
+    "python": "3.14.8",
+    "system": "Darwin"
+  },
+  "question": {
+    "id": "L3-04",
+    "level": 3,
+    "signals": [
+      "logs"
+    ],
+    "theme": "logs",
+    "title": "What do structured logs cost, and what do they save?"
+  },
+  "repetitions": 3,
+  "results_version": 2,
+  "runs": [
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "every field in the body, parsed by the Collector",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_records": 1000,
+        "duplicates": 0,
+        "missing_sequences": 0,
+        "parsed_records": 1000,
+        "unique_sequences": 1000,
+        "unknown_sequences": 0
+      },
+      "repetition": 1,
+      "sending": {
+        "batch_item_bytes": 179536.0,
+        "batch_item_bytes_per_record": 179.5,
+        "categories": {
+          "/cart error": 20,
+          "/cart ok": 180,
+          "/checkout error": 20,
+          "/checkout ok": 180,
+          "/login error": 20,
+          "/login ok": 180,
+          "/profile error": 20,
+          "/profile ok": 180,
+          "/search error": 20,
+          "/search ok": 180
+        },
+        "categorized_count": 1000,
+        "control_count": 1000.0,
+        "http_status": 200,
+        "miscounted": 0,
+        "records_sent": 1000,
+        "request_bytes": 274381,
+        "request_bytes_per_record": 274.4,
+        "request_series": 10,
+        "unparsed_count": 0
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "text-canonical"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the same text with 10 records in a second format",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_records": 1000,
+        "duplicates": 0,
+        "missing_sequences": 0,
+        "parsed_records": 990,
+        "unique_sequences": 1000,
+        "unknown_sequences": 0
+      },
+      "repetition": 1,
+      "sending": {
+        "batch_item_bytes": 178651.0,
+        "batch_item_bytes_per_record": 178.7,
+        "categories": {
+          "/cart error": 20,
+          "/cart ok": 180,
+          "/checkout error": 19,
+          "/checkout ok": 180,
+          "/login error": 20,
+          "/login ok": 180,
+          "/profile error": 20,
+          "/profile ok": 180,
+          "/search error": 20,
+          "/search ok": 171,
+          "unparsed unparsed": 10
+        },
+        "categorized_count": 990,
+        "control_count": 1000.0,
+        "http_status": 200,
+        "miscounted": 10,
+        "records_sent": 1000,
+        "request_bytes": 273931,
+        "request_bytes_per_record": 273.9,
+        "request_series": 11,
+        "unparsed_count": 10
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "text-drift-1pct"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "a short body and typed attributes, nothing to parse",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_records": 1000,
+        "duplicates": 0,
+        "missing_sequences": 0,
+        "parsed_records": 1000,
+        "unique_sequences": 1000,
+        "unknown_sequences": 0
+      },
+      "repetition": 1,
+      "sending": {
+        "batch_item_bytes": 163676.0,
+        "batch_item_bytes_per_record": 163.7,
+        "categories": {
+          "/cart error": 20,
+          "/cart ok": 180,
+          "/checkout error": 20,
+          "/checkout ok": 180,
+          "/login error": 20,
+          "/login ok": 180,
+          "/profile error": 20,
+          "/profile ok": 180,
+          "/search error": 20,
+          "/search ok": 180
+        },
+        "categorized_count": 1000,
+        "control_count": 1000.0,
+        "http_status": 200,
+        "miscounted": 0,
+        "records_sent": 1000,
+        "request_bytes": 440381,
+        "request_bytes_per_record": 440.4,
+        "request_series": 10,
+        "unparsed_count": 0
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "structured"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "every field in the body, parsed by the Collector",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_records": 1000,
+        "duplicates": 0,
+        "missing_sequences": 0,
+        "parsed_records": 1000,
+        "unique_sequences": 1000,
+        "unknown_sequences": 0
+      },
+      "repetition": 2,
+      "sending": {
+        "batch_item_bytes": 179536.0,
+        "batch_item_bytes_per_record": 179.5,
+        "categories": {
+          "/cart error": 20,
+          "/cart ok": 180,
+          "/checkout error": 20,
+          "/checkout ok": 180,
+          "/login error": 20,
+          "/login ok": 180,
+          "/profile error": 20,
+          "/profile ok": 180,
+          "/search error": 20,
+          "/search ok": 180
+        },
+        "categorized_count": 1000,
+        "control_count": 1000.0,
+        "http_status": 200,
+        "miscounted": 0,
+        "records_sent": 1000,
+        "request_bytes": 274381,
+        "request_bytes_per_record": 274.4,
+        "request_series": 10,
+        "unparsed_count": 0
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "text-canonical"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the same text with 10 records in a second format",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_records": 1000,
+        "duplicates": 0,
+        "missing_sequences": 0,
+        "parsed_records": 990,
+        "unique_sequences": 1000,
+        "unknown_sequences": 0
+      },
+      "repetition": 2,
+      "sending": {
+        "batch_item_bytes": 178651.0,
+        "batch_item_bytes_per_record": 178.7,
+        "categories": {
+          "/cart error": 20,
+          "/cart ok": 180,
+          "/checkout error": 19,
+          "/checkout ok": 180,
+          "/login error": 20,
+          "/login ok": 180,
+          "/profile error": 20,
+          "/profile ok": 180,
+          "/search error": 20,
+          "/search ok": 171,
+          "unparsed unparsed": 10
+        },
+        "categorized_count": 990,
+        "control_count": 1000.0,
+        "http_status": 200,
+        "miscounted": 10,
+        "records_sent": 1000,
+        "request_bytes": 273931,
+        "request_bytes_per_record": 273.9,
+        "request_series": 11,
+        "unparsed_count": 10
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "text-drift-1pct"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "a short body and typed attributes, nothing to parse",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_records": 1000,
+        "duplicates": 0,
+        "missing_sequences": 0,
+        "parsed_records": 1000,
+        "unique_sequences": 1000,
+        "unknown_sequences": 0
+      },
+      "repetition": 2,
+      "sending": {
+        "batch_item_bytes": 163676.0,
+        "batch_item_bytes_per_record": 163.7,
+        "categories": {
+          "/cart error": 20,
+          "/cart ok": 180,
+          "/checkout error": 20,
+          "/checkout ok": 180,
+          "/login error": 20,
+          "/login ok": 180,
+          "/profile error": 20,
+          "/profile ok": 180,
+          "/search error": 20,
+          "/search ok": 180
+        },
+        "categorized_count": 1000,
+        "control_count": 1000.0,
+        "http_status": 200,
+        "miscounted": 0,
+        "records_sent": 1000,
+        "request_bytes": 440381,
+        "request_bytes_per_record": 440.4,
+        "request_series": 10,
+        "unparsed_count": 0
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "structured"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "every field in the body, parsed by the Collector",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_records": 1000,
+        "duplicates": 0,
+        "missing_sequences": 0,
+        "parsed_records": 1000,
+        "unique_sequences": 1000,
+        "unknown_sequences": 0
+      },
+      "repetition": 3,
+      "sending": {
+        "batch_item_bytes": 179536.0,
+        "batch_item_bytes_per_record": 179.5,
+        "categories": {
+          "/cart error": 20,
+          "/cart ok": 180,
+          "/checkout error": 20,
+          "/checkout ok": 180,
+          "/login error": 20,
+          "/login ok": 180,
+          "/profile error": 20,
+          "/profile ok": 180,
+          "/search error": 20,
+          "/search ok": 180
+        },
+        "categorized_count": 1000,
+        "control_count": 1000.0,
+        "http_status": 200,
+        "miscounted": 0,
+        "records_sent": 1000,
+        "request_bytes": 274381,
+        "request_bytes_per_record": 274.4,
+        "request_series": 10,
+        "unparsed_count": 0
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "text-canonical"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the same text with 10 records in a second format",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_records": 1000,
+        "duplicates": 0,
+        "missing_sequences": 0,
+        "parsed_records": 990,
+        "unique_sequences": 1000,
+        "unknown_sequences": 0
+      },
+      "repetition": 3,
+      "sending": {
+        "batch_item_bytes": 178651.0,
+        "batch_item_bytes_per_record": 178.7,
+        "categories": {
+          "/cart error": 20,
+          "/cart ok": 180,
+          "/checkout error": 19,
+          "/checkout ok": 180,
+          "/login error": 20,
+          "/login ok": 180,
+          "/profile error": 20,
+          "/profile ok": 180,
+          "/search error": 20,
+          "/search ok": 171,
+          "unparsed unparsed": 10
+        },
+        "categorized_count": 990,
+        "control_count": 1000.0,
+        "http_status": 200,
+        "miscounted": 10,
+        "records_sent": 1000,
+        "request_bytes": 273931,
+        "request_bytes_per_record": 273.9,
+        "request_series": 11,
+        "unparsed_count": 10
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "text-drift-1pct"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1000.0,
+            "receiver_accepted": 1000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "a short body and typed attributes, nothing to parse",
+      "log": {
+        "error_lines": 0,
+        "lines": 9,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_records": 1000,
+        "duplicates": 0,
+        "missing_sequences": 0,
+        "parsed_records": 1000,
+        "unique_sequences": 1000,
+        "unknown_sequences": 0
+      },
+      "repetition": 3,
+      "sending": {
+        "batch_item_bytes": 163676.0,
+        "batch_item_bytes_per_record": 163.7,
+        "categories": {
+          "/cart error": 20,
+          "/cart ok": 180,
+          "/checkout error": 20,
+          "/checkout ok": 180,
+          "/login error": 20,
+          "/login ok": 180,
+          "/profile error": 20,
+          "/profile ok": 180,
+          "/search error": 20,
+          "/search ok": 180
+        },
+        "categorized_count": 1000,
+        "control_count": 1000.0,
+        "http_status": 200,
+        "miscounted": 0,
+        "records_sent": 1000,
+        "request_bytes": 440381,
+        "request_bytes_per_record": 440.4,
+        "request_series": 10,
+        "unparsed_count": 0
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "structured"
+    }
+  ],
+  "stack": {
+    "otelcol_contrib": "0.162.0",
+    "prometheus": "v3.15.0"
+  },
+  "variants": [
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "96064feb57acad6e1ed4c6b6b3cf9685f53f102d2a9d399f6697c3e7d6876f95",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "3a30a96099408576ef0d59f0789426de9d0dc060d4cc0679105a151e343ffbc9"
+      },
+      "description": "every field in the body, parsed by the Collector",
+      "name": "text-canonical",
+      "options": {}
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "96064feb57acad6e1ed4c6b6b3cf9685f53f102d2a9d399f6697c3e7d6876f95",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "3a30a96099408576ef0d59f0789426de9d0dc060d4cc0679105a151e343ffbc9"
+      },
+      "description": "the same text with 10 records in a second format",
+      "name": "text-drift-1pct",
+      "options": {}
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "96064feb57acad6e1ed4c6b6b3cf9685f53f102d2a9d399f6697c3e7d6876f95",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "3a30a96099408576ef0d59f0789426de9d0dc060d4cc0679105a151e343ffbc9"
+      },
+      "description": "a short body and typed attributes, nothing to parse",
+      "name": "structured",
+      "options": {}
+    }
+  ]
+}

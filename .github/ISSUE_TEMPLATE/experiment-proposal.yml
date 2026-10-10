@@ -1,0 +1,26 @@
+name: Experiment proposal
+description: Propose a new measured question on the ladder
+title: "[experiment] "
+labels: ["experiment"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What should be measured, in one or two sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: docs
+    attributes:
+      label: Documentation paragraph
+      description: Official page, commit or tag, and the sentence to quote.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it belongs here
+      description: What the documentation leaves ambiguous, and which level fits.
+    validations:
+      required: true

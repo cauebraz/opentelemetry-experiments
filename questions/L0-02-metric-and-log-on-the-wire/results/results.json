@@ -1,0 +1,933 @@
+{
+  "columns": [
+    {
+      "kind": "number",
+      "label": "HTTP status",
+      "path": "sending.http_status"
+    },
+    {
+      "kind": "number",
+      "label": "Accepted points",
+      "path": "counters.collector.metrics.receiver_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Accepted logs",
+      "path": "counters.collector.logs.receiver_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Sink points",
+      "path": "counters.sink.metrics.receiver_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Sink logs",
+      "path": "counters.sink.logs.receiver_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Exported series",
+      "path": "measured.exported_series"
+    },
+    {
+      "kind": "number",
+      "label": "Printed by debug",
+      "path": "measured.debug_records"
+    },
+    {
+      "kind": "number",
+      "label": "Warn lines",
+      "path": "log.warn_lines"
+    },
+    {
+      "kind": "text",
+      "label": "Timestamp is 1970",
+      "path": "measured.timestamp_is_the_zero_instant"
+    },
+    {
+      "kind": "number",
+      "label": "Trace id hex chars",
+      "path": "measured.trace_id_hex_length"
+    }
+  ],
+  "question": {
+    "id": "L0-02",
+    "level": 0,
+    "signals": [
+      "metrics",
+      "logs"
+    ],
+    "theme": "metrics",
+    "title": "What survives when a metric or a log is missing a field?"
+  },
+  "repetitions": 3,
+  "runs": [
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 3.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "a monotonic sum with delta temporality",
+      "log": {
+        "error_lines": 0,
+        "lines": 33,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_records": 1,
+        "exported_series": 1,
+        "timestamp_is_the_zero_instant": null,
+        "trace_id_hex_length": null
+      },
+      "repetition": 1,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/metrics -H 'Content-Type: application/json' -d '{\"resourceMetrics\":[{\"scopeMetrics\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"metrics\":[{\"name\":\"l0_02.requests\",\"unit\":\"1\",\"sum\":{\"dataPoints\":[{\"asDouble\":7.0,\"startTimeUnixNano\":\"1791143369539376000\",\"timeUnixNano\":\"1791143370539376000\",\"attributes\":[{\"key\":\"http.method\",\"value\":{\"stringValue\":\"GET\"}}]}],\"isMonotonic\":true,\"aggregationTemporality\":\"AGGREGATION_TEMPORALITY_DELTA\"}}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-02\"}}]}}]}'",
+        "http_status": 200,
+        "request_bytes": 515,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "delta-sum"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 3.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the same sum with no aggregationTemporality field",
+      "log": {
+        "error_lines": 0,
+        "lines": 33,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_records": 1,
+        "exported_series": 0,
+        "timestamp_is_the_zero_instant": null,
+        "trace_id_hex_length": null
+      },
+      "repetition": 1,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/metrics -H 'Content-Type: application/json' -d '{\"resourceMetrics\":[{\"scopeMetrics\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"metrics\":[{\"name\":\"l0_02.requests\",\"unit\":\"1\",\"sum\":{\"dataPoints\":[{\"asDouble\":7.0,\"startTimeUnixNano\":\"1791143379542984000\",\"timeUnixNano\":\"1791143380542984000\",\"attributes\":[{\"key\":\"http.method\",\"value\":{\"stringValue\":\"GET\"}}]}],\"isMonotonic\":true}}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-02\"}}]}}]}'",
+        "http_status": 200,
+        "request_bytes": 456,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sum-without-temporality"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 3.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "a gauge, which has no temporality to leave out",
+      "log": {
+        "error_lines": 0,
+        "lines": 31,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_records": 1,
+        "exported_series": 1,
+        "timestamp_is_the_zero_instant": null,
+        "trace_id_hex_length": null
+      },
+      "repetition": 1,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/metrics -H 'Content-Type: application/json' -d '{\"resourceMetrics\":[{\"scopeMetrics\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"metrics\":[{\"name\":\"l0_02.inflight\",\"unit\":\"1\",\"gauge\":{\"dataPoints\":[{\"asDouble\":7.0,\"startTimeUnixNano\":\"1791143400779556000\",\"timeUnixNano\":\"1791143401779556000\",\"attributes\":[{\"key\":\"http.method\",\"value\":{\"stringValue\":\"GET\"}}]}]}}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-02\"}}]}}]}'",
+        "http_status": 200,
+        "request_bytes": 437,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "gauge"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "a log record with no timeUnixNano",
+      "log": {
+        "error_lines": 0,
+        "lines": 28,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_records": 1,
+        "exported_series": null,
+        "timestamp_is_the_zero_instant": "yes",
+        "trace_id_hex_length": 0
+      },
+      "repetition": 1,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/logs -H 'Content-Type: application/json' -d '{\"resourceLogs\":[{\"scopeLogs\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"logRecords\":[{\"body\":{\"stringValue\":\"checkout failed\"},\"severityNumber\":17,\"severityText\":\"ERROR\",\"attributes\":[]}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-02\"}}]}}]}'",
+        "http_status": 200,
+        "request_bytes": 302,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "log-without-timestamp"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "a log record with a timestamp and a trace id",
+      "log": {
+        "error_lines": 0,
+        "lines": 28,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_records": 1,
+        "exported_series": null,
+        "timestamp_is_the_zero_instant": "no",
+        "trace_id_hex_length": 32
+      },
+      "repetition": 1,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/logs -H 'Content-Type: application/json' -d '{\"resourceLogs\":[{\"scopeLogs\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"logRecords\":[{\"body\":{\"stringValue\":\"checkout failed\"},\"severityNumber\":17,\"severityText\":\"ERROR\",\"attributes\":[],\"timeUnixNano\":\"1791143423778077000\",\"traceId\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"spanId\":\"bbbbbbbbbbbbbbbb\"}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-02\"}}]}}]}'",
+        "http_status": 200,
+        "request_bytes": 418,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "log-with-trace-id"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 3.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "a monotonic sum with delta temporality",
+      "log": {
+        "error_lines": 0,
+        "lines": 33,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_records": 1,
+        "exported_series": 1,
+        "timestamp_is_the_zero_instant": null,
+        "trace_id_hex_length": null
+      },
+      "repetition": 2,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/metrics -H 'Content-Type: application/json' -d '{\"resourceMetrics\":[{\"scopeMetrics\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"metrics\":[{\"name\":\"l0_02.requests\",\"unit\":\"1\",\"sum\":{\"dataPoints\":[{\"asDouble\":7.0,\"startTimeUnixNano\":\"1791143433812318000\",\"timeUnixNano\":\"1791143434812318000\",\"attributes\":[{\"key\":\"http.method\",\"value\":{\"stringValue\":\"GET\"}}]}],\"isMonotonic\":true,\"aggregationTemporality\":\"AGGREGATION_TEMPORALITY_DELTA\"}}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-02\"}}]}}]}'",
+        "http_status": 200,
+        "request_bytes": 515,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "delta-sum"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 3.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the same sum with no aggregationTemporality field",
+      "log": {
+        "error_lines": 0,
+        "lines": 33,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_records": 1,
+        "exported_series": 0,
+        "timestamp_is_the_zero_instant": null,
+        "trace_id_hex_length": null
+      },
+      "repetition": 2,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/metrics -H 'Content-Type: application/json' -d '{\"resourceMetrics\":[{\"scopeMetrics\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"metrics\":[{\"name\":\"l0_02.requests\",\"unit\":\"1\",\"sum\":{\"dataPoints\":[{\"asDouble\":7.0,\"startTimeUnixNano\":\"1791143444816067000\",\"timeUnixNano\":\"1791143445816067000\",\"attributes\":[{\"key\":\"http.method\",\"value\":{\"stringValue\":\"GET\"}}]}],\"isMonotonic\":true}}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-02\"}}]}}]}'",
+        "http_status": 200,
+        "request_bytes": 456,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sum-without-temporality"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 3.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "a gauge, which has no temporality to leave out",
+      "log": {
+        "error_lines": 0,
+        "lines": 31,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_records": 1,
+        "exported_series": 1,
+        "timestamp_is_the_zero_instant": null,
+        "trace_id_hex_length": null
+      },
+      "repetition": 2,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/metrics -H 'Content-Type: application/json' -d '{\"resourceMetrics\":[{\"scopeMetrics\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"metrics\":[{\"name\":\"l0_02.inflight\",\"unit\":\"1\",\"gauge\":{\"dataPoints\":[{\"asDouble\":7.0,\"startTimeUnixNano\":\"1791143466035943000\",\"timeUnixNano\":\"1791143467035943000\",\"attributes\":[{\"key\":\"http.method\",\"value\":{\"stringValue\":\"GET\"}}]}]}}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-02\"}}]}}]}'",
+        "http_status": 200,
+        "request_bytes": 437,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "gauge"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "a log record with no timeUnixNano",
+      "log": {
+        "error_lines": 0,
+        "lines": 28,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_records": 1,
+        "exported_series": null,
+        "timestamp_is_the_zero_instant": "yes",
+        "trace_id_hex_length": 0
+      },
+      "repetition": 2,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/logs -H 'Content-Type: application/json' -d '{\"resourceLogs\":[{\"scopeLogs\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"logRecords\":[{\"body\":{\"stringValue\":\"checkout failed\"},\"severityNumber\":17,\"severityText\":\"ERROR\",\"attributes\":[]}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-02\"}}]}}]}'",
+        "http_status": 200,
+        "request_bytes": 302,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "log-without-timestamp"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "a log record with a timestamp and a trace id",
+      "log": {
+        "error_lines": 0,
+        "lines": 28,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_records": 1,
+        "exported_series": null,
+        "timestamp_is_the_zero_instant": "no",
+        "trace_id_hex_length": 32
+      },
+      "repetition": 2,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/logs -H 'Content-Type: application/json' -d '{\"resourceLogs\":[{\"scopeLogs\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"logRecords\":[{\"body\":{\"stringValue\":\"checkout failed\"},\"severityNumber\":17,\"severityText\":\"ERROR\",\"attributes\":[],\"timeUnixNano\":\"1791143489091767000\",\"traceId\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"spanId\":\"bbbbbbbbbbbbbbbb\"}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-02\"}}]}}]}'",
+        "http_status": 200,
+        "request_bytes": 418,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "log-with-trace-id"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 3.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "a monotonic sum with delta temporality",
+      "log": {
+        "error_lines": 0,
+        "lines": 33,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_records": 1,
+        "exported_series": 1,
+        "timestamp_is_the_zero_instant": null,
+        "trace_id_hex_length": null
+      },
+      "repetition": 3,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/metrics -H 'Content-Type: application/json' -d '{\"resourceMetrics\":[{\"scopeMetrics\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"metrics\":[{\"name\":\"l0_02.requests\",\"unit\":\"1\",\"sum\":{\"dataPoints\":[{\"asDouble\":7.0,\"startTimeUnixNano\":\"1791143499082015000\",\"timeUnixNano\":\"1791143500082015000\",\"attributes\":[{\"key\":\"http.method\",\"value\":{\"stringValue\":\"GET\"}}]}],\"isMonotonic\":true,\"aggregationTemporality\":\"AGGREGATION_TEMPORALITY_DELTA\"}}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-02\"}}]}}]}'",
+        "http_status": 200,
+        "request_bytes": 515,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "delta-sum"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 3.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the same sum with no aggregationTemporality field",
+      "log": {
+        "error_lines": 0,
+        "lines": 33,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_records": 1,
+        "exported_series": 0,
+        "timestamp_is_the_zero_instant": null,
+        "trace_id_hex_length": null
+      },
+      "repetition": 3,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/metrics -H 'Content-Type: application/json' -d '{\"resourceMetrics\":[{\"scopeMetrics\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"metrics\":[{\"name\":\"l0_02.requests\",\"unit\":\"1\",\"sum\":{\"dataPoints\":[{\"asDouble\":7.0,\"startTimeUnixNano\":\"1791143510093965000\",\"timeUnixNano\":\"1791143511093965000\",\"attributes\":[{\"key\":\"http.method\",\"value\":{\"stringValue\":\"GET\"}}]}],\"isMonotonic\":true}}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-02\"}}]}}]}'",
+        "http_status": 200,
+        "request_bytes": 456,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "sum-without-temporality"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 3.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "a gauge, which has no temporality to leave out",
+      "log": {
+        "error_lines": 0,
+        "lines": 31,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_records": 1,
+        "exported_series": 1,
+        "timestamp_is_the_zero_instant": null,
+        "trace_id_hex_length": null
+      },
+      "repetition": 3,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/metrics -H 'Content-Type: application/json' -d '{\"resourceMetrics\":[{\"scopeMetrics\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"metrics\":[{\"name\":\"l0_02.inflight\",\"unit\":\"1\",\"gauge\":{\"dataPoints\":[{\"asDouble\":7.0,\"startTimeUnixNano\":\"1791143531275559000\",\"timeUnixNano\":\"1791143532275559000\",\"attributes\":[{\"key\":\"http.method\",\"value\":{\"stringValue\":\"GET\"}}]}]}}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-02\"}}]}}]}'",
+        "http_status": 200,
+        "request_bytes": 437,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "gauge"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "a log record with no timeUnixNano",
+      "log": {
+        "error_lines": 0,
+        "lines": 28,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_records": 1,
+        "exported_series": null,
+        "timestamp_is_the_zero_instant": "yes",
+        "trace_id_hex_length": 0
+      },
+      "repetition": 3,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/logs -H 'Content-Type: application/json' -d '{\"resourceLogs\":[{\"scopeLogs\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"logRecords\":[{\"body\":{\"stringValue\":\"checkout failed\"},\"severityNumber\":17,\"severityText\":\"ERROR\",\"attributes\":[]}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-02\"}}]}}]}'",
+        "http_status": 200,
+        "request_bytes": 302,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "log-without-timestamp"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          },
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "a log record with a timestamp and a trace id",
+      "log": {
+        "error_lines": 0,
+        "lines": 28,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_records": 1,
+        "exported_series": null,
+        "timestamp_is_the_zero_instant": "no",
+        "trace_id_hex_length": 32
+      },
+      "repetition": 3,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/logs -H 'Content-Type: application/json' -d '{\"resourceLogs\":[{\"scopeLogs\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"logRecords\":[{\"body\":{\"stringValue\":\"checkout failed\"},\"severityNumber\":17,\"severityText\":\"ERROR\",\"attributes\":[],\"timeUnixNano\":\"1791143554333876000\",\"traceId\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"spanId\":\"bbbbbbbbbbbbbbbb\"}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-02\"}}]}}]}'",
+        "http_status": 200,
+        "request_bytes": 418,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "log-with-trace-id"
+    }
+  ],
+  "stack": {
+    "otelcol_contrib": "0.162.0",
+    "prometheus": "v3.15.0"
+  },
+  "variants": [
+    {
+      "description": "a monotonic sum with delta temporality",
+      "name": "delta-sum"
+    },
+    {
+      "description": "the same sum with no aggregationTemporality field",
+      "name": "sum-without-temporality"
+    },
+    {
+      "description": "a gauge, which has no temporality to leave out",
+      "name": "gauge"
+    },
+    {
+      "description": "a log record with no timeUnixNano",
+      "name": "log-without-timestamp"
+    },
+    {
+      "description": "a log record with a timestamp and a trace id",
+      "name": "log-with-trace-id"
+    }
+  ]
+}

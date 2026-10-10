@@ -1,0 +1,17 @@
+receivers:
+  otlp:
+    protocols:
+      http:
+
+exporters:
+  debug:
+  otlp_grpc/unused:
+    endpoint: sink:4317
+
+service:
+  pipelines:
+    logs:
+      receivers:
+        - otlp
+      exporters:
+        - debug

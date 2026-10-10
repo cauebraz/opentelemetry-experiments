@@ -1,0 +1,57 @@
+receivers:
+  otlp:
+    protocols:
+      http:
+        endpoint: 0.0.0.0:4318
+
+processors:
+  memory_limiter:
+    check_interval: 1s
+    limit_mib: 400
+    spike_limit_mib: 100
+  tail_sampling:
+    decision_wait: 5s
+    num_traces: 5000
+    policies:
+      - name: errors
+        type: status_code
+        status_code:
+          status_codes:
+            - ERROR
+  batch: {}
+
+exporters:
+  otlp_grpc/sink:
+    endpoint: sink:4317
+    timeout: 5s
+    tls:
+      insecure: true
+
+extensions:
+  health_check:
+    endpoint: 0.0.0.0:13133
+
+service:
+  extensions:
+    - health_check
+  pipelines:
+    traces:
+      receivers:
+        - otlp
+      processors:
+        - memory_limiter
+        - tail_sampling
+        - batch
+      exporters:
+        - otlp_grpc/sink
+  telemetry:
+    metrics:
+      level: detailed
+      readers:
+        - pull:
+            exporter:
+              prometheus:
+                host: 0.0.0.0
+                port: 8888
+                without_type_suffix: true
+                without_units: true

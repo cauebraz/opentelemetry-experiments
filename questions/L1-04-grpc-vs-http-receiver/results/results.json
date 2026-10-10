@@ -1,0 +1,1758 @@
+{
+  "columns": [
+    {
+      "kind": "number",
+      "label": "Points sent",
+      "path": "sending.points_sent"
+    },
+    {
+      "kind": "number",
+      "label": "Sent bytes",
+      "path": "sending.sent_bytes"
+    },
+    {
+      "kind": "number",
+      "label": "Collector RX bytes",
+      "path": "sending.rx_bytes"
+    },
+    {
+      "kind": "number",
+      "label": "Background RX bytes",
+      "path": "sending.background_rx_bytes"
+    },
+    {
+      "kind": "number",
+      "label": "Net RX bytes",
+      "path": "sending.net_rx_bytes"
+    },
+    {
+      "kind": "number",
+      "label": "RX bytes per point",
+      "path": "sending.rx_bytes_per_point"
+    },
+    {
+      "kind": "number",
+      "label": "Collector CPU ns per point",
+      "path": "sending.collector_cpu_ns_per_point"
+    },
+    {
+      "kind": "number",
+      "label": "Sender CPU ns per point",
+      "path": "sending.sender_cpu_ns_per_point"
+    },
+    {
+      "kind": "number",
+      "label": "Points per second",
+      "path": "sending.points_per_second"
+    },
+    {
+      "kind": "number",
+      "label": "Failed requests",
+      "path": "sending.failed_requests"
+    },
+    {
+      "kind": "number",
+      "label": "Export requests",
+      "path": "measured.export_requests"
+    },
+    {
+      "kind": "number",
+      "label": "Delivered",
+      "path": "measured.delivered_points"
+    },
+    {
+      "kind": "number",
+      "label": "Collector accepted",
+      "path": "counters.collector.metrics.receiver_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Sink accepted",
+      "path": "counters.sink.metrics.receiver_accepted"
+    },
+    {
+      "kind": "text",
+      "label": "JSON on the gRPC port",
+      "path": "sending.json_on_grpc_port"
+    },
+    {
+      "kind": "number",
+      "label": "Order position",
+      "path": "position"
+    },
+    {
+      "kind": "number",
+      "label": "Warn lines",
+      "path": "log.warn_lines"
+    },
+    {
+      "kind": "number",
+      "label": "Error lines",
+      "path": "log.error_lines"
+    }
+  ],
+  "execution_order": [
+    [
+      "grpc-none",
+      "grpc-gzip",
+      "http-proto-none",
+      "http-proto-gzip",
+      "http-json-none"
+    ],
+    [
+      "grpc-gzip",
+      "http-proto-none",
+      "http-proto-gzip",
+      "http-json-none",
+      "grpc-none"
+    ],
+    [
+      "http-proto-none",
+      "http-proto-gzip",
+      "http-json-none",
+      "grpc-none",
+      "grpc-gzip"
+    ],
+    [
+      "http-proto-gzip",
+      "http-json-none",
+      "grpc-none",
+      "grpc-gzip",
+      "http-proto-none"
+    ],
+    [
+      "http-json-none",
+      "grpc-none",
+      "grpc-gzip",
+      "http-proto-none",
+      "http-proto-gzip"
+    ]
+  ],
+  "provenance": {
+    "compose_sha256": "49991e9504b2cec047c838cfcbcb462847254b462c3785d3655a1048e4e32555",
+    "docker_compose": "5.5.1",
+    "dockerfile_sha256": "9144298cec761cc3f7f162e232a2accda2203566c7fe91b9566f15e9f5d245de",
+    "machine": "arm64",
+    "python": "3.14.8",
+    "system": "Darwin"
+  },
+  "question": {
+    "id": "L1-04",
+    "level": 1,
+    "signals": [
+      "metrics"
+    ],
+    "theme": "collector",
+    "title": "What does choosing gRPC over HTTP on the receiver cost or save?"
+  },
+  "repetitions": 5,
+  "results_version": 2,
+  "runs": [
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "protobuf over gRPC, no compression",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 1,
+      "repetition": 1,
+      "sending": {
+        "background_rx_bytes": 213,
+        "collector_cpu_ns": 91102000,
+        "collector_cpu_ns_per_point": 911.0,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 304,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 7404038,
+        "points_per_second": 673832,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 7404251,
+        "rx_bytes_per_point": 74.0,
+        "sender_cpu_ns_per_point": 625.8,
+        "sending_seconds": 0.15,
+        "sent_bytes": 7319000,
+        "window_problems": [],
+        "work_seconds": 3.5
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "grpc-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "protobuf over gRPC, gzip",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 2,
+      "repetition": 1,
+      "sending": {
+        "background_rx_bytes": 60,
+        "collector_cpu_ns": 113368000,
+        "collector_cpu_ns_per_point": 1131.7,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 84,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 893887,
+        "points_per_second": 476173,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 893947,
+        "rx_bytes_per_point": 8.9,
+        "sender_cpu_ns_per_point": 1030.3,
+        "sending_seconds": 0.21,
+        "sent_bytes": 7319000,
+        "window_problems": [],
+        "work_seconds": 3.56
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "grpc-gzip"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "HTTP protobuf, no compression",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 3,
+      "repetition": 1,
+      "sending": {
+        "background_rx_bytes": 149,
+        "collector_cpu_ns": 83854000,
+        "collector_cpu_ns_per_point": 836.5,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 216,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 7387741,
+        "points_per_second": 850640,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 7387890,
+        "rx_bytes_per_point": 73.9,
+        "sender_cpu_ns_per_point": 217.7,
+        "sending_seconds": 0.12,
+        "sent_bytes": 7319000,
+        "window_problems": [],
+        "work_seconds": 3.44
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "http-proto-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "HTTP protobuf, gzip",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 4,
+      "repetition": 1,
+      "sending": {
+        "background_rx_bytes": 374,
+        "collector_cpu_ns": 99033000,
+        "collector_cpu_ns_per_point": 989.3,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 524,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 859775,
+        "points_per_second": 440790,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 860149,
+        "rx_bytes_per_point": 8.6,
+        "sender_cpu_ns_per_point": 1393.6,
+        "sending_seconds": 0.23,
+        "sent_bytes": 800090,
+        "window_problems": [],
+        "work_seconds": 3.57
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "http-proto-gzip"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "HTTP JSON, no compression",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 5,
+      "repetition": 1,
+      "sending": {
+        "background_rx_bytes": 252,
+        "collector_cpu_ns": 154049000,
+        "collector_cpu_ns_per_point": 1538.5,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 346,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 21847770,
+        "points_per_second": 338115,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 21848022,
+        "rx_bytes_per_point": 218.5,
+        "sender_cpu_ns_per_point": 1239.0,
+        "sending_seconds": 0.3,
+        "sent_bytes": 21753600,
+        "window_problems": [],
+        "work_seconds": 3.64
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "http-json-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "protobuf over gRPC, gzip",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 1,
+      "repetition": 2,
+      "sending": {
+        "background_rx_bytes": 215,
+        "collector_cpu_ns": 114920000,
+        "collector_cpu_ns_per_point": 1146.4,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 304,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 891871,
+        "points_per_second": 533919,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 892086,
+        "rx_bytes_per_point": 8.9,
+        "sender_cpu_ns_per_point": 962.5,
+        "sending_seconds": 0.19,
+        "sent_bytes": 7319000,
+        "window_problems": [],
+        "work_seconds": 3.53
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "grpc-gzip"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "HTTP protobuf, no compression",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 2,
+      "repetition": 2,
+      "sending": {
+        "background_rx_bytes": 209,
+        "collector_cpu_ns": 85516000,
+        "collector_cpu_ns_per_point": 853.2,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 304,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 7387021,
+        "points_per_second": 852132,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 7387230,
+        "rx_bytes_per_point": 73.9,
+        "sender_cpu_ns_per_point": 205.6,
+        "sending_seconds": 0.12,
+        "sent_bytes": 7319000,
+        "window_problems": [],
+        "work_seconds": 3.44
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "http-proto-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "HTTP protobuf, gzip",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 3,
+      "repetition": 2,
+      "sending": {
+        "background_rx_bytes": 407,
+        "collector_cpu_ns": 114258000,
+        "collector_cpu_ns_per_point": 1138.5,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 566,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 858917,
+        "points_per_second": 373929,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 859324,
+        "rx_bytes_per_point": 8.6,
+        "sender_cpu_ns_per_point": 1620.2,
+        "sending_seconds": 0.27,
+        "sent_bytes": 800090,
+        "window_problems": [],
+        "work_seconds": 3.6
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "http-proto-gzip"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "HTTP JSON, no compression",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 4,
+      "repetition": 2,
+      "sending": {
+        "background_rx_bytes": 62,
+        "collector_cpu_ns": 168454000,
+        "collector_cpu_ns_per_point": 1682.7,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 84,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 21848488,
+        "points_per_second": 314338,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 21848550,
+        "rx_bytes_per_point": 218.5,
+        "sender_cpu_ns_per_point": 1342.2,
+        "sending_seconds": 0.32,
+        "sent_bytes": 21753600,
+        "window_problems": [],
+        "work_seconds": 3.68
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "http-json-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "protobuf over gRPC, no compression",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 5,
+      "repetition": 2,
+      "sending": {
+        "background_rx_bytes": 179,
+        "collector_cpu_ns": 80302000,
+        "collector_cpu_ns_per_point": 801.2,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 256,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 7404125,
+        "points_per_second": 726980,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 7404304,
+        "rx_bytes_per_point": 74.0,
+        "sender_cpu_ns_per_point": 526.9,
+        "sending_seconds": 0.14,
+        "sent_bytes": 7319000,
+        "window_problems": [],
+        "work_seconds": 3.49
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "grpc-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "HTTP protobuf, no compression",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 1,
+      "repetition": 3,
+      "sending": {
+        "background_rx_bytes": 91,
+        "collector_cpu_ns": 93553000,
+        "collector_cpu_ns_per_point": 935.5,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 132,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 7392749,
+        "points_per_second": 759047,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 7392840,
+        "rx_bytes_per_point": 73.9,
+        "sender_cpu_ns_per_point": 245.2,
+        "sending_seconds": 0.13,
+        "sent_bytes": 7319000,
+        "window_problems": [],
+        "work_seconds": 3.46
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "http-proto-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "HTTP protobuf, gzip",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 2,
+      "repetition": 3,
+      "sending": {
+        "background_rx_bytes": 125,
+        "collector_cpu_ns": 88745000,
+        "collector_cpu_ns_per_point": 887.5,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 174,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 859529,
+        "points_per_second": 422305,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 859654,
+        "rx_bytes_per_point": 8.6,
+        "sender_cpu_ns_per_point": 1473.1,
+        "sending_seconds": 0.24,
+        "sent_bytes": 800090,
+        "window_problems": [],
+        "work_seconds": 3.59
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "http-proto-gzip"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "HTTP JSON, no compression",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 3,
+      "repetition": 3,
+      "sending": {
+        "background_rx_bytes": 221,
+        "collector_cpu_ns": 146948000,
+        "collector_cpu_ns_per_point": 1469.5,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 304,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 21847339,
+        "points_per_second": 338539,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 21847560,
+        "rx_bytes_per_point": 218.5,
+        "sender_cpu_ns_per_point": 1279.5,
+        "sending_seconds": 0.3,
+        "sent_bytes": 21753600,
+        "window_problems": [],
+        "work_seconds": 3.63
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "http-json-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "protobuf over gRPC, no compression",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 4,
+      "repetition": 3,
+      "sending": {
+        "background_rx_bytes": 241,
+        "collector_cpu_ns": 78900000,
+        "collector_cpu_ns_per_point": 789.0,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 346,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 7403680,
+        "points_per_second": 752964,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 7403921,
+        "rx_bytes_per_point": 74.0,
+        "sender_cpu_ns_per_point": 516.0,
+        "sending_seconds": 0.13,
+        "sent_bytes": 7319000,
+        "window_problems": [],
+        "work_seconds": 3.48
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "grpc-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "protobuf over gRPC, gzip",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 5,
+      "repetition": 3,
+      "sending": {
+        "background_rx_bytes": 59,
+        "collector_cpu_ns": 113825000,
+        "collector_cpu_ns_per_point": 1138.2,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 84,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 891987,
+        "points_per_second": 532435,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 892046,
+        "rx_bytes_per_point": 8.9,
+        "sender_cpu_ns_per_point": 957.2,
+        "sending_seconds": 0.19,
+        "sent_bytes": 7319000,
+        "window_problems": [],
+        "work_seconds": 3.5
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "grpc-gzip"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "HTTP protobuf, gzip",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 1,
+      "repetition": 4,
+      "sending": {
+        "background_rx_bytes": 125,
+        "collector_cpu_ns": 110398000,
+        "collector_cpu_ns_per_point": 1104.0,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 174,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 859529,
+        "points_per_second": 385238,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 859654,
+        "rx_bytes_per_point": 8.6,
+        "sender_cpu_ns_per_point": 1612.6,
+        "sending_seconds": 0.26,
+        "sent_bytes": 800090,
+        "window_problems": [],
+        "work_seconds": 3.6
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "http-proto-gzip"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "HTTP JSON, no compression",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 2,
+      "repetition": 4,
+      "sending": {
+        "background_rx_bytes": 159,
+        "collector_cpu_ns": 160441000,
+        "collector_cpu_ns_per_point": 1604.4,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 216,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 21847375,
+        "points_per_second": 320803,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 21847534,
+        "rx_bytes_per_point": 218.5,
+        "sender_cpu_ns_per_point": 1310.3,
+        "sending_seconds": 0.31,
+        "sent_bytes": 21753600,
+        "window_problems": [],
+        "work_seconds": 3.67
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "http-json-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "protobuf over gRPC, no compression",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 3,
+      "repetition": 4,
+      "sending": {
+        "background_rx_bytes": 183,
+        "collector_cpu_ns": 82220000,
+        "collector_cpu_ns_per_point": 822.2,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 264,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 7404473,
+        "points_per_second": 710363,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 7404656,
+        "rx_bytes_per_point": 74.0,
+        "sender_cpu_ns_per_point": 525.0,
+        "sending_seconds": 0.14,
+        "sent_bytes": 7319000,
+        "window_problems": [],
+        "work_seconds": 3.47
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "grpc-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "protobuf over gRPC, gzip",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 4,
+      "repetition": 4,
+      "sending": {
+        "background_rx_bytes": 123,
+        "collector_cpu_ns": 109272000,
+        "collector_cpu_ns_per_point": 1092.1,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 174,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 891105,
+        "points_per_second": 569427,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 891228,
+        "rx_bytes_per_point": 8.9,
+        "sender_cpu_ns_per_point": 919.0,
+        "sending_seconds": 0.18,
+        "sent_bytes": 7319000,
+        "window_problems": [],
+        "work_seconds": 3.52
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "grpc-gzip"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "HTTP protobuf, no compression",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 5,
+      "repetition": 4,
+      "sending": {
+        "background_rx_bytes": 271,
+        "collector_cpu_ns": 82165000,
+        "collector_cpu_ns_per_point": 821.6,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 394,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 7386959,
+        "points_per_second": 826499,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 7387230,
+        "rx_bytes_per_point": 73.9,
+        "sender_cpu_ns_per_point": 221.9,
+        "sending_seconds": 0.12,
+        "sent_bytes": 7319000,
+        "window_problems": [],
+        "work_seconds": 3.44
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "http-proto-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "HTTP JSON, no compression",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 1,
+      "repetition": 5,
+      "sending": {
+        "background_rx_bytes": 222,
+        "collector_cpu_ns": 159014000,
+        "collector_cpu_ns_per_point": 1586.7,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 304,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 21847536,
+        "points_per_second": 329092,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 21847758,
+        "rx_bytes_per_point": 218.5,
+        "sender_cpu_ns_per_point": 1306.9,
+        "sending_seconds": 0.3,
+        "sent_bytes": 21753600,
+        "window_problems": [],
+        "work_seconds": 3.65
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "http-json-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "protobuf over gRPC, no compression",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 2,
+      "repetition": 5,
+      "sending": {
+        "background_rx_bytes": 59,
+        "collector_cpu_ns": 105022000,
+        "collector_cpu_ns_per_point": 1050.2,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 84,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 7403862,
+        "points_per_second": 629376,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 7403921,
+        "rx_bytes_per_point": 74.0,
+        "sender_cpu_ns_per_point": 602.4,
+        "sending_seconds": 0.16,
+        "sent_bytes": 7319000,
+        "window_problems": [],
+        "work_seconds": 3.51
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "grpc-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "protobuf over gRPC, gzip",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 3,
+      "repetition": 5,
+      "sending": {
+        "background_rx_bytes": 214,
+        "collector_cpu_ns": 107088000,
+        "collector_cpu_ns_per_point": 1070.9,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 304,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 892598,
+        "points_per_second": 590596,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 892812,
+        "rx_bytes_per_point": 8.9,
+        "sender_cpu_ns_per_point": 873.5,
+        "sending_seconds": 0.17,
+        "sent_bytes": 7319000,
+        "window_problems": [],
+        "work_seconds": 3.52
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "grpc-gzip"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "HTTP protobuf, no compression",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 4,
+      "repetition": 5,
+      "sending": {
+        "background_rx_bytes": 161,
+        "collector_cpu_ns": 81553000,
+        "collector_cpu_ns_per_point": 814.4,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 234,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 7387135,
+        "points_per_second": 828985,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 7387296,
+        "rx_bytes_per_point": 73.9,
+        "sender_cpu_ns_per_point": 229.1,
+        "sending_seconds": 0.12,
+        "sent_bytes": 7319000,
+        "window_problems": [],
+        "work_seconds": 3.44
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "http-proto-none"
+    },
+    {
+      "counters": {
+        "collector": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "metrics": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100000.0,
+            "receiver_accepted": 100000.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "HTTP protobuf, gzip",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "delivered_points": 100000,
+        "export_requests": 20
+      },
+      "position": 5,
+      "repetition": 5,
+      "sending": {
+        "background_rx_bytes": 327,
+        "collector_cpu_ns": 113862000,
+        "collector_cpu_ns_per_point": 1138.6,
+        "engine": {
+          "api": "1.56",
+          "engine": "29.8.2"
+        },
+        "failed_requests": 0,
+        "idle_rx_bytes": 454,
+        "json_on_grpc_port": "BadStatusLine",
+        "net_rx_bytes": 859261,
+        "points_per_second": 373842,
+        "points_sent": 100000,
+        "prometheus_restored": true,
+        "quiescent": true,
+        "rx_bytes": 859588,
+        "rx_bytes_per_point": 8.6,
+        "sender_cpu_ns_per_point": 1672.0,
+        "sending_seconds": 0.27,
+        "sent_bytes": 800090,
+        "window_problems": [],
+        "work_seconds": 3.6
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "http-proto-gzip"
+    }
+  ],
+  "stack": {
+    "otelcol_contrib": "0.162.0",
+    "prometheus": "v3.15.0"
+  },
+  "variants": [
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "bf25fa2172e2e140f5286126b52c5188f9b578ac99fbe71931048cd35fac041c",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "2d9ae84bbb4f93bd296a2242e151700adaea3acc267f90ae3cef7b74f5856f1a"
+      },
+      "description": "protobuf over gRPC, no compression",
+      "name": "grpc-none",
+      "options": {
+        "encoding": "proto",
+        "gzip": false,
+        "protocol": "grpc"
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "bf25fa2172e2e140f5286126b52c5188f9b578ac99fbe71931048cd35fac041c",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "2d9ae84bbb4f93bd296a2242e151700adaea3acc267f90ae3cef7b74f5856f1a"
+      },
+      "description": "protobuf over gRPC, gzip",
+      "name": "grpc-gzip",
+      "options": {
+        "encoding": "proto",
+        "gzip": true,
+        "protocol": "grpc"
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "bf25fa2172e2e140f5286126b52c5188f9b578ac99fbe71931048cd35fac041c",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "2d9ae84bbb4f93bd296a2242e151700adaea3acc267f90ae3cef7b74f5856f1a"
+      },
+      "description": "HTTP protobuf, no compression",
+      "name": "http-proto-none",
+      "options": {
+        "encoding": "proto",
+        "gzip": false,
+        "protocol": "http"
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "bf25fa2172e2e140f5286126b52c5188f9b578ac99fbe71931048cd35fac041c",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "2d9ae84bbb4f93bd296a2242e151700adaea3acc267f90ae3cef7b74f5856f1a"
+      },
+      "description": "HTTP protobuf, gzip",
+      "name": "http-proto-gzip",
+      "options": {
+        "encoding": "proto",
+        "gzip": true,
+        "protocol": "http"
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "bf25fa2172e2e140f5286126b52c5188f9b578ac99fbe71931048cd35fac041c",
+        "prometheus": "de91312bcc9e9f81faffcfe31ac65469528b4c545b7028eb6b544cf4bc1201e1",
+        "sink": "2d9ae84bbb4f93bd296a2242e151700adaea3acc267f90ae3cef7b74f5856f1a"
+      },
+      "description": "HTTP JSON, no compression",
+      "name": "http-json-none",
+      "options": {
+        "encoding": "json",
+        "gzip": false,
+        "protocol": "http"
+      }
+    }
+  ]
+}

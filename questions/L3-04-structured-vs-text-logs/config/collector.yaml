@@ -1,0 +1,76 @@
+receivers:
+  otlp:
+    protocols:
+      http:
+        endpoint: 0.0.0.0:4318
+
+processors:
+  transform/parse:
+    error_mode: ignore
+    log_statements:
+      - context: log
+        conditions:
+          - log.attributes["http.route"] == nil
+        statements:
+          - merge_maps(log.cache, ExtractPatterns(log.body, "route=(?P<route>\\S+) outcome=(?P<outcome>\\S+)"), "upsert")
+          - set(log.attributes["http.route"], log.cache["route"]) where log.cache["route"] != nil
+          - set(log.attributes["outcome"], log.cache["outcome"]) where log.cache["outcome"] != nil
+  batch: {}
+
+connectors:
+  count:
+    logs:
+      l3_04.records:
+        description: Every log record, whatever its shape.
+      l3_04.requests:
+        description: Log records by route and outcome.
+        attributes:
+          - key: http.route
+            default_value: unparsed
+          - key: outcome
+            default_value: unparsed
+
+exporters:
+  otlp_grpc/sink:
+    endpoint: sink:4317
+    timeout: 5s
+    tls:
+      insecure: true
+  prometheus:
+    endpoint: 0.0.0.0:9464
+    metric_expiration: 5m
+    translation_strategy: UnderscoreEscapingWithSuffixes
+
+extensions:
+  health_check:
+    endpoint: 0.0.0.0:13133
+
+service:
+  extensions:
+    - health_check
+  pipelines:
+    logs:
+      receivers:
+        - otlp
+      processors:
+        - transform/parse
+        - batch
+      exporters:
+        - otlp_grpc/sink
+        - count
+    metrics:
+      receivers:
+        - count
+      exporters:
+        - prometheus
+  telemetry:
+    metrics:
+      level: detailed
+      readers:
+        - pull:
+            exporter:
+              prometheus:
+                host: 0.0.0.0
+                port: 8888
+                without_type_suffix: true
+                without_units: true

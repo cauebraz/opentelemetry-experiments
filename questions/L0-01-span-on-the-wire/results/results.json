@@ -1,0 +1,640 @@
+{
+  "columns": [
+    {
+      "kind": "number",
+      "label": "HTTP status",
+      "path": "sending.http_status"
+    },
+    {
+      "kind": "number",
+      "label": "Accepted",
+      "path": "counters.collector.traces.receiver_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Refused",
+      "path": "counters.collector.traces.receiver_refused"
+    },
+    {
+      "kind": "number",
+      "label": "Spans printed",
+      "path": "measured.debug_spans"
+    },
+    {
+      "kind": "number",
+      "label": "Resource attrs",
+      "path": "measured.resource_attributes"
+    },
+    {
+      "kind": "number",
+      "label": "Warn lines",
+      "path": "log.warn_lines"
+    },
+    {
+      "kind": "text",
+      "label": "End time is 1970",
+      "path": "measured.end_time_is_the_zero_instant"
+    },
+    {
+      "kind": "number",
+      "label": "Duration ms",
+      "path": "measured.duration_ms"
+    },
+    {
+      "kind": "number",
+      "label": "Trace id hex chars",
+      "path": "measured.trace_id_hex_length"
+    },
+    {
+      "kind": "text",
+      "label": "Response body",
+      "path": "sending.response_body"
+    }
+  ],
+  "question": {
+    "id": "L0-01",
+    "level": 0,
+    "signals": [
+      "traces"
+    ],
+    "theme": "traces",
+    "title": "What does the Collector do with a span you send by hand?"
+  },
+  "repetitions": 3,
+  "runs": [
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "a resource, a 16 byte trace id and an end time",
+      "log": {
+        "error_lines": 0,
+        "lines": 32,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_spans": 1,
+        "duration_ms": 120,
+        "end_time_is_the_zero_instant": "no",
+        "resource_attributes": 1,
+        "span_name": "GET /checkout",
+        "trace_id_hex_length": 32
+      },
+      "repetition": 1,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/traces -H 'Content-Type: application/json' -d '{\"resourceSpans\":[{\"scopeSpans\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"spans\":[{\"traceId\":\"5b8efff798038103d269b633813fc60c\",\"spanId\":\"eee19b7ec3c1b174\",\"name\":\"GET /checkout\",\"kind\":2,\"startTimeUnixNano\":\"1791143234993014000\",\"attributes\":[],\"endTimeUnixNano\":\"1791143235113014000\"}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-01\"}}]}}]}'",
+        "http_status": 200,
+        "request_bytes": 407,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "valid"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "the same span with a 15 byte trace id",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_spans": 0,
+        "duration_ms": null,
+        "end_time_is_the_zero_instant": null,
+        "resource_attributes": 0,
+        "span_name": null,
+        "trace_id_hex_length": null
+      },
+      "repetition": 1,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/traces -H 'Content-Type: application/json' -d '{\"resourceSpans\":[{\"scopeSpans\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"spans\":[{\"traceId\":\"000000000000000000000000000000\",\"spanId\":\"eee19b7ec3c1b174\",\"name\":\"GET /checkout\",\"kind\":2,\"startTimeUnixNano\":\"1791143246015242000\",\"attributes\":[],\"endTimeUnixNano\":\"1791143246135242000\"}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-01\"}}]}}]}'",
+        "http_status": 400,
+        "request_bytes": 405,
+        "response_body": "{\"code\":3,\"message\":\"ID.UnmarshalJSONIter: length mismatch, error found in #10 byte of ...|000000000\\\", \\\"spanId\\\"|..., bigger context ...|ns\\\": [{\\\"traceId\\\": \\\"000000000000000000000000000000\\\", \\\"spanId\\\": \\\"eee19b7ec3c1b174\\\", \\\"name\\\": \\\"GET /chec|...\"}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "short-trace-id"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the same span with no resource at all",
+      "log": {
+        "error_lines": 0,
+        "lines": 30,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_spans": 1,
+        "duration_ms": 120,
+        "end_time_is_the_zero_instant": "no",
+        "resource_attributes": 0,
+        "span_name": "GET /checkout",
+        "trace_id_hex_length": 32
+      },
+      "repetition": 1,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/traces -H 'Content-Type: application/json' -d '{\"resourceSpans\":[{\"scopeSpans\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"spans\":[{\"traceId\":\"5b8efff798038103d269b633813fc60c\",\"spanId\":\"eee19b7ec3c1b174\",\"name\":\"GET /checkout\",\"kind\":2,\"startTimeUnixNano\":\"1791143257994714000\",\"attributes\":[],\"endTimeUnixNano\":\"1791143258114714000\"}]}]}]}'",
+        "http_status": 200,
+        "request_bytes": 317,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "no-resource"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the same span with no end time",
+      "log": {
+        "error_lines": 0,
+        "lines": 32,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_spans": 1,
+        "duration_ms": null,
+        "end_time_is_the_zero_instant": "yes",
+        "resource_attributes": 1,
+        "span_name": "GET /checkout",
+        "trace_id_hex_length": 32
+      },
+      "repetition": 1,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/traces -H 'Content-Type: application/json' -d '{\"resourceSpans\":[{\"scopeSpans\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"spans\":[{\"traceId\":\"5b8efff798038103d269b633813fc60c\",\"spanId\":\"eee19b7ec3c1b174\",\"name\":\"GET /checkout\",\"kind\":2,\"startTimeUnixNano\":\"1791143268987529000\",\"attributes\":[]}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-01\"}}]}}]}'",
+        "http_status": 200,
+        "request_bytes": 365,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "no-end-time"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "a resource, a 16 byte trace id and an end time",
+      "log": {
+        "error_lines": 0,
+        "lines": 32,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_spans": 1,
+        "duration_ms": 120,
+        "end_time_is_the_zero_instant": "no",
+        "resource_attributes": 1,
+        "span_name": "GET /checkout",
+        "trace_id_hex_length": 32
+      },
+      "repetition": 2,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/traces -H 'Content-Type: application/json' -d '{\"resourceSpans\":[{\"scopeSpans\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"spans\":[{\"traceId\":\"5b8efff798038103d269b633813fc60c\",\"spanId\":\"eee19b7ec3c1b174\",\"name\":\"GET /checkout\",\"kind\":2,\"startTimeUnixNano\":\"1791143280031839000\",\"attributes\":[],\"endTimeUnixNano\":\"1791143280151839000\"}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-01\"}}]}}]}'",
+        "http_status": 200,
+        "request_bytes": 407,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "valid"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "the same span with a 15 byte trace id",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_spans": 0,
+        "duration_ms": null,
+        "end_time_is_the_zero_instant": null,
+        "resource_attributes": 0,
+        "span_name": null,
+        "trace_id_hex_length": null
+      },
+      "repetition": 2,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/traces -H 'Content-Type: application/json' -d '{\"resourceSpans\":[{\"scopeSpans\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"spans\":[{\"traceId\":\"000000000000000000000000000000\",\"spanId\":\"eee19b7ec3c1b174\",\"name\":\"GET /checkout\",\"kind\":2,\"startTimeUnixNano\":\"1791143291062379000\",\"attributes\":[],\"endTimeUnixNano\":\"1791143291182379000\"}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-01\"}}]}}]}'",
+        "http_status": 400,
+        "request_bytes": 405,
+        "response_body": "{\"code\":3,\"message\":\"ID.UnmarshalJSONIter: length mismatch, error found in #10 byte of ...|000000000\\\", \\\"spanId\\\"|..., bigger context ...|ns\\\": [{\\\"traceId\\\": \\\"000000000000000000000000000000\\\", \\\"spanId\\\": \\\"eee19b7ec3c1b174\\\", \\\"name\\\": \\\"GET /chec|...\"}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "short-trace-id"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the same span with no resource at all",
+      "log": {
+        "error_lines": 0,
+        "lines": 30,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_spans": 1,
+        "duration_ms": 120,
+        "end_time_is_the_zero_instant": "no",
+        "resource_attributes": 0,
+        "span_name": "GET /checkout",
+        "trace_id_hex_length": 32
+      },
+      "repetition": 2,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/traces -H 'Content-Type: application/json' -d '{\"resourceSpans\":[{\"scopeSpans\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"spans\":[{\"traceId\":\"5b8efff798038103d269b633813fc60c\",\"spanId\":\"eee19b7ec3c1b174\",\"name\":\"GET /checkout\",\"kind\":2,\"startTimeUnixNano\":\"1791143303079976000\",\"attributes\":[],\"endTimeUnixNano\":\"1791143303199976000\"}]}]}]}'",
+        "http_status": 200,
+        "request_bytes": 317,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "no-resource"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the same span with no end time",
+      "log": {
+        "error_lines": 0,
+        "lines": 32,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_spans": 1,
+        "duration_ms": null,
+        "end_time_is_the_zero_instant": "yes",
+        "resource_attributes": 1,
+        "span_name": "GET /checkout",
+        "trace_id_hex_length": 32
+      },
+      "repetition": 2,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/traces -H 'Content-Type: application/json' -d '{\"resourceSpans\":[{\"scopeSpans\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"spans\":[{\"traceId\":\"5b8efff798038103d269b633813fc60c\",\"spanId\":\"eee19b7ec3c1b174\",\"name\":\"GET /checkout\",\"kind\":2,\"startTimeUnixNano\":\"1791143314059164000\",\"attributes\":[]}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-01\"}}]}}]}'",
+        "http_status": 200,
+        "request_bytes": 365,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "no-end-time"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "a resource, a 16 byte trace id and an end time",
+      "log": {
+        "error_lines": 0,
+        "lines": 32,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_spans": 1,
+        "duration_ms": 120,
+        "end_time_is_the_zero_instant": "no",
+        "resource_attributes": 1,
+        "span_name": "GET /checkout",
+        "trace_id_hex_length": 32
+      },
+      "repetition": 3,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/traces -H 'Content-Type: application/json' -d '{\"resourceSpans\":[{\"scopeSpans\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"spans\":[{\"traceId\":\"5b8efff798038103d269b633813fc60c\",\"spanId\":\"eee19b7ec3c1b174\",\"name\":\"GET /checkout\",\"kind\":2,\"startTimeUnixNano\":\"1791143325084243000\",\"attributes\":[],\"endTimeUnixNano\":\"1791143325204243000\"}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-01\"}}]}}]}'",
+        "http_status": 200,
+        "request_bytes": 407,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "valid"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "the same span with a 15 byte trace id",
+      "log": {
+        "error_lines": 0,
+        "lines": 10,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_spans": 0,
+        "duration_ms": null,
+        "end_time_is_the_zero_instant": null,
+        "resource_attributes": 0,
+        "span_name": null,
+        "trace_id_hex_length": null
+      },
+      "repetition": 3,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/traces -H 'Content-Type: application/json' -d '{\"resourceSpans\":[{\"scopeSpans\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"spans\":[{\"traceId\":\"000000000000000000000000000000\",\"spanId\":\"eee19b7ec3c1b174\",\"name\":\"GET /checkout\",\"kind\":2,\"startTimeUnixNano\":\"1791143336129579000\",\"attributes\":[],\"endTimeUnixNano\":\"1791143336249579000\"}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-01\"}}]}}]}'",
+        "http_status": 400,
+        "request_bytes": 405,
+        "response_body": "{\"code\":3,\"message\":\"ID.UnmarshalJSONIter: length mismatch, error found in #10 byte of ...|000000000\\\", \\\"spanId\\\"|..., bigger context ...|ns\\\": [{\\\"traceId\\\": \\\"000000000000000000000000000000\\\", \\\"spanId\\\": \\\"eee19b7ec3c1b174\\\", \\\"name\\\": \\\"GET /chec|...\"}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "short-trace-id"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the same span with no resource at all",
+      "log": {
+        "error_lines": 0,
+        "lines": 30,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_spans": 1,
+        "duration_ms": 120,
+        "end_time_is_the_zero_instant": "no",
+        "resource_attributes": 0,
+        "span_name": "GET /checkout",
+        "trace_id_hex_length": 32
+      },
+      "repetition": 3,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/traces -H 'Content-Type: application/json' -d '{\"resourceSpans\":[{\"scopeSpans\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"spans\":[{\"traceId\":\"5b8efff798038103d269b633813fc60c\",\"spanId\":\"eee19b7ec3c1b174\",\"name\":\"GET /checkout\",\"kind\":2,\"startTimeUnixNano\":\"1791143348091216000\",\"attributes\":[],\"endTimeUnixNano\":\"1791143348211216000\"}]}]}]}'",
+        "http_status": 200,
+        "request_bytes": 317,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "no-resource"
+    },
+    {
+      "counters": {
+        "collector": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 2.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        },
+        "sink": {
+          "traces": {
+            "exporter_send_failed": null,
+            "exporter_sent": 1.0,
+            "receiver_accepted": 1.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "the same span with no end time",
+      "log": {
+        "error_lines": 0,
+        "lines": 32,
+        "warn_lines": 0
+      },
+      "measured": {
+        "debug_spans": 1,
+        "duration_ms": null,
+        "end_time_is_the_zero_instant": "yes",
+        "resource_attributes": 1,
+        "span_name": "GET /checkout",
+        "trace_id_hex_length": 32
+      },
+      "repetition": 3,
+      "sending": {
+        "curl": "curl -i -X POST http://127.0.0.1:24318/v1/traces -H 'Content-Type: application/json' -d '{\"resourceSpans\":[{\"scopeSpans\":[{\"scope\":{\"name\":\"opentelemetry_experiments\"},\"spans\":[{\"traceId\":\"5b8efff798038103d269b633813fc60c\",\"spanId\":\"eee19b7ec3c1b174\",\"name\":\"GET /checkout\",\"kind\":2,\"startTimeUnixNano\":\"1791143359097847000\",\"attributes\":[]}]}],\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"l0-01\"}}]}}]}'",
+        "http_status": 200,
+        "request_bytes": 365,
+        "response_body": "{\"partialSuccess\":{}}"
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "no-end-time"
+    }
+  ],
+  "stack": {
+    "otelcol_contrib": "0.162.0",
+    "prometheus": "v3.15.0"
+  },
+  "variants": [
+    {
+      "description": "a resource, a 16 byte trace id and an end time",
+      "name": "valid"
+    },
+    {
+      "description": "the same span with a 15 byte trace id",
+      "name": "short-trace-id"
+    },
+    {
+      "description": "the same span with no resource at all",
+      "name": "no-resource"
+    },
+    {
+      "description": "the same span with no end time",
+      "name": "no-end-time"
+    }
+  ]
+}
