@@ -134,7 +134,9 @@ starts a new container with a new, empty volume, as a pod rescheduled with an
 expects one start instead of two. The hypothesis above is unchanged. The first
 session is kept in
 [`results/session-1-results.json`](results/session-1-results.json), its logs
-in [`results/session-1-logs/`](results/session-1-logs/) and the tmpfs config in
+as `results/logs/session-1-*.log`, for example
+[`session-1-tmpfs-sigkill-r1.log`](results/logs/session-1-tmpfs-sigkill-r1.log),
+and the tmpfs config in
 [`results/session-1-collector-queue-tmpfs.yaml`](results/session-1-collector-queue-tmpfs.yaml).
 
 Prediction for `volume-recreated`, written with this amendment: the queue reads
