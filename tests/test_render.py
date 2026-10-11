@@ -96,7 +96,7 @@ def write_results(directory, recorded, report="recorded\n"):
 def test_all_canonical_repository_reports_match_their_recorded_results():
     checked, problems = render.check_reports()
 
-    assert checked == 23
+    assert checked == 24
     assert problems == []
 
 
@@ -187,7 +187,7 @@ def test_rendered_repository_reports_do_not_mutate_the_worktree():
 
     checked, problems = render.check_reports()
 
-    assert checked == 23
+    assert checked == 24
     assert problems == []
     assert {
         report: (report.read_bytes(), report.stat().st_mtime_ns) for report in reports

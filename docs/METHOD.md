@@ -112,7 +112,17 @@ append-only log as history. `otlp.trace_payload(..., schema_url=...)` and
 L4-01 adds the gateway hop and pauses one layer at a time. L4-05 scrapes
 native histograms only when the exported job sets `scrape_native_histograms`
 and negotiates protobuf. L4-04 builds a second Collector image with `ocb`
-and compares it with the stock image on the same log workload.
+and compares it with the stock image on the same log workload. L2-08 runs
+every variant on a question-local image that adds a
+`/var/lib/otelcol/file_storage` volume owned by the Collector's user, ends the
+Collector with `docker compose stop` (SIGTERM) or `kill -s SIGKILL` while the
+sink is stopped, and starts the same container again, so the volume and the
+container log survive. Its `volume-recreated` variant uses
+`docker compose up --force-recreate --renew-anon-volumes collector` instead,
+which discards both. On an image with no `/tmp`, such as these `FROM scratch`
+images, Docker 29.8.2 remounts the `/tmp` tmpfs at mode `755` after a restart,
+so a Collector running as 65532 cannot write there the second time
+(`questions/L2-08-persistent-queue/QUESTION.md`).
 
 `stop` followed by `start` restarts the sink process and resets its self
 counters while preserving the container log. A question that recovers the sink

@@ -38,7 +38,7 @@ Requirements that matter for reproduction:
 - Recorded results came from Docker Desktop on macOS; absolute CPU and
   network numbers can differ on other hosts
 
-This tree has twenty-five measured questions, levels 0 to 4. Each Level 4
+This tree has twenty-six measured questions, levels 0 to 4. Each Level 4
 question keeps its hypothesis next to the recorded `results.json`.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md) and
@@ -85,6 +85,7 @@ it.
 | [L2-05 Traces while the exporter fails](questions/L2-05-traces-under-exporter-failure/QUESTION.md) | traces | measured |
 | [L2-06 The SDK with no Collector to talk to](questions/L2-06-sdk-without-collector/QUESTION.md) | sdk | measured |
 | [L2-07 When the exporter stops retrying](questions/L2-07-retry-exhausted/QUESTION.md) | collector | measured |
+| [L2-08 What survives a Collector restart](questions/L2-08-persistent-queue/QUESTION.md) | collector | measured |
 
 ### Level 3, what it costs
 
