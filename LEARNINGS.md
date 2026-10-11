@@ -128,6 +128,23 @@ opinion, a recommendation, or a restatement of the documentation.
   639 to 934 bytes per workload window
   ([L3-06](questions/L3-06-compression-and-protocol/results/results.json)).
 
+- With the in-memory queue, a SIGKILL of the Collector lost all 100 log
+  records the receiver had answered with HTTP 200, with no error line in the
+  log and no `accepted`, `sent` or `send_failed` logs series on the restarted
+  Collector
+  ([L2-08](questions/L2-08-persistent-queue/results/results.json)).
+- A `file_storage` persistent queue on a volume delivered 100 of 100 after
+  both SIGTERM and SIGKILL, with 0 duplicates, and the restarted Collector read
+  10 requests in `otelcol_exporter_queue_size` before the destination returned
+  ([L2-08](questions/L2-08-persistent-queue/results/results.json)).
+- A SIGTERM shutdown wrote 10 `Exporting failed. Dropping data.` error lines
+  summing `dropped_items` to 100 for both the memory and the persistent queue,
+  and the persistent queue then delivered all 100
+  ([L2-08](questions/L2-08-persistent-queue/results/results.json)).
+- The same persistent config with the container recreated on a new volume
+  delivered 0 of 100 and logged no error
+  ([L2-08](questions/L2-08-persistent-queue/results/results.json)).
+
 - `otelcol validate` exited 0 with no output for an exporter configured and
   in no pipeline, and for a receiver endpoint set to an undefined
   `${env:...}`, exactly as for the minimal config

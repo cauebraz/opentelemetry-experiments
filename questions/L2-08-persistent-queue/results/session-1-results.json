@@ -1,0 +1,943 @@
+{
+  "columns": [
+    {
+      "kind": "text",
+      "label": "HTTP status",
+      "path": "sending.http_status"
+    },
+    {
+      "kind": "number",
+      "label": "Accepted before",
+      "path": "sending.accepted_before_fault"
+    },
+    {
+      "kind": "number",
+      "label": "Queue before",
+      "path": "sending.queue_before_fault"
+    },
+    {
+      "kind": "number",
+      "label": "Stop seconds",
+      "path": "sending.stop_seconds"
+    },
+    {
+      "kind": "number",
+      "label": "Queue after restart",
+      "path": "sending.queue_after_restart"
+    },
+    {
+      "kind": "number",
+      "label": "Delivered",
+      "path": "sending.delivered"
+    },
+    {
+      "kind": "number",
+      "label": "Unique",
+      "path": "measured.unique_records"
+    },
+    {
+      "kind": "number",
+      "label": "Duplicates",
+      "path": "measured.duplicate_records"
+    },
+    {
+      "kind": "number",
+      "label": "Seconds to delivery",
+      "path": "sending.seconds_to_delivery"
+    },
+    {
+      "kind": "number",
+      "label": "Drop log lines",
+      "path": "measured.drop_log_lines"
+    },
+    {
+      "kind": "number",
+      "label": "Dropped items logged",
+      "path": "measured.dropped_items"
+    },
+    {
+      "kind": "number",
+      "label": "Accepted after restart",
+      "path": "counters.collector.logs.receiver_accepted"
+    },
+    {
+      "kind": "number",
+      "label": "Error lines",
+      "path": "log.error_lines"
+    }
+  ],
+  "execution_order": [
+    [
+      "memory-sigterm",
+      "memory-sigkill",
+      "volume-sigterm",
+      "volume-sigkill",
+      "tmpfs-sigkill"
+    ],
+    [
+      "memory-sigterm",
+      "memory-sigkill",
+      "volume-sigterm",
+      "volume-sigkill",
+      "tmpfs-sigkill"
+    ],
+    [
+      "memory-sigterm",
+      "memory-sigkill",
+      "volume-sigterm",
+      "volume-sigkill",
+      "tmpfs-sigkill"
+    ]
+  ],
+  "provenance": {
+    "compose_sha256": "04296faeb6d1dedee99439198e116513a519edb74c4eecf0efba50ecb13a8074",
+    "docker_compose": "5.5.1",
+    "dockerfile_sha256": "9144298cec761cc3f7f162e232a2accda2203566c7fe91b9566f15e9f5d245de",
+    "machine": "arm64",
+    "python": "3.14.8",
+    "system": "Darwin",
+    "uv_lock_sha256": "738291bd09cf59ba5675beaf0d0e1407be82ce4cbbacc3f886ec4ce4b7587e8e"
+  },
+  "question": {
+    "id": "L2-08",
+    "level": 2,
+    "signals": [
+      "logs"
+    ],
+    "theme": "collector",
+    "title": "What survives a Collector restart while the backend is down?"
+  },
+  "repetitions": 3,
+  "results_version": 3,
+  "runs": [
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "in-memory queue, Collector stopped with SIGTERM and started again",
+      "log": {
+        "error_lines": 10,
+        "lines": 124,
+        "warn_lines": 1
+      },
+      "measured": {
+        "drop_log_lines": 10,
+        "dropped_items": 100,
+        "duplicate_records": 0,
+        "records_printed": 0,
+        "starts_logged": 2,
+        "unique_records": 0,
+        "unknown_records": 0
+      },
+      "position": 1,
+      "repetition": 1,
+      "sending": {
+        "accepted_before_fault": 100.0,
+        "delivered": 0.0,
+        "http_status": 200,
+        "queue_after_restart": 0.0,
+        "queue_before_fault": 10.0,
+        "records_sent": 100,
+        "requests_sent": 10,
+        "seconds_to_delivery": null,
+        "stop_seconds": 0.43
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "memory-sigterm"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "in-memory queue, Collector killed with SIGKILL and started again",
+      "log": {
+        "error_lines": 0,
+        "lines": 29,
+        "warn_lines": 1
+      },
+      "measured": {
+        "drop_log_lines": 0,
+        "dropped_items": 0,
+        "duplicate_records": 0,
+        "records_printed": 0,
+        "starts_logged": 2,
+        "unique_records": 0,
+        "unknown_records": 0
+      },
+      "position": 2,
+      "repetition": 1,
+      "sending": {
+        "accepted_before_fault": 100.0,
+        "delivered": 0.0,
+        "http_status": 200,
+        "queue_after_restart": 0.0,
+        "queue_before_fault": 10.0,
+        "records_sent": 100,
+        "requests_sent": 10,
+        "seconds_to_delivery": null,
+        "stop_seconds": 0.43
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "memory-sigkill"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "file_storage queue on a volume, Collector stopped with SIGTERM",
+      "log": {
+        "error_lines": 10,
+        "lines": 144,
+        "warn_lines": 1
+      },
+      "measured": {
+        "drop_log_lines": 10,
+        "dropped_items": 100,
+        "duplicate_records": 0,
+        "records_printed": 100,
+        "starts_logged": 2,
+        "unique_records": 100,
+        "unknown_records": 0
+      },
+      "position": 3,
+      "repetition": 1,
+      "sending": {
+        "accepted_before_fault": 100.0,
+        "delivered": 100.0,
+        "http_status": 200,
+        "queue_after_restart": 10.0,
+        "queue_before_fault": 10.0,
+        "records_sent": 100,
+        "requests_sent": 10,
+        "seconds_to_delivery": 17.7,
+        "stop_seconds": 0.49
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "volume-sigterm"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "file_storage queue on a volume, Collector killed with SIGKILL",
+      "log": {
+        "error_lines": 0,
+        "lines": 49,
+        "warn_lines": 1
+      },
+      "measured": {
+        "drop_log_lines": 0,
+        "dropped_items": 0,
+        "duplicate_records": 0,
+        "records_printed": 100,
+        "starts_logged": 2,
+        "unique_records": 100,
+        "unknown_records": 0
+      },
+      "position": 4,
+      "repetition": 1,
+      "sending": {
+        "accepted_before_fault": 100.0,
+        "delivered": 100.0,
+        "http_status": 200,
+        "queue_after_restart": 10.0,
+        "queue_before_fault": 10.0,
+        "records_sent": 100,
+        "requests_sent": 10,
+        "seconds_to_delivery": 15.7,
+        "stop_seconds": 0.4
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "volume-sigkill"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "file_storage queue on the /tmp tmpfs, Collector killed with SIGKILL",
+      "log": {
+        "error_lines": 1,
+        "lines": 52,
+        "warn_lines": 1
+      },
+      "measured": {},
+      "position": 5,
+      "repetition": 1,
+      "sending": {
+        "error": "TimeoutError: http://127.0.0.1:23133 was not ready after 60s: <urlopen error [Errno 61] Connection refused>"
+      },
+      "validity": {
+        "notes": [
+          "send failed: TimeoutError: http://127.0.0.1:23133 was not ready after 60s: <urlopen error [Errno 61] Connection refused>"
+        ],
+        "ok": false
+      },
+      "variant": "tmpfs-sigkill"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "in-memory queue, Collector stopped with SIGTERM and started again",
+      "log": {
+        "error_lines": 10,
+        "lines": 124,
+        "warn_lines": 1
+      },
+      "measured": {
+        "drop_log_lines": 10,
+        "dropped_items": 100,
+        "duplicate_records": 0,
+        "records_printed": 0,
+        "starts_logged": 2,
+        "unique_records": 0,
+        "unknown_records": 0
+      },
+      "position": 1,
+      "repetition": 2,
+      "sending": {
+        "accepted_before_fault": 100.0,
+        "delivered": 0.0,
+        "http_status": 200,
+        "queue_after_restart": 0.0,
+        "queue_before_fault": 10.0,
+        "records_sent": 100,
+        "requests_sent": 10,
+        "seconds_to_delivery": null,
+        "stop_seconds": 0.41
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "memory-sigterm"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "in-memory queue, Collector killed with SIGKILL and started again",
+      "log": {
+        "error_lines": 0,
+        "lines": 29,
+        "warn_lines": 1
+      },
+      "measured": {
+        "drop_log_lines": 0,
+        "dropped_items": 0,
+        "duplicate_records": 0,
+        "records_printed": 0,
+        "starts_logged": 2,
+        "unique_records": 0,
+        "unknown_records": 0
+      },
+      "position": 2,
+      "repetition": 2,
+      "sending": {
+        "accepted_before_fault": 100.0,
+        "delivered": 0.0,
+        "http_status": 200,
+        "queue_after_restart": 0.0,
+        "queue_before_fault": 10.0,
+        "records_sent": 100,
+        "requests_sent": 10,
+        "seconds_to_delivery": null,
+        "stop_seconds": 0.44
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "memory-sigkill"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "file_storage queue on a volume, Collector stopped with SIGTERM",
+      "log": {
+        "error_lines": 10,
+        "lines": 144,
+        "warn_lines": 1
+      },
+      "measured": {
+        "drop_log_lines": 10,
+        "dropped_items": 100,
+        "duplicate_records": 0,
+        "records_printed": 100,
+        "starts_logged": 2,
+        "unique_records": 100,
+        "unknown_records": 0
+      },
+      "position": 3,
+      "repetition": 2,
+      "sending": {
+        "accepted_before_fault": 100.0,
+        "delivered": 100.0,
+        "http_status": 200,
+        "queue_after_restart": 10.0,
+        "queue_before_fault": 10.0,
+        "records_sent": 100,
+        "requests_sent": 10,
+        "seconds_to_delivery": 10.6,
+        "stop_seconds": 0.39
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "volume-sigterm"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "file_storage queue on a volume, Collector killed with SIGKILL",
+      "log": {
+        "error_lines": 0,
+        "lines": 49,
+        "warn_lines": 1
+      },
+      "measured": {
+        "drop_log_lines": 0,
+        "dropped_items": 0,
+        "duplicate_records": 0,
+        "records_printed": 100,
+        "starts_logged": 2,
+        "unique_records": 100,
+        "unknown_records": 0
+      },
+      "position": 4,
+      "repetition": 2,
+      "sending": {
+        "accepted_before_fault": 100.0,
+        "delivered": 100.0,
+        "http_status": 200,
+        "queue_after_restart": 10.0,
+        "queue_before_fault": 10.0,
+        "records_sent": 100,
+        "requests_sent": 10,
+        "seconds_to_delivery": 9.6,
+        "stop_seconds": 0.46
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "volume-sigkill"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "file_storage queue on the /tmp tmpfs, Collector killed with SIGKILL",
+      "log": {
+        "error_lines": 1,
+        "lines": 52,
+        "warn_lines": 1
+      },
+      "measured": {},
+      "position": 5,
+      "repetition": 2,
+      "sending": {
+        "error": "TimeoutError: http://127.0.0.1:23133 was not ready after 60s: <urlopen error [Errno 61] Connection refused>"
+      },
+      "validity": {
+        "notes": [
+          "send failed: TimeoutError: http://127.0.0.1:23133 was not ready after 60s: <urlopen error [Errno 61] Connection refused>"
+        ],
+        "ok": false
+      },
+      "variant": "tmpfs-sigkill"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "in-memory queue, Collector stopped with SIGTERM and started again",
+      "log": {
+        "error_lines": 10,
+        "lines": 124,
+        "warn_lines": 1
+      },
+      "measured": {
+        "drop_log_lines": 10,
+        "dropped_items": 100,
+        "duplicate_records": 0,
+        "records_printed": 0,
+        "starts_logged": 2,
+        "unique_records": 0,
+        "unknown_records": 0
+      },
+      "position": 1,
+      "repetition": 3,
+      "sending": {
+        "accepted_before_fault": 100.0,
+        "delivered": 0.0,
+        "http_status": 200,
+        "queue_after_restart": 0.0,
+        "queue_before_fault": 10.0,
+        "records_sent": 100,
+        "requests_sent": 10,
+        "seconds_to_delivery": null,
+        "stop_seconds": 0.45
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "memory-sigterm"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "in-memory queue, Collector killed with SIGKILL and started again",
+      "log": {
+        "error_lines": 0,
+        "lines": 29,
+        "warn_lines": 1
+      },
+      "measured": {
+        "drop_log_lines": 0,
+        "dropped_items": 0,
+        "duplicate_records": 0,
+        "records_printed": 0,
+        "starts_logged": 2,
+        "unique_records": 0,
+        "unknown_records": 0
+      },
+      "position": 2,
+      "repetition": 3,
+      "sending": {
+        "accepted_before_fault": 100.0,
+        "delivered": 0.0,
+        "http_status": 200,
+        "queue_after_restart": 0.0,
+        "queue_before_fault": 10.0,
+        "records_sent": 100,
+        "requests_sent": 10,
+        "seconds_to_delivery": null,
+        "stop_seconds": 0.39
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "memory-sigkill"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "file_storage queue on a volume, Collector stopped with SIGTERM",
+      "log": {
+        "error_lines": 10,
+        "lines": 144,
+        "warn_lines": 1
+      },
+      "measured": {
+        "drop_log_lines": 10,
+        "dropped_items": 100,
+        "duplicate_records": 0,
+        "records_printed": 100,
+        "starts_logged": 2,
+        "unique_records": 100,
+        "unknown_records": 0
+      },
+      "position": 3,
+      "repetition": 3,
+      "sending": {
+        "accepted_before_fault": 100.0,
+        "delivered": 100.0,
+        "http_status": 200,
+        "queue_after_restart": 10.0,
+        "queue_before_fault": 10.0,
+        "records_sent": 100,
+        "requests_sent": 10,
+        "seconds_to_delivery": 12.1,
+        "stop_seconds": 0.47
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "volume-sigterm"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": 100.0,
+            "receiver_accepted": 100.0,
+            "receiver_refused": 0.0
+          }
+        }
+      },
+      "description": "file_storage queue on a volume, Collector killed with SIGKILL",
+      "log": {
+        "error_lines": 0,
+        "lines": 49,
+        "warn_lines": 1
+      },
+      "measured": {
+        "drop_log_lines": 0,
+        "dropped_items": 0,
+        "duplicate_records": 0,
+        "records_printed": 100,
+        "starts_logged": 2,
+        "unique_records": 100,
+        "unknown_records": 0
+      },
+      "position": 4,
+      "repetition": 3,
+      "sending": {
+        "accepted_before_fault": 100.0,
+        "delivered": 100.0,
+        "http_status": 200,
+        "queue_after_restart": 10.0,
+        "queue_before_fault": 10.0,
+        "records_sent": 100,
+        "requests_sent": 10,
+        "seconds_to_delivery": 12.1,
+        "stop_seconds": 0.51
+      },
+      "validity": {
+        "notes": [],
+        "ok": true
+      },
+      "variant": "volume-sigkill"
+    },
+    {
+      "counters": {
+        "collector": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        },
+        "sink": {
+          "logs": {
+            "exporter_send_failed": null,
+            "exporter_sent": null,
+            "receiver_accepted": null,
+            "receiver_refused": null
+          }
+        }
+      },
+      "description": "file_storage queue on the /tmp tmpfs, Collector killed with SIGKILL",
+      "log": {
+        "error_lines": 1,
+        "lines": 52,
+        "warn_lines": 1
+      },
+      "measured": {},
+      "position": 5,
+      "repetition": 3,
+      "sending": {
+        "error": "TimeoutError: http://127.0.0.1:23133 was not ready after 60s: <urlopen error [Errno 61] Connection refused>"
+      },
+      "validity": {
+        "notes": [
+          "send failed: TimeoutError: http://127.0.0.1:23133 was not ready after 60s: <urlopen error [Errno 61] Connection refused>"
+        ],
+        "ok": false
+      },
+      "variant": "tmpfs-sigkill"
+    }
+  ],
+  "stack": {
+    "otelcol_contrib": "0.162.0",
+    "prometheus": "v3.15.0"
+  },
+  "variants": [
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "2b653a79755fcfdb5105d5c777110c6e541eab11ac84286ef0223f8ffbedb088",
+        "prometheus": "1e33c42770ffeba75d035c75d6e48348d9d175129c434113864ba2c9c03956c4",
+        "sink": "3a30a96099408576ef0d59f0789426de9d0dc060d4cc0679105a151e343ffbc9"
+      },
+      "description": "in-memory queue, Collector stopped with SIGTERM and started again",
+      "gateway_config": "",
+      "name": "memory-sigterm",
+      "options": {
+        "fault": "sigterm"
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "2b653a79755fcfdb5105d5c777110c6e541eab11ac84286ef0223f8ffbedb088",
+        "prometheus": "1e33c42770ffeba75d035c75d6e48348d9d175129c434113864ba2c9c03956c4",
+        "sink": "3a30a96099408576ef0d59f0789426de9d0dc060d4cc0679105a151e343ffbc9"
+      },
+      "description": "in-memory queue, Collector killed with SIGKILL and started again",
+      "gateway_config": "",
+      "name": "memory-sigkill",
+      "options": {
+        "fault": "sigkill"
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "b391ffac01b1f50c0ca709b0debf9738078e00cce4fe847338082976854ce66d",
+        "prometheus": "1e33c42770ffeba75d035c75d6e48348d9d175129c434113864ba2c9c03956c4",
+        "sink": "3a30a96099408576ef0d59f0789426de9d0dc060d4cc0679105a151e343ffbc9"
+      },
+      "description": "file_storage queue on a volume, Collector stopped with SIGTERM",
+      "gateway_config": "",
+      "name": "volume-sigterm",
+      "options": {
+        "fault": "sigterm"
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "b391ffac01b1f50c0ca709b0debf9738078e00cce4fe847338082976854ce66d",
+        "prometheus": "1e33c42770ffeba75d035c75d6e48348d9d175129c434113864ba2c9c03956c4",
+        "sink": "3a30a96099408576ef0d59f0789426de9d0dc060d4cc0679105a151e343ffbc9"
+      },
+      "description": "file_storage queue on a volume, Collector killed with SIGKILL",
+      "gateway_config": "",
+      "name": "volume-sigkill",
+      "options": {
+        "fault": "sigkill"
+      }
+    },
+    {
+      "collector_memory_limit": "0",
+      "config_sha256": {
+        "collector": "e6784c999b49cfa858a1243b4f966f4cb591af155ab61f1d15d5128465925622",
+        "prometheus": "1e33c42770ffeba75d035c75d6e48348d9d175129c434113864ba2c9c03956c4",
+        "sink": "3a30a96099408576ef0d59f0789426de9d0dc060d4cc0679105a151e343ffbc9"
+      },
+      "description": "file_storage queue on the /tmp tmpfs, Collector killed with SIGKILL",
+      "gateway_config": "",
+      "name": "tmpfs-sigkill",
+      "options": {
+        "fault": "sigkill"
+      }
+    }
+  ]
+}
