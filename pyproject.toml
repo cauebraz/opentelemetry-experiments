@@ -24,7 +24,7 @@ classifiers = [
 ]
 dependencies = [
   "grpcio==1.84.0",
-  "opentelemetry-exporter-otlp-proto-http==1.45.0",
+  "opentelemetry-exporter-otlp-proto-http==1.45.1",
   "opentelemetry-sdk==1.45.0",
 ]
 
