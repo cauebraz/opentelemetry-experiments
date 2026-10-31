@@ -36,7 +36,7 @@ Issues = "https://github.com/cauebraz/opentelemetry-experiments/issues"
 [dependency-groups]
 dev = [
   "pytest==9.1.1",
-  "ruff==0.16.10",
+  "ruff==0.17.1",
 ]
 
 [tool.pytest.ini_options]
